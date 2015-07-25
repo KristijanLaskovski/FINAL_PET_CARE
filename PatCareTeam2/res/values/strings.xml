@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">PatCareTeam2</string>
+    <string name="title_section1">Home</string>
+    <string name="title_section2">Adopt a pet</string>
+    <string name="title_section3">Buy</string>
+    <string name="title_section4">Post</string>
+    <string name="title_section5">Log out</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="action_example">Example action</string>
+    <string name="action_settings">Settings</string>
+    <string name="action_preferences">Preferences</string>
+    <string name="action_exit">Exit</string>
+    <string name="action_about_us">About Us</string>
+    <string name="postBTN">POST</string>
+    <string name="comentString">Enter your comment here</string>
+    
+    
+</resources>
