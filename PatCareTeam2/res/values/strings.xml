@@ -19,4 +19,14 @@
     <string name="userName">Username</string>
     <string name="password">Password</string>
     <string name="login">Login</string>
+    <string name="nameTV">Name</string>
+    <string name="lastnameTv">Last Name</string>
+    <string name="timeTV">Time of post</string>
+    <string name="tvComment">Your Comment here</string>
+    <string name="title_activity_comment">CommentActivity</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="stringForCommnet">Enter your comment here</string>
+    <string name="post_btn">Post</string>
+    <string name="addAPost">Add a Post</string>
+
 </resources>

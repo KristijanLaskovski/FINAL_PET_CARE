@@ -5,7 +5,7 @@
     android:orientation="vertical" >
     
  <TextView
-        android:id="@+id/textView1"
+        android:id="@+id/tvName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="About us :\nWe are people who care about animals and live for them ?! Tuka neshto za nas moze da pihemo neznam"
