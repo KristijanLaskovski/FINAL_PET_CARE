@@ -77,7 +77,7 @@ public class MainActivity extends ActionBarActivity implements
 	        switch (position) {
 	        case 1:
 	        	mTitle = getString(R.string.title_section1);
-	        	fragment = new LoginFragment();
+	        	fragment = new HomeFragment();
 	            break;
 	        case 2:
 	        	mTitle = getString(R.string.title_section2);
