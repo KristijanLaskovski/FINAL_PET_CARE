@@ -2209,8 +2209,10 @@ containing a value of this type.
         public static final int action_settings=0x7f0b001b;
         public static final int app_name=0x7f0b0012;
         public static final int comentString=0x7f0b0020;
+        public static final int login=0x7f0b0023;
         public static final int navigation_drawer_close=0x7f0b0019;
         public static final int navigation_drawer_open=0x7f0b0018;
+        public static final int password=0x7f0b0022;
         public static final int postBTN=0x7f0b001f;
         /**  Text to use when the number in a notification info is too large
          (greater than status_bar_notification_info_maxnum, defined in
@@ -2224,6 +2226,7 @@ containing a value of this type.
         public static final int title_section3=0x7f0b0015;
         public static final int title_section4=0x7f0b0016;
         public static final int title_section5=0x7f0b0017;
+        public static final int userName=0x7f0b0021;
     }
     public static final class style {
         public static final int AlertDialog_AppCompat=0x7f0c0040;
