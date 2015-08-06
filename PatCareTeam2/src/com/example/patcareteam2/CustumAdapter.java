@@ -25,7 +25,7 @@ public class CustumAdapter  extends ArrayAdapter<Comment>{
 		View custumView=linflater.inflate(R.layout.custum_view,parent,false);
 		Comment comment=getItem(position);
 		TextView name=(TextView)custumView.findViewById(R.id.tvName);
-		TextView lastname=(TextView)custumView.findViewById(R.id.TVLastName);
+		//TextView lastname=(TextView)custumView.findViewById(R.id.TVLastName);
 		TextView time=(TextView)custumView.findViewById(R.id.TVtime);
 		TextView commentar=(TextView)custumView.findViewById(R.id.TVComment);
 		
@@ -33,7 +33,7 @@ public class CustumAdapter  extends ArrayAdapter<Comment>{
 		profilePhoto.setImageResource(R.drawable.kikko);
 		
 		 name.setText(comment.getFirstName());
-		 lastname.setText(comment.getLastName());
+		// lastname.setText(comment.getLastName());
 		 time.setText(comment.getTime());
 		 commentar.setText(comment.getComment());
 		 

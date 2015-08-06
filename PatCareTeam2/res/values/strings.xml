@@ -28,5 +28,12 @@
     <string name="stringForCommnet">Enter your comment here</string>
     <string name="post_btn">Post</string>
     <string name="addAPost">Add a Post</string>
+    <string name="title_activity_register">Register</string>
+    <string name="usernameR">Username</string>
+    <string name="passwordRegister">Password</string>
+    <string name="btnRegistertext">Register</string>
+    <string name="firstname">First Name</string>
+    <string name="lastName">Last Name</string>
+    <string name="emailhint">Email</string>
 
 </resources>

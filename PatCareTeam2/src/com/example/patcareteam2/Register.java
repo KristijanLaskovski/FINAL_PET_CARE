@@ -1,21 +1,15 @@
 package com.example.patcareteam2;
 
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 import org.apache.http.NameValuePair;
 import org.apache.http.message.BasicNameValuePair;
 import org.json.JSONException;
 import org.json.JSONObject;
-
 import android.app.Activity;
 import android.app.ProgressDialog;
-import android.content.Intent;
-import android.content.SharedPreferences;
 import android.os.AsyncTask;
 import android.os.Bundle;
-import android.preference.PreferenceManager;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -25,59 +19,85 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-public class CommentActivity extends Activity implements OnClickListener{
-
-	EditText insertedcomment;
-	private Button  mSubmit;
+public class Register extends Activity  implements OnClickListener{
+	
+	private EditText user, pass,fname,lname;
+	private Button  mRegister;
+	
 	 // Progress Dialog
     private ProgressDialog pDialog;
  
     // JSON parser class
     JSONParser jsonParser = new JSONParser();
     
-    //php add a comment script
+    //php register script
     
     //localhost :  
     //testing on your device
     //put your local ip instead,  on windows, run CMD > ipconfig
     //or in mac's terminal type ifconfig and look for the ip under en0 or en1
-   // private static final String POST_COMMENT_URL = "http://xxx.xxx.x.x:1234/webservice/addcomment.php";
+   // private static final String REGISTER_URL = "http://xxx.xxx.x.x:1234/webservice/register.php";
     
     //testing on Emulator:
-    private static final String POST_COMMENT_URL = "http://192.168.1.126/webservice/addcomment.php";
+    private static final String REGISTER_URL = "http://192.168.1.126/webservice/register.php";
     
   //testing from a real server:
-    //private static final String POST_COMMENT_URL = "http://www.mybringback.com/webservice/addcomment.php";
+    //private static final String REGISTER_URL = "http://www.mybringback.com/webservice/register.php";
     
     //ids
     private static final String TAG_SUCCESS = "success";
     private static final String TAG_MESSAGE = "message";
 	
 	
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_comment);
-		insertedcomment=(EditText)findViewById(R.id.ETforEnteringCommnets);
-		mSubmit = (Button)findViewById(R.id.btnPostComment);
-		mSubmit.setOnClickListener(this);
+		setContentView(R.layout.activity_register);
+		user = (EditText)findViewById(R.id.usernameRegister);
+		pass = (EditText)findViewById(R.id.passwordRegister);
+		fname = (EditText)findViewById(R.id.firstname);
+		lname = (EditText)findViewById(R.id.lastName);
+		
+		
+
+		mRegister = (Button)findViewById(R.id.btnRegister);
+		mRegister.setOnClickListener(this);
 	}
 
+	@Override
+	public boolean onCreateOptionsMenu(Menu menu) {
+		// Inflate the menu; this adds items to the action bar if it is present.
+		getMenuInflater().inflate(R.menu.register, menu);
+		return true;
+	}
 
+	@Override
+	public boolean onOptionsItemSelected(MenuItem item) {
+		// Handle action bar item clicks here. The action bar will
+		// automatically handle clicks on the Home/Up button, so long
+		// as you specify a parent activity in AndroidManifest.xml.
+		int id = item.getItemId();
+		if (id == R.id.action_settings) {
+			return true;
+		}
+		return super.onOptionsItemSelected(item);
+	}
 
 	@Override
 	public void onClick(View v) {
 		// TODO Auto-generated method stub
-		new PostComment().execute();
+		new CreateUser().execute();
 	}
 	
-class PostComment extends AsyncTask<String, String, String> {
+class CreateUser extends AsyncTask<String, String, String> {
+
 		
         @Override
         protected void onPreExecute() {
             super.onPreExecute();
-            pDialog = new ProgressDialog(CommentActivity.this);
-            pDialog.setMessage("Posting Comment...");
+            pDialog = new ProgressDialog(Register.this);
+            pDialog.setMessage("Creating User...");
             pDialog.setIndeterminate(false);
             pDialog.setCancelable(true);
             pDialog.show();
@@ -88,41 +108,35 @@ class PostComment extends AsyncTask<String, String, String> {
 			// TODO Auto-generated method stub
 			 // Check for success tag
             int success;
-            
-            SimpleDateFormat sdf = new SimpleDateFormat("HH:mm");
-	           String currentDateandTime = sdf.format(new Date());
-            
-            String post_title =currentDateandTime ;
-            String post_message = insertedcomment.getText().toString();
-            
-            //We need to change this:
-            SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(CommentActivity.this);
-            String post_username = sp.getString("username", "anon");
-            
+            String username = user.getText().toString();
+            String password = pass.getText().toString();
+            String firstname= fname.getText().toString();
+            String lastname = lname.getText().toString();
             try {
                 // Building Parameters
                 List<NameValuePair> params = new ArrayList<NameValuePair>();
-                params.add(new BasicNameValuePair("username", post_username));
-                params.add(new BasicNameValuePair("title", post_title));
-                params.add(new BasicNameValuePair("message", post_message));
+                params.add(new BasicNameValuePair("username", username));
+                params.add(new BasicNameValuePair("password", password));
+                params.add(new BasicNameValuePair("firstname", firstname));
+                params.add(new BasicNameValuePair("lastname", lastname));
  
                 Log.d("request!", "starting");
                 
                 //Posting user data to script 
                 JSONObject json = jsonParser.makeHttpRequest(
-                		POST_COMMENT_URL, "POST", params);
+                       REGISTER_URL, "POST", params);
  
                 // full json response
-                Log.d("Post Comment attempt", json.toString());
+                Log.d("Registering attempt", json.toString());
  
                 // json success element
                 success = json.getInt(TAG_SUCCESS);
                 if (success == 1) {
-                	Log.d("Comment Added!", json.toString());    
+                	Log.d("User Created!", json.toString());              	
                 	finish();
                 	return json.getString(TAG_MESSAGE);
                 }else{
-                	Log.d("Comment Failure!", json.getString(TAG_MESSAGE));
+                	Log.d("Registering Failure!", json.getString(TAG_MESSAGE));
                 	return json.getString(TAG_MESSAGE);
                 	
                 }
@@ -138,12 +152,12 @@ class PostComment extends AsyncTask<String, String, String> {
             // dismiss the dialog once product deleted
             pDialog.dismiss();
             if (file_url != null){
-            	Toast.makeText(CommentActivity.this, file_url, Toast.LENGTH_LONG).show();
+            	Toast.makeText(Register.this, file_url, Toast.LENGTH_LONG).show();
             }
  
         }
 		
 	}
 	
-
+	
 }

@@ -4,29 +4,32 @@
     android:layout_height="match_parent"
     android:orientation="vertical" 
   >
-   
-    <TextView 
-       android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/userName" />
+
    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/etUsername"
-        />
-   <TextView 
+       android:id="@+id/etUsername"
        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/password" />
+       android:layout_height="wrap_content"
+       android:hint="@string/usernameR" />
+
     <EditText
+        android:id="@+id/etPassword"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/etPassword"
-        />
+        android:hint="@string/passwordRegister" />
+
     <Button
         android:layout_width="100dp"
         android:layout_height="wrap_content"
         android:layout_gravity="right"
         android:text="@string/login" 
-        android:id="@+id/btnLogin"/>"
+        android:id="@+id/btnLogin"/>
+
+    <Button
+        android:id="@+id/btnloginRegister"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/btnRegistertext"
+        android:layout_gravity="right" />
+
+"
 </LinearLayout>
