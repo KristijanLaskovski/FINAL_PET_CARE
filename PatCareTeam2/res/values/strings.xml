@@ -36,5 +36,6 @@
     <string name="lastName">Last Name</string>
     <string name="emailhint">Email</string>
     <string name="lname">Last Name</string>
+    <string name="takeaphoto">Take a photo</string>
 
 </resources>

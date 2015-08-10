@@ -1,5 +1,7 @@
 package com.example.patcareteam2;
 
+import java.io.File;
+import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
@@ -9,13 +11,20 @@ import org.apache.http.message.BasicNameValuePair;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import com.example.patcareteam2.LoginActivity.AttemptLogin;
+
 import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.os.Environment;
 import android.preference.PreferenceManager;
+import android.provider.MediaStore;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -23,15 +32,18 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 public class CommentActivity extends Activity implements OnClickListener{
 
 	EditText insertedcomment;
 	private Button  mSubmit;
+	private Button  mTakePhoto;
 	 // Progress Dialog
     private ProgressDialog pDialog;
  
+    ImageView mImageView;
     // JSON parser class
     JSONParser jsonParser = new JSONParser();
     
@@ -60,16 +72,158 @@ public class CommentActivity extends Activity implements OnClickListener{
 		setContentView(R.layout.activity_comment);
 		insertedcomment=(EditText)findViewById(R.id.ETforEnteringCommnets);
 		mSubmit = (Button)findViewById(R.id.btnPostComment);
+		mTakePhoto = (Button)findViewById(R.id.BtnTakeAPhoto);
 		mSubmit.setOnClickListener(this);
+		mTakePhoto.setOnClickListener(this);
+		//fffffffffffffffffffffffffffffffffffffffffffffffg
+		mImageView=(ImageView)findViewById(R.id.takenImage1);
+		
+		
 	}
 
-
-
+	static final int REQUEST_IMAGE_CAPTURE = 1;
+/*
+	private void dispatchTakePictureIntent() {
+	    Intent takePictureIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+	    if (takePictureIntent.resolveActivity(getPackageManager()) != null) {
+	        startActivityForResult(takePictureIntent, REQUEST_IMAGE_CAPTURE);
+	    }
+	}*/
+	@Override
+	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+	  /*  if (requestCode == REQUEST_IMAGE_CAPTURE && resultCode == RESULT_OK) {
+	        Bundle extras = data.getExtras();
+	        Bitmap imageBitmap = (Bitmap) extras.get("data");
+	        mImageView.setImageBitmap(imageBitmap);
+	    }*/
+		if (requestCode == REQUEST_TAKE_PHOTO && resultCode == RESULT_OK) {
+			
+			Log.d("++++++++++++++++++++++++++++POMINAVME NA requestCode == REQUEST_TAKE_PHOTO ","Tuka  photoFile = createImageFile();");
+		      
+		if (mCurrentPhotoPath != null) {
+			
+			
+			Log.d("***************************"," Vo IF sme vlezeni ");
+			
+			setPic();
+			galleryAddPic();
+			mCurrentPhotoPath = null;
+		}
+		}
+	}
+	
+	
 	@Override
 	public void onClick(View v) {
 		// TODO Auto-generated method stub
-		new PostComment().execute();
+		switch(v.getId()){
+		case R.id.btnPostComment:
+			new PostComment().execute();
+			break;
+		case R.id.BtnTakeAPhoto:
+			dispatchTakePictureIntent();
+			Log.d("&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&","Tuka se povikuva kamerata");
+			
+			
+			break;
+		}
+		
+		
+		
+		
+		
+		
 	}
+	
+	//hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
+	
+	
+	String mCurrentPhotoPath;
+
+	private File createImageFile() throws IOException {
+	    // Create an image file name
+	    String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date());
+	    String imageFileName = "JPEG_" + timeStamp + "_";
+	    File storageDir = Environment.getExternalStoragePublicDirectory(
+	            Environment.DIRECTORY_PICTURES);
+	    File image = File.createTempFile(
+	        imageFileName,  /* prefix */
+	        ".jpg",         /* suffix */
+	        storageDir      /* directory */
+	    );
+
+	    // Save a file: path for use with ACTION_VIEW intents
+	    mCurrentPhotoPath = image.getAbsolutePath();
+	    return image;
+	}
+	
+	
+	static final int REQUEST_TAKE_PHOTO = 1;
+
+	private void dispatchTakePictureIntent() {
+	    Intent takePictureIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+	    // Ensure that there's a camera activity to handle the intent
+	    if (takePictureIntent.resolveActivity(getPackageManager()) != null) {
+	        // Create the File where the photo should go
+	        File photoFile = null;
+	        try {
+	            photoFile = createImageFile();
+	        	Log.d("YESSSSSSSSSSSSSSSSSSSSS","USPESNO  photoFile = createImageFile();");
+	  	      
+	            
+	        } catch (IOException ex) {
+	            // Error occurred while creating the File
+	        	Log.d("ERORRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRR","Tuka  photoFile = createImageFile();");
+	        }
+	        // Continue only if the File was successfully created
+	        if (photoFile != null) {
+	            takePictureIntent.putExtra(MediaStore.EXTRA_OUTPUT,
+	                    Uri.fromFile(photoFile));
+	            startActivityForResult(takePictureIntent, REQUEST_TAKE_PHOTO);
+	        }
+	    }
+	}
+	
+	private void galleryAddPic() {
+	    Intent mediaScanIntent = new Intent(Intent.ACTION_MEDIA_SCANNER_SCAN_FILE);
+	    File f = new File(mCurrentPhotoPath);
+	    Uri contentUri = Uri.fromFile(f);
+	    mediaScanIntent.setData(contentUri);
+	    this.sendBroadcast(mediaScanIntent);
+	}
+	
+	
+	private void setPic() {
+	    // Get the dimensions of the View
+	    int targetW = mImageView.getWidth();
+	    int targetH = mImageView.getHeight();
+
+	    // Get the dimensions of the bitmap
+	    BitmapFactory.Options bmOptions = new BitmapFactory.Options();
+	    bmOptions.inJustDecodeBounds = true;
+	    BitmapFactory.decodeFile(mCurrentPhotoPath, bmOptions);
+	    int photoW = bmOptions.outWidth;
+	    int photoH = bmOptions.outHeight;
+
+	    // Determine how much to scale down the image
+	    int scaleFactor = Math.min(photoW/targetW, photoH/targetH);
+
+	    // Decode the image file into a Bitmap sized to fill the View
+	    bmOptions.inJustDecodeBounds = false;
+	    bmOptions.inSampleSize = scaleFactor;
+	    bmOptions.inPurgeable = true;
+
+	    Log.d(" ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^"," postvivame image View ");
+	    
+	    
+	    Bitmap bitmap = BitmapFactory.decodeFile(mCurrentPhotoPath, bmOptions);
+	    mImageView.setImageBitmap(bitmap);
+	}
+	
+	
+
+	
+	//hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
 	
 class PostComment extends AsyncTask<String, String, String> {
 		

@@ -41,4 +41,23 @@
         android:layout_marginBottom="83dp"
         android:text="@string/post_btn" />
 
+    <Button
+        android:id="@+id/BtnTakeAPhoto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/imageView1"
+        android:layout_alignTop="@+id/btnPostComment"
+        android:layout_marginTop="14dp"
+        android:text="@string/takeaphoto" />
+
+    <ImageView
+        android:id="@+id/takenImage1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/ETforEnteringCommnets"
+        android:layout_below="@+id/ETforEnteringCommnets"
+        android:layout_marginTop="70dp"
+        
+        android:src="@drawable/kikko" />
+
 </RelativeLayout>
