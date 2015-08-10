@@ -1,44 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        <RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical" >
-
-    <ImageView
+    android:layout_height="wrap_content"
+  >
+        
+        
+         <ImageView
         android:id="@+id/imageView1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="90dp"
-        android:contentDescription="@drawable/ic_launcher"
-        android:src="@drawable/ic_launcher" />
+        android:layout_gravity="left"
+        android:padding="5dp"
+        android:src="@drawable/kikko" />
+       
+        <ListView
+            android:id="@android:id/list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imageView1" >
 
-    <EditText
-        android:id="@+id/etComment"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="@string/comentString"
-        android:inputType="textMultiLine" >
-    </EditText>
+</ListView>
 
-    <Button
-        android:id="@+id/btnLoad"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Load" />
+        <TextView
+            android:id="@+id/profileLastName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/profilFirstName"
+            android:layout_toRightOf="@+id/imageView1"
+            android:text="@string/lastName"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
 
-    <Button
-        android:id="@+id/btnPOSTcoment"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/postBTN" />
-
-    <TextView
-        android:id="@+id/tvComment"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="TextView" />
-
-    
-
-</LinearLayout>
+        <TextView
+            android:id="@+id/profilFirstName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/profileLastName"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="5dp"
+            android:text="@string/firstname"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+        
+ </RelativeLayout>
