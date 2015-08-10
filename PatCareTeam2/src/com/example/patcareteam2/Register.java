@@ -39,7 +39,7 @@ public class Register extends Activity  implements OnClickListener{
    // private static final String REGISTER_URL = "http://xxx.xxx.x.x:1234/webservice/register.php";
     
     //testing on Emulator:
-    private static final String REGISTER_URL = "http://192.168.1.126/webservice/register.php";
+    private static final String REGISTER_URL = "http://192.168.1.130/webservice/register.php";
     
   //testing from a real server:
     //private static final String REGISTER_URL = "http://www.mybringback.com/webservice/register.php";

@@ -35,5 +35,6 @@
     <string name="firstname">First Name</string>
     <string name="lastName">Last Name</string>
     <string name="emailhint">Email</string>
+    <string name="lname">Last Name</string>
 
 </resources>

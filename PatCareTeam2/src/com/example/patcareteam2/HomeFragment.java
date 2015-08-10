@@ -49,7 +49,7 @@ public class HomeFragment extends  android.support.v4.app.ListFragment {
 	// "http://xxx.xxx.x.x:1234/webservice/comments.php";
 
 	// testing on Emulator:
-	private static final String READ_COMMENTS_URL = "http://192.168.1.126/webservice/comments.php";
+	private static final String READ_COMMENTS_URL = "http://192.168.1.130/webservice/comments.php";
 
 	// testing from a real server:
 	// private static final String READ_COMMENTS_URL =
@@ -57,11 +57,16 @@ public class HomeFragment extends  android.support.v4.app.ListFragment {
 
 	// JSON IDS:
 	private static final String TAG_SUCCESS = "success";
-	private static final String TAG_TITLE = "title";
+	private static final String TAG_TIME = "time_post";
 	private static final String TAG_POSTS = "posts";
 	private static final String TAG_POST_ID = "post_id";
 	private static final String TAG_USERNAME = "username";
 	private static final String TAG_MESSAGE = "message";
+	
+	
+	private static final String TAG_FIRST_NAME = "firstname";
+	private static final String TAG_LAST_NAME = "lastname";
+	
 	// it's important to note that the message is both in the parent branch of
 	// our JSON tree that displays a "Post Available" or a "No Post Available"
 	// message,
@@ -152,19 +157,25 @@ public class HomeFragment extends  android.support.v4.app.ListFragment {
 				JSONObject c = mComments.getJSONObject(i);
 
 				// gets the content of each tag
-				String title = c.getString(TAG_TITLE);
+				String title = c.getString(TAG_TIME);
 				String content = c.getString(TAG_MESSAGE);
 				String username = c.getString(TAG_USERNAME);
+				String firstname = c.getString(TAG_FIRST_NAME);
+				String lastname = c.getString(TAG_LAST_NAME);
+				
+				
 
-				Log.d("++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++", title+"    "+content+"     "+username);
+				Log.d("&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&",firstname+ lastname+ title+"    "+content+"     "+username);
 				
 				
 				// creating new HashMap
 				HashMap<String, String> map = new HashMap<String, String>();
 
-				map.put(TAG_TITLE, title);
+				map.put(TAG_TIME, title);
 				map.put(TAG_MESSAGE, content);
 				map.put(TAG_USERNAME, username);
+				map.put(TAG_FIRST_NAME, firstname);
+				map.put(TAG_LAST_NAME, lastname);
 
 				// adding HashList to ArrayList
 				mCommentList.add(map);
@@ -189,9 +200,8 @@ public class HomeFragment extends  android.support.v4.app.ListFragment {
 		//and place the appropriate info from the list to the
 		//correct GUI id.  Order is important here.
 		ListAdapter adapter = new SimpleAdapter(getActivity(), mCommentList,
-				R.layout.custum_view, new String[] { TAG_TITLE, TAG_MESSAGE,
-						TAG_USERNAME }, new int[] { R.id.TVtime, R.id.TVComment,
-						R.id.tvName });
+				R.layout.custum_view, new String[] { TAG_MESSAGE, TAG_LAST_NAME,TAG_FIRST_NAME ,TAG_TIME},
+				                         new int[] { R.id.TVComment, R.id.etLastName,R.id.tvName ,R.id.TVtime});
 
 		// I shouldn't have to comment on this one:
 		setListAdapter(adapter);

@@ -44,7 +44,7 @@ public class CommentActivity extends Activity implements OnClickListener{
    // private static final String POST_COMMENT_URL = "http://xxx.xxx.x.x:1234/webservice/addcomment.php";
     
     //testing on Emulator:
-    private static final String POST_COMMENT_URL = "http://192.168.1.126/webservice/addcomment.php";
+    private static final String POST_COMMENT_URL = "http://192.168.1.130/webservice/addcomment.php";
     
   //testing from a real server:
     //private static final String POST_COMMENT_URL = "http://www.mybringback.com/webservice/addcomment.php";
@@ -98,6 +98,10 @@ class PostComment extends AsyncTask<String, String, String> {
             //We need to change this:
             SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(CommentActivity.this);
             String post_username = sp.getString("username", "anon");
+           
+            //tuka dodadov promena
+            String post_fname = sp.getString("firstname", "anon");
+            String post_lname= sp.getString("lastname", "anon");
             
             try {
                 // Building Parameters
@@ -105,7 +109,11 @@ class PostComment extends AsyncTask<String, String, String> {
                 params.add(new BasicNameValuePair("username", post_username));
                 params.add(new BasicNameValuePair("title", post_title));
                 params.add(new BasicNameValuePair("message", post_message));
- 
+               //tuka dodadov promena
+                params.add(new BasicNameValuePair("firstname", post_fname));
+                params.add(new BasicNameValuePair("lastname", post_lname));
+                
+                
                 Log.d("request!", "starting");
                 
                 //Posting user data to script 

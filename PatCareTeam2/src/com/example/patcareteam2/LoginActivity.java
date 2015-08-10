@@ -54,7 +54,7 @@ public class LoginActivity extends Activity implements View.OnClickListener {
 		// "http://xxx.xxx.x.x:1234/webservice/login.php";
 
 		// testing on Emulator:
-		private static final String LOGIN_URL = "http://192.168.1.126/webservice/login.php";
+		private static final String LOGIN_URL = "http://192.168.1.130/webservice/login.php";
 
 		// testing from a real server:
 		// private static final String LOGIN_URL =
@@ -63,8 +63,8 @@ public class LoginActivity extends Activity implements View.OnClickListener {
 		// JSON element ids from repsonse of php script:
 		private static final String TAG_SUCCESS = "success";
 		private static final String TAG_MESSAGE = "message";
-	
-	
+		private static final String TAG_FIRST_NAME = "firstname";
+		private static final String TAG_LAST_NAME = "lastname";
 	
 	
 	@Override
@@ -143,22 +143,26 @@ public class LoginActivity extends Activity implements View.OnClickListener {
 				if (success == 1) {
 					Log.d("Login Successful!", json.toString());
 					// save user data
+					
+					String ime=json.getString(TAG_FIRST_NAME);
+					String prezime=json.getString(TAG_LAST_NAME);
+					
+					Log.d("*****************************************************************************************************************", ime+prezime);
+					//dotuka raboti i vraka ime i prezime tocno
+					
 					SharedPreferences sp = PreferenceManager
 							.getDefaultSharedPreferences(LoginActivity.this);
 					Editor edit = sp.edit();
 					edit.putString("username", username);
+					edit.putString("firstname", ime);
+					edit.putString("lastname", prezime);
 					edit.commit();
 					
 					
 					Intent i=new Intent("com.example.patcareteam2.MAINACTIVITY");
 					finish();
 					startActivity(i);
-					
-					
-					
-					//Intent i = new Intent(Login.this, ReadComments.class);
-					//finish();
-				//	startActivity(i);
+
 					return json.getString(TAG_MESSAGE);
 				} else {
 					Log.d("Login Failure!", json.getString(TAG_MESSAGE));
