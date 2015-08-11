@@ -18,9 +18,12 @@ import org.apache.http.NameValuePair;
 import org.apache.http.message.BasicNameValuePair;
 import android.app.Activity;
 import android.app.ProgressDialog;
+import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.SharedPreferences.Editor;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
@@ -64,7 +67,7 @@ public class LoginActivity extends Activity implements View.OnClickListener {
 		private static final String TAG_MESSAGE = "message";
 		private static final String TAG_FIRST_NAME = "firstname";
 		private static final String TAG_LAST_NAME = "lastname";
-	
+		private ConnectivityManager connMgr;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -84,16 +87,26 @@ public class LoginActivity extends Activity implements View.OnClickListener {
 	@Override
 	public void onClick(View v) {
 		switch(v.getId()){
-		//case R.id.btnLogin :
-			//autntication 
-			//autentication("url");
-			//Toast.makeText(this, "Login", Toast.LENGTH_SHORT).show();
-			//Intent i=new Intent("com.example.patcareteam2.MAINACTIVITY");
-			//startActivity(i);
-			//finish();
-			//break;
+		
 		case R.id.btnLogin:
-			new AttemptLogin().execute();
+			connMgr = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
+			
+			NetworkInfo networkInfo = connMgr.getNetworkInfo(ConnectivityManager.TYPE_WIFI); 
+			
+			boolean isWifiConn = networkInfo.isConnected();
+	
+			NetworkInfo networkInfo2 = connMgr.getNetworkInfo(ConnectivityManager.TYPE_MOBILE);
+			
+			boolean isMobileConn = networkInfo2.isConnected();
+			
+			if(isWifiConn==true || isMobileConn==true)
+				new AttemptLogin().execute();
+			else
+			{
+				Toast.makeText(this, "You dont have internet connection", Toast.LENGTH_SHORT).show();
+				startActivityForResult(new Intent(android.provider.Settings.ACTION_SETTINGS), 0);
+			}
+			
 			break;
 		case R.id.btnloginRegister:
 			Intent i = new Intent(this, Register.class);
