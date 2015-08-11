@@ -49,11 +49,10 @@ public class HomeFragment extends  android.support.v4.app.ListFragment {
 	// "http://xxx.xxx.x.x:1234/webservice/comments.php";
 
 	// testing on Emulator:
-	private static final String READ_COMMENTS_URL = "http://192.168.1.130/webservice/comments.php";
+	//private static final String READ_COMMENTS_URL = "http://192.168.1.130/webservice/comments.php";
 
 	// testing from a real server:
-	// private static final String READ_COMMENTS_URL =
-	// "http://www.mybringback.com/webservice/comments.php";
+	 private static final String READ_COMMENTS_URL = "http://www.petcarekl.com/webservice/comments.php";
 
 	// JSON IDS:
 	private static final String TAG_SUCCESS = "success";

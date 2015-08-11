@@ -56,10 +56,10 @@ public class CommentActivity extends Activity implements OnClickListener{
    // private static final String POST_COMMENT_URL = "http://xxx.xxx.x.x:1234/webservice/addcomment.php";
     
     //testing on Emulator:
-    private static final String POST_COMMENT_URL = "http://192.168.1.130/webservice/addcomment.php";
+   // private static final String POST_COMMENT_URL = "http://192.168.1.130/webservice/addcomment.php";
     
   //testing from a real server:
-    //private static final String POST_COMMENT_URL = "http://www.mybringback.com/webservice/addcomment.php";
+    private static final String POST_COMMENT_URL = "http://www.petcarekl.com/webservice/addcomment.php";
     
     //ids
     private static final String TAG_SUCCESS = "success";

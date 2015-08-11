@@ -40,7 +40,7 @@ public class ProfileFragment  extends android.support.v4.app.ListFragment implem
 	    Button btnAddAcommnet;
 		JSONParser jsonParser = new JSONParser();
 		private ProgressDialog pDialog;
-		private static final String READ_COMMENTS_PROFILE_URL = "http://192.168.1.130/webservice/profilecomments.php";
+		private static final String READ_COMMENTS_PROFILE_URL = "http://www.petcarekl.com/webservice/profilecomments.php";
 		// JSON IDS:
 		private static final String TAG_SUCCESS = "success";
 		private static final String TAG_TIME = "time_post";
