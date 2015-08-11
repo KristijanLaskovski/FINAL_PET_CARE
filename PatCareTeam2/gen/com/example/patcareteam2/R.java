@@ -1936,17 +1936,18 @@ containing a value of this type.
         public static final int abc_textfield_search_activated_mtrl_alpha=0x7f020038;
         public static final int abc_textfield_search_default_mtrl_alpha=0x7f020039;
         public static final int abc_textfield_search_material=0x7f02003a;
-        public static final int comment_image=0x7f02003b;
-        public static final int drawer_shadow=0x7f02003c;
-        public static final int ic_drawer=0x7f02003d;
-        public static final int ic_launcher=0x7f02003e;
-        public static final int kikko=0x7f02003f;
-        public static final int like=0x7f020040;
-        public static final int notification_template_icon_bg=0x7f020041;
+        public static final int camera=0x7f02003b;
+        public static final int comment_image=0x7f02003c;
+        public static final int drawer_shadow=0x7f02003d;
+        public static final int ic_drawer=0x7f02003e;
+        public static final int ic_launcher=0x7f02003f;
+        public static final int kikko=0x7f020040;
+        public static final int like=0x7f020041;
+        public static final int notification_template_icon_bg=0x7f020042;
     }
     public static final class id {
-        public static final int BtnTakeAPhoto=0x7f0a0053;
-        public static final int ETforEnteringCommnets=0x7f0a0051;
+        public static final int BtnTakeAPhoto=0x7f0a0052;
+        public static final int ETforEnteringCommnets=0x7f0a0050;
         public static final int TVComment=0x7f0a0061;
         public static final int TVtime=0x7f0a0063;
         public static final int action0=0x7f0a0068;
@@ -1975,7 +1976,7 @@ containing a value of this type.
         public static final int always=0x7f0a0019;
         public static final int beginning=0x7f0a0020;
         public static final int btnLogin=0x7f0a0057;
-        public static final int btnPostComment=0x7f0a0052;
+        public static final int btnPostComment=0x7f0a0053;
         public static final int btnRegister=0x7f0a0060;
         public static final int btnloginRegister=0x7f0a0058;
         public static final int buttonPanel=0x7f0a0036;
@@ -2007,7 +2008,7 @@ containing a value of this type.
         public static final int icon=0x7f0a002b;
         public static final int ifRoom=0x7f0a001b;
         public static final int image=0x7f0a0028;
-        public static final int imageView1=0x7f0a0050;
+        public static final int imageView1=0x7f0a0051;
         public static final int info=0x7f0a0073;
         public static final int lastName=0x7f0a005d;
         public static final int line1=0x7f0a006d;

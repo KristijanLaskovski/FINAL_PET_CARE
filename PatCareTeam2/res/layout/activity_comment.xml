@@ -8,16 +8,6 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.patcareteam2.CommentActivity" >
 
-    <ImageView
-        android:id="@+id/imageView1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginLeft="5dp"
-        android:layout_marginTop="60dp"
-        android:src="@drawable/comment_image" />
-
     <EditText
         android:id="@+id/ETforEnteringCommnets"
         android:layout_width="wrap_content"
@@ -32,32 +22,40 @@
         <requestFocus />
     </EditText>
 
-    <Button
-        android:id="@+id/btnPostComment"
+    <ImageView
+        android:id="@+id/imageView1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignRight="@+id/ETforEnteringCommnets"
-        android:layout_marginBottom="83dp"
-        android:text="@string/post_btn" />
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="14dp"
+        android:layout_marginTop="24dp"
+        android:src="@drawable/comment_image" />
 
     <Button
         android:id="@+id/BtnTakeAPhoto"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/imageView1"
-        android:layout_alignTop="@+id/btnPostComment"
-        android:layout_marginTop="14dp"
+        android:layout_alignLeft="@+id/btnPostComment"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="54dp"
         android:text="@string/takeaphoto" />
+
+    <Button
+        android:id="@+id/btnPostComment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/BtnTakeAPhoto"
+        
+        android:text="@string/post_btn" />
 
     <ImageView
         android:id="@+id/takenImage1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/ETforEnteringCommnets"
-        android:layout_below="@+id/ETforEnteringCommnets"
-        android:layout_marginTop="70dp"
-        
-        android:src="@drawable/kikko" />
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_above="@+id/btnPostComment"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="14dp"
+        android:src="@drawable/camera" />
 
 </RelativeLayout>
