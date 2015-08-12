@@ -2,10 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
+
     tools:context="com.example.patcareteam2.CommentActivity" >
 
     <EditText
@@ -33,29 +30,45 @@
         android:src="@drawable/comment_image" />
 
     <Button
-        android:id="@+id/BtnTakeAPhoto"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/btnPostComment"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="54dp"
-        android:text="@string/takeaphoto" />
-
-    <Button
         android:id="@+id/btnPostComment"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/BtnTakeAPhoto"
-        
-        android:text="@string/post_btn" />
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="5dp"
+        android:layout_marginRight="6dp"
+        android:layout_marginTop="390dp"
+        android:background="@drawable/post_btn"
+        />
 
     <ImageView
         android:id="@+id/takenImage1"
         android:layout_width="match_parent"
         android:layout_height="200dp"
-        android:layout_above="@+id/btnPostComment"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="14dp"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/ETforEnteringCommnets"
+        android:layout_marginTop="27dp"
         android:src="@drawable/camera" />
+
+    <Button
+        android:id="@+id/BtnTakeAPhoto"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignBaseline="@+id/btnPostComment"
+        android:layout_alignBottom="@+id/btnPostComment"
+        android:layout_toLeftOf="@+id/btnPostComment"
+        android:background="@drawable/photo_btn"
+        android:layout_marginRight="10dp"
+         android:layout_marginLeft="10dp"
+         />
+
+    <Button
+        android:id="@+id/checkLocation"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignBaseline="@+id/BtnTakeAPhoto"
+        android:layout_alignBottom="@+id/BtnTakeAPhoto"
+        android:layout_toLeftOf="@+id/BtnTakeAPhoto"
+        android:background="@drawable/location_btn" />
 
 </RelativeLayout>

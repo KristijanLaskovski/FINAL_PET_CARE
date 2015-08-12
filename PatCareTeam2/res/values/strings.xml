@@ -39,5 +39,7 @@
     <string name="takeaphoto">Take a photo</string>
     <string name="motostring">Rescue the lost,save the injured,</string>
     <string name="motostring2">love the abandoned</string>
+    <string name="tp">TAKE</string>
+    <string name="loc">Plc</string>
 
 </resources>

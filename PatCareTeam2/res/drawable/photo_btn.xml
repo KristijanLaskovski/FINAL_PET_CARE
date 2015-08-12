@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <selector xmlns:android="http://schemas.android.com/apk/res/android" >
-    <item 
-        android:drawable="@drawable/butn_post_over"
+        <item 
+        android:drawable="@drawable/take_photo_over"
         android:state_pressed="true">
     </item>
     
     <item 
-       android:drawable="@drawable/butn_post_normal">   
+       android:drawable="@drawable/take_photo_normal">   
     </item>
+
 </selector>
