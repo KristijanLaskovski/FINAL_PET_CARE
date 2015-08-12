@@ -2,35 +2,72 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical" 
-  >
+    android:background="@drawable/bacgroundpetcare"
+    android:orientation="vertical"
+    android:padding="10dp"
+     >
 
+     <TextView
+         android:id="@+id/textView1"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:layout_marginTop="150dp"
+         android:gravity="center_horizontal"
+         android:text="@string/motostring"
+         android:textAppearance="?android:attr/textAppearanceSmall"
+         android:textColor="#ffffff" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:text="@string/motostring2"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="#ffffff" />
+    
    <EditText
        android:id="@+id/etUsername"
        android:layout_width="match_parent"
        android:layout_height="wrap_content"
-       android:hint="@string/emailhint" />
+       android:layout_marginTop="100dp"
+       android:gravity="center_vertical|center_horizontal"
+       android:hint="@string/emailhint"
+       android:textColor="#ffffff"
+       android:textColorHint="#ffffff" />
 
     <EditText
         android:id="@+id/etPassword"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:gravity="center_vertical|center_horizontal"
         android:hint="@string/password"
-        android:inputType="textPassword" />
+        android:inputType="textPassword"
+        android:textColor="#ffffff"
+        android:textColorHint="#ffffff" />
 
     <Button
-        android:layout_width="100dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="right"
         android:text="@string/login" 
-        android:id="@+id/btnLogin"/>
+        android:id="@+id/btnLogin"
+       android:background="@drawable/shape"
+          android:textColor="#ffffff"
+           android:layout_marginTop="20dp"
+          
+        />
 
     <Button
         android:id="@+id/btnloginRegister"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/btnRegistertext"
-        android:layout_gravity="right" />
+        android:background="@drawable/shape"
+        android:text="@string/btnRegistertext" 
+        android:layout_marginTop="10dp"
+         android:textColor="#ffffff"
+        
+        
+        />
 
-"
 </LinearLayout>

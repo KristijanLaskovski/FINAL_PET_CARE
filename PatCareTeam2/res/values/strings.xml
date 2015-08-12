@@ -37,5 +37,7 @@
     <string name="emailhint">Email</string>
     <string name="lname">Last Name</string>
     <string name="takeaphoto">Take a photo</string>
+    <string name="motostring">Rescue the lost,save the injured,</string>
+    <string name="motostring2">love the abandoned</string>
 
 </resources>
