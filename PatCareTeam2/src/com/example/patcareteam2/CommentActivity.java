@@ -60,12 +60,14 @@ public class CommentActivity extends Activity implements OnClickListener {
 	private LocationManager locationManager; /* provides access to the system location services */
 	private Location deviceLocation; /* my location */
 	private String provider;
-	private final long LOCATION_REFRESH_TIME = 60000;
-	private final int LOCATION_REFRESH_DISTANCE = 10;
+	private final long LOCATION_REFRESH_TIME = 1000;
+	private final float LOCATION_REFRESH_DISTANCE = 1;
 	
 	/* ONLY FOR DEBUGGING */
 	TextView latlng;
 	/* ONLY FOR DEBUGGING */
+	
+	CommentActivity context = this;
 	
 	/* location */
 	
@@ -95,20 +97,12 @@ public class CommentActivity extends Activity implements OnClickListener {
     private static final String TAG_MESSAGE = "message";
 	
     
-    /* location */
-    private final LocationListener locationListener = new LocationListener() {
-	    @Override
-	    public void onLocationChanged(final Location location) {
-	        deviceLocation = location;
-	    }
-	};
-	/* location */
-	
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_comment);
-	
+		
 		insertedcomment=(EditText)findViewById(R.id.ETforEnteringCommnets);
 		
 		mSubmit = (Button)findViewById(R.id.btnPostComment);
@@ -134,9 +128,21 @@ public class CommentActivity extends Activity implements OnClickListener {
 		if (!gpsEnabled && !netEnabled){
 			/* starting settings so the user enables them, TODO what if the user, doesn't enables them, stop everything.
 			 * TODO make safeguard against - matching Activity may not exist - read more: hover ACTION_NETWORK_OPERATOR_SETTINGS */
+			Toast.makeText(this, "gps and net are desabled", Toast.LENGTH_LONG);
 			startActivity(new Intent(Settings.ACTION_NETWORK_OPERATOR_SETTINGS));
+			Log.d("&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&","gps and net are enabled");	
 		}
 		
+		if(gpsEnabled){
+			Toast.makeText(this, "gps is enabled", Toast.LENGTH_LONG);
+			Log.d("&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&","gps is enabled");	
+			
+		}
+		
+		if(netEnabled){
+			Toast.makeText(this, "net is enabled", Toast.LENGTH_LONG);
+			Log.d("&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&","net is enabled");	
+		}
 		
 		Criteria criteria = new Criteria(); /* kriterium spored koj kje izbereme network or gps */
 		// Getting the name of the provider that meets the criteria
@@ -147,7 +153,35 @@ public class CommentActivity extends Activity implements OnClickListener {
 		}
 		/* AKO IMA PROBLEM mozhno e da e tuka so castiranjeto na lokacijata */
 		 locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, LOCATION_REFRESH_TIME,
-				 LOCATION_REFRESH_DISTANCE , (android.location.LocationListener) locationListener);
+				 LOCATION_REFRESH_DISTANCE ,  new android.location.LocationListener() {
+					
+					@Override
+					public void onStatusChanged(String provider, int status, Bundle extras) {
+						// TODO handle
+						
+					}
+					
+					@Override
+					public void onProviderEnabled(String provider) {
+						// TODO handle
+						
+					}
+					
+					@Override
+					public void onProviderDisabled(String provider) {
+						
+						Toast.makeText(context, "Your provider" + provider + " is disabled ", Toast.LENGTH_LONG).show();
+						
+						/* TODO handle this */
+					}
+					
+					@Override
+					public void onLocationChanged(Location location) {
+						// TODO Auto-generated method stub
+						Toast.makeText(context, "onLocationChanged", Toast.LENGTH_LONG).show();
+						deviceLocation = location;
+					}
+				});
 	}
 
 	static final int REQUEST_IMAGE_CAPTURE = 1;
@@ -197,10 +231,15 @@ public class CommentActivity extends Activity implements OnClickListener {
 				switch (locationChoise) {
 				case 0:{
 					Log.d("&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&","Obtain your location");	
-					double lat = deviceLocation.getLatitude();
-					double lng = deviceLocation.getLongitude();
-					latlng.setText("Latitude is: " + lat + " and longitude is " + lng);
-					/* save lat and lng in our database */
+					if (deviceLocation != null) {
+						double lat = deviceLocation.getLatitude();
+						double lng = deviceLocation.getLongitude();
+						latlng.setText("Latitude is: " + lat + " and longitude is " + lng);
+						/* save lat and lng in our database */
+						
+					} else {
+						Toast.makeText(context, "deviceLocation is null ", Toast.LENGTH_LONG).show();
+					}
 					dialog.cancel();
 					break;
 				}
