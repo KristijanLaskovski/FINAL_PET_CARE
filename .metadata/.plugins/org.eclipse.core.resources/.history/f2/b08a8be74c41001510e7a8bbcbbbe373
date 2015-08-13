@@ -1,0 +1,24 @@
+package com.example.patcareteam2;
+
+import android.app.Activity;
+import android.os.Bundle;
+import android.util.DisplayMetrics;
+
+public class LocationPopUp extends Activity {
+
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		// TODO Auto-generated method stub
+		super.onCreate(savedInstanceState);
+		
+		setContentView(R.layout.location_pop_up);
+		
+		DisplayMetrics dm = new DisplayMetrics();
+		getWindowManager().getDefaultDisplay().getMetrics(dm);
+		
+		int width = dm.widthPixels;
+		int height = dm.heightPixels;
+		
+		getWindow().setLayout(width, height);
+	}
+}

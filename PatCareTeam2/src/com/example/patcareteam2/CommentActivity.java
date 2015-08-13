@@ -6,25 +6,37 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+
 import org.apache.http.NameValuePair;
 import org.apache.http.message.BasicNameValuePair;
 import org.json.JSONException;
 import org.json.JSONObject;
 
 import com.example.patcareteam2.LoginActivity.AttemptLogin;
+import com.google.android.gms.location.LocationListener;
 
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.app.AlertDialog.Builder;
+import android.app.DialogFragment;
 import android.app.ProgressDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.location.Address;
+import android.location.Criteria;
+import android.location.Location;
+import android.location.LocationManager;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Environment;
 import android.preference.PreferenceManager;
 import android.provider.MediaStore;
+import android.provider.Settings;
+import android.support.v4.app.FragmentActivity;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -33,13 +45,30 @@ import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
-public class CommentActivity extends Activity implements OnClickListener{
+public class CommentActivity extends Activity implements OnClickListener {
 
 	EditText insertedcomment;
 	private Button  mSubmit;
 	private Button  mTakePhoto;
+	
+	/* location */
+	private Button  mCheckLocation;
+	private AlertDialog.Builder dialogBuilder;
+	private LocationManager locationManager; /* provides access to the system location services */
+	private Location deviceLocation; /* my location */
+	private String provider;
+	private final long LOCATION_REFRESH_TIME = 60000;
+	private final int LOCATION_REFRESH_DISTANCE = 10;
+	
+	/* ONLY FOR DEBUGGING */
+	TextView latlng;
+	/* ONLY FOR DEBUGGING */
+	
+	/* location */
+	
 	 // Progress Dialog
     private ProgressDialog pDialog;
  
@@ -65,20 +94,60 @@ public class CommentActivity extends Activity implements OnClickListener{
     private static final String TAG_SUCCESS = "success";
     private static final String TAG_MESSAGE = "message";
 	
+    
+    /* location */
+    private final LocationListener locationListener = new LocationListener() {
+	    @Override
+	    public void onLocationChanged(final Location location) {
+	        deviceLocation = location;
+	    }
+	};
+	/* location */
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_comment);
+	
 		insertedcomment=(EditText)findViewById(R.id.ETforEnteringCommnets);
+		
 		mSubmit = (Button)findViewById(R.id.btnPostComment);
-		mTakePhoto = (Button)findViewById(R.id.BtnTakeAPhoto);
 		mSubmit.setOnClickListener(this);
+		
+		mTakePhoto = (Button)findViewById(R.id.BtnTakeAPhoto);
 		mTakePhoto.setOnClickListener(this);
-		//fffffffffffffffffffffffffffffffffffffffffffffffg
+		
 		mImageView=(ImageView)findViewById(R.id.takenImage1);
 		
+		/* location */
+		mCheckLocation = (Button)findViewById(R.id.checkLocation);
+		mCheckLocation.setOnClickListener(this);
+		latlng = (TextView) findViewById(R.id.latlng); /* ONLY FOR DEBUGGING */
 		
+		locationManager = (LocationManager) getSystemService(LOCATION_SERVICE); /* i am getting location services from location manager */
+		
+		boolean gpsEnabled = locationManager
+				.isProviderEnabled(LocationManager.GPS_PROVIDER);
+		boolean netEnabled = locationManager
+				.isProviderEnabled(LocationManager.NETWORK_PROVIDER);
+		
+		if (!gpsEnabled && !netEnabled){
+			/* starting settings so the user enables them, TODO what if the user, doesn't enables them, stop everything.
+			 * TODO make safeguard against - matching Activity may not exist - read more: hover ACTION_NETWORK_OPERATOR_SETTINGS */
+			startActivity(new Intent(Settings.ACTION_NETWORK_OPERATOR_SETTINGS));
+		}
+		
+		
+		Criteria criteria = new Criteria(); /* kriterium spored koj kje izbereme network or gps */
+		// Getting the name of the provider that meets the criteria
+		provider = locationManager.getBestProvider(criteria, false);
+				
+		if (provider == null || provider.equals("")) {
+			Toast.makeText(getBaseContext(), "No Provider Found",Toast.LENGTH_LONG).show(); /* shouldn't happen. */
+		}
+		/* AKO IMA PROBLEM mozhno e da e tuka so castiranjeto na lokacijata */
+		 locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, LOCATION_REFRESH_TIME,
+				 LOCATION_REFRESH_DISTANCE , (android.location.LocationListener) locationListener);
 	}
 
 	static final int REQUEST_IMAGE_CAPTURE = 1;
@@ -111,6 +180,86 @@ public class CommentActivity extends Activity implements OnClickListener{
 		}
 		}
 	}
+	int locationChoise = -1;
+	public void chooseLocationDialog(){
+		
+		/* Variables */
+		dialogBuilder = new AlertDialog.Builder(this);
+		final String[] types = {"Obtain my location", "Add location"};
+		
+		/* Process */
+		dialogBuilder.setTitle("Enter your location");
+		
+		dialogBuilder.setPositiveButton(R.string.ok, new DialogInterface.OnClickListener() {
+			
+			@Override
+			public void onClick(DialogInterface dialog, int which) {
+				switch (locationChoise) {
+				case 0:{
+					Log.d("&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&","Obtain your location");	
+					double lat = deviceLocation.getLatitude();
+					double lng = deviceLocation.getLongitude();
+					latlng.setText("Latitude is: " + lat + " and longitude is " + lng);
+					/* save lat and lng in our database */
+					dialog.cancel();
+					break;
+				}
+				case 1:{
+					Log.d("&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&","Add new location");	
+					
+					/* SE OTVARA NOV DIALOG SO INPUT TEXT - JA PISHUVASH ADRESATA I TAA ADRESA SE BARA :) */
+					/* SAMO NE RABOTI SEGA RADI TOA SHTO NASHEVO AKTIVITY IMPLEMENTIRA ONLCLICKLISTENER, KJE GO SREDAM
+					 * POSLE RABOTA DENESKA, NA RABOTA :D */
+				/*	GeocodingTask task = new GeocodingTask(this,
+							new GeocoderAddressListener() {
+
+								@Override
+								public void onAddressObtained(Address address) {
+									if (address != null) {
+										
+									} else {
+									
+									}
+
+								}
+							});
+
+					task.execute("Skopje");*/
+					
+					break;
+				}
+				default:
+					break;
+				}
+			}
+		});
+		
+		dialogBuilder.setNegativeButton(R.string.cancel, new DialogInterface.OnClickListener() {
+			
+			@Override
+			public void onClick(DialogInterface dialog, int which) {
+				dialog.cancel();
+				
+			}
+		});
+		/* plus positive i negative OK i cancel */
+		
+		
+		dialogBuilder.setSingleChoiceItems(types, -1, new DialogInterface.OnClickListener() {
+			
+			@Override
+			public void onClick(DialogInterface dialog, int which) {
+				
+				locationChoise = which;
+
+			}
+		});
+		
+		/* Output */
+		AlertDialog dialog = dialogBuilder.create();
+		dialog.show();
+	}
+	
 	
 	
 	@Override
@@ -122,8 +271,11 @@ public class CommentActivity extends Activity implements OnClickListener{
 			break;
 		case R.id.BtnTakeAPhoto:
 			dispatchTakePictureIntent();
-			Log.d("&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&","Tuka se povikuva kamerata");
-			
+			Log.d("&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&","Tuka se povikuva kamerata");	
+			break;
+		case R.id.checkLocation:
+			chooseLocationDialog();
+			/* dialog box */
 			
 			break;
 		}

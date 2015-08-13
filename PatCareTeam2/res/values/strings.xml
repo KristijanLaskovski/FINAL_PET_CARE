@@ -41,5 +41,8 @@
     <string name="motostring2">love the abandoned</string>
     <string name="tp">TAKE</string>
     <string name="loc">Plc</string>
-
+    <string name="myLocation">obtain my location</string>
+    <string name="newLocation">add location</string>
+	<string name="ok">OK</string>
+	<string name="cancel">Cancel</string>
 </resources>

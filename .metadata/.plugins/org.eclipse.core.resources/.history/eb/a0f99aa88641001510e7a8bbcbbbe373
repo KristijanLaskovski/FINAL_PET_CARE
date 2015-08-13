@@ -1,0 +1,14 @@
+package com.example.patcareteam2;
+
+import android.location.Address;
+import android.os.AsyncTask;
+
+public class GeocodingTask extends AsyncTask<Object, Void, Address> {
+
+	@Override
+	protected Address doInBackground(Object... params) {
+		
+		return null;
+	}
+
+}

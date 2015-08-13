@@ -1,0 +1,49 @@
+<xml version="1.0" encoding="utf-8"?/>
+<resources>
+
+    <string name="app_name">PatCareTeam2</string>
+    <string name="title_section1">Home</string>
+    <string name="title_section2">Adopt a pet</string>
+    <string name="title_section3">Buy</string>
+    <string name="title_section4">Profile</string>
+    <string name="title_section5">Log out</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="action_example">Example action</string>
+    <string name="action_settings">Settings</string>
+    <string name="action_preferences">Preferences</string>
+    <string name="action_exit">Exit</string>
+    <string name="action_about_us">About Us</string>
+    <string name="postBTN">POST</string>
+    <string name="comentString">Enter your comment here</string>
+    <string name="userName">Username</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="nameTV">Name</string>
+    <string name="lastnameTv">Last Name</string>
+    <string name="timeTV">Time of post</string>
+    <string name="tvComment">Your Comment here</string>
+    <string name="title_activity_comment">CommentActivity</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="stringForCommnet">Enter your comment here</string>
+    <string name="post_btn">Post</string>
+    <string name="addAPost">Add a Post</string>
+    <string name="title_activity_register">Register</string>
+    <string name="usernameR">Username</string>
+    <string name="passwordRegister">Password</string>
+    <string name="btnRegistertext">Register</string>
+    <string name="firstname">First Name</string>
+    <string name="lastName">Last Name</string>
+    <string name="emailhint">Email</string>
+    <string name="lname">Last Name</string>
+    <string name="takeaphoto">Take a photo</string>
+    <string name="motostring">Rescue the lost,save the injured,</string>
+    <string name="motostring2">love the abandoned</string>
+    <string name="tp">TAKE</string>
+    <string name="loc">Plc</string>
+    <string name="myLocation">obtain my location</string>
+    <string name="newLocation">add location</string>
+    <string name="OK">OK</string>
+    <string name="cancel">Cancel</string>
+
+</resources>

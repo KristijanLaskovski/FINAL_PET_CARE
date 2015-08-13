@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CityActivity" 
+    android:background="#B28F6B">
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="14dp"
+        android:layout_marginTop="18dp"
+        android:text="@string/details"
+        android:textAppearance="?android:attr/textAppearanceLarge" 
+        android:textColor="#FFFFFF"
+        android:fontFamily="sans-serif-light"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textView1"
+        android:layout_below="@+id/textView1"
+        android:layout_marginTop="24dp"
+        android:text="1. NAME: SKOPJE"
+        android:textSize="20dp"
+        android:textColor="#FFFFFF"
+        android:fontFamily="sans-serif-light"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/countryCode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/name"
+        android:layout_below="@+id/name"
+        android:layout_marginTop="32dp"
+        android:text="2. COUNTRY CODE: MK"
+        android:textSize="20dp"
+        android:textColor="#FFFFFF" 
+        android:fontFamily="sans-serif-light"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/wikipedia"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/countryCode"
+        android:layout_below="@+id/countryCode"
+        android:layout_marginTop="34dp"
+        android:text="3. WIKI: en.wikipedia.org/wiki/Skopje"
+        android:textSize="20dp"
+        android:textColor="#FFFFFF" 
+        android:fontFamily="sans-serif-light"
+        android:textStyle="bold"
+        />
+
+    <TextView
+        android:id="@+id/population"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/wikipedia"
+        android:layout_below="@+id/wikipedia"
+        android:layout_marginTop="21dp"
+        android:text="4. POPULATION: 474889" 
+        android:textSize="20dp"
+        android:textColor="#FFFFFF"
+        android:fontFamily="sans-serif-light"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/fcodename"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/population"
+        android:layout_below="@+id/population"
+        android:layout_marginTop="20dp"
+        android:text="5.capital of a political entity"
+        android:textSize="20dp"
+        android:textColor="#FFFFFF" 
+        android:fontFamily="sans-serif-light"
+        android:textStyle="bold"/>
+
+</RelativeLayout>

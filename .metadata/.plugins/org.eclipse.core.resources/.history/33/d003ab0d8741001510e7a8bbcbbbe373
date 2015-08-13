@@ -1,0 +1,19 @@
+package com.example.patcareteam2;
+
+import android.location.Address;
+import android.location.Geocoder;
+import android.os.AsyncTask;
+
+public class GeocodingTask extends AsyncTask<Object, Void, Address> {
+
+	/* geocoding: transformig a street address into (latitude, longitude) coordinate. Reverse geocoding is the vice versa. */
+	private Geocoder gCoder;
+	private GeocoderAddressListener listener;
+	
+	@Override
+	protected Address doInBackground(Object... params) {
+		
+		return null;
+	}
+
+}
