@@ -14,6 +14,7 @@ import org.json.JSONObject;
 
 import com.example.patcareteam2.LoginActivity.AttemptLogin;
 import com.google.android.gms.location.LocationListener;
+import com.google.android.gms.maps.model.LatLng;
 
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -56,7 +57,7 @@ public class CommentActivity extends Activity implements OnClickListener {
 	
 	/* location */
 	private Button  mCheckLocation;
-	private AlertDialog.Builder dialogBuilder;
+	private AlertDialog.Builder dialogBuilder; // reused
 	private LocationManager locationManager; /* provides access to the system location services */
 	private Location deviceLocation; /* my location */
 	private String provider;
@@ -66,6 +67,10 @@ public class CommentActivity extends Activity implements OnClickListener {
 	/* ONLY FOR DEBUGGING */
 	TextView latlng;
 	/* ONLY FOR DEBUGGING */
+	
+	TextView locationAddress; /* this is for our post, so it can be shown the actual street address */
+	double lat, lng;
+	private EditText addLocation;
 	
 	CommentActivity context = this;
 	
@@ -117,6 +122,7 @@ public class CommentActivity extends Activity implements OnClickListener {
 		mCheckLocation = (Button)findViewById(R.id.checkLocation);
 		mCheckLocation.setOnClickListener(this);
 		latlng = (TextView) findViewById(R.id.latlng); /* ONLY FOR DEBUGGING */
+		locationAddress = (TextView) findViewById(R.id.locationAddress);
 		
 		locationManager = (LocationManager) getSystemService(LOCATION_SERVICE); /* i am getting location services from location manager */
 		
@@ -150,38 +156,44 @@ public class CommentActivity extends Activity implements OnClickListener {
 				
 		if (provider == null || provider.equals("")) {
 			Toast.makeText(getBaseContext(), "No Provider Found",Toast.LENGTH_LONG).show(); /* shouldn't happen. */
+		} else {
+			
+			deviceLocation = locationManager.getLastKnownLocation(provider);
+			
+			 locationManager.requestLocationUpdates(provider, LOCATION_REFRESH_TIME,
+					 LOCATION_REFRESH_DISTANCE ,  new android.location.LocationListener() {
+						
+						@Override
+						public void onStatusChanged(String provider, int status, Bundle extras) {
+							// TODO handle
+							
+						}
+						
+						@Override
+						public void onProviderEnabled(String provider) {
+							// TODO handle
+							
+						}
+						
+						@Override
+						public void onProviderDisabled(String provider) {
+							
+							Toast.makeText(context, "Your provider" + provider + " is disabled ", Toast.LENGTH_LONG).show();
+							
+							/* TODO handle this */
+						}
+						
+						@Override
+						public void onLocationChanged(Location location) {
+							// TODO Auto-generated method stub
+							Toast.makeText(context, "onLocationChanged", Toast.LENGTH_LONG).show();
+							deviceLocation = location;
+						
+						}
+					});
 		}
-		/* AKO IMA PROBLEM mozhno e da e tuka so castiranjeto na lokacijata */
-		 locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, LOCATION_REFRESH_TIME,
-				 LOCATION_REFRESH_DISTANCE ,  new android.location.LocationListener() {
-					
-					@Override
-					public void onStatusChanged(String provider, int status, Bundle extras) {
-						// TODO handle
-						
-					}
-					
-					@Override
-					public void onProviderEnabled(String provider) {
-						// TODO handle
-						
-					}
-					
-					@Override
-					public void onProviderDisabled(String provider) {
-						
-						Toast.makeText(context, "Your provider" + provider + " is disabled ", Toast.LENGTH_LONG).show();
-						
-						/* TODO handle this */
-					}
-					
-					@Override
-					public void onLocationChanged(Location location) {
-						// TODO Auto-generated method stub
-						Toast.makeText(context, "onLocationChanged", Toast.LENGTH_LONG).show();
-						deviceLocation = location;
-					}
-				});
+		
+	
 	}
 
 	static final int REQUEST_IMAGE_CAPTURE = 1;
@@ -219,10 +231,10 @@ public class CommentActivity extends Activity implements OnClickListener {
 		
 		/* Variables */
 		dialogBuilder = new AlertDialog.Builder(this);
-		final String[] types = {"Obtain my location", "Add location"};
+		final String[] types = {"Obtain my location", "Add new location"};
 		
 		/* Process */
-		dialogBuilder.setTitle("Enter your location");
+		dialogBuilder.setTitle("Choose location");
 		
 		dialogBuilder.setPositiveButton(R.string.ok, new DialogInterface.OnClickListener() {
 			
@@ -232,10 +244,24 @@ public class CommentActivity extends Activity implements OnClickListener {
 				case 0:{
 					Log.d("&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&","Obtain your location");	
 					if (deviceLocation != null) {
-						double lat = deviceLocation.getLatitude();
-						double lng = deviceLocation.getLongitude();
+						 lat = deviceLocation.getLatitude();
+						 lng = deviceLocation.getLongitude();
 						latlng.setText("Latitude is: " + lat + " and longitude is " + lng);
-						/* save lat and lng in our database */
+						/* 001 HERE YOU GET THE LOCATION, SAVE IT IN YOUR EXTRAS */
+						
+						/* now we're using GeocoderTask again, to obtain */
+						GeocodingTask task = new GeocodingTask(context, new GeocoderAddressListener() {
+							
+							@Override
+							public void onAddressObtained(Address address) {
+								if (address != null) {
+									 locationAddress.setText("Location address is: " + address.getThoroughfare() + " " +  address.getFeatureName() + " "  + address.getPostalCode() + " " + address.getCountryName() );	
+								}
+								
+							}
+						});
+						
+						task.execute(new LatLng(lat, lng));
 						
 					} else {
 						Toast.makeText(context, "deviceLocation is null ", Toast.LENGTH_LONG).show();
@@ -245,26 +271,8 @@ public class CommentActivity extends Activity implements OnClickListener {
 				}
 				case 1:{
 					Log.d("&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&","Add new location");	
-					
-					/* SE OTVARA NOV DIALOG SO INPUT TEXT - JA PISHUVASH ADRESATA I TAA ADRESA SE BARA :) */
-					/* SAMO NE RABOTI SEGA RADI TOA SHTO NASHEVO AKTIVITY IMPLEMENTIRA ONLCLICKLISTENER, KJE GO SREDAM
-					 * POSLE RABOTA DENESKA, NA RABOTA :D */
-				/*	GeocodingTask task = new GeocodingTask(this,
-							new GeocoderAddressListener() {
-
-								@Override
-								public void onAddressObtained(Address address) {
-									if (address != null) {
-										
-									} else {
-									
-									}
-
-								}
-							});
-
-					task.execute("Skopje");*/
-					
+					addNewLocationDialog();
+					dialog.cancel();
 					break;
 				}
 				default:
@@ -299,7 +307,72 @@ public class CommentActivity extends Activity implements OnClickListener {
 		dialog.show();
 	}
 	
-	
+	/* if the user doesn't want to use its own location, but wants to type it in */
+	public void addNewLocationDialog(){
+		
+		/* Variables */
+		dialogBuilder = new AlertDialog.Builder(this);
+		
+		
+		/* Process */
+		dialogBuilder.setTitle("Enter new location");
+		addLocation = new EditText(this);
+		dialogBuilder.setView(addLocation);
+		dialogBuilder.setPositiveButton(R.string.ok, new DialogInterface.OnClickListener() {
+			
+			@Override
+			public void onClick(DialogInterface dialog, int which) {
+				/* so task manager-ot */
+				
+				Log.d("&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&","ON OKAY");	
+				GeocodingTask task = new GeocodingTask(context, new GeocoderAddressListener(){
+
+					@Override
+					public void onAddressObtained(Address address) {
+						Log.d("&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&","HALLO");	
+						if (address != null) { /* if address is not null we know it's the correct one, since that's
+						why we use GecodingTask.*/
+							Log.d("&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&","Address is not null.");	
+								 lat = address.getLatitude();
+								 lng = address.getLongitude();
+								 latlng.setText("Latitude is: " + lat + " and longitude is " + lng);
+								 locationAddress.setText("Location address is: " + address.getThoroughfare() + " " +  address.getFeatureName() + " "  + address.getPostalCode() + " " + address.getCountryName() );
+								/* 001 HERE YOU GET THE LOCATION, SAVE IT IN YOUR EXTRAS 
+								 * ti si go znaesh najdobro kodot, no mislam deka najubavo e na edno mesto
+								 * site podatoci da gi stavash, znachi da ne gi stavash tuka odma vo baza, tuku 
+								 * da apdejtirash ednash na kraj koga kje klikne POST, zasho mozhebi nekoj kje se
+								 * predomisli i kje saka da editne neshto i na sekoe editnuvanje kje pravish ista rabota
+								 * (valjda vaka ti e, jas samo pishuvam onaka :P zasho dosadnen mi e zhivotot pa i jas
+								 * sum dosadna) :P
+								 * */
+						} else {
+							/* 001 DALI MISLITE DEKA TREBA TUKA DA PRIMI OKEJ DA SE VRATI NAZAD I USTVARI DA NEMA
+							 * SETIRANO LOKCIJA, ISTO KAKO CANCEL, ILI DA ISKOCHI TOAST, MORASH DA VNESESH NESHTO,
+							 * - MENE MI E DA NE IMAME PREMNOGU TOAST-OVI NIZ CELATA APLIKACIJA, ZASHO GLEDAM DEKA
+							 * NEMA MNOGU VO NAJNOVIVE, MNOGU RETKO, ILI PA IM ISKACHA NESHTO OD GORE, MOZHEME
+							 * I TOA DA GO NAJDEME */
+						}
+						
+					}
+					
+				});
+				
+				task.execute(addLocation.getText().toString());
+				dialog.cancel();
+			}
+		});
+		
+		dialogBuilder.setNegativeButton(R.string.cancel, new DialogInterface.OnClickListener() {
+			
+			@Override
+			public void onClick(DialogInterface dialog, int which) {
+				dialog.cancel();
+			}
+		});
+
+		AlertDialog dialog = dialogBuilder.create();
+		dialog.show();
+	}
 	
 	@Override
 	public void onClick(View v) {

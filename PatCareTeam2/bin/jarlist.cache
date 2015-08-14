@@ -1,5 +1,7 @@
 # cache for current jar dependency. DO NOT EDIT.
 # format is <lastModified> <length> <SHA-1> <path>
 # Encoding is UTF-8
-1433522190478 1184450 e19387dc3b060af32f5401f84fbe246635256955 C:\Users\Kristijan\Documents\W9\appcompat_v7\libs\android-support-v4.jar
-1439335264722 1184450 e19387dc3b060af32f5401f84fbe246635256955 C:\Users\Kristijan\git\FINAL_PET_CARE1\FINAL_PET_CARE\PatCareTeam2\libs\android-support-v4.jar
+1439418007073 1184670 fde22d8d2ef6363324a3d79a1dd16c8645c25564 C:\Development\adt-bundle-windows-x86_64-20140702\sdk\extras\android\support\v7\appcompat\libs\android-support-v4.jar
+1439418023301 1184670 fde22d8d2ef6363324a3d79a1dd16c8645c25564 C:\Users\MARIN\Documents\GitHub\FINAL_PET_CARE\PatCareTeam2\libs\android-support-v4.jar
+1439360471777 586153 60d9ac18cb076738881c397f0d972fb207d90737 C:\Users\MARIN\Documents\GitHub\FINAL_PET_CARE\PatCareTeam2\libs\android-support-v7-appcompat.jar
+1439418007035 586153 60d9ac18cb076738881c397f0d972fb207d90737 C:\Development\adt-bundle-windows-x86_64-20140702\sdk\extras\android\support\v7\appcompat\libs\android-support-v7-appcompat.jar

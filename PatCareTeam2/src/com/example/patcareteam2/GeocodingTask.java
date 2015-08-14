@@ -25,19 +25,21 @@ public class GeocodingTask extends AsyncTask<Object, Void, Address> {
 	protected Address doInBackground(Object... params) {
 		
 		List <Address> addresses = null;
-		Address clickedAddress = null;
+		Address address = null;
 		
 		try {
 
-			if (params.length > 0) {
-				if (params[0] instanceof LatLng) {
+			if (params.length > 0) {	
+				if (params[0] instanceof LatLng) { 
 					// reverse geocoding - vnesuvam (latitude, longitude) coordinate.
+					Log.d("&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&","PARAMS[0] IS INSTANCE OF LATLNG");	
 					LatLng point = (LatLng) params[0];
 					addresses = gCoder.getFromLocation(point.latitude,
 							point.longitude, 1);
 					// 1 - max results : onaa adresa koja smeta GoogleMaps deka e najtochna.
 				} else if (params[0] instanceof String) {
 					// geocoding - vnesuvam adresa primerot so Skopje.
+					Log.d("&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&","PARAMS[0] IS INSTANCE OF STRING - ADDRESS ");	
 					addresses = gCoder.getFromLocationName((String) params[0],
 							1);
 				} else {
@@ -45,16 +47,22 @@ public class GeocodingTask extends AsyncTask<Object, Void, Address> {
 				}
 			}
 			
-			if (addresses != null && addresses.size() > 0) {
-				clickedAddress = addresses.get(0);
+			if (addresses != null) {
+				address = addresses.get(0);
 			}
 			
 		} catch (Exception ex) {
 			ex.printStackTrace();
 		}
 		
-		return clickedAddress;
+		return address;
 
 	}
 
+	@Override /* after doInBackground() */
+	protected void onPostExecute(Address result) {
+		super.onPostExecute(result);
+		listener.onAddressObtained(result);
+	}
+	
 }

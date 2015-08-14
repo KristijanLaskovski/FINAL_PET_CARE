@@ -1,0 +1,85 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context="com.example.patcareteam2.CommentActivity" >
+
+    <EditText
+        android:id="@+id/ETforEnteringCommnets"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/imageView1"
+        android:layout_marginLeft="16dp"
+        android:layout_toRightOf="@+id/imageView1"
+        android:ems="10"
+        android:hint="@string/stringForCommnet"
+        android:inputType="textMultiLine" >
+
+        <requestFocus />
+    </EditText>
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="14dp"
+        android:layout_marginTop="24dp"
+        android:src="@drawable/comment_image" />
+
+    <Button
+        android:id="@+id/btnPostComment"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="5dp"
+        android:layout_marginRight="6dp"
+        android:layout_marginTop="390dp"
+        android:background="@drawable/post_btn"
+        />
+
+    <ImageView
+        android:id="@+id/takenImage1"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/ETforEnteringCommnets"
+        android:layout_marginTop="27dp"
+        android:src="@drawable/camera" />
+
+    <Button
+        android:id="@+id/BtnTakeAPhoto"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignBaseline="@+id/btnPostComment"
+        android:layout_alignBottom="@+id/btnPostComment"
+        android:layout_toLeftOf="@+id/btnPostComment"
+        android:background="@drawable/photo_btn"
+        android:layout_marginRight="10dp"
+         android:layout_marginLeft="10dp"
+         />
+
+    <Button
+        android:id="@+id/checkLocation"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignBaseline="@+id/BtnTakeAPhoto"
+        android:layout_alignBottom="@+id/BtnTakeAPhoto"
+        android:layout_toLeftOf="@+id/BtnTakeAPhoto"
+        android:background="@drawable/location_btn" />
+
+    <TextView
+        android:id="@+id/latlng"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/checkLocation"
+        android:layout_alignLeft="@+id/imageView1"
+        android:layout_marginBottom="29dp"
+        android:layout_marginLeft="16dp"
+        android:text="Large Text"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+</RelativeLayout>
