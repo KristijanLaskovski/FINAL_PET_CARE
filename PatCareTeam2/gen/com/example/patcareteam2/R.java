@@ -2358,7 +2358,7 @@ containing a value of this type.
         public static final int abc_textfield_search_default_mtrl_alpha=0x7f020039;
         public static final int abc_textfield_search_material=0x7f02003a;
         public static final int bacground=0x7f02003b;
-        public static final int bacgroundpetcare=0x7f02003c;
+        public static final int backgroundpetcare=0x7f02003c;
         public static final int butn_post_normal=0x7f02003d;
         public static final int butn_post_over=0x7f02003e;
         public static final int camera=0x7f02003f;
@@ -2425,7 +2425,7 @@ containing a value of this type.
         public static final int take_photo_over=0x7f02007b;
     }
     public static final class id {
-        public static final int BtnTakeAPhoto=0x7f09006b;
+        public static final int BtnTakeAPhoto=0x7f09006c;
         public static final int ETforEnteringCommnets=0x7f090067;
         public static final int TVComment=0x7f09007c;
         public static final int TVtime=0x7f09007e;
@@ -2468,7 +2468,7 @@ containing a value of this type.
         public static final int buy_with_google=0x7f09001d;
         public static final int cancel_action=0x7f090086;
         public static final int cast_notification_id=0x7f090000;
-        public static final int checkLocation=0x7f09006c;
+        public static final int checkLocation=0x7f09006d;
         public static final int checkbox=0x7f09004f;
         public static final int chronometer=0x7f09008c;
         public static final int classic=0x7f09001f;
@@ -2505,12 +2505,12 @@ containing a value of this type.
         public static final int imageView1=0x7f090068;
         public static final int info=0x7f090090;
         public static final int lastName=0x7f090078;
-        public static final int latlng=0x7f09006d;
+        public static final int latlng=0x7f09006e;
         public static final int line1=0x7f09008a;
         public static final int line3=0x7f09008e;
         public static final int listMode=0x7f090023;
         public static final int list_item=0x7f090041;
-        public static final int locationAddress=0x7f09006e;
+        public static final int locationAddress=0x7f09006b;
         public static final int match_parent=0x7f090019;
         public static final int media_actions=0x7f090088;
         public static final int middle=0x7f090039;

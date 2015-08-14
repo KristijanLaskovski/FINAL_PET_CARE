@@ -1,7 +1,9 @@
 package com.example.patcareteam2;
 
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.io.InputStream;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
@@ -21,19 +23,27 @@ import android.app.AlertDialog;
 import android.app.AlertDialog.Builder;
 import android.app.DialogFragment;
 import android.app.ProgressDialog;
+import android.content.ComponentName;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.pm.PackageManager;
+import android.content.pm.ResolveInfo;
+import android.database.Cursor;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.graphics.Matrix;
 import android.location.Address;
 import android.location.Criteria;
 import android.location.Location;
 import android.location.LocationManager;
+import android.media.ExifInterface;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Environment;
+import android.os.Parcelable;
 import android.preference.PreferenceManager;
 import android.provider.MediaStore;
 import android.provider.Settings;
@@ -109,13 +119,10 @@ public class CommentActivity extends Activity implements OnClickListener {
 		setContentView(R.layout.activity_comment);
 		
 		insertedcomment=(EditText)findViewById(R.id.ETforEnteringCommnets);
-		
 		mSubmit = (Button)findViewById(R.id.btnPostComment);
 		mSubmit.setOnClickListener(this);
-		
 		mTakePhoto = (Button)findViewById(R.id.BtnTakeAPhoto);
 		mTakePhoto.setOnClickListener(this);
-		
 		mImageView=(ImageView)findViewById(R.id.takenImage1);
 		
 		/* location */
@@ -204,14 +211,14 @@ public class CommentActivity extends Activity implements OnClickListener {
 	        startActivityForResult(takePictureIntent, REQUEST_IMAGE_CAPTURE);
 	    }
 	}*/
-	@Override
-	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+//	@Override
+	//protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 	  /*  if (requestCode == REQUEST_IMAGE_CAPTURE && resultCode == RESULT_OK) {
 	        Bundle extras = data.getExtras();
 	        Bitmap imageBitmap = (Bitmap) extras.get("data");
 	        mImageView.setImageBitmap(imageBitmap);
 	    }*/
-		if (requestCode == REQUEST_TAKE_PHOTO && resultCode == RESULT_OK) {
+		/*if (requestCode == REQUEST_TAKE_PHOTO && resultCode == RESULT_OK) {
 			
 			Log.d("++++++++++++++++++++++++++++POMINAVME NA requestCode == REQUEST_TAKE_PHOTO ","Tuka  photoFile = createImageFile();");
 		      
@@ -224,8 +231,8 @@ public class CommentActivity extends Activity implements OnClickListener {
 			galleryAddPic();
 			mCurrentPhotoPath = null;
 		}
-		}
-	}
+		}*/
+//	}
 	int locationChoise = -1;
 	public void chooseLocationDialog(){
 		
@@ -382,7 +389,8 @@ public class CommentActivity extends Activity implements OnClickListener {
 			new PostComment().execute();
 			break;
 		case R.id.BtnTakeAPhoto:
-			dispatchTakePictureIntent();
+		//	dispatchTakePictureIntent();
+			openImageIntent();
 			Log.d("&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&","Tuka se povikuva kamerata");	
 			break;
 		case R.id.checkLocation:
@@ -401,94 +409,102 @@ public class CommentActivity extends Activity implements OnClickListener {
 	
 	//hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
 	
-	
-	String mCurrentPhotoPath;
+	private Uri outputFileUri;
+	static final int YOUR_SELECT_PICTURE_REQUEST_CODE = 1;
+	private void openImageIntent() {
 
-	private File createImageFile() throws IOException {
-	    // Create an image file name
-	    String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date());
-	    String imageFileName = "JPEG_" + timeStamp + "_";
-	    File storageDir = Environment.getExternalStoragePublicDirectory(
-	            Environment.DIRECTORY_PICTURES);
-	    File image = File.createTempFile(
-	        imageFileName,  /* prefix */
-	        ".jpg",         /* suffix */
-	        storageDir      /* directory */
-	    );
+	// Determine Uri of camera image to save.
+	final File root = new File(Environment.getExternalStorageDirectory() + File.separator + "MyDir" + File.separator);
+	root.mkdirs();
+	final String fname = "img_"+ System.currentTimeMillis() + ".jpg";
+	final File sdImageMainDirectory = new File(root, fname);
+	outputFileUri = Uri.fromFile(sdImageMainDirectory);
 
-	    // Save a file: path for use with ACTION_VIEW intents
-	    mCurrentPhotoPath = image.getAbsolutePath();
-	    return image;
+	    // Camera.
+	    final List<Intent> cameraIntents = new ArrayList<Intent>();
+	    final Intent captureIntent = new Intent(android.provider.MediaStore.ACTION_IMAGE_CAPTURE);
+	    final PackageManager packageManager = getPackageManager();
+	    final List<ResolveInfo> listCam = packageManager.queryIntentActivities(captureIntent, 0);
+	    for(ResolveInfo res : listCam) {
+	        final String packageName = res.activityInfo.packageName;
+	        final Intent intent = new Intent(captureIntent);
+	        intent.setComponent(new ComponentName(res.activityInfo.packageName, res.activityInfo.name));
+	        intent.setPackage(packageName);
+	    intent.putExtra(MediaStore.EXTRA_OUTPUT, outputFileUri);
+	        cameraIntents.add(intent);
+	    }
+
+	    // Filesystem.
+	    final Intent galleryIntent = new Intent();
+	    galleryIntent.setType("image/*");
+	    galleryIntent.setAction(Intent.ACTION_GET_CONTENT);
+
+	    // Chooser of filesystem options.
+	    final Intent chooserIntent = Intent.createChooser(galleryIntent, "Select Source");
+
+	    // Add the camera options.
+	    chooserIntent.putExtra(Intent.EXTRA_INITIAL_INTENTS, cameraIntents.toArray(new Parcelable[cameraIntents.size()]));
+
+	    startActivityForResult(chooserIntent, YOUR_SELECT_PICTURE_REQUEST_CODE);
 	}
-	
-	
-	static final int REQUEST_TAKE_PHOTO = 1;
 
-	private void dispatchTakePictureIntent() {
-	    Intent takePictureIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-	    // Ensure that there's a camera activity to handle the intent
-	    if (takePictureIntent.resolveActivity(getPackageManager()) != null) {
-	        // Create the File where the photo should go
-	        File photoFile = null;
-	        try {
-	            photoFile = createImageFile();
-	        	Log.d("YESSSSSSSSSSSSSSSSSSSSS","USPESNO  photoFile = createImageFile();");
-	  	      
+	@Override
+	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+	    if (resultCode == RESULT_OK) {
+	        if (requestCode == YOUR_SELECT_PICTURE_REQUEST_CODE) {
+	            final boolean isCamera;
+	            if (data == null) {
+	                isCamera = true;
+	            } else {
+	                final String action = data.getAction();
+	                if (action == null) {
+	                    isCamera = false;
+	                } else {
+	                    isCamera = action.equals(android.provider.MediaStore.ACTION_IMAGE_CAPTURE);
+	                }
+	            }
+
+	            Uri selectedImageUri;
+	            if (isCamera) {
+	                selectedImageUri = outputFileUri;
+	            } else {
+	                selectedImageUri = data == null ? null : data.getData();
+	            }
+	           /* Bitmap b=null;
+	            try {
+					 b=getCorrectlyOrientedImage(CommentActivity.this,selectedImageUri);
+				} catch (IOException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}*/
+	           // mImageView.setImageBitmap(b);
 	            
-	        } catch (IOException ex) {
-	            // Error occurred while creating the File
-	        	Log.d("ERORRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRR","Tuka  photoFile = createImageFile();");
-	        }
-	        // Continue only if the File was successfully created
-	        if (photoFile != null) {
-	            takePictureIntent.putExtra(MediaStore.EXTRA_OUTPUT,
-	                    Uri.fromFile(photoFile));
-	            startActivityForResult(takePictureIntent, REQUEST_TAKE_PHOTO);
+	          //  mImageView.setImageURI(selectedImageUri);
+	            Bitmap bitmap=null;
+	            try {
+					 bitmap = MediaStore.Images.Media.getBitmap(this.getContentResolver(), selectedImageUri);
+				} catch (FileNotFoundException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				} catch (IOException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+	            
+	          Bitmap resized = Bitmap.createScaledBitmap(bitmap, 1280, 720, true); 
+	            mImageView.setImageBitmap(resized);
+	       
+	            
 	        }
 	    }
 	}
 	
-	private void galleryAddPic() {
-	    Intent mediaScanIntent = new Intent(Intent.ACTION_MEDIA_SCANNER_SCAN_FILE);
-	    File f = new File(mCurrentPhotoPath);
-	    Uri contentUri = Uri.fromFile(f);
-	    mediaScanIntent.setData(contentUri);
-	    this.sendBroadcast(mediaScanIntent);
-	}
-	
-	
-	private void setPic() {
-	    // Get the dimensions of the View
-	    int targetW = mImageView.getWidth();
-	    int targetH = mImageView.getHeight();
 
-	    // Get the dimensions of the bitmap
-	    BitmapFactory.Options bmOptions = new BitmapFactory.Options();
-	    bmOptions.inJustDecodeBounds = true;
-	    BitmapFactory.decodeFile(mCurrentPhotoPath, bmOptions);
-	    int photoW = bmOptions.outWidth;
-	    int photoH = bmOptions.outHeight;
-
-	    // Determine how much to scale down the image
-	    int scaleFactor = Math.min(photoW/targetW, photoH/targetH);
-
-	    // Decode the image file into a Bitmap sized to fill the View
-	    bmOptions.inJustDecodeBounds = false;
-	    bmOptions.inSampleSize = scaleFactor;
-	    bmOptions.inPurgeable = true;
-
-	    Log.d(" ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^"," postvivame image View ");
-	    
-	    
-	    Bitmap bitmap = BitmapFactory.decodeFile(mCurrentPhotoPath, bmOptions);
-	    mImageView.setImageBitmap(bitmap);
-	}
-	
-	
-
-	
 	//hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
 	
+	//*********************************************************************************
+
+	//*********************************************************************************
 class PostComment extends AsyncTask<String, String, String> {
 		
         @Override

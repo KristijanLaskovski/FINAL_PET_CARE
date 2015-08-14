@@ -45,9 +45,9 @@
         android:id="@+id/takenImage1"
         android:layout_width="match_parent"
         android:layout_height="200dp"
+        android:layout_above="@+id/locationAddress"
         android:layout_alignParentRight="true"
         android:layout_below="@+id/ETforEnteringCommnets"
-        android:layout_marginTop="27dp"
         android:src="@drawable/camera" />
 
     <Button
@@ -72,23 +72,22 @@
         android:background="@drawable/location_btn" />
 
     <TextView
-        android:id="@+id/latlng"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/checkLocation"
-        android:layout_alignLeft="@+id/imageView1"
-        android:layout_marginBottom="29dp"
-        android:layout_marginLeft="16dp"
-        android:text="Large Text"
-        android:textAppearance="?android:attr/textAppearanceLarge" />
-
-    <TextView
         android:id="@+id/locationAddress"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_above="@+id/latlng"
         android:layout_alignLeft="@+id/imageView1"
         android:layout_marginBottom="14dp"
+        android:text="Large Text"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/latlng"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/checkLocation"
+        android:layout_alignLeft="@+id/locationAddress"
+        android:layout_marginBottom="16dp"
         android:text="Large Text"
         android:textAppearance="?android:attr/textAppearanceLarge" />
 

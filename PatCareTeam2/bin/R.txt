@@ -480,7 +480,7 @@ int drawable abc_textfield_search_activated_mtrl_alpha 0x7f020038
 int drawable abc_textfield_search_default_mtrl_alpha 0x7f020039
 int drawable abc_textfield_search_material 0x7f02003a
 int drawable bacground 0x7f02003b
-int drawable bacgroundpetcare 0x7f02003c
+int drawable backgroundpetcare 0x7f02003c
 int drawable butn_post_normal 0x7f02003d
 int drawable butn_post_over 0x7f02003e
 int drawable camera 0x7f02003f
@@ -545,7 +545,7 @@ int drawable shadow_button 0x7f020078
 int drawable shape 0x7f020079
 int drawable take_photo_normal 0x7f02007a
 int drawable take_photo_over 0x7f02007b
-int id BtnTakeAPhoto 0x7f09006b
+int id BtnTakeAPhoto 0x7f09006c
 int id ETforEnteringCommnets 0x7f090067
 int id TVComment 0x7f09007c
 int id TVtime 0x7f09007e
@@ -588,7 +588,7 @@ int id buy_now 0x7f09001c
 int id buy_with_google 0x7f09001d
 int id cancel_action 0x7f090086
 int id cast_notification_id 0x7f090000
-int id checkLocation 0x7f09006c
+int id checkLocation 0x7f09006d
 int id checkbox 0x7f09004f
 int id chronometer 0x7f09008c
 int id classic 0x7f09001f
@@ -625,12 +625,12 @@ int id image 0x7f09003f
 int id imageView1 0x7f090068
 int id info 0x7f090090
 int id lastName 0x7f090078
-int id latlng 0x7f09006d
+int id latlng 0x7f09006e
 int id line1 0x7f09008a
 int id line3 0x7f09008e
 int id listMode 0x7f090023
 int id list_item 0x7f090041
-int id locationAddress 0x7f09006e
+int id locationAddress 0x7f09006b
 int id match_parent 0x7f090019
 int id media_actions 0x7f090088
 int id middle 0x7f090039
