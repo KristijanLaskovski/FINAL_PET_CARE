@@ -45,4 +45,7 @@
     <string name="newLocation">add location</string>
 	<string name="ok">OK</string>
 	<string name="cancel">Cancel</string>
+	<string name="losttv">Lost pet</string>
+	<string name="foundtv">Found a pet</string>
+	<string name="sellgivetv">Sell a pet</string>
 </resources>

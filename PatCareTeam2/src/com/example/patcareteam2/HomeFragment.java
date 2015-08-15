@@ -13,14 +13,19 @@ import org.json.JSONObject;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.media.Image;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.util.Base64;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
@@ -32,6 +37,9 @@ public class HomeFragment extends  android.support.v4.app.ListFragment {
 	
     public HomeFragment(){}
      
+    
+    ImageView imslika;
+    
   //  ArrayAdapter<Comment> arrAdapterForComents;
   //  List<Comment> listForComments;
   ListView listViewOnHome;
@@ -52,7 +60,7 @@ public class HomeFragment extends  android.support.v4.app.ListFragment {
 	//private static final String READ_COMMENTS_URL = "http://192.168.1.130/webservice/comments.php";
 
 	// testing from a real server:
-	 private static final String READ_COMMENTS_URL = "http://www.petcarekl.com/webservice/comments.php";
+	 private static final String READ_COMMENTS_URL = "http://www.petcarekl.com/webservice/commentspc.php";
 
 	// JSON IDS:
 	private static final String TAG_SUCCESS = "success";
@@ -86,14 +94,8 @@ public class HomeFragment extends  android.support.v4.app.ListFragment {
             Bundle savedInstanceState) {
 
         View rootView = inflater.inflate(R.layout.fragment_home, container, false);
-        
-      /*  listForComments=new ArrayList<Comment>();
-		arrAdapterForComents=new CustumAdapter(getActivity().getApplicationContext(), listForComments);*/	
-		listViewOnHome=(ListView)rootView .findViewById(android.R.id.list);
-	/*	listViewOnHome.setAdapter(arrAdapterForComents);
-        */
+	    listViewOnHome=(ListView)rootView .findViewById(android.R.id.list);
 		btnAddAcommnet=(Button)rootView.findViewById(R.id.addComentBTN);
-  
 		btnAddAcommnet.setOnClickListener(new View.OnClickListener() {
 			
 			@Override
@@ -101,10 +103,6 @@ public class HomeFragment extends  android.support.v4.app.ListFragment {
 				
 				Intent i = new Intent(getActivity(),CommentActivity.class);
 				startActivity(i);
-				
-				
-				//Intent i=new Intent(getActivity(),CommentActivity.class);
-				//startActivityForResult(i,0);
 			}
 		});
 		
@@ -163,24 +161,26 @@ public class HomeFragment extends  android.support.v4.app.ListFragment {
 				String lastname = c.getString(TAG_LAST_NAME);
 				
 				
-
-				Log.d("&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&",firstname+ lastname+ title+"    "+content+"     "+username);
+				//############################################################################
+				String image = c.getString("image");
+		        //KIKO_LASKO  tuka ja dobivame slikta enkodirana kako golem strng :(
+				Log.d("ghfgh", image);
+				//Log.d("&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&",firstname+ lastname+ title+"    "+content+"     "+username);
 				
 				
 				// creating new HashMap
 				HashMap<String, String> map = new HashMap<String, String>();
-
 				map.put(TAG_TIME, title);
 				map.put(TAG_MESSAGE, content);
 				map.put(TAG_USERNAME, username);
 				map.put(TAG_FIRST_NAME, firstname);
 				map.put(TAG_LAST_NAME, lastname);
-
 				// adding HashList to ArrayList
 				mCommentList.add(map);
-
-				// annndddd, our JSON data is up to date same with our array
-				// list
+				
+				
+				
+				
 			}
 
 		} catch (JSONException e) {

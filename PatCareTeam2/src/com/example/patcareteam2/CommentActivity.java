@@ -1,5 +1,6 @@
 package com.example.patcareteam2;
 
+import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -32,6 +33,7 @@ import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
 import android.database.Cursor;
 import android.graphics.Bitmap;
+import android.graphics.Bitmap.CompressFormat;
 import android.graphics.BitmapFactory;
 import android.graphics.Matrix;
 import android.location.Address;
@@ -48,6 +50,8 @@ import android.preference.PreferenceManager;
 import android.provider.MediaStore;
 import android.provider.Settings;
 import android.support.v4.app.FragmentActivity;
+import android.support.v7.app.AppCompatActivity;
+import android.util.Base64;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -56,15 +60,24 @@ import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.widget.CompoundButton.OnCheckedChangeListener;
 
-public class CommentActivity extends Activity implements OnClickListener {
+
+
+public class CommentActivity extends AppCompatActivity implements OnClickListener {
 
 	EditText insertedcomment;
 	private Button  mSubmit;
 	private Button  mTakePhoto;
-	
+	private RadioGroup  rg;
+	Bitmap resized;
+	RadioButton rb;
+	private String rb_text;
+	private String imagedata;
 	/* location */
 	private Button  mCheckLocation;
 	private AlertDialog.Builder dialogBuilder; // reused
@@ -105,7 +118,7 @@ public class CommentActivity extends Activity implements OnClickListener {
    // private static final String POST_COMMENT_URL = "http://192.168.1.130/webservice/addcomment.php";
     
   //testing from a real server:
-    private static final String POST_COMMENT_URL = "http://www.petcarekl.com/webservice/addcomment.php";
+    private static final String POST_COMMENT_URL = "http://www.petcarekl.com/webservice/addcommentsimage.php";
     
     //ids
     private static final String TAG_SUCCESS = "success";
@@ -124,6 +137,24 @@ public class CommentActivity extends Activity implements OnClickListener {
 		mTakePhoto = (Button)findViewById(R.id.BtnTakeAPhoto);
 		mTakePhoto.setOnClickListener(this);
 		mImageView=(ImageView)findViewById(R.id.takenImage1);
+		
+		/*KIKO_COMMENTS   proba so radio button */
+		rb_text="Lost pet";
+		
+		 rg = (RadioGroup) findViewById(R.id.radioGroup1);
+		 rg.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+	            @Override
+	            public void onCheckedChanged(RadioGroup group, int checkedId) {
+	                RadioButton rb = (RadioButton) group.findViewById(checkedId);
+	                if(null!=rb && checkedId > -1){
+	                   // Toast.makeText(CommentActivity.this, rb.getText(), Toast.LENGTH_SHORT).show();
+	                	rb_text=(String) rb.getText();
+	                }
+
+	            }
+	        });
+		
+		
 		
 		/* location */
 		mCheckLocation = (Button)findViewById(R.id.checkLocation);
@@ -204,6 +235,9 @@ public class CommentActivity extends Activity implements OnClickListener {
 	}
 
 	static final int REQUEST_IMAGE_CAPTURE = 1;
+	
+
+	
 /*
 	private void dispatchTakePictureIntent() {
 	    Intent takePictureIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
@@ -470,16 +504,6 @@ public class CommentActivity extends Activity implements OnClickListener {
 	            } else {
 	                selectedImageUri = data == null ? null : data.getData();
 	            }
-	           /* Bitmap b=null;
-	            try {
-					 b=getCorrectlyOrientedImage(CommentActivity.this,selectedImageUri);
-				} catch (IOException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-				}*/
-	           // mImageView.setImageBitmap(b);
-	            
-	          //  mImageView.setImageURI(selectedImageUri);
 	            Bitmap bitmap=null;
 	            try {
 					 bitmap = MediaStore.Images.Media.getBitmap(this.getContentResolver(), selectedImageUri);
@@ -491,8 +515,15 @@ public class CommentActivity extends Activity implements OnClickListener {
 					e.printStackTrace();
 				}
 	            
-	          Bitmap resized = Bitmap.createScaledBitmap(bitmap, 1280, 720, true); 
-	            mImageView.setImageBitmap(resized);
+	            //Bitmap resized;
+	            ByteArrayOutputStream bytedata = new ByteArrayOutputStream();
+	            bitmap.compress(CompressFormat.JPEG, 100, bytedata);
+	            byte[] dataa = bytedata.toByteArray();
+	            imagedata = Base64.encodeToString(dataa, Base64.DEFAULT);
+	            
+	            
+	         // resized = Bitmap.createScaledBitmap(bitmap, 1280, 720, true); 
+	            mImageView.setImageBitmap(bitmap);
 	       
 	            
 	        }
@@ -536,8 +567,16 @@ class PostComment extends AsyncTask<String, String, String> {
             //tuka dodadov promena
             String post_fname = sp.getString("firstname", "anon");
             String post_lname= sp.getString("lastname", "anon");
+         
+            //Bitmap resized;
+         //   ByteArrayOutputStream bytedata = new ByteArrayOutputStream();
+         //   resized.compress(CompressFormat.JPEG, 100, bytedata);
+        //    byte[] data = bytedata.toByteArray();
+       //     String imagedata = Base64.encodeToString(data, Base64.DEFAULT);
+         
             
             try {
+            	
                 // Building Parameters
                 List<NameValuePair> params = new ArrayList<NameValuePair>();
                 params.add(new BasicNameValuePair("username", post_username));
@@ -546,6 +585,16 @@ class PostComment extends AsyncTask<String, String, String> {
                //tuka dodadov promena
                 params.add(new BasicNameValuePair("firstname", post_fname));
                 params.add(new BasicNameValuePair("lastname", post_lname));
+                //long i lat  lat, lng; 88888888888888888888888888888888888888888888888888888888888888888
+                String post_long = Double.toString(lng);
+                String post_lat = Double.toString(lat);
+                params.add(new BasicNameValuePair("longitude",post_long));
+                params.add(new BasicNameValuePair("latitude", post_lat));
+                //rb_text
+                params.add(new BasicNameValuePair("typecomment", rb_text));
+                params.add(new BasicNameValuePair("image", imagedata));
+                
+                
                 
                 
                 Log.d("request!", "starting");

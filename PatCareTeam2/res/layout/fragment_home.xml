@@ -5,18 +5,16 @@
     android:paddingLeft="0dp"
     android:background="#C2EEE5"
      >
+
     <ListView
         android:id="@android:id/list"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:listSelector="@android:color/transparent"
-		android:cacheColorHint="@android:color/transparent"
-		android:divider="@null"
-		android:dividerHeight="5dp"
-        
-         >
+        android:cacheColorHint="@android:color/transparent"
+        android:divider="@null"
+        android:dividerHeight="5dp"
+        android:listSelector="@android:color/transparent" >
 
     </ListView>
 
@@ -30,6 +28,9 @@
             android:layout_marginRight="10dp"
             android:layout_marginTop="390dp"
             android:background="@drawable/custom_button" />
+
+        
+     
  
 </RelativeLayout>
 
