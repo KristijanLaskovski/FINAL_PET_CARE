@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">PatCareTeam2</string>
+    <string name="app_name">Pat Care</string>
     <string name="title_section1">Home</string>
-    <string name="title_section2">Adopt a pet</string>
-    <string name="title_section3">Buy</string>
-    <string name="title_section4">Profile</string>
-    <string name="title_section5">Log out</string>
+    <string name="title_section2">Profile</string>
+    <string name="title_section3">Lost and Found pets</string>
+    <string name="title_section4">Adobt a pet</string>
+    <string name="title_section5">Give or sell a pet</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="action_example">Example action</string>
@@ -48,4 +48,6 @@
 	<string name="losttv">Lost pet</string>
 	<string name="foundtv">Found a pet</string>
 	<string name="sellgivetv">Sell a pet</string>
+	<string name="aboutustext">    \t We are people who care about animals and live for them. We made this application becouse we wanted to meke a faster way for owners of pets to get information about how to care for their pets, and if their pet is lost then to share it in this aplication with picture, location and if the want to find a home for abandoned pets.</string>
+	<string name="prodolzenieaboutus">With PetCare we provide also  tip for users how to take care for their pets and what to do in emergensies.</string>
 </resources>

@@ -592,7 +592,7 @@ class PostComment extends AsyncTask<String, String, String> {
                 params.add(new BasicNameValuePair("latitude", post_lat));
                 //rb_text
                 params.add(new BasicNameValuePair("typecomment", rb_text));
-                params.add(new BasicNameValuePair("image", imagedata));
+                params.add(new BasicNameValuePair("image", ""));
                 
                 
                 

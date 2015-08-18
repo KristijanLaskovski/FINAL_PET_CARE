@@ -1,10 +1,15 @@
 package com.example.patcareteam2;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import android.support.v7.app.ActionBarActivity;
 import android.app.Activity;
 import android.support.v7.app.ActionBar;
 import android.support.v4.app.Fragment;
-import android.support.v4.app.ActionBarDrawerToggle;
+//import android.support.v4.app.ActionBarDrawerToggle;
+
+import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.content.Intent;
@@ -98,10 +103,23 @@ public class NavigationDrawerFragment extends Fragment {
                 selectItem(position);
             }
         });
-        mDrawerListView.setAdapter(new ArrayAdapter<String>(
+        
+        
+        List dataList = new ArrayList();
+        dataList.add(new DrawerItem( getString(R.string.title_section1), R.drawable.homepetcareicon));
+        dataList.add(new DrawerItem(getString(R.string.title_section2), R.drawable.navbarprofile));
+        dataList.add(new DrawerItem(getString(R.string.title_section3), R.drawable.doglost));  
+        dataList.add(new DrawerItem(getString(R.string.title_section4), R.drawable.shoppet));
+        dataList.add(new DrawerItem(getString(R.string.title_section5), R.drawable.givepet));
+        
+        CustomDrawerAdapter  mDrawerAdapter = new CustomDrawerAdapter(getActivity(), R.layout.navdrawer_costum, dataList);
+        mDrawerListView.setAdapter(mDrawerAdapter);
+        
+        
+     /*   mDrawerListView.setAdapter(new ArrayAdapter<String>(
                 getActionBar().getThemedContext(),
-                android.R.layout.simple_list_item_1,
-                android.R.id.text1,
+               R.layout.navdrawer_costum,
+               R.id.navbartv,
                 new String[]{
                         getString(R.string.title_section1),
                         getString(R.string.title_section2),
@@ -110,6 +128,8 @@ public class NavigationDrawerFragment extends Fragment {
                         getString(R.string.title_section5)
                 }));
         mDrawerListView.setItemChecked(mCurrentSelectedPosition, true);
+       */
+        
         return mDrawerListView;
     }
 
@@ -141,8 +161,8 @@ public class NavigationDrawerFragment extends Fragment {
                 getActivity(),                    /* host Activity */
                 mDrawerLayout,                    /* DrawerLayout object */
                 R.drawable.ic_drawer,             /* nav drawer image to replace 'Up' caret */
-                R.string.navigation_drawer_open,  /* "open drawer" description for accessibility */
-                R.string.navigation_drawer_close  /* "close drawer" description for accessibility */
+                R.string.navigation_drawer_open /* "open drawer" description for accessibility */
+            //    R.string.navigation_drawer_close  /* "close drawer" description for accessibility */
         ) {
             @Override
             public void onDrawerClosed(View drawerView) {

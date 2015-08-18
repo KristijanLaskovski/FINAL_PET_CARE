@@ -3,18 +3,17 @@
 	xmlns:android="http://schemas.android.com/apk/res/android"
 	android:layout_width="match_parent"
 	android:layout_height="wrap_content"
-	android:paddingLeft="5dp"
-	android:paddingRight="5dp"
+	
 	android:descendantFocusability="beforeDescendants">
 
 	<LinearLayout
 		android:orientation="vertical"
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
-		android:paddingLeft="5dp"
+	
 		android:paddingTop="5dp"
 		android:paddingBottom="5dp"
-		android:paddingRight="5dp"
+	
 		android:background="@drawable/card_background_selector"
 		android:descendantFocusability="afterDescendants">
 
@@ -67,18 +66,50 @@
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:textColor="#222" />
 
-    <TextView
-        android:id="@+id/TVtime"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/TVComment"
-        android:layout_alignLeft="@+id/tvName"
-      
-        android:text="@string/timeTV"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:textColor="#222" />
-	       </RelativeLayout>
-	    
+    
+        <ImageView
+	        android:id="@+id/imageView1"
+	        android:layout_width="wrap_content"
+	        android:layout_height="190dp"
+	        android:src="@drawable/cutetamplate"
+	         android:layout_below="@+id/TVComment"
+	         />
 
+        <TextView
+            android:id="@+id/TVtime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/tvName"
+            android:layout_below="@+id/tvName"
+            android:text="@string/timeTV"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="#222" />
+    
+        
+         <ImageButton
+	        android:id="@+id/imageButton1"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:src="@drawable/locationbtnadd"
+	        android:background="@null"
+	        android:layout_below="@+id/imageView1"
+	        android:layout_marginLeft="5dp"
+	        
+	         />
+
+         <ImageButton
+             android:id="@+id/imageButton2"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_below="@+id/imageView1"
+             
+             android:layout_marginLeft="270dp"
+             
+             android:background="@null"
+             android:src="@drawable/calluser" />
+        
+	       </RelativeLayout>
+
+	   
 	</LinearLayout>
 </FrameLayout>
