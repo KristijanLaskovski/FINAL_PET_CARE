@@ -41,27 +41,9 @@ public class Register extends Activity  implements OnClickListener{
 	private Button  mRegister;
 	private ImageView profileimageview;
 	private String textofimage;
-	 // Progress Dialog
     private ProgressDialog pDialog;
- 
-    // JSON parser class
     JSONParser jsonParser = new JSONParser();
-    
-    //php register script
-    
-    //localhost :  
-    //testing on your device
-    //put your local ip instead,  on windows, run CMD > ipconfig
-    //or in mac's terminal type ifconfig and look for the ip under en0 or en1
-   // private static final String REGISTER_URL = "http://xxx.xxx.x.x:1234/webservice/register.php";
-    
-    //testing on Emulator:
-   // private static final String REGISTER_URL = "http://192.168.1.130/webservice/register.php";
-    
-  //testing from a real server:
     private static final String REGISTER_URL = "http://www.petcarekl.com/webservice/registernew.php";
-    
-    //ids
     private static final String TAG_SUCCESS = "success";
     private static final String TAG_MESSAGE = "message";
 	
@@ -75,7 +57,7 @@ public class Register extends Activity  implements OnClickListener{
 		pass = (EditText)findViewById(R.id.passwordRegister);
 		fname = (EditText)findViewById(R.id.firstname);
 		lname = (EditText)findViewById(R.id.lastName);
-		profileimageview=(ImageView)findViewById(R.id.profileimage);
+		profileimageview=(ImageView)findViewById(R.id.commentimage);
 		profileimageview.setClickable(true);
 		profileimageview.setOnClickListener(new View.OnClickListener() {
 		    @Override
@@ -188,7 +170,7 @@ class CreateUser extends AsyncTask<String, String, String> {
 
 
 
-//hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
+//_____________KIKO_COMMENTS___________________TAKE_AN_PROFILE_PICTURE_______________________
 
 private Uri outputFileUri;
 static final int YOUR_SELECT_PICTURE_REQUEST_CODE = 1;
@@ -297,11 +279,7 @@ protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 }
 
 
-//hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
-
-
-
-
+//_____________KIKO_COMMENTS___________________TAKE_AN_PROFILE_PICTURE_______________________
 
 
 

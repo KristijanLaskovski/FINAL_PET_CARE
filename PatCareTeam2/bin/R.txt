@@ -608,6 +608,7 @@ int id checkbox 0x7f09004f
 int id chronometer 0x7f09009a
 int id classic 0x7f09001f
 int id collapseActionView 0x7f090031
+int id commentimage 0x7f090067
 int id container 0x7f09007d
 int id contentPanel 0x7f090048
 int id custom 0x7f09004c
@@ -670,7 +671,6 @@ int id passwordRegister 0x7f090082
 int id production 0x7f090013
 int id profilFirstName 0x7f09008c
 int id profileLastName 0x7f09008b
-int id profileimage 0x7f090067
 int id progress_circular 0x7f090008
 int id progress_horizontal 0x7f090009
 int id radio 0x7f090051

@@ -66,24 +66,17 @@ public class ProfileFragment  extends android.support.v4.app.ListFragment implem
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
         Bundle savedInstanceState) {
-		View rootView = inflater.inflate(R.layout.fragment_comment, container, false);
+	  View rootView = inflater.inflate(R.layout.fragment_comment, container, false);
       firstname=(TextView)rootView.findViewById(R.id.profilFirstName);
       lastname=(TextView)rootView.findViewById(R.id.profileLastName);
       sp = PreferenceManager.getDefaultSharedPreferences(getActivity());
       String post_fname = sp.getString("firstname", "anon");
       String post_lname= sp.getString("lastname", "anon");
-      
       profileview=(ImageView)rootView.findViewById(R.id.ivkikolaskovski);
-      
-      //proba A slika ################################################################3
       String post_image= sp.getString("pimage", "anon");
       byte[] decodedByte = Base64.decode(post_image, Base64.DEFAULT);                     
-     Bitmap b = BitmapFactory.decodeByteArray(decodedByte, 0, decodedByte.length);
+      Bitmap b = BitmapFactory.decodeByteArray(decodedByte, 0, decodedByte.length);
       profileview.setImageBitmap(b);
-      //kiko_lasko coments #############################################################
-      
-      
-      
       firstname.setText(post_fname);
       lastname.setText(post_lname);
       listViewOnHome=(ListView)rootView .findViewById(android.R.id.list);
@@ -112,36 +105,7 @@ public class ProfileFragment  extends android.support.v4.app.ListFragment implem
 	}
 
 	public void updateJSONdata() {
-/*
-		mCommentList = new ArrayList<HashMap<String, String>>();
-		JSONParser jParser = new JSONParser();
-		JSONObject json = jParser.getJSONFromUrl(READ_COMMENTS_URL);
-		try {
-			mComments = json.getJSONArray(TAG_POSTS);
-			for (int i = 0; i < mComments.length(); i++) {
-				JSONObject c = mComments.getJSONObject(i);
-				String title = c.getString(TAG_TIME);
-				String content = c.getString(TAG_MESSAGE);
-				String username = c.getString(TAG_USERNAME);
-				String firstname = c.getString(TAG_FIRST_NAME);
-				String lastname = c.getString(TAG_LAST_NAME);
-				Log.d("&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&",firstname+ lastname+ title+"    "+content+"     "+username);
-				// creating new HashMap
-				HashMap<String, String> map = new HashMap<String, String>();
-				map.put(TAG_TIME, title);
-				map.put(TAG_MESSAGE, content);
-				map.put(TAG_USERNAME, username);
-				map.put(TAG_FIRST_NAME, firstname);
-				map.put(TAG_LAST_NAME, lastname);
-				// adding HashList to ArrayList
-				mCommentList.add(map);
-				// annndddd, our JSON data is up to date same with our array
-				// list
-			}
 
-		} catch (JSONException e) {
-			e.printStackTrace();
-		}*/
 	}
 	
 

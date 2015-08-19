@@ -2488,6 +2488,7 @@ containing a value of this type.
         public static final int chronometer=0x7f09009a;
         public static final int classic=0x7f09001f;
         public static final int collapseActionView=0x7f090031;
+        public static final int commentimage=0x7f090067;
         public static final int container=0x7f09007d;
         public static final int contentPanel=0x7f090048;
         public static final int custom=0x7f09004c;
@@ -2550,7 +2551,6 @@ containing a value of this type.
         public static final int production=0x7f090013;
         public static final int profilFirstName=0x7f09008c;
         public static final int profileLastName=0x7f09008b;
-        public static final int profileimage=0x7f090067;
         public static final int progress_circular=0x7f090008;
         public static final int progress_horizontal=0x7f090009;
         public static final int radio=0x7f090051;

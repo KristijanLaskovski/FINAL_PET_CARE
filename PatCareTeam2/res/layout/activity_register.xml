@@ -9,7 +9,7 @@
     tools:context="com.example.patcareteam2.Register" >
 
     <ImageView
-        android:id="@+id/profileimage"
+        android:id="@+id/commentimage"
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_centerHorizontal="true"

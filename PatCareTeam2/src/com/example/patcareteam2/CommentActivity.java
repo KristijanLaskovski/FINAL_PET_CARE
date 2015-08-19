@@ -71,6 +71,7 @@ import android.widget.CompoundButton.OnCheckedChangeListener;
 public class CommentActivity extends AppCompatActivity implements OnClickListener {
 
 	EditText insertedcomment;
+    ImageView mImageView;
 	private Button  mSubmit;
 	private Button  mTakePhoto;
 	private RadioGroup  rg;
@@ -78,7 +79,7 @@ public class CommentActivity extends AppCompatActivity implements OnClickListene
 	Bitmap resized;
 	RadioButton rb;
 	private String rb_text;
-	private String imagedata;
+
 	/* location */
 	private Button  mCheckLocation;
 	private AlertDialog.Builder dialogBuilder; // reused
@@ -102,26 +103,9 @@ public class CommentActivity extends AppCompatActivity implements OnClickListene
 	
 	 // Progress Dialog
     private ProgressDialog pDialog;
- 
-    ImageView mImageView;
     // JSON parser class
     JSONParser jsonParser = new JSONParser();
-    
-    //php add a comment script
-    
-    //localhost :  
-    //testing on your device
-    //put your local ip instead,  on windows, run CMD > ipconfig
-    //or in mac's terminal type ifconfig and look for the ip under en0 or en1
-   // private static final String POST_COMMENT_URL = "http://xxx.xxx.x.x:1234/webservice/addcomment.php";
-    
-    //testing on Emulator:
-   // private static final String POST_COMMENT_URL = "http://192.168.1.130/webservice/addcomment.php";
-    
-  //testing from a real server:
     private static final String POST_COMMENT_URL = "http://www.petcarekl.com/webservice/addcommentsimage.php";
-    
-    //ids
     private static final String TAG_SUCCESS = "success";
     private static final String TAG_MESSAGE = "message";
 	
@@ -234,40 +218,6 @@ public class CommentActivity extends AppCompatActivity implements OnClickListene
 		
 	
 	}
-
-	static final int REQUEST_IMAGE_CAPTURE = 1;
-	
-
-	
-/*
-	private void dispatchTakePictureIntent() {
-	    Intent takePictureIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-	    if (takePictureIntent.resolveActivity(getPackageManager()) != null) {
-	        startActivityForResult(takePictureIntent, REQUEST_IMAGE_CAPTURE);
-	    }
-	}*/
-//	@Override
-	//protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-	  /*  if (requestCode == REQUEST_IMAGE_CAPTURE && resultCode == RESULT_OK) {
-	        Bundle extras = data.getExtras();
-	        Bitmap imageBitmap = (Bitmap) extras.get("data");
-	        mImageView.setImageBitmap(imageBitmap);
-	    }*/
-		/*if (requestCode == REQUEST_TAKE_PHOTO && resultCode == RESULT_OK) {
-			
-			Log.d("++++++++++++++++++++++++++++POMINAVME NA requestCode == REQUEST_TAKE_PHOTO ","Tuka  photoFile = createImageFile();");
-		      
-		if (mCurrentPhotoPath != null) {
-			
-			
-			Log.d("***************************"," Vo IF sme vlezeni ");
-			
-			setPic();
-			galleryAddPic();
-			mCurrentPhotoPath = null;
-		}
-		}*/
-//	}
 	int locationChoise = -1;
 	public void chooseLocationDialog(){
 		
@@ -431,18 +381,12 @@ public class CommentActivity extends AppCompatActivity implements OnClickListene
 		case R.id.checkLocation:
 			chooseLocationDialog();
 			/* dialog box */
-			
 			break;
 		}
-		
-		
-		
-		
-		
-		
+
 	}
 	
-	//hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
+	//hhhhhhhhhhhhhhhhhhhhhhhhh__________KIKO_COMMENT____POST___PHOTO_______________hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
 	
 	private Uri outputFileUri;
 	static final int YOUR_SELECT_PICTURE_REQUEST_CODE = 1;
@@ -515,53 +459,19 @@ public class CommentActivity extends AppCompatActivity implements OnClickListene
 					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
-	            
-	            //Bitmap resized;
-	          //  ByteArrayOutputStream bytedata = new ByteArrayOutputStream();
-	          //  bitmap.compress(CompressFormat.JPEG, 100, bytedata);
-	          //  byte[] dataa = bytedata.toByteArray();
-	         //   imagedata = Base64.encodeToString(dataa, Base64.DEFAULT);
-	      
-	            
-	         // resized = Bitmap.createScaledBitmap(bitmap, 1280, 720, true); 
-	          //  mImageView.setImageBitmap(bitmap);
-	            
-	            
-	            
 	            ByteArrayOutputStream bytedata = new ByteArrayOutputStream();
-	            
-	        
-	            bitmap = Bitmap.createScaledBitmap( bitmap, 256, 256, false);
+	            bitmap = Bitmap.createScaledBitmap( bitmap, 512, 256, false);
 	            bitmap.compress(CompressFormat.JPEG, 100, bytedata);
-	           
 	            byte[] dataa = bytedata.toByteArray();
 	            image_comment_encoded= Base64.encodeToString(dataa, Base64.DEFAULT);
-	            
-	            
-	         // resized = Bitmap.createScaledBitmap(bitmap, 1280, 720, true); 
 	            mImageView.setImageBitmap(bitmap);
-	            
-	            
-	            
-	            
-	            
-	            
-	            
-	            
-	            
-	            
-	       
 	            
 	        }
 	    }
 	}
 	
-
-	//hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
+	//hhhhhhhhhhhhhhhhhhhhhhhhh__________KIKO_COMMENT____POST___PHOTO_______________hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
 	
-	//*********************************************************************************
-
-	//*********************************************************************************
 class PostComment extends AsyncTask<String, String, String> {
 		
         @Override
@@ -580,28 +490,16 @@ class PostComment extends AsyncTask<String, String, String> {
 			 // Check for success tag
             int success;
             
-            SimpleDateFormat sdf = new SimpleDateFormat("HH:mm");
-	           String currentDateandTime = sdf.format(new Date());
-            
+            SimpleDateFormat sdf = new SimpleDateFormat("HH:mm  MMM dd,yyyy");
+	        String currentDateandTime = sdf.format(new Date());
             String post_title =currentDateandTime ;
             String post_message = insertedcomment.getText().toString();
-            
-            //We need to change this:
             SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(CommentActivity.this);
             String post_username = sp.getString("username", "anon");
-           
-            //tuka dodadov promena
             String post_fname = sp.getString("firstname", "anon");
             String post_lname= sp.getString("lastname", "anon");
             String post_image_progile= sp.getString("pimage", "anon");
-         
-            //Bitmap resized;
-         //   ByteArrayOutputStream bytedata = new ByteArrayOutputStream();
-         //   resized.compress(CompressFormat.JPEG, 100, bytedata);
-        //    byte[] data = bytedata.toByteArray();
-       //     String imagedata = Base64.encodeToString(data, Base64.DEFAULT);
-         
-            
+
             try {
             	
                 // Building Parameters
@@ -609,15 +507,12 @@ class PostComment extends AsyncTask<String, String, String> {
                 params.add(new BasicNameValuePair("username", post_username));
                 params.add(new BasicNameValuePair("title", post_title));
                 params.add(new BasicNameValuePair("message", post_message));
-               //tuka dodadov promena
                 params.add(new BasicNameValuePair("firstname", post_fname));
                 params.add(new BasicNameValuePair("lastname", post_lname));
-                //long i lat  lat, lng; 88888888888888888888888888888888888888888888888888888888888888888
                 String post_long = Double.toString(lng);
                 String post_lat = Double.toString(lat);
                 params.add(new BasicNameValuePair("longitude",post_long));
                 params.add(new BasicNameValuePair("latitude", post_lat));
-                //rb_text
                 params.add(new BasicNameValuePair("typecomment", rb_text));
                 params.add(new BasicNameValuePair("image_c", image_comment_encoded));
                 params.add(new BasicNameValuePair("image_p", post_image_progile));
