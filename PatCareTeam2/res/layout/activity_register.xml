@@ -8,19 +8,34 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.patcareteam2.Register" >
 
-    <EditText
+    <ImageView
+        android:id="@+id/profileimage"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/registericon" />
+    
+    <RelativeLayout
+         android:layout_width="match_parent"
+    android:layout_height="300dp"
+    android:layout_marginTop="150dp"
+         >
+        
+         <EditText
         android:id="@+id/firstname"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
+       
         android:ems="10"
         android:hint="@string/firstname" >    <requestFocus />
     </EditText>
+  
+    
+    
     <EditText
         android:id="@+id/lastName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-          
         android:ems="10"
         android:hint="@string/lastName" 
         android:layout_below="@+id/firstname"/>
@@ -33,7 +48,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/lastName"
-      
         android:ems="10"
         android:hint="@string/emailhint" />
 
@@ -41,9 +55,7 @@
         android:id="@+id/passwordRegister"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-       
         android:layout_below="@+id/usernameRegister"
-        
         android:ems="10"
         android:hint="@string/passwordRegister"
         android:inputType="textPassword" />
@@ -56,5 +68,13 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="32dp"
         android:text="@string/btnRegistertext" />
+        
+        
+        
+    </RelativeLayout>
+    
+    
+   
 
+    
 </RelativeLayout>

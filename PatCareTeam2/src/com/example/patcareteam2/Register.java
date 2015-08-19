@@ -1,5 +1,9 @@
 package com.example.patcareteam2;
 
+import java.io.ByteArrayOutputStream;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import org.apache.http.NameValuePair;
@@ -8,8 +12,19 @@ import org.json.JSONException;
 import org.json.JSONObject;
 import android.app.Activity;
 import android.app.ProgressDialog;
+import android.content.ComponentName;
+import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.content.pm.ResolveInfo;
+import android.graphics.Bitmap;
+import android.graphics.Bitmap.CompressFormat;
+import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.os.Environment;
+import android.os.Parcelable;
+import android.provider.MediaStore;
+import android.util.Base64;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -17,13 +32,15 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 public class Register extends Activity  implements OnClickListener{
 	
 	private EditText user, pass,fname,lname;
 	private Button  mRegister;
-	
+	private ImageView profileimageview;
+	private String textofimage;
 	 // Progress Dialog
     private ProgressDialog pDialog;
  
@@ -42,7 +59,7 @@ public class Register extends Activity  implements OnClickListener{
    // private static final String REGISTER_URL = "http://192.168.1.130/webservice/register.php";
     
   //testing from a real server:
-    private static final String REGISTER_URL = "http://www.petcarekl.com/webservice/register.php";
+    private static final String REGISTER_URL = "http://www.petcarekl.com/webservice/registernew.php";
     
     //ids
     private static final String TAG_SUCCESS = "success";
@@ -58,8 +75,15 @@ public class Register extends Activity  implements OnClickListener{
 		pass = (EditText)findViewById(R.id.passwordRegister);
 		fname = (EditText)findViewById(R.id.firstname);
 		lname = (EditText)findViewById(R.id.lastName);
-		
-		
+		profileimageview=(ImageView)findViewById(R.id.profileimage);
+		profileimageview.setClickable(true);
+		profileimageview.setOnClickListener(new View.OnClickListener() {
+		    @Override
+		    public void onClick(View v) {
+		    	
+		    	openImageIntent();
+		    }
+		});
 
 		mRegister = (Button)findViewById(R.id.btnRegister);
 		mRegister.setOnClickListener(this);
@@ -119,6 +143,7 @@ class CreateUser extends AsyncTask<String, String, String> {
                 params.add(new BasicNameValuePair("password", password));
                 params.add(new BasicNameValuePair("firstname", firstname));
                 params.add(new BasicNameValuePair("lastname", lastname));
+                params.add(new BasicNameValuePair("profileimage", textofimage));
  
                 Log.d("request!", "starting");
                 
@@ -158,6 +183,148 @@ class CreateUser extends AsyncTask<String, String, String> {
         }
 		
 	}
+
+
+
+
+
+//hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
+
+private Uri outputFileUri;
+static final int YOUR_SELECT_PICTURE_REQUEST_CODE = 1;
+private void openImageIntent() {
+
+// Determine Uri of camera image to save.
+final File root = new File(Environment.getExternalStorageDirectory() + File.separator + "MyDir" + File.separator);
+root.mkdirs();
+final String fname = "img_"+ System.currentTimeMillis() + ".jpg";
+final File sdImageMainDirectory = new File(root, fname);
+outputFileUri = Uri.fromFile(sdImageMainDirectory);
+
+    // Camera.
+    final List<Intent> cameraIntents = new ArrayList<Intent>();
+    final Intent captureIntent = new Intent(android.provider.MediaStore.ACTION_IMAGE_CAPTURE);
+    final PackageManager packageManager = getPackageManager();
+    final List<ResolveInfo> listCam = packageManager.queryIntentActivities(captureIntent, 0);
+    for(ResolveInfo res : listCam) {
+        final String packageName = res.activityInfo.packageName;
+        final Intent intent = new Intent(captureIntent);
+        intent.setComponent(new ComponentName(res.activityInfo.packageName, res.activityInfo.name));
+        intent.setPackage(packageName);
+    intent.putExtra(MediaStore.EXTRA_OUTPUT, outputFileUri);
+        cameraIntents.add(intent);
+    }
+
+    // Filesystem.
+    final Intent galleryIntent = new Intent();
+    galleryIntent.setType("image/*");
+    galleryIntent.setAction(Intent.ACTION_GET_CONTENT);
+
+    // Chooser of filesystem options.
+    final Intent chooserIntent = Intent.createChooser(galleryIntent, "Select Source");
+
+    // Add the camera options.
+    chooserIntent.putExtra(Intent.EXTRA_INITIAL_INTENTS, cameraIntents.toArray(new Parcelable[cameraIntents.size()]));
+
+    startActivityForResult(chooserIntent, YOUR_SELECT_PICTURE_REQUEST_CODE);
+}
+
+@Override
+protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+    if (resultCode == RESULT_OK) {
+        if (requestCode == YOUR_SELECT_PICTURE_REQUEST_CODE) {
+            final boolean isCamera;
+            if (data == null) {
+                isCamera = true;
+            } else {
+                final String action = data.getAction();
+                if (action == null) {
+                    isCamera = false;
+                } else {
+                    isCamera = action.equals(android.provider.MediaStore.ACTION_IMAGE_CAPTURE);
+                }
+            }
+
+            Uri selectedImageUri;
+            if (isCamera) {
+                selectedImageUri = outputFileUri;
+            } else {
+                selectedImageUri = data == null ? null : data.getData();
+            }
+            Bitmap bitmap=null;
+            try {
+				 bitmap = MediaStore.Images.Media.getBitmap(this.getContentResolver(), selectedImageUri);
+			} catch (FileNotFoundException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+            
+            //Bitmap resized;
+           
+            int kolku_da_skrati_w=0;
+            int kolku_da_skrati_h=0;
+            if(bitmap.getWidth()>bitmap.getHeight()){
+            	  kolku_da_skrati_w=bitmap.getWidth()-bitmap.getHeight();
+            }else{
+                  kolku_da_skrati_h=bitmap.getHeight()-bitmap.getWidth();
+            }
+            
+            
+            
+            ByteArrayOutputStream bytedata = new ByteArrayOutputStream();
+            
+            Bitmap croppedBmp = Bitmap.createBitmap(bitmap, 0, 0, bitmap.getWidth()-kolku_da_skrati_w,bitmap.getHeight()-kolku_da_skrati_h);
+            
+            croppedBmp = Bitmap.createScaledBitmap(croppedBmp, 256, 256, false);
+            croppedBmp.compress(CompressFormat.JPEG, 100, bytedata);
+           
+            byte[] dataa = bytedata.toByteArray();
+            textofimage= Base64.encodeToString(dataa, Base64.DEFAULT);
+            
+            
+         // resized = Bitmap.createScaledBitmap(bitmap, 1280, 720, true); 
+            profileimageview.setImageBitmap(croppedBmp);
+       
+           
+            
+            
+            
+        }
+    }
+}
+
+
+//hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 	
 	
 }

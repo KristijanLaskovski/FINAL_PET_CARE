@@ -8,8 +8,8 @@
         
          <ImageView
         android:id="@+id/ivkikolaskovski"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
         android:layout_gravity="left"
         android:padding="5dp"
         android:src="@drawable/kikko" />

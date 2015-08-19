@@ -162,9 +162,11 @@ public class HomeFragment extends  android.support.v4.app.ListFragment {
 				
 				
 				//############################################################################
-				String image = c.getString("image");
+				String image_c = c.getString("image_c");
+				String image_p = c.getString("image_p");
+				String contact = c.getString("contact");
 		        //KIKO_LASKO  tuka ja dobivame slikta enkodirana kako golem strng :(
-				Log.d("ghfgh", image);
+				Log.d("ghfgh", image_c);
 				//Log.d("&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&",firstname+ lastname+ title+"    "+content+"     "+username);
 				
 				

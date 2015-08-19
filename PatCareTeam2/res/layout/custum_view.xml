@@ -68,7 +68,7 @@
 
     
         <ImageView
-	        android:id="@+id/imageView1"
+	        android:id="@+id/profileimage"
 	        android:layout_width="wrap_content"
 	        android:layout_height="190dp"
 	        android:src="@drawable/cutetamplate"
@@ -92,7 +92,7 @@
 	        android:layout_height="wrap_content"
 	        android:src="@drawable/locationbtnadd"
 	        android:background="@null"
-	        android:layout_below="@+id/imageView1"
+	        android:layout_below="@+id/profileimage"
 	        android:layout_marginLeft="5dp"
 	        
 	         />
@@ -101,7 +101,7 @@
              android:id="@+id/imageButton2"
              android:layout_width="wrap_content"
              android:layout_height="wrap_content"
-             android:layout_below="@+id/imageView1"
+             android:layout_below="@+id/profileimage"
              
              android:layout_marginLeft="270dp"
              

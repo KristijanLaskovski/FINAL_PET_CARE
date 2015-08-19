@@ -16,17 +16,21 @@ import android.app.ProgressDialog;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.SharedPreferences.Editor;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.util.Base64;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
@@ -38,6 +42,7 @@ public class ProfileFragment  extends android.support.v4.app.ListFragment implem
 	    TextView firstname,lastname;
 	    ListView listViewOnHome;
 	    Button btnAddAcommnet;
+	    ImageView profileview;
 		JSONParser jsonParser = new JSONParser();
 		private ProgressDialog pDialog;
 		private static final String READ_COMMENTS_PROFILE_URL = "http://www.petcarekl.com/webservice/profilecomments.php";
@@ -67,6 +72,18 @@ public class ProfileFragment  extends android.support.v4.app.ListFragment implem
       sp = PreferenceManager.getDefaultSharedPreferences(getActivity());
       String post_fname = sp.getString("firstname", "anon");
       String post_lname= sp.getString("lastname", "anon");
+      
+      profileview=(ImageView)rootView.findViewById(R.id.ivkikolaskovski);
+      
+      //proba A slika ################################################################3
+      String post_image= sp.getString("pimage", "anon");
+      byte[] decodedByte = Base64.decode(post_image, Base64.DEFAULT);                     
+     Bitmap b = BitmapFactory.decodeByteArray(decodedByte, 0, decodedByte.length);
+      profileview.setImageBitmap(b);
+      //kiko_lasko coments #############################################################
+      
+      
+      
       firstname.setText(post_fname);
       lastname.setText(post_lname);
       listViewOnHome=(ListView)rootView .findViewById(android.R.id.list);
@@ -159,6 +176,8 @@ public class ProfileFragment  extends android.support.v4.app.ListFragment implem
 
 			  SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(getActivity());
 	            String post_username = sp.getString("username", "anon");
+	            
+	          
 	            int success;
 	            mCommentList = new ArrayList<HashMap<String, String>>();
 	            

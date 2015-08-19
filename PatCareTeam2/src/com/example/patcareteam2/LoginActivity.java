@@ -158,6 +158,7 @@ public class LoginActivity extends Activity implements View.OnClickListener {
 					
 					String ime=json.getString(TAG_FIRST_NAME);
 					String prezime=json.getString(TAG_LAST_NAME);
+					String image=json.getString("profileimage");
 					
 					Log.d("*****************************************************************************************************************", ime+prezime);
 					//dotuka raboti i vraka ime i prezime tocno
@@ -168,12 +169,17 @@ public class LoginActivity extends Activity implements View.OnClickListener {
 					edit.putString("username", username);
 					edit.putString("firstname", ime);
 					edit.putString("lastname", prezime);
+			    	edit.putString("pimage", image);
 					edit.commit();
 					
 					
 					Intent i=new Intent("com.example.patcareteam2.MAINACTIVITY");
 					finish();
 					startActivity(i);
+					
+					Log.d("POSLE  PUT STRING I START ACTIVITYY!", "$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$");
+					
+					
 
 					return json.getString(TAG_MESSAGE);
 				} else {

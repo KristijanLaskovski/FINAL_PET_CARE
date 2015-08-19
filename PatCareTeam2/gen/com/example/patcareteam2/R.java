@@ -2424,19 +2424,20 @@ containing a value of this type.
         public static final int location_btn=0x7f02007a;
         public static final int locationbtnadd=0x7f02007b;
         public static final int navbarprofile=0x7f02007c;
-        public static final int notification_template_icon_bg=0x7f020089;
+        public static final int notification_template_icon_bg=0x7f02008a;
         public static final int photo_btn=0x7f02007d;
         public static final int post_btn=0x7f02007e;
         public static final int post_normal=0x7f02007f;
         public static final int post_over=0x7f020080;
         public static final int powered_by_google_dark=0x7f020081;
         public static final int powered_by_google_light=0x7f020082;
-        public static final int shadow=0x7f020083;
-        public static final int shadow_button=0x7f020084;
-        public static final int shape=0x7f020085;
-        public static final int shoppet=0x7f020086;
-        public static final int take_photo_normal=0x7f020087;
-        public static final int take_photo_over=0x7f020088;
+        public static final int registericon=0x7f020083;
+        public static final int shadow=0x7f020084;
+        public static final int shadow_button=0x7f020085;
+        public static final int shape=0x7f020086;
+        public static final int shoppet=0x7f020087;
+        public static final int take_photo_normal=0x7f020088;
+        public static final int take_photo_over=0x7f020089;
     }
     public static final class id {
         public static final int BtnTakeAPhoto=0x7f09006f;
@@ -2519,7 +2520,6 @@ containing a value of this type.
         public static final int image=0x7f09003f;
         public static final int imageButton1=0x7f090089;
         public static final int imageButton2=0x7f09008a;
-        public static final int imageView1=0x7f090067;
         public static final int imageView2=0x7f090069;
         public static final int imageView3=0x7f09006a;
         public static final int imageView4=0x7f09006b;
@@ -2550,6 +2550,7 @@ containing a value of this type.
         public static final int production=0x7f090013;
         public static final int profilFirstName=0x7f09008c;
         public static final int profileLastName=0x7f09008b;
+        public static final int profileimage=0x7f090067;
         public static final int progress_circular=0x7f090008;
         public static final int progress_horizontal=0x7f090009;
         public static final int radio=0x7f090051;

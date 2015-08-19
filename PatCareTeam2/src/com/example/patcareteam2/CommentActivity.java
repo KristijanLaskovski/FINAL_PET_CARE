@@ -74,6 +74,7 @@ public class CommentActivity extends AppCompatActivity implements OnClickListene
 	private Button  mSubmit;
 	private Button  mTakePhoto;
 	private RadioGroup  rg;
+	private String image_comment_encoded;
 	Bitmap resized;
 	RadioButton rb;
 	private String rb_text;
@@ -516,14 +517,39 @@ public class CommentActivity extends AppCompatActivity implements OnClickListene
 				}
 	            
 	            //Bitmap resized;
+	          //  ByteArrayOutputStream bytedata = new ByteArrayOutputStream();
+	          //  bitmap.compress(CompressFormat.JPEG, 100, bytedata);
+	          //  byte[] dataa = bytedata.toByteArray();
+	         //   imagedata = Base64.encodeToString(dataa, Base64.DEFAULT);
+	      
+	            
+	         // resized = Bitmap.createScaledBitmap(bitmap, 1280, 720, true); 
+	          //  mImageView.setImageBitmap(bitmap);
+	            
+	            
+	            
 	            ByteArrayOutputStream bytedata = new ByteArrayOutputStream();
+	            
+	        
+	            bitmap = Bitmap.createScaledBitmap( bitmap, 256, 256, false);
 	            bitmap.compress(CompressFormat.JPEG, 100, bytedata);
+	           
 	            byte[] dataa = bytedata.toByteArray();
-	            imagedata = Base64.encodeToString(dataa, Base64.DEFAULT);
+	            image_comment_encoded= Base64.encodeToString(dataa, Base64.DEFAULT);
 	            
 	            
 	         // resized = Bitmap.createScaledBitmap(bitmap, 1280, 720, true); 
 	            mImageView.setImageBitmap(bitmap);
+	            
+	            
+	            
+	            
+	            
+	            
+	            
+	            
+	            
+	            
 	       
 	            
 	        }
@@ -567,6 +593,7 @@ class PostComment extends AsyncTask<String, String, String> {
             //tuka dodadov promena
             String post_fname = sp.getString("firstname", "anon");
             String post_lname= sp.getString("lastname", "anon");
+            String post_image_progile= sp.getString("pimage", "anon");
          
             //Bitmap resized;
          //   ByteArrayOutputStream bytedata = new ByteArrayOutputStream();
@@ -592,9 +619,9 @@ class PostComment extends AsyncTask<String, String, String> {
                 params.add(new BasicNameValuePair("latitude", post_lat));
                 //rb_text
                 params.add(new BasicNameValuePair("typecomment", rb_text));
-                params.add(new BasicNameValuePair("image", ""));
-                
-                
+                params.add(new BasicNameValuePair("image_c", image_comment_encoded));
+                params.add(new BasicNameValuePair("image_p", post_image_progile));
+                params.add(new BasicNameValuePair("contact", "075713761"));
                 
                 
                 Log.d("request!", "starting");
