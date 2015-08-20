@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/backgroundpetcare"
-    android:orientation="vertical"
+   
     android:padding="10dp" >
 
      <TextView
@@ -16,57 +16,68 @@
          android:textAppearance="?android:attr/textAppearanceSmall"
          android:textColor="#ffffff" />
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center_horizontal"
-        android:text="@string/motostring2"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:textColor="#ffffff" />
-    
-   <EditText
-       android:id="@+id/etUsername"
-       android:layout_width="match_parent"
-       android:layout_height="wrap_content"
-       android:layout_marginTop="100dp"
-       android:gravity="center_vertical|center_horizontal"
-       android:hint="@string/emailhint"
-       android:textColor="#ffffff"
-       android:textColorHint="#ffffff" />
-
-    <EditText
-        android:id="@+id/etPassword"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center_vertical|center_horizontal"
-        android:hint="@string/password"
-        android:inputType="textPassword"
-        android:textColor="#ffffff"
-        android:textColorHint="#ffffff" />
-
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="right"
-        android:text="@string/login" 
-        android:id="@+id/btnLogin"
-       android:background="@drawable/shape"
-          android:textColor="#ffffff"
-           android:layout_marginTop="20dp"
-          
-        />
-
     <Button
         android:id="@+id/btnloginRegister"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/shape"
         android:text="@string/btnRegistertext" 
-        android:layout_marginTop="10dp"
+       
          android:textColor="#ffffff"
-        
+        android:layout_alignParentBottom="true"
         
         />
 
-</LinearLayout>
+    <Button
+        android:id="@+id/btnLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btnloginRegister"
+        android:layout_alignLeft="@+id/btnloginRegister"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/shape"
+        android:text="@string/login"
+        android:textColor="#ffffff" />
+
+    <EditText
+        android:id="@+id/etPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btnLogin"
+        android:layout_alignLeft="@+id/btnLogin"
+        android:layout_marginBottom="15dp"
+        android:ems="10"
+        android:gravity="center_vertical|center_horizontal"
+        android:hint="@string/password"
+        android:inputType="textPassword"
+        android:textColor="#ffffff"
+        android:textColorHint="#ffffff" >
+
+        <requestFocus />
+    </EditText>
+
+    <EditText
+        android:id="@+id/etUsername"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/etPassword"
+        android:layout_alignLeft="@+id/etPassword"
+        android:ems="10"
+        android:gravity="center_vertical|center_horizontal"
+        android:hint="@string/emailhint"
+        android:textColor="#ffffff"
+        android:textColorHint="#ffffff" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/latlng"
+        android:layout_alignLeft="@+id/latlng"
+        android:layout_marginBottom="17dp"
+        android:gravity="center_horizontal"
+        android:text="@string/motostring2"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="#ffffff" />
+
+</RelativeLayout>

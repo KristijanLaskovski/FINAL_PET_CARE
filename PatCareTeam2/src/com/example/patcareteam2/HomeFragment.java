@@ -22,7 +22,9 @@ import android.util.Base64;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -138,7 +140,9 @@ public class HomeFragment extends  android.support.v4.app.ListFragment {
         ListAdapter adapter=new CustumAdapterForComments(getActivity(), NEW_Comments);
 		ListView lv = getListView();	
 		lv.setAdapter(adapter);
-	/*	lv.setOnItemClickListener(new OnItemClickListener() {
+		
+		
+		/*lv.setOnItemClickListener(new OnItemClickListener() {
 
 			@Override
 			public void onItemClick(AdapterView<?> parent, View view,
@@ -149,7 +153,12 @@ public class HomeFragment extends  android.support.v4.app.ListFragment {
 				// it is useful to know in real life applications.
 
 			}
-		});*/
+		});
+		
+	*/
+		
+		
+		
 	}
 	
 	public class LoadComments extends AsyncTask<Void, Void, Boolean> {
