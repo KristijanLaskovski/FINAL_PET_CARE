@@ -25,12 +25,14 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
+import android.widget.Toast;
  
 public class HomeFragment extends  android.support.v4.app.ListFragment {
 
@@ -141,21 +143,18 @@ public class HomeFragment extends  android.support.v4.app.ListFragment {
 		ListView lv = getListView();	
 		lv.setAdapter(adapter);
 		
-		
-		/*lv.setOnItemClickListener(new OnItemClickListener() {
+		lv.setOnItemClickListener(new OnItemClickListener() {
 
-			@Override
+		
 			public void onItemClick(AdapterView<?> parent, View view,
 					int position, long id) {
-
-				// This method is triggered if an item is click within our
-				// list. For our example we won't be using this, but
-				// it is useful to know in real life applications.
+                //NE RABOTIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
+				Toast.makeText(getActivity(), position,Toast.LENGTH_SHORT).show();
 
 			}
 		});
 		
-	*/
+	
 		
 		
 		
@@ -187,8 +186,8 @@ public class HomeFragment extends  android.support.v4.app.ListFragment {
 			updateList();
 		}
 	}
-	
-	
+
+
 	
 	
 }

@@ -2423,22 +2423,24 @@ containing a value of this type.
         public static final int like=0x7f020079;
         public static final int location_btn=0x7f02007a;
         public static final int locationbtnadd=0x7f02007b;
-        public static final int navbarprofile=0x7f02007c;
-        public static final int notification_template_icon_bg=0x7f02008b;
-        public static final int photo_btn=0x7f02007d;
-        public static final int post_btn=0x7f02007e;
-        public static final int post_normal=0x7f02007f;
-        public static final int post_over=0x7f020080;
-        public static final int powered_by_google_dark=0x7f020081;
-        public static final int powered_by_google_light=0x7f020082;
-        public static final int registerbacground=0x7f020083;
-        public static final int registrationicon=0x7f020084;
-        public static final int shadow=0x7f020085;
-        public static final int shadow_button=0x7f020086;
-        public static final int shape=0x7f020087;
-        public static final int shoppet=0x7f020088;
-        public static final int take_photo_normal=0x7f020089;
-        public static final int take_photo_over=0x7f02008a;
+        public static final int locationbtnadd_over=0x7f02007c;
+        public static final int mapbtn=0x7f02007d;
+        public static final int navbarprofile=0x7f02007e;
+        public static final int notification_template_icon_bg=0x7f02008d;
+        public static final int photo_btn=0x7f02007f;
+        public static final int post_btn=0x7f020080;
+        public static final int post_normal=0x7f020081;
+        public static final int post_over=0x7f020082;
+        public static final int powered_by_google_dark=0x7f020083;
+        public static final int powered_by_google_light=0x7f020084;
+        public static final int registerbacground=0x7f020085;
+        public static final int registrationicon=0x7f020086;
+        public static final int shadow=0x7f020087;
+        public static final int shadow_button=0x7f020088;
+        public static final int shape=0x7f020089;
+        public static final int shoppet=0x7f02008a;
+        public static final int take_photo_normal=0x7f02008b;
+        public static final int take_photo_over=0x7f02008c;
     }
     public static final class id {
         public static final int BtnTakeAPhoto=0x7f09006f;
@@ -2482,7 +2484,7 @@ containing a value of this type.
         public static final int buyButton=0x7f090017;
         public static final int buy_now=0x7f09001c;
         public static final int buy_with_google=0x7f09001d;
-        public static final int callBtnContact=0x7f09008a;
+        public static final int callBtnContact=0x7f090089;
         public static final int cancel_action=0x7f090094;
         public static final int cast_notification_id=0x7f090000;
         public static final int checkLocation=0x7f090070;
@@ -2534,7 +2536,6 @@ containing a value of this type.
         public static final int listMode=0x7f090023;
         public static final int list_item=0x7f090041;
         public static final int locationAddress=0x7f090071;
-        public static final int locationShowBtn=0x7f090089;
         public static final int lostpet=0x7f090074;
         public static final int match_parent=0x7f090019;
         public static final int media_actions=0x7f090096;
@@ -2579,6 +2580,7 @@ containing a value of this type.
         public static final int showCustom=0x7f090027;
         public static final int showHome=0x7f090028;
         public static final int showTitle=0x7f090029;
+        public static final int showmapbtn=0x7f09008a;
         public static final int slide=0x7f090022;
         public static final int split_action_bar=0x7f090005;
         public static final int src_atop=0x7f09002d;
