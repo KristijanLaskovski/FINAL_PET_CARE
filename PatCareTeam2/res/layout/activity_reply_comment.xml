@@ -1,0 +1,71 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="320dp"
+    android:layout_height="700dp"
+    android:background="#ffffff"
+    tools:context="com.example.patcareteam2.ReplyComment" >
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="18dp"
+        android:layout_marginTop="15dp"
+        android:text="@string/writeacomment"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="#14ad72" />
+
+    <View
+        android:id="@+id/view1"
+        android:layout_width="fill_parent"
+        android:layout_height="2dp"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/textView1"
+        android:layout_marginTop="16dp"
+        android:background="#14ad72" />
+
+      <EditText
+          android:id="@+id/editText1"
+          android:layout_width="220dp"
+          android:layout_height="wrap_content"
+          android:layout_alignLeft="@+id/textView1"
+          android:layout_alignTop="@+id/view2"
+          android:layout_marginTop="14dp"
+          android:background="@null"
+          android:ems="10"
+          android:hint="@string/replaycommentt" >
+
+          <requestFocus />
+      </EditText>
+
+      <View
+          android:id="@+id/view2"
+          android:layout_width="fill_parent"
+          android:layout_height="2dp"
+          android:layout_alignParentBottom="true"
+          android:layout_alignParentLeft="true"
+          android:layout_marginBottom="241dp"
+          android:background="#14ad72" />
+
+      <Button
+          android:id="@+id/button1"
+          android:layout_width="40dp"
+          android:layout_height="40dp"
+          android:layout_alignBaseline="@+id/editText1"
+          android:layout_alignBottom="@+id/editText1"
+          android:layout_marginLeft="28dp"
+          android:layout_toRightOf="@+id/editText1"
+          android:background="@drawable/custum_send_replay" />
+
+      <ListView
+          android:id="@+id/listView1"
+          android:layout_width="match_parent"
+          android:layout_height="380dp"
+          android:layout_alignParentLeft="true"
+          android:layout_below="@+id/view1" >
+
+      </ListView>
+
+</RelativeLayout>

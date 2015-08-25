@@ -9,6 +9,8 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import com.example.patcareteam2.CustumAdapterForComments.ReplayOnCommentInterface;
+
 
 
 import android.app.ProgressDialog;
@@ -34,7 +36,7 @@ import android.widget.ListView;
 import android.widget.SimpleAdapter;
 import android.widget.Toast;
  
-public class HomeFragment extends  android.support.v4.app.ListFragment {
+public class HomeFragment extends  android.support.v4.app.ListFragment implements ReplayOnCommentInterface {
 
     public HomeFragment(){
     	
@@ -84,7 +86,21 @@ public class HomeFragment extends  android.support.v4.app.ListFragment {
         return rootView;
     }
 	
+	@Override
+	public void startActivityForReplayComent() {
+		// TODO Auto-generated method stub
+		ReplayOnComment();
+	}
 
+	public void ReplayOnComment(){
+		Intent i = new Intent(getActivity(), ReplyComment.class);
+		startActivity(i);
+	}
+	
+	
+	
+	
+	
 	@Override
 	public void onResume() {
 		// TODO Auto-generated method stub
@@ -139,7 +155,11 @@ public class HomeFragment extends  android.support.v4.app.ListFragment {
 	 * Inserts the parsed data into the listview.
 	 */
 	private void updateList() {
-        ListAdapter adapter=new CustumAdapterForComments(getActivity(), NEW_Comments);
+		CustumAdapterForComments adapter=new CustumAdapterForComments(getActivity(), NEW_Comments);
+        
+		adapter.setCallback(this);
+        
+        
 		ListView lv = getListView();	
 		lv.setAdapter(adapter);
 		
@@ -186,6 +206,7 @@ public class HomeFragment extends  android.support.v4.app.ListFragment {
 			updateList();
 		}
 	}
+
 
 
 	

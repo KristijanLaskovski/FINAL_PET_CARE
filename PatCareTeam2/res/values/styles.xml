@@ -45,7 +45,13 @@ parent="@style/Widget.AppCompat.ActionBar.TabText">
 </style>
     
     
-    
+    <style name="myDialog" parent="android:style/Theme.Dialog">
+   <item name="android:windowNoTitle">true</item>
+   <item name="@android:background">@android:color/white</item>
+    <item name="@android:textColor">@android:color/primary_text_light</item> 
+     <item name="android:windowMinWidthMajor">97%</item>
+    <item name="android:windowMinWidthMinor">97%</item>
+    </style>
     
     
     

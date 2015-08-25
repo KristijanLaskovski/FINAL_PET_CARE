@@ -81,22 +81,21 @@
             android:textAppearance="?android:attr/textAppearanceSmall"
             android:textColor="#222" />
 
-         <ImageButton
-             android:id="@+id/callBtnContact"
-             android:layout_width="wrap_content"
-             android:layout_height="wrap_content"
-             android:layout_below="@+id/commentimage"
-             android:layout_marginLeft="70dp"
-             android:background="@null"
-             android:src="@drawable/calluser" />
-
          <Button
              android:id="@+id/showmapbtn"
              android:layout_width="40dp"
              android:layout_height="40dp"
              android:layout_alignLeft="@+id/TVComment"
-             android:layout_alignTop="@+id/callBtnContact"
+             android:layout_below="@+id/commentimage"
              android:background="@drawable/mapbtn" />
+
+         <Button
+             android:id="@+id/btnreplayComment"
+             android:layout_width="40dp"
+             android:layout_height="40dp"
+             android:layout_alignTop="@+id/showmapbtn"
+             android:layout_toRightOf="@+id/ivkikolaskovski"
+             android:background="@drawable/custum_button_comment" />
         
 	       </RelativeLayout>
 

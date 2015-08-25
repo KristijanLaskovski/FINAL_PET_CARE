@@ -22,11 +22,25 @@ import android.widget.Toast;
 public class CustumAdapterForComments extends ArrayAdapter<CommentItem> {
 
 	ArrayList<CommentItem> comments;
+	Context mContext;
+	ReplayOnCommentInterface callBack;
+	
+	   public interface ReplayOnCommentInterface{
+	    	 public void startActivityForReplayComent();
+	    		 
+	    	 
+	     }
+	     
+	     public void setCallback(ReplayOnCommentInterface callback){
+
+	         this.callBack = callback;
+	     }
 	
 	
     public CustumAdapterForComments(Context context, ArrayList<CommentItem> comments) {
         super(context,R.layout.custum_view, comments);
         this.comments=comments;
+        this.mContext=context;
      }
 
     
@@ -64,6 +78,7 @@ public class CustumAdapterForComments extends ArrayAdapter<CommentItem> {
     	        viewHolder.img_profile=(ImageView)convertView.findViewById(R.id.ivkikolaskovski);
     	        viewHolder.img_comment=(ImageView)convertView.findViewById(R.id.commentimage);
     	        viewHolder.btnShowLocation=(Button)convertView.findViewById(R.id.showmapbtn);
+    	        viewHolder.btnReplayComment=(Button)convertView.findViewById(R.id.btnreplayComment);
     	        
     	        convertView.setTag(viewHolder);
     	    }else{
@@ -102,20 +117,28 @@ public class CustumAdapterForComments extends ArrayAdapter<CommentItem> {
 	//se nadevam deka ot tuka nekako mozi da se startuva activite  za prikaz na mapata eve tuka jas ke probam da gi stavam vo tast
 						// langitude i latitude 
 						
-						Toast.makeText(getContext(),comment.getLangitude()+"  "+comment.getLongitude(), Toast.LENGTH_SHORT).show();
-						
-						
-						
+						Toast.makeText(getContext(),comment.getLangitude()+"  "+comment.getLongitude(), Toast.LENGTH_SHORT).show();	
 //KIKO_KOMENTS _____________________________________________________________________________________________________________________________________
 											
 					}
 				}) ;
+    	        viewHolder.btnReplayComment.setOnClickListener(new OnClickListener() {
+					
+    	  					@Override
+    	  					public void onClick(View v) {
+ 					
+    	  						//((HomeFragment)mContext).ReplayOnComment();
+    	  		//((MainActivity)mContext).rep
+    	  						callBack.startActivityForReplayComent();
+    	  					}
+    	  				}) ;
+    	        
+    	        
+    	        
+    	        
     	    }
-    	    
     	
-
-    	  //KIKO_KOMENTS _________________NEZNAM_DALI_TUKA _AKO_SAKAME_DA_PRAVIME_DA_SE_PRIKAZI_AKTIVITITO_KAKO_NA_FB__________________________________________________________________________________________________________________
-    				
+//KIKO_KOMENTS _________________NEZNAM_DALI_TUKA _AKO_SAKAME_DA_PRAVIME_DA_SE_PRIKAZI_AKTIVITITO_KAKO_NA_FB__________________________________________________________________________________________________________________		
 		convertView.setOnClickListener(new OnClickListener() {
 			
 			@Override
@@ -150,7 +173,11 @@ public class CustumAdapterForComments extends ArrayAdapter<CommentItem> {
          TextView tvComment;
          Button btnShowLocation;
          Button btnCallContact;
+         Button btnReplayComment;
      }
+     
+     
+  
      
  
      

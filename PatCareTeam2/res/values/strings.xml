@@ -43,11 +43,15 @@
     <string name="loc">Plc</string>
     <string name="myLocation">obtain my location</string>
     <string name="newLocation">add location</string>
-	<string name="ok">OK</string>
-	<string name="cancel">Cancel</string>
-	<string name="losttv">Lost pet</string>
-	<string name="foundtv">Found a pet</string>
-	<string name="sellgivetv">Sell a pet</string>
-	<string name="aboutustext">    \t We are people who care about animals and live for them. We made this application becouse we wanted to meke a faster way for owners of pets to get information about how to care for their pets, and if their pet is lost then to share it in this aplication with picture, location and if the want to find a home for abandoned pets.</string>
-	<string name="prodolzenieaboutus">With PetCare we provide also  tip for users how to take care for their pets and what to do in emergensies.</string>
+    <string name="ok">OK</string>
+    <string name="cancel">Cancel</string>
+    <string name="losttv">Lost pet</string>
+    <string name="foundtv">Found a pet</string>
+    <string name="sellgivetv">Sell a pet</string>
+    <string name="aboutustext">    \t We are people who care about animals and live for them. We made this application becouse we wanted to meke a faster way for owners of pets to get information about how to care for their pets, and if their pet is lost then to share it in this aplication with picture, location and if the want to find a home for abandoned pets.</string>
+    <string name="prodolzenieaboutus">With PetCare we provide also  tip for users how to take care for their pets and what to do in emergensies.</string>
+    <string name="title_activity_reply_comment">ReplyComment</string>
+    <string name="writeacomment">Write a comment</string>
+    <string name="replaycommentt">Enter text here..</string>
+
 </resources>

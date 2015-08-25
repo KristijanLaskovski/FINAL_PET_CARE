@@ -92,6 +92,7 @@ public class MainActivity extends ActionBarActivity implements
 	            break;
 	        case 5:
 	        	mTitle = getString(R.string.title_section5);
+	        	fragment=new BuyFragment();
 	            break;
 	        default:
 	            break;
