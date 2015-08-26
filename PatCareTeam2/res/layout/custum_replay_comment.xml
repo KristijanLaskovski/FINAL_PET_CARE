@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content"
+	android:descendantFocusability="beforeDescendants">
+
+	<LinearLayout
+		android:orientation="vertical"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:paddingTop="5dp"
+		android:paddingBottom="5dp"
+		android:background="@drawable/card_background_selector"
+		android:descendantFocusability="afterDescendants">
+
+		<RelativeLayout
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+		    android:descendantFocusability="afterDescendants" >
+
+		    <ImageView
+		        android:id="@+id/replayImage"
+		        android:layout_width="40dp"
+		        android:layout_height="40dp"
+		        android:layout_alignParentLeft="true"
+		        android:layout_alignParentTop="true"
+		        android:layout_marginLeft="5dp"
+		        android:layout_marginTop="5dp"
+		        android:src="@drawable/kikko" />
+
+		    <TextView
+		        android:id="@+id/replayName"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_alignTop="@+id/replayImage"
+		        android:layout_marginLeft="19dp"
+		        android:layout_toRightOf="@+id/replayImage"
+		        android:text="@string/firstname"
+		        android:textAppearance="?android:attr/textAppearanceMedium"
+		        android:textColor="#222" />
+
+		    <TextView
+		        android:id="@+id/replayLastName"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_alignBottom="@+id/replayName"
+		        android:layout_marginLeft="18dp"
+		        android:layout_toRightOf="@+id/replayName"
+		        android:text="@string/lastName"
+		        android:textAppearance="?android:attr/textAppearanceMedium"
+		        android:textColor="#222" />
+
+		    <TextView
+		        android:id="@+id/replayTime"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_alignLeft="@+id/replayName"
+		        android:layout_below="@+id/replayName"
+		        android:text="@string/timeTV"
+		        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+		</RelativeLayout>
+
+		<TextView
+		    android:id="@+id/replayComment"
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+		    android:layout_margin="6dp"
+		    android:text="@string/stringForCommnet"
+		    android:textAppearance="?android:attr/textAppearanceSmall"
+		    android:textColor="#222" />
+
+</LinearLayout>
+
+</FrameLayout>
+
+
