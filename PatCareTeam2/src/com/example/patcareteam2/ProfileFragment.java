@@ -72,7 +72,7 @@ public class ProfileFragment  extends android.support.v4.app.ListFragment implem
       sp = PreferenceManager.getDefaultSharedPreferences(getActivity());
       String post_fname = sp.getString("firstname", "anon");
       String post_lname= sp.getString("lastname", "anon");
-      profileview=(ImageView)rootView.findViewById(R.id.ivkikolaskovski);
+      profileview=(ImageView)rootView.findViewById(R.id.replayImage);
       String post_image= sp.getString("pimage", "anon");
       byte[] decodedByte = Base64.decode(post_image, Base64.DEFAULT);                     
       Bitmap b = BitmapFactory.decodeByteArray(decodedByte, 0, decodedByte.length);

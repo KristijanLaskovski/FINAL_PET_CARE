@@ -32,7 +32,7 @@
             android:value="AIzaSyCAN7HNP1aCJrDNHcLe-9POC8ar1lXqXls" />
         <!--
             <meta-data android:name="com.google.android.gms.version"
-    		android:value="@integer/google_play_services_version" />
+    		android:value="@integer/google_play_services_version" />
         -->
 
         <activity
@@ -89,12 +89,19 @@
         <activity
             android:name=".ReplyComment"
             android:label="@string/title_activity_reply_comment"
-            android:theme="@style/myDialog"
-            android:screenOrientation="portrait">
-             <intent-filter>
+            android:screenOrientation="portrait"
+            android:theme="@style/myDialog" >
+            <intent-filter>
                 <action android:name="com.example.patcareteam2.REPLYCOMMENT" />
+
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
+        </activity>
+        <activity
+            android:name=".CommentsOnPost"
+            android:label="@string/title_activity_comments_on_post"
+             android:screenOrientation="portrait"
+             >
         </activity>
     </application>
 

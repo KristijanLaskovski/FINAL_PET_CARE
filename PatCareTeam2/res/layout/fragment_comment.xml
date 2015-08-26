@@ -7,7 +7,7 @@
         
         
          <ImageView
-        android:id="@+id/ivkikolaskovski"
+        android:id="@+id/replayImage"
         android:layout_width="150dp"
         android:layout_height="150dp"
         android:layout_gravity="left"
@@ -18,7 +18,7 @@
             android:id="@android:id/list"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/ivkikolaskovski" >
+            android:layout_below="@+id/replayImage" >
 
 </ListView>
 
@@ -27,7 +27,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/profilFirstName"
-            android:layout_toRightOf="@+id/ivkikolaskovski"
+            android:layout_toRightOf="@+id/replayImage"
             android:text="@string/lastName"
             android:textAppearance="?android:attr/textAppearanceLarge" />
 

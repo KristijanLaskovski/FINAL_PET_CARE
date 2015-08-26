@@ -53,5 +53,6 @@
     <string name="title_activity_reply_comment">ReplyComment</string>
     <string name="writeacomment">Write a comment</string>
     <string name="replaycommentt">Enter text here..</string>
+    <string name="title_activity_comments_on_post">CommentsOnPost</string>
 
 </resources>

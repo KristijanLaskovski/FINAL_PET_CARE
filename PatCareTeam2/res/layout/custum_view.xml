@@ -14,91 +14,109 @@
 		android:background="@drawable/card_background_selector"
 		android:descendantFocusability="afterDescendants">
 
-	    <RelativeLayout 
-	    android:layout_width="match_parent"
-		android:layout_height="wrap_content"
-		android:descendantFocusability="afterDescendants"
-		 >
-	        
-	    <ImageView
-        android:id="@+id/ivkikolaskovski"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginLeft="5dp"
-        android:layout_marginTop="5dp"
-        android:src="@drawable/kikko" />
+		<RelativeLayout
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+		    android:descendantFocusability="afterDescendants" >
 
-    <TextView
-        android:id="@+id/tvName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/ivkikolaskovski"
-        android:layout_marginLeft="18dp"
-        android:layout_toRightOf="@+id/ivkikolaskovski"
-        android:text="@string/nameTV"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:textColor="#222" />
+		    <ImageView
+		        android:id="@+id/replayImage"
+		        android:layout_width="60dp"
+		        android:layout_height="60dp"
+		        android:layout_alignParentLeft="true"
+		        android:layout_alignParentTop="true"
+		        android:layout_marginLeft="5dp"
+		        android:layout_marginTop="5dp"
+		        android:src="@drawable/kikko" />
 
-    <TextView
-        android:id="@+id/TVComment"
-      android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/ivkikolaskovski"
-        android:layout_below="@+id/ivkikolaskovski"
-     
-        android:text="@string/tvComment"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:textColor="#222"/>
+		    <TextView
+		        android:id="@+id/tvName"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_alignTop="@+id/replayImage"
+		        android:layout_marginLeft="18dp"
+		        android:layout_toRightOf="@+id/replayImage"
+		        android:text="@string/nameTV"
+		        android:textAppearance="?android:attr/textAppearanceLarge"
+		        android:textColor="#222" />
 
-    <TextView
-        android:id="@+id/etLastName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/tvName"
-        android:layout_alignBottom="@+id/tvName"
-        android:layout_toRightOf="@+id/tvName"
-        android:paddingLeft="5dp"
-        android:text="@string/lname"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:textColor="#222" />
+		    <TextView
+		        android:id="@+id/TVComment"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_alignLeft="@+id/replayImage"
+		        android:layout_below="@+id/replayImage"
+		        android:text="@string/tvComment"
+		        android:textAppearance="?android:attr/textAppearanceSmall"
+		        android:textColor="#222" />
 
-        <ImageView
-            android:id="@+id/commentimage"
-            android:layout_width="match_parent"
-            android:layout_height="256dp"
-            android:layout_below="@+id/TVComment"
-            android:src="@drawable/cutetamplate" />
+		    <TextView
+		        android:id="@+id/etLastName"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_alignBaseline="@+id/tvName"
+		        android:layout_alignBottom="@+id/tvName"
+		        android:layout_toRightOf="@+id/tvName"
+		        android:paddingLeft="5dp"
+		        android:text="@string/lname"
+		        android:textAppearance="?android:attr/textAppearanceLarge"
+		        android:textColor="#222" />
 
-        <TextView
-            android:id="@+id/TVtime"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignLeft="@+id/tvName"
-            android:layout_below="@+id/tvName"
-            android:text="@string/timeTV"
-            android:textAppearance="?android:attr/textAppearanceSmall"
-            android:textColor="#222" />
+		    <ImageView
+		        android:id="@+id/commentimage"
+		        android:layout_width="match_parent"
+		        android:layout_height="200dp"
+		        android:layout_below="@+id/TVComment"
+		        android:src="@drawable/cutetamplate" />
 
-         <Button
-             android:id="@+id/showmapbtn"
-             android:layout_width="40dp"
-             android:layout_height="40dp"
-             android:layout_alignLeft="@+id/TVComment"
-             android:layout_below="@+id/commentimage"
-             android:background="@drawable/mapbtn" />
+		    <TextView
+		        android:id="@+id/TVtime"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_alignLeft="@+id/tvName"
+		        android:layout_below="@+id/tvName"
+		        android:text="@string/timeTV"
+		        android:textAppearance="?android:attr/textAppearanceSmall"
+		        android:textColor="#222" />
 
-         <Button
-             android:id="@+id/btnreplayComment"
-             android:layout_width="40dp"
-             android:layout_height="40dp"
-             android:layout_alignTop="@+id/showmapbtn"
-             android:layout_toRightOf="@+id/ivkikolaskovski"
-             android:background="@drawable/custum_button_comment" />
-        
-	       </RelativeLayout>
+		    <Button
+		        android:id="@+id/showmapbtn"
+		        android:layout_width="30dp"
+		        android:layout_height="30dp"
+		        android:layout_alignLeft="@+id/TVComment"
+		        android:layout_below="@+id/view1"
+		        android:background="@drawable/mapbtn" />
 
+		    <Button
+		        android:id="@+id/btnreplayComment"
+		        android:layout_width="30dp"
+		        android:layout_height="30dp"
+		     android:layout_below="@+id/view1"
+		        android:layout_centerHorizontal="true"
+		        android:background="@drawable/custum_button_comment" />
+
+		    <View
+		        android:id="@+id/view1"
+		        android:layout_width="match_parent"
+		        android:layout_height="0.1dp"	        
+		        android:layout_below="@+id/commentimage"
+		        android:background="#5ae5cc"
+		        android:paddingBottom="5dp"
+		        android:layout_marginLeft="5dp"
+		        android:layout_marginRight="5dp"
+		        android:layout_marginBottom="5dp"
+		        android:layout_marginTop="5dp"
+		         />
+
+		    <Button
+		        android:id="@+id/button1"
+		        android:layout_width="30dp"
+		        android:layout_height="30dp"
+		        android:layout_alignRight="@+id/view1"
+		        android:layout_alignTop="@+id/btnreplayComment"
+		        android:background="@drawable/custum_call_btn" />
+
+		</RelativeLayout>
 	   
 	</LinearLayout>
 </FrameLayout>

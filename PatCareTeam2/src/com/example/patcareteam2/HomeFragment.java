@@ -87,19 +87,16 @@ public class HomeFragment extends  android.support.v4.app.ListFragment implement
     }
 	
 	@Override
-	public void startActivityForReplayComent() {
+	public void startActivityForReplayComent(String post_id) {
 		// TODO Auto-generated method stub
-		ReplayOnComment();
+		ReplayOnComment(post_id);
 	}
 
-	public void ReplayOnComment(){
-		Intent i = new Intent(getActivity(), ReplyComment.class);
+	public void ReplayOnComment(String post_id){
+		Intent i = new Intent(getActivity(),CommentsOnPost.class);
+		i.putExtra("POST_ID", post_id);
 		startActivity(i);
 	}
-	
-	
-	
-	
 	
 	@Override
 	public void onResume() {
@@ -109,7 +106,26 @@ public class HomeFragment extends  android.support.v4.app.ListFragment implement
 		new LoadComments().execute();
 	}
 
-
+	
+	
+	
+	
+	
+	
+	//KIKO_COMMENTS ___________________ZA_DIDI_TUKA_PRI_CLICK_NA_GLOBUSOT_SHOW_MAP__________________________________________________________________________________________________________________________
+	
+	@Override
+	public void startActivityForShowingLocation(String longitude,
+			String latitude) {
+		// TODO Auto-generated method stub
+		Toast.makeText(getActivity(), longitude+" "+latitude, Toast.LENGTH_SHORT).show();
+	}
+	//KIKO_COMMENTS ___________________ZA_DIDI_TUKA_PRI_CLICK_NA_GLOBUSOT_SHOW_MAP__________________________________________________________________________________________________________________________
+	
+	
+	
+	
+	
 	
 	/**
 	 * Retrieves recent post data from the server.
@@ -141,7 +157,8 @@ public class HomeFragment extends  android.support.v4.app.ListFragment implement
 				String langitude = c.getString("latitude");
 				String longitude = c.getString("longitude");
 				String type_c = c.getString("typecomment");
-				CommentItem comitem=new CommentItem(content, firstname, lastname, title, image_p, image_c, langitude, longitude, contact, type_c);
+				String post_id=c.getString("post_id");
+				CommentItem comitem=new CommentItem(content, firstname, lastname, title, image_p, image_c, langitude, longitude, contact, type_c,post_id);
 				NEW_Comments.add(comitem);
 				
 			}
@@ -206,6 +223,8 @@ public class HomeFragment extends  android.support.v4.app.ListFragment implement
 			updateList();
 		}
 	}
+
+
 
 
 

@@ -12,10 +12,11 @@ public class CommentItem {
 	public String longitude;
 	public String contact;
 	public String type_c;
+	public String post_id;
 	
 	public CommentItem(String message, String firstname, String lastname,
 			String time_c, String image_p, String image_c, String langitude,
-			String longitude, String contact, String type_c) {
+			String longitude, String contact, String type_c,String post_id) {
 		super();
 		this.message = message;
 		this.firstname = firstname;
@@ -27,6 +28,15 @@ public class CommentItem {
 		this.longitude = longitude;
 		this.contact = contact;
 		this.type_c = type_c;
+		this.post_id=post_id;
+	}
+
+	public String getPost_id() {
+		return post_id;
+	}
+
+	public void setPost_id(String post_id) {
+		this.post_id = post_id;
 	}
 
 	public String getMessage() {

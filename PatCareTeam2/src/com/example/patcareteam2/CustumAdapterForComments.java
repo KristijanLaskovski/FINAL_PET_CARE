@@ -26,8 +26,8 @@ public class CustumAdapterForComments extends ArrayAdapter<CommentItem> {
 	ReplayOnCommentInterface callBack;
 	
 	   public interface ReplayOnCommentInterface{
-	    	 public void startActivityForReplayComent();
-	    		 
+	    	 public void startActivityForReplayComent(String post_id);
+	         public void startActivityForShowingLocation(String langitude, String latitude);
 	    	 
 	     }
 	     
@@ -75,7 +75,7 @@ public class CustumAdapterForComments extends ArrayAdapter<CommentItem> {
     	        viewHolder.tvLastName = (TextView) convertView.findViewById(R.id.etLastName);
     	        viewHolder.tvTime = (TextView) convertView.findViewById(R.id.TVtime);
     	        viewHolder.tvComment = (TextView) convertView.findViewById(R.id.TVComment);
-    	        viewHolder.img_profile=(ImageView)convertView.findViewById(R.id.ivkikolaskovski);
+    	        viewHolder.img_profile=(ImageView)convertView.findViewById(R.id.replayImage);
     	        viewHolder.img_comment=(ImageView)convertView.findViewById(R.id.commentimage);
     	        viewHolder.btnShowLocation=(Button)convertView.findViewById(R.id.showmapbtn);
     	        viewHolder.btnReplayComment=(Button)convertView.findViewById(R.id.btnreplayComment);
@@ -116,8 +116,8 @@ public class CustumAdapterForComments extends ArrayAdapter<CommentItem> {
 //KIKO_KOMENTS ___________________ZA__DIDI________________________________________________________________________________________________________________
 	//se nadevam deka ot tuka nekako mozi da se startuva activite  za prikaz na mapata eve tuka jas ke probam da gi stavam vo tast
 						// langitude i latitude 
-						
-						Toast.makeText(getContext(),comment.getLangitude()+"  "+comment.getLongitude(), Toast.LENGTH_SHORT).show();	
+						callBack.startActivityForShowingLocation(comment.getLongitude(),comment.getLangitude() );
+						//Toast.makeText(getContext(),comment.getLangitude()+"  "+comment.getLongitude(), Toast.LENGTH_SHORT).show();	
 //KIKO_KOMENTS _____________________________________________________________________________________________________________________________________
 											
 					}
@@ -129,7 +129,7 @@ public class CustumAdapterForComments extends ArrayAdapter<CommentItem> {
  					
     	  						//((HomeFragment)mContext).ReplayOnComment();
     	  		//((MainActivity)mContext).rep
-    	  						callBack.startActivityForReplayComent();
+    	  						callBack.startActivityForReplayComent(comment.getPost_id());
     	  					}
     	  				}) ;
     	        

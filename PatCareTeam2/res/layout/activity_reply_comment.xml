@@ -6,7 +6,7 @@
     tools:context="com.example.patcareteam2.ReplyComment" >
 
     <TextView
-        android:id="@+id/textView1"
+        android:id="@+id/replayName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
@@ -22,50 +22,58 @@
         android:layout_width="fill_parent"
         android:layout_height="2dp"
         android:layout_alignParentLeft="true"
-        android:layout_below="@+id/textView1"
+        android:layout_below="@+id/replayName"
         android:layout_marginTop="16dp"
         android:background="#14ad72" />
 
-      <EditText
-          android:id="@+id/editText1"
-          android:layout_width="220dp"
-          android:layout_height="wrap_content"
-          android:layout_alignLeft="@+id/textView1"
-          android:layout_alignTop="@+id/view2"
-          android:layout_marginTop="14dp"
-          android:background="@null"
-          android:ems="10"
-          android:hint="@string/replaycommentt" >
-
-          <requestFocus />
-      </EditText>
+  
 
       <View
           android:id="@+id/view2"
           android:layout_width="fill_parent"
-          android:layout_height="2dp"
+          android:layout_height="1dp"
           android:layout_alignParentBottom="true"
           android:layout_alignParentLeft="true"
           android:layout_marginBottom="241dp"
           android:background="#14ad72" />
 
-      <Button
-          android:id="@+id/button1"
-          android:layout_width="40dp"
-          android:layout_height="40dp"
-          android:layout_alignBaseline="@+id/editText1"
-          android:layout_alignBottom="@+id/editText1"
-          android:layout_marginLeft="28dp"
-          android:layout_toRightOf="@+id/editText1"
-          android:background="@drawable/custum_send_replay" />
-
       <ListView
-          android:id="@+id/listView1"
+         android:id="@android:id/list"
           android:layout_width="match_parent"
           android:layout_height="380dp"
           android:layout_alignParentLeft="true"
-          android:layout_below="@+id/view1" >
+          android:layout_below="@+id/view1" 
+          android:cacheColorHint="@android:color/transparent"
+          android:divider="@null"
+          android:dividerHeight="5dp"
+          android:listSelector="@android:color/transparent"
+          
+          >
 
       </ListView>
+
+      <EditText
+            android:id="@+id/enteredReplaytoPost"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignLeft="@+id/replayName"
+          android:layout_alignTop="@+id/view2"
+          android:layout_marginTop="19dp"
+          android:ems="12"
+          android:background="@null"
+          android:hint="@string/replaycommentt"  >
+
+          <requestFocus />
+      </EditText>
+
+       <Button
+           android:id="@+id/button1"
+           android:layout_width="40dp"
+           android:layout_height="40dp"
+           android:layout_alignBaseline="@+id/enteredReplaytoPost"
+           android:layout_alignBottom="@+id/enteredReplaytoPost"
+           android:layout_toRightOf="@+id/enteredReplaytoPost"
+           android:background="@drawable/custum_send_replay"
+           android:onClick="replayOnComment" />
 
 </RelativeLayout>
