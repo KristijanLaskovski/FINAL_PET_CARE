@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+           <RelativeLayout
+               xmlns:android="http://schemas.android.com/apk/res/android"
+               android:id="@+id/prv"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+                >
+               
+               <RelativeLayout
+               android:layout_width="match_parent"
+               android:layout_height="150dp"
+               android:background="@drawable/lowpolyprofile"
+                    >
+                   <ImageView
+       		   android:id="@+id/replayImage"
+      		   android:layout_width="100dp"
+               android:layout_height="100dp"
+               android:layout_marginTop="50dp"
+               android:padding="7dp"
+               android:src="@drawable/kikko" />
+               
+               <TextView
+               android:id="@+id/profileLastName"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_below="@+id/profilFirstName"
+               android:layout_toRightOf="@+id/replayImage"
+               android:text="@string/lastName"
+               android:textAppearance="?android:attr/textAppearanceLarge"
+               android:textColor="#ffffff" />
+
+            <TextView
+            android:id="@+id/profilFirstName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/profileLastName"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="67dp"
+            android:text="@string/firstname"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="#ffffff" />
+
+        <TextView
+            android:id="@+id/tvNumberOfComments"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/profileLastName"
+            android:layout_below="@+id/profileLastName"
+            android:text="@string/numberofcomments"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="#ffffff" />
+                   
+                   
+               </RelativeLayout>
+               
+               
+               
+
+  </RelativeLayout> 

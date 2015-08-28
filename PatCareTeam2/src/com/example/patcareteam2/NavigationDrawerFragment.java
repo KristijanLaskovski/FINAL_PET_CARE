@@ -111,6 +111,7 @@ public class NavigationDrawerFragment extends Fragment {
         dataList.add(new DrawerItem(getString(R.string.title_section3), R.drawable.doglost));  
         dataList.add(new DrawerItem(getString(R.string.title_section4), R.drawable.shoppet));
         dataList.add(new DrawerItem(getString(R.string.title_section5), R.drawable.givepet));
+        dataList.add(new DrawerItem(getString(R.string.title_section6), R.drawable.givepet));
         
         CustomDrawerAdapter  mDrawerAdapter = new CustomDrawerAdapter(getActivity(), R.layout.navdrawer_costum, dataList);
         mDrawerListView.setAdapter(mDrawerAdapter);

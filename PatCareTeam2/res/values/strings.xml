@@ -7,6 +7,7 @@
     <string name="title_section3">Lost and Found pets</string>
     <string name="title_section4">Adobt a pet</string>
     <string name="title_section5">Give or sell a pet</string>
+    <string name="title_section6">Tips for Pet Care</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="action_example">Example action</string>
@@ -54,5 +55,16 @@
     <string name="writeacomment">Write a comment</string>
     <string name="replaycommentt">Enter text here..</string>
     <string name="title_activity_comments_on_post">CommentsOnPost</string>
+    <string name="numberofcomments">12 comments</string>
+    <string name="petcare1">Regular Exams are Vital</string>
+    <string name="petcare2">Spay and Neuter Your Pets</string>
+    <string name="petcare3">Prevent Parasites</string>
+    <string name="petcare4">Maintain a Healthy Weight</string>
+    <string name="petcare5">Get Regular Vaccinations</string>
+    <string name="petcare6">Provide an Enriched Environment</string>
+    <string name="petcare7">ID Microchip Your Pet</string>
+    <string name="petcare8">Pets Need Dental Care, Too</string>
+    <string name="petcare9">Never Give Pets People Medication</string>
+    <string name="petcare10">Proper Restraint in a Vehicle</string>
 
 </resources>

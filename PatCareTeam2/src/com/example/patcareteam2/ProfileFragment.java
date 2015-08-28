@@ -10,6 +10,7 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import com.example.patcareteam2.CustumAdapterForComments.ReplayOnCommentInterface;
 import com.example.patcareteam2.HomeFragment.LoadComments;
 
 import android.app.ProgressDialog;
@@ -29,15 +30,21 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ListAdapter;
 import android.widget.ListView;
+import android.widget.RelativeLayout;
 import android.widget.SimpleAdapter;
 import android.widget.TextView;
+import android.widget.Toast;
+import android.widget.AdapterView.OnItemClickListener;
 
 
-public class ProfileFragment  extends android.support.v4.app.ListFragment implements OnClickListener{
+public class ProfileFragment  extends  android.support.v4.app.ListFragment implements ReplayOnCommentInterface {
+
 	
 	    TextView firstname,lastname;
 	    ListView listViewOnHome;
@@ -59,28 +66,48 @@ public class ProfileFragment  extends android.support.v4.app.ListFragment implem
 		// manages all of our comments in a list.
 		private ArrayList<HashMap<String, String>> mCommentList;
 		SharedPreferences sp;
-	    
-
+		ArrayAdapter<CommentItem> arrayAdapterofComments;
+		private ArrayList<CommentItem> NEW_Comments ;
+		String post_image;
 
 	
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
         Bundle savedInstanceState) {
-	  View rootView = inflater.inflate(R.layout.fragment_comment, container, false);
-      firstname=(TextView)rootView.findViewById(R.id.profilFirstName);
-      lastname=(TextView)rootView.findViewById(R.id.profileLastName);
+	 // View rootView = inflater.inflate(R.layout.fragment_comment, container, false);
       sp = PreferenceManager.getDefaultSharedPreferences(getActivity());
       String post_fname = sp.getString("firstname", "anon");
       String post_lname= sp.getString("lastname", "anon");
-      profileview=(ImageView)rootView.findViewById(R.id.replayImage);
-      String post_image= sp.getString("pimage", "anon");
+      post_image= sp.getString("pimage", "anon");
       byte[] decodedByte = Base64.decode(post_image, Base64.DEFAULT);                     
       Bitmap b = BitmapFactory.decodeByteArray(decodedByte, 0, decodedByte.length);
-      profileview.setImageBitmap(b);
+      listViewOnHome= (ListView) inflater.inflate(
+              R.layout.fragment_comment, container, false);
+      listViewOnHome.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+          @Override
+          public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+             // selectItem(position);
+          }
+      });
+      
+      
+      
+      RelativeLayout rl=(RelativeLayout)inflater.inflate(R.layout.header_profile, null);
+      //proba za na profile
+      TextView firstname=(TextView)rl.findViewById(R.id.profilFirstName);
       firstname.setText(post_fname);
+      TextView lastname=(TextView)rl.findViewById(R.id.profileLastName);
       lastname.setText(post_lname);
-      listViewOnHome=(ListView)rootView .findViewById(android.R.id.list);
-    	return rootView;
+      TextView numberofComments=(TextView)rl.findViewById(R.id.tvNumberOfComments);
+      numberofComments.setText("54 comments");
+      ImageView profileimage=(ImageView)rl.findViewById(R.id.replayImage);
+      profileimage.setImageBitmap(b);
+      //proba za na profile
+      listViewOnHome.addHeaderView(rl);
+      
+      
+      
+    	return  listViewOnHome;
 	}
 
 	@Override
@@ -90,33 +117,133 @@ public class ProfileFragment  extends android.support.v4.app.ListFragment implem
 	//	new LoadComments().execute();
 	}
 
+
 	@Override
-	public void onClick(View v) {
-	
-     }
-	
+	public void startActivityForShowingLocation(String langitude,
+			String latitude) {
+		// TODO Auto-generated method stub
+		
+	}
+	@Override
+	public void startActivityForReplayComent(String post_id) {
+		// TODO Auto-generated method stub
+		ReplayOnComment(post_id);
+	}
+
+	public void ReplayOnComment(String post_id){
+		Intent i = new Intent(getActivity(),CommentsOnPost.class);
+		i.putExtra("POST_ID", post_id);
+		startActivity(i);
+	}
 	
 	@Override
 	public void onResume() {
 		// TODO Auto-generated method stub
 		super.onResume();
 		// loading the comments via AsyncTask
-	new LoadComments().execute();
+		new LoadComments().execute();
 	}
 
 	public void updateJSONdata() {
+		
+		
+		
 
+		NEW_Comments=new ArrayList<CommentItem>();
+		
+		
+		 SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(getActivity());
+         String post_username = sp.getString("username", "anon");
+         
+       
+         int success;
+        // mCommentList = new ArrayList<HashMap<String, String>>();
+         
+			try {
+				// Building Parameters
+				List<NameValuePair> params = new ArrayList<NameValuePair>();
+				params.add(new BasicNameValuePair("username", post_username));
+
+				Log.d("request!", "starting");
+				// getting product details by making HTTP request
+				JSONObject json = jsonParser.makeHttpRequest(READ_COMMENTS_PROFILE_URL, "POST",
+						params);
+
+				// check your log for json response
+				Log.d("Login attempt", json.toString());
+
+				// json success tag
+				success = json.getInt(TAG_SUCCESS);
+				if (success == 1) {
+					
+				
+						mComments = json.getJSONArray(TAG_POSTS);
+
+						// looping through all posts according to the json object returned
+						for (int i = 0; i < mComments.length(); i++) {
+							JSONObject c = mComments.getJSONObject(i);
+							// gets the content of each tag
+							String title = c.getString(TAG_TIME);
+							String content = c.getString(TAG_MESSAGE);
+							String username = c.getString(TAG_USERNAME);
+							String firstname = c.getString(TAG_FIRST_NAME);
+							String lastname = c.getString(TAG_LAST_NAME);
+			             	String image_c = c.getString("image_c");
+							//String image_p = c.getString("image_p");
+							String contact = c.getString("contact");
+							String langitude = c.getString("latitude");
+							String longitude = c.getString("longitude");
+							String type_c = c.getString("typecomment");
+							String post_id=c.getString("post_id");
+							CommentItem comitem=new CommentItem(content, firstname, lastname, title, post_image, image_c, langitude, longitude, contact, type_c,post_id);
+							NEW_Comments.add(comitem);
+							
+						}
+
+										
+				}
+					
+				}catch (JSONException e) {
+					e.printStackTrace();
+				}  
+		
+		
+		
+		
+		
+				
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		//JSONParser jParser = new JSONParser();
+		//JSONObject json = jParser.getJSONFromUrl(READ_COMMENTS_PROFILE_URL);
+		
 	}
-	
 
 
 	private void updateList() {
-		ListAdapter adapter = new SimpleAdapter(getActivity(), mCommentList,
-				R.layout.custum_view, new String[] { TAG_MESSAGE, TAG_LAST_NAME,TAG_FIRST_NAME ,TAG_TIME},
-				                         new int[] { R.id.TVComment, R.id.etLastName,R.id.tvName ,R.id.TVtime});
-		// I shouldn't have to comment on this one:
-		setListAdapter(adapter);
+		CustumAdapterForComments adapter=new CustumAdapterForComments(getActivity(), NEW_Comments);
+        
+		adapter.setCallback(this);
 		ListView lv = getListView();	
+		lv.setAdapter(adapter);
+		
+		lv.setOnItemClickListener(new OnItemClickListener() {
+
+		
+			public void onItemClick(AdapterView<?> parent, View view,
+					int position, long id) {
+                //NE RABOTIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
+				Toast.makeText(getActivity(), position,Toast.LENGTH_SHORT).show();
+
+			}
+		});
 	}
 	
 	
@@ -129,7 +256,7 @@ public class ProfileFragment  extends android.support.v4.app.ListFragment implem
 		protected void onPreExecute() {
 			super.onPreExecute();
 			pDialog = new ProgressDialog(getActivity());
-			pDialog.setMessage("Loading Profile...");
+			pDialog.setMessage("Loading Comments...");
 			pDialog.setIndeterminate(false);
 			pDialog.setCancelable(true);
 			pDialog.show();
@@ -137,64 +264,7 @@ public class ProfileFragment  extends android.support.v4.app.ListFragment implem
 
 		@Override
 		protected Boolean doInBackground(Void... arg0) {
-
-			  SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(getActivity());
-	            String post_username = sp.getString("username", "anon");
-	            
-	          
-	            int success;
-	            mCommentList = new ArrayList<HashMap<String, String>>();
-	            
-				try {
-					// Building Parameters
-					List<NameValuePair> params = new ArrayList<NameValuePair>();
-					params.add(new BasicNameValuePair("username", post_username));
-
-					Log.d("request!", "starting");
-					// getting product details by making HTTP request
-					JSONObject json = jsonParser.makeHttpRequest(READ_COMMENTS_PROFILE_URL, "POST",
-							params);
-
-					// check your log for json response
-					Log.d("Login attempt", json.toString());
-
-					// json success tag
-					success = json.getInt(TAG_SUCCESS);
-					if (success == 1) {
-						Log.d("Login Successful!", json.toString());
-						// save user data
-						
-						mComments = json.getJSONArray(TAG_POSTS);
-						for (int i = 0; i < mComments.length(); i++) {
-							JSONObject c = mComments.getJSONObject(i);
-							String title = c.getString(TAG_TIME);
-							String content = c.getString(TAG_MESSAGE);
-							String username = c.getString(TAG_USERNAME);
-							String firstname = c.getString(TAG_FIRST_NAME);
-							String lastname = c.getString(TAG_LAST_NAME);
-							HashMap<String, String> map = new HashMap<String, String>();
-							map.put(TAG_TIME, title);
-							map.put(TAG_MESSAGE, content);
-							map.put(TAG_USERNAME, username);
-							map.put(TAG_FIRST_NAME, firstname);
-							map.put(TAG_LAST_NAME, lastname);
-							mCommentList.add(map);
-						}
-
-						
-					} else {
-						Log.d("Login Failure!", json.getString(TAG_MESSAGE));
-						
-					}
-				} catch (JSONException e) {
-					e.printStackTrace();
-				}  
-	            
-	            
-	            
-			
-			
-			
+			updateJSONdata();
 			return null;
 
 		}
@@ -205,9 +275,16 @@ public class ProfileFragment  extends android.support.v4.app.ListFragment implem
 			pDialog.dismiss();
 			updateList();
 		}
-	}
 	
 	
 	
+	
+}
+
+
+
+
+
+
 	
 }

@@ -94,6 +94,10 @@ public class MainActivity extends ActionBarActivity implements
 	        	mTitle = getString(R.string.title_section5);
 	        	fragment=new BuyFragment();
 	            break;
+	        case 6:
+	        	mTitle = getString(R.string.title_section6);
+	        	fragment=new TipsForPetCare();
+	            break;
 	        default:
 	            break;
 	        }
