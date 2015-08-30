@@ -4,26 +4,40 @@ import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 import org.apache.http.NameValuePair;
 import org.apache.http.message.BasicNameValuePair;
 import org.json.JSONException;
 import org.json.JSONObject;
+
+
+import com.squareup.picasso.OkHttpDownloader;
+import com.squareup.picasso.Picasso;
+
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.ComponentName;
+import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
+import android.database.Cursor;
 import android.graphics.Bitmap;
 import android.graphics.Bitmap.CompressFormat;
+import android.graphics.Matrix;
+import android.media.ExifInterface;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Environment;
 import android.os.Parcelable;
+import android.provider.DocumentsContract;
 import android.provider.MediaStore;
+import android.provider.MediaStore.Images;
 import android.util.Base64;
 import android.util.Log;
 import android.view.Menu;
@@ -59,16 +73,35 @@ public class Register extends Activity  implements OnClickListener{
 		lname = (EditText)findViewById(R.id.lastName);
 		profileimageview=(ImageView)findViewById(R.id.commentimage);
 		profileimageview.setClickable(true);
+		
+	//	int mRotation = getCameraDisplayOrientation();
+
+		//Camera.Parameters parameters = camera.getParameters();
+
+		//parameters.setRotation(mRotation); //set rotation to save the picture
+
+		//camera.setDisplayOrientation(result); //set the rotation for preview camera
+
+		//camera.setParameters(parameters);
+		// Picasso.with(this).load()
+        //  .resize(300, 300)
+       //   .into(profileimageview);
+		
+		
 		profileimageview.setOnClickListener(new View.OnClickListener() {
 		    @Override
 		    public void onClick(View v) {
 		    	
 		    	openImageIntent();
+		
+		 		
 		    }
 		});
 
 		mRegister = (Button)findViewById(R.id.btnRegister);
 		mRegister.setOnClickListener(this);
+		
+		
 	}
 
 	@Override
@@ -118,6 +151,10 @@ class CreateUser extends AsyncTask<String, String, String> {
             String password = pass.getText().toString();
             String firstname= fname.getText().toString();
             String lastname = lname.getText().toString();
+            
+            SimpleDateFormat sdf = new SimpleDateFormat("yyyyMMdd_HHmmss");
+            String nameoffile_image = sdf.format(new Date());
+            
             try {
                 // Building Parameters
                 List<NameValuePair> params = new ArrayList<NameValuePair>();
@@ -126,6 +163,7 @@ class CreateUser extends AsyncTask<String, String, String> {
                 params.add(new BasicNameValuePair("firstname", firstname));
                 params.add(new BasicNameValuePair("lastname", lastname));
                 params.add(new BasicNameValuePair("profileimage", textofimage));
+                params.add(new BasicNameValuePair("filename_profileimage", nameoffile_image));
  
                 Log.d("request!", "starting");
                 
@@ -258,17 +296,73 @@ protected void onActivityResult(int requestCode, int resultCode, Intent data) {
             
             ByteArrayOutputStream bytedata = new ByteArrayOutputStream();
             
-            Bitmap croppedBmp = Bitmap.createBitmap(bitmap, 0, 0, bitmap.getWidth()-kolku_da_skrati_w,bitmap.getHeight()-kolku_da_skrati_h);
+         //   Bitmap croppedBmp = Bitmap.createBitmap(bitmap, 0, 0, bitmap.getWidth()-kolku_da_skrati_w,bitmap.getHeight()-kolku_da_skrati_h);
             
-            croppedBmp = Bitmap.createScaledBitmap(croppedBmp, 256, 256, false);
-            croppedBmp.compress(CompressFormat.JPEG, 100, bytedata);
+           // croppedBmp = Bitmap.createScaledBitmap(croppedBmp, 256, 256, false);
+          //  croppedBmp.compress(CompressFormat.JPEG, 100, bytedata);
+           
+          //  byte[] dataa = bytedata.toByteArray();
+          //  textofimage= Base64.encodeToString(dataa, Base64.DEFAULT);
+            
+            
+            
+            
+            //^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+            
+            int rotate = 0;
+            try {
+                File imageFile = new File(getPath(selectedImageUri));
+                
+                ExifInterface exif = new ExifInterface(
+                        imageFile.getAbsolutePath());
+                int orientation = exif.getAttributeInt(
+                        ExifInterface.TAG_ORIENTATION,
+                        ExifInterface.ORIENTATION_NORMAL);
+
+                switch (orientation) {
+                case ExifInterface.ORIENTATION_ROTATE_270:
+                    rotate = 270;
+                    break;
+                case ExifInterface.ORIENTATION_ROTATE_180:
+                    rotate = 180;
+                    break;
+                case ExifInterface.ORIENTATION_ROTATE_90:
+                    rotate = 90;
+                    break;
+                }
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+            Matrix matrix = new Matrix();
+    matrix.postRotate(rotate);
+    bitmap = Bitmap.createBitmap(bitmap , 0, 0, bitmap.getWidth(), bitmap.getHeight(), matrix, true);
+            
+            bitmap =Bitmap.createScaledBitmap(bitmap, 256, 256, false);
+            bitmap.compress(CompressFormat.JPEG, 100, bytedata);
            
             byte[] dataa = bytedata.toByteArray();
             textofimage= Base64.encodeToString(dataa, Base64.DEFAULT);
             
             
+            
+            //^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+            
+            
+            
+            
+            
+            
+            
+            
+            
+      Picasso.with(Register.this)
+            .load(getImageUri(Register.this,bitmap))
+            .resize(100, 100)
+            .centerCrop()
+            .into(profileimageview);
+            
          // resized = Bitmap.createScaledBitmap(bitmap, 1280, 720, true); 
-            profileimageview.setImageBitmap(croppedBmp);
+          //  profileimageview.setImageBitmap(bitmap);
        
            
             
@@ -283,12 +377,42 @@ protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 
 
 
+@SuppressLint("NewApi") public String getPath(Uri contentUri) {// Will return "image:x*"
+    String wholeID = DocumentsContract.getDocumentId(contentUri);
+
+    // Split at colon, use second item in the array
+    String id = wholeID.split(":")[1];
+
+    String[] column = { MediaStore.Images.Media.DATA };
+
+    // where id is equal to
+    String sel = MediaStore.Images.Media._ID + "=?";
+
+    Cursor cursor = getContentResolver().query(
+            MediaStore.Images.Media.EXTERNAL_CONTENT_URI, column, sel,
+            new String[] { id }, null);
+
+    String filePath = "";
+
+    int columnIndex = cursor.getColumnIndex(column[0]);
+
+    if (cursor.moveToFirst()) {
+        filePath = cursor.getString(columnIndex);
+    }
+
+    cursor.close();
+    return filePath;
+}
 
 
 
 
-
-
+public Uri getImageUri(Context inContext, Bitmap inImage) {
+	  ByteArrayOutputStream bytes = new ByteArrayOutputStream();
+	  inImage.compress(Bitmap.CompressFormat.JPEG, 100, bytes);
+	  String path = Images.Media.insertImage(inContext.getContentResolver(), inImage, "Title", null);
+	  return Uri.parse(path);
+	}
 
 
 

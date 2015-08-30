@@ -500,6 +500,11 @@ class PostComment extends AsyncTask<String, String, String> {
             String post_lname= sp.getString("lastname", "anon");
             String post_image_progile= sp.getString("pimage", "anon");
 
+            
+            SimpleDateFormat sdf_comment_name = new SimpleDateFormat("HHmmMMMddyyyy");
+            String cfile_commnet_name = sdf_comment_name.format(new Date());
+            
+            
             try {
             	
                 // Building Parameters
@@ -517,7 +522,7 @@ class PostComment extends AsyncTask<String, String, String> {
                 params.add(new BasicNameValuePair("image_c", image_comment_encoded));
                 params.add(new BasicNameValuePair("image_p", post_image_progile));
                 params.add(new BasicNameValuePair("contact", "075713761"));
-                
+                params.add(new BasicNameValuePair("comment_image_name", cfile_commnet_name));
                 
                 Log.d("request!", "starting");
                 

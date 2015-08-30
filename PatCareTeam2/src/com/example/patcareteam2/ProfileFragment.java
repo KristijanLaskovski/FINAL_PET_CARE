@@ -12,6 +12,7 @@ import org.json.JSONObject;
 
 import com.example.patcareteam2.CustumAdapterForComments.ReplayOnCommentInterface;
 import com.example.patcareteam2.HomeFragment.LoadComments;
+import com.squareup.picasso.Picasso;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
@@ -79,8 +80,8 @@ public class ProfileFragment  extends  android.support.v4.app.ListFragment imple
       String post_fname = sp.getString("firstname", "anon");
       String post_lname= sp.getString("lastname", "anon");
       post_image= sp.getString("pimage", "anon");
-      byte[] decodedByte = Base64.decode(post_image, Base64.DEFAULT);                     
-      Bitmap b = BitmapFactory.decodeByteArray(decodedByte, 0, decodedByte.length);
+     // byte[] decodedByte = Base64.decode(post_image, Base64.DEFAULT);                     
+     // Bitmap b = BitmapFactory.decodeByteArray(decodedByte, 0, decodedByte.length);
       listViewOnHome= (ListView) inflater.inflate(
               R.layout.fragment_comment, container, false);
       listViewOnHome.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -101,8 +102,13 @@ public class ProfileFragment  extends  android.support.v4.app.ListFragment imple
       TextView numberofComments=(TextView)rl.findViewById(R.id.tvNumberOfComments);
       numberofComments.setText("54 comments");
       ImageView profileimage=(ImageView)rl.findViewById(R.id.replayImage);
-      profileimage.setImageBitmap(b);
+     // profileimage.setImageBitmap(b);
       //proba za na profile
+      
+      Picasso.with(getActivity()).load(post_image)
+        .into(profileimage);
+      
+      
       listViewOnHome.addHeaderView(rl);
       
       

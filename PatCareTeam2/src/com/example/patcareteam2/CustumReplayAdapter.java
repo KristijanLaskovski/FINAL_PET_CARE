@@ -3,6 +3,7 @@ package com.example.patcareteam2;
 import java.util.ArrayList;
 
 import com.example.patcareteam2.CustumAdapterForComments.ViewHolderItem;
+import com.squareup.picasso.Picasso;
 
 import android.content.Context;
 import android.graphics.Bitmap;
@@ -19,11 +20,11 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 public class CustumReplayAdapter extends ArrayAdapter<ReplayedItem> {
-
+	Context mContext;
 	
 	  public CustumReplayAdapter(Context context, ArrayList<ReplayedItem> comments) {
 	        super(context,R.layout.custum_replay_comment, comments);
-	       
+	       this.mContext=context;
 	     }
 	
 	
@@ -54,8 +55,8 @@ public class CustumReplayAdapter extends ArrayAdapter<ReplayedItem> {
 	    	    final ReplayedItem comment = getItem(position); 
 	    	    
 	    	       String image_p=comment.getImage();
-	    	       byte[] decodedByte = Base64.decode(image_p, Base64.DEFAULT);                     
-	    	       Bitmap b = BitmapFactory.decodeByteArray(decodedByte, 0, decodedByte.length);
+	    	       //byte[] decodedByte = Base64.decode(image_p, Base64.DEFAULT);                     
+	    	      // Bitmap b = BitmapFactory.decodeByteArray(decodedByte, 0, decodedByte.length);
 
 
 	    	    if(comment != null) {
@@ -64,7 +65,10 @@ public class CustumReplayAdapter extends ArrayAdapter<ReplayedItem> {
 	    	        viewHolder.tvLastName.setText(comment.getLastname());
 	    	        viewHolder.tvTime.setText(comment.getTimePost());
 	    	        viewHolder.tvComment.setText(comment.getMessage());
-	    	        viewHolder.img_profile.setImageBitmap(b);
+	    	        
+	    	        Picasso.with(mContext).load(image_p)
+	    	          .into(viewHolder.img_profile);
+	    	       // viewHolder.img_profile.setImageBitmap(b);
 	    	    }
 						
 	

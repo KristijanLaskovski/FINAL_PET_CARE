@@ -2,6 +2,8 @@ package com.example.patcareteam2;
 
 import java.util.ArrayList;
 
+import com.squareup.picasso.Picasso;
+
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -88,18 +90,18 @@ public class CustumAdapterForComments extends ArrayAdapter<CommentItem> {
     	    final CommentItem comment = getItem(position); 
     	    
     	       String image_p=comment.getImage_p();
-    	       byte[] decodedByte = Base64.decode(image_p, Base64.DEFAULT);                     
-    	       Bitmap b = BitmapFactory.decodeByteArray(decodedByte, 0, decodedByte.length);
+    	      // byte[] decodedByte = Base64.decode(image_p, Base64.DEFAULT);                     
+    	     // Bitmap b = BitmapFactory.decodeByteArray(decodedByte, 0, decodedByte.length);
     	       //ImageView profile=(ImageView)custumView.findViewById(R.id.ivkikolaskovski);
     	     //  profile.setImageBitmap(b);
     	       
     	       
     	       String image_c=comment.getImage_c();
-    	       byte[] decodedByte_c = Base64.decode(image_c, Base64.DEFAULT);                     
-    	       Bitmap b_c = BitmapFactory.decodeByteArray(decodedByte_c, 0, decodedByte_c.length);
+    	      // byte[] decodedByte_c = Base64.decode(image_c, Base64.DEFAULT);                     
+    	     //  Bitmap b_c = BitmapFactory.decodeByteArray(decodedByte_c, 0, decodedByte_c.length);
     	      // ImageView img_comment=(ImageView)custumView.findViewById(R.id.commentimage);
     	     //  img_comment.setImageBitmap(b_c);
-    	       
+    	       Log.d("PICCASOOOOOOOOOOOO", image_c);
     	    
     	    if(comment != null) {
     	        // get the TextView from the ViewHolder and then set the text (item name) and tag (item ID) values
@@ -107,8 +109,18 @@ public class CustumAdapterForComments extends ArrayAdapter<CommentItem> {
     	        viewHolder.tvLastName.setText(comment.getLastname());
     	        viewHolder.tvTime.setText(comment.getTime_c());
     	        viewHolder.tvComment.setText(comment.getMessage());
-    	        viewHolder.img_profile.setImageBitmap(b);
-    	        viewHolder.img_comment.setImageBitmap(b_c);
+    	        
+    	        Picasso.with(mContext).load(image_c)
+    	          .resize(300, 300)
+    	          .into(viewHolder.img_comment);
+    	        
+    	        
+    	        Picasso.with(mContext).load(image_p)
+  	          .into(viewHolder.img_profile);
+  	        
+    	        
+    	      //  viewHolder.img_profile.setImageBitmap(b);
+    	       // viewHolder.img_comment.setImageBitmap(b_c);
     	        viewHolder.btnShowLocation.setOnClickListener(new OnClickListener() {
 					
 					@Override
