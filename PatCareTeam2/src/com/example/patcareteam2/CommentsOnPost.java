@@ -11,8 +11,7 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import com.example.patcareteam2.ReplyComment.LoadComments;
-import com.example.patcareteam2.ReplyComment.PostComment;
+
 
 import android.app.Activity;
 import android.app.ListActivity;
@@ -232,9 +231,7 @@ class PostComment extends AsyncTask<String, String, String> {
             
             SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(CommentsOnPost.this);
             String post_username = sp.getString("username", "anon");
-            String post_fname = sp.getString("firstname", "anon");
-            String post_lname= sp.getString("lastname", "anon");
-            String post_image_progile= sp.getString("pimage", "anon");
+        
 
             try {
             	
@@ -244,9 +241,8 @@ class PostComment extends AsyncTask<String, String, String> {
                 params.add(new BasicNameValuePair("post_id", post_id));
                 params.add(new BasicNameValuePair("time_post", post_time));
                 params.add(new BasicNameValuePair("message", post_message));
-                params.add(new BasicNameValuePair("firstname", post_fname));
-                params.add(new BasicNameValuePair("lastname", post_lname));
-                params.add(new BasicNameValuePair("image_p", post_image_progile));
+                params.add(new BasicNameValuePair("username", post_username ));
+               
 
                 
                 

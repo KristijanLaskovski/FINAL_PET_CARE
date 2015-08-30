@@ -159,14 +159,14 @@ public class LoginActivity extends Activity implements View.OnClickListener {
 					String ime=json.getString(TAG_FIRST_NAME);
 					String prezime=json.getString(TAG_LAST_NAME);
 					String image=json.getString("profileimage");
-					
+					String korisnik=json.getString("username");
 					Log.d("*****************************************************************************************************************", ime+prezime);
 					//dotuka raboti i vraka ime i prezime tocno
 					
 					SharedPreferences sp = PreferenceManager
 							.getDefaultSharedPreferences(LoginActivity.this);
 					Editor edit = sp.edit();
-					edit.putString("username", username);
+					edit.putString("username", korisnik);
 					edit.putString("firstname", ime);
 					edit.putString("lastname", prezime);
 			    	edit.putString("pimage", image);
