@@ -36,6 +36,13 @@ public class MainActivity extends ActionBarActivity implements
 		 //AppEventsLogger.deactivateApp(this);
 	}
 
+	@Override
+    public void onBackPressed() {
+
+       return;
+    }
+
+	
 	/**
 	 * Fragment managing the behaviors, interactions and presentation of the
 	 * navigation drawer.

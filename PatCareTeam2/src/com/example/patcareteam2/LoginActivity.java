@@ -72,6 +72,14 @@ public class LoginActivity extends Activity implements View.OnClickListener {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
+		SharedPreferences	sp = PreferenceManager.getDefaultSharedPreferences(LoginActivity.this);
+	    Boolean user_login_inforamtion = sp.getBoolean("logininformation", false);
+	    		
+		if(user_login_inforamtion){
+			Intent i=new Intent("com.example.patcareteam2.MAINACTIVITY");
+			finish();
+			startActivity(i);
+		}
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_login);
 		
@@ -82,6 +90,9 @@ public class LoginActivity extends Activity implements View.OnClickListener {
 		
 		btnLogin.setOnClickListener(this);
 		btnRegister.setOnClickListener(this);
+		
+		
+	
 	}
 
 	@Override
@@ -170,6 +181,8 @@ public class LoginActivity extends Activity implements View.OnClickListener {
 					edit.putString("firstname", ime);
 					edit.putString("lastname", prezime);
 			    	edit.putString("pimage", image);
+			    	edit.putBoolean("logininformation", true);
+			    	
 					edit.commit();
 					
 					

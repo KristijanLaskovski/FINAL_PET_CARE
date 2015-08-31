@@ -111,7 +111,6 @@ public class CustumAdapterForComments extends ArrayAdapter<CommentItem> {
     	        viewHolder.tvComment.setText(comment.getMessage());
     	        
     	        Picasso.with(mContext).load(image_c)
-    	          .resize(300, 300)
     	          .into(viewHolder.img_comment);
     	        
     	        

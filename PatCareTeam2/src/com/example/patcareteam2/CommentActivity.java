@@ -460,7 +460,20 @@ public class CommentActivity extends AppCompatActivity implements OnClickListene
 					e.printStackTrace();
 				}
 	            ByteArrayOutputStream bytedata = new ByteArrayOutputStream();
-	            bitmap = Bitmap.createScaledBitmap( bitmap, 512, 256, false);
+	          //  bitmap = Bitmap.createScaledBitmap( bitmap, 512, 256, false);
+	            
+	            int newimage_w=300;
+	            int newimage_h=300;
+	            if(bitmap.getWidth()>bitmap.getHeight()){
+	            	newimage_w=512;
+	            	newimage_h=300;
+	            }else{
+	            	newimage_w=300;
+	            	newimage_h=512;
+	            }
+	            
+	            
+	            bitmap = Bitmap.createScaledBitmap( bitmap, newimage_w, newimage_h, false);
 	            bitmap.compress(CompressFormat.JPEG, 100, bytedata);
 	            byte[] dataa = bytedata.toByteArray();
 	            image_comment_encoded= Base64.encodeToString(dataa, Base64.DEFAULT);
@@ -522,7 +535,7 @@ class PostComment extends AsyncTask<String, String, String> {
                 params.add(new BasicNameValuePair("image_c", image_comment_encoded));
                 params.add(new BasicNameValuePair("image_p", post_image_progile));
                 params.add(new BasicNameValuePair("contact", "075713761"));
-                params.add(new BasicNameValuePair("comment_image_name", cfile_commnet_name));
+                params.add(new BasicNameValuePair("comment_image_name", cfile_commnet_name+post_username));
                 
                 Log.d("request!", "starting");
                 
