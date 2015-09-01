@@ -71,6 +71,8 @@
         android:id="@+id/takenImage1"
         android:layout_width="match_parent"
         android:layout_height="300dp"
+        android:layout_marginTop="60dp"
+        
         android:layout_alignParentLeft="true"
         android:layout_below="@+id/ETforEnteringCommnets"
         android:contentDescription="@string/title_section4"
@@ -85,5 +87,70 @@
         android:layout_marginLeft="5dp"
         android:layout_toRightOf="@+id/BtnTakeAPhoto"
         android:background="@drawable/custum_btn_call" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignLeft="@+id/ETforEnteringCommnets"
+        android:layout_below="@+id/ETforEnteringCommnets"
+         >
+
+        <ImageView
+            android:id="@+id/smallIMGtypeComment"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="15dp"
+            android:src="@drawable/pozadinabela" />
+
+        <TextView
+            android:id="@+id/tvsmallTypeComment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/smallIMGtypeComment"
+            android:layout_marginLeft="14dp"
+            android:layout_toRightOf="@+id/smallIMGtypeComment"
+            android:text=""
+            android:textAppearance="?android:attr/textAppearanceSmall" />
+
+        <ImageView
+            android:id="@+id/smallIMGContact"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/pozadinabela" />
+
+        <TextView
+            android:id="@+id/tvsmallContactPhone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/smallIMGContact"
+            android:layout_marginLeft="18dp"
+            android:layout_toRightOf="@+id/smallIMGContact"
+            android:text=""
+            android:textAppearance="?android:attr/textAppearanceSmall" />
+
+        <ImageView
+            android:id="@+id/smallIMGlocation"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_alignLeft="@+id/smallIMGtypeComment"
+            android:layout_alignParentBottom="true"
+            android:src="@drawable/pozadinabela" />
+
+        <TextView
+            android:id="@+id/tvsmalllocation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/tvsmallTypeComment"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="14dp"
+            android:layout_toRightOf="@+id/smallIMGlocation"
+            android:text=""
+            android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    </RelativeLayout>
 
 </RelativeLayout>

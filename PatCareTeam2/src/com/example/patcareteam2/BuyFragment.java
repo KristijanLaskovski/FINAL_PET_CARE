@@ -35,7 +35,7 @@ import android.widget.ListView;
 import android.widget.SimpleAdapter;
 import android.widget.TextView;
 import android.widget.Toast;
- 
+
 public class BuyFragment extends  android.support.v4.app.ListFragment {
 
 	private TextView textView;
@@ -46,7 +46,7 @@ public class BuyFragment extends  android.support.v4.app.ListFragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
             Bundle savedInstanceState) {
 
-        View rootView = inflater.inflate(R.layout.fragment_buy, container, false);
+     View rootView = inflater.inflate(R.layout.fragment_buy, container, false);
         
 		return rootView;
        

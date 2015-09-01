@@ -36,6 +36,7 @@ import android.graphics.Bitmap;
 import android.graphics.Bitmap.CompressFormat;
 import android.graphics.BitmapFactory;
 import android.graphics.Matrix;
+import android.graphics.drawable.Drawable;
 import android.location.Address;
 import android.location.Criteria;
 import android.location.Location;
@@ -51,6 +52,8 @@ import android.provider.MediaStore;
 import android.provider.Settings;
 import android.support.v4.app.FragmentActivity;
 import android.support.v7.app.AppCompatActivity;
+import android.text.InputFilter;
+import android.text.InputType;
 import android.util.Base64;
 import android.util.Log;
 import android.view.Menu;
@@ -75,10 +78,12 @@ public class CommentActivity extends AppCompatActivity implements OnClickListene
 	private Button  mSubmit;
 	private Button  mTakePhoto;
 	private Button  mTypeComment;
+	private Button  mPhoneNumber;
 	private String image_comment_encoded;
 	Bitmap resized;
 	RadioButton rb;
 	private String rb_text;
+	private String phonnumbercontact="";
 
 	/* location */
 	private Button  mCheckLocation;
@@ -96,6 +101,17 @@ public class CommentActivity extends AppCompatActivity implements OnClickListene
 	TextView locationAddress; /* this is for our post, so it can be shown the actual street address */
 	double lat, lng;
 	private EditText addLocation;
+	private EditText phoneNumber;
+	ImageView imv2;
+	Drawable myDrawable;
+	TextView tv2;
+	ImageView imv1;
+	Drawable myDrawable1;
+	TextView tv1;
+	ImageView imv3;
+	Drawable myDrawable3;
+	TextView tv3;
+	
 	
 	CommentActivity context = this;
 	
@@ -124,6 +140,20 @@ public class CommentActivity extends AppCompatActivity implements OnClickListene
 		mImageView=(ImageView)findViewById(R.id.takenImage1);
 		mTypeComment= (Button)findViewById(R.id.typecomentBTN);
 		mTypeComment.setOnClickListener(this);
+		
+		imv1=(ImageView)findViewById(R.id.smallIMGtypeComment);
+		 myDrawable1 = getResources().getDrawable(R.drawable.t);
+		tv1=(TextView)findViewById(R.id.tvsmallTypeComment);
+		imv2=(ImageView)findViewById(R.id.smallIMGContact);
+		 myDrawable = getResources().getDrawable(R.drawable.c);
+		tv2=(TextView)findViewById(R.id.tvsmallContactPhone);
+		imv3=(ImageView)findViewById(R.id.smallIMGlocation);
+		 myDrawable3 = getResources().getDrawable(R.drawable.l);
+		tv3=(TextView)findViewById(R.id.tvsmalllocation);
+		
+		
+		mPhoneNumber= (Button)findViewById(R.id.callbtnInfo);
+		mPhoneNumber.setOnClickListener(this);
 		/*KIKO_COMMENTS   proba so radio button */
 		rb_text="Lost pet";
 	
@@ -234,6 +264,20 @@ public class CommentActivity extends AppCompatActivity implements OnClickListene
 							public void onAddressObtained(Address address) {
 								if (address != null) {
 									// locationAddress.setText("Location address is: " + address.getThoroughfare() + " " +  address.getFeatureName() + " "  + address.getPostalCode() + " " + address.getCountryName() );	
+								
+								String addresfull="";
+								if(address.getThoroughfare()!=null)
+									addresfull+=address.getThoroughfare()+" ";
+								if(address.getFeatureName()!=null)
+									addresfull+=address.getFeatureName()+" ";
+								if( address.getPostalCode()!=null)
+									addresfull+= address.getPostalCode()+" ";
+								if(address.getCountryName()!=null)
+									addresfull+=address.getCountryName()+" ";
+								imv3.setImageDrawable(myDrawable3);
+								tv3.setText(addresfull);
+								
+								
 								}
 								
 							}
@@ -313,6 +357,22 @@ public class CommentActivity extends AppCompatActivity implements OnClickListene
 							Log.d("&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&","Address is not null.");	
 								 lat = address.getLatitude();
 								 lng = address.getLongitude();
+								 
+								 
+									String addresfull="";
+									if(address.getThoroughfare()!=null)
+										addresfull+=address.getThoroughfare()+" ";
+									if(address.getFeatureName()!=null)
+										addresfull+=address.getFeatureName()+" ";
+									if( address.getPostalCode()!=null)
+										addresfull+= address.getPostalCode()+" ";
+									if(address.getCountryName()!=null)
+										addresfull+=address.getCountryName()+" ";
+									imv3.setImageDrawable(myDrawable3);
+									tv3.setText(addresfull);
+								 
+								 
+								 
 								// latlng.setText("Latitude is: " + lat + " and longitude is " + lng);
 								// locationAddress.setText("Location address is: " + address.getThoroughfare() + " " +  address.getFeatureName() + " "  + address.getPostalCode() + " " + address.getCountryName() );
 								/* 001 HERE YOU GET THE LOCATION, SAVE IT IN YOUR EXTRAS 
@@ -365,6 +425,9 @@ public class CommentActivity extends AppCompatActivity implements OnClickListene
 		case R.id.btnPostComment:
 			new PostComment().execute();
 			break;
+		case R.id.callbtnInfo:
+			addPhoneNumber();
+			break;
 		case R.id.BtnTakeAPhoto:
 		//	dispatchTakePictureIntent();
 			openImageIntent();
@@ -402,16 +465,22 @@ public class CommentActivity extends AppCompatActivity implements OnClickListene
 				switch (typeofComentChoose) {
 				case 0:{
 					rb_text="Lost pet";
+					imv1.setImageDrawable(myDrawable1);
+					tv1.setText(rb_text);
 					dialog.cancel();
 					break;
 				}
 				case 1:{
 					rb_text="Searching for pet";
+					imv1.setImageDrawable(myDrawable1);
+					tv1.setText(rb_text);
 					dialog.cancel();
 					break;
 				}
 				case 2:{
 					rb_text="Sell a pet";
+					imv1.setImageDrawable(myDrawable1);
+					tv1.setText(rb_text);
 					dialog.cancel();
 					break;
 				}
@@ -425,6 +494,8 @@ public class CommentActivity extends AppCompatActivity implements OnClickListene
 			
 			@Override
 			public void onClick(DialogInterface dialog, int which) {
+				imv1.setImageDrawable(myDrawable1);
+				tv1.setText("Just a post");
 				dialog.cancel();
 				
 			}
@@ -462,7 +533,48 @@ public class CommentActivity extends AppCompatActivity implements OnClickListene
 	
 	//KIKO_-------------------------------------------------------------------
 	
-	
+	public void addPhoneNumber(){
+		
+		/* Variables */
+		dialogBuilder = new AlertDialog.Builder(this);
+		
+		
+		/* Process */
+		dialogBuilder.setTitle("Enter phone number");
+		phoneNumber = new EditText(this);
+		phoneNumber.setInputType(InputType.TYPE_CLASS_NUMBER);
+		phoneNumber.setFilters(new InputFilter[] {new InputFilter.LengthFilter(9)});
+		
+		dialogBuilder.setView(phoneNumber);
+		dialogBuilder.setPositiveButton(R.string.ok, new DialogInterface.OnClickListener() {
+			
+			@Override
+			public void onClick(DialogInterface dialog, int which) {
+				if(phoneNumber.getText().toString().length()==9){
+					phonnumbercontact=phoneNumber.getText().toString();
+				
+					imv2.setImageDrawable(myDrawable);
+					tv2.setText(phonnumbercontact);
+				}else{
+					Toast.makeText(CommentActivity.this, "Phone number must be from 9 characters!", Toast.LENGTH_SHORT).show();                   
+					imv2.setImageDrawable(myDrawable);
+					tv2.setText("No contact added !");
+				}
+				dialog.cancel();
+			}
+		});
+		
+		dialogBuilder.setNegativeButton(R.string.cancel, new DialogInterface.OnClickListener() {
+			
+			@Override
+			public void onClick(DialogInterface dialog, int which) {
+				dialog.cancel();
+			}
+		});
+
+		AlertDialog dialog = dialogBuilder.create();
+		dialog.show();
+	}
 	
 	
 	//hhhhhhhhhhhhhhhhhhhhhhhhh__________KIKO_COMMENT____POST___PHOTO_______________hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
@@ -613,7 +725,7 @@ class PostComment extends AsyncTask<String, String, String> {
                 params.add(new BasicNameValuePair("typecomment", rb_text));
                 params.add(new BasicNameValuePair("image_c", image_comment_encoded));
                 params.add(new BasicNameValuePair("image_p", post_image_progile));
-                params.add(new BasicNameValuePair("contact", "075713761"));
+                params.add(new BasicNameValuePair("contact", phonnumbercontact));
                 params.add(new BasicNameValuePair("comment_image_name", cfile_commnet_name+post_username));
                 
                 Log.d("request!", "starting");
