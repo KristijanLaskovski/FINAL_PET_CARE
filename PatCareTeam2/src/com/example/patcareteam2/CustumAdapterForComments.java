@@ -30,7 +30,7 @@ public class CustumAdapterForComments extends ArrayAdapter<CommentItem> {
 	   public interface ReplayOnCommentInterface{
 	    	 public void startActivityForReplayComent(String post_id);
 	         public void startActivityForShowingLocation(String langitude, String latitude);
-	    	 
+	         public void startActivityForCallingPerson(String phone);
 	     }
 	     
 	     public void setCallback(ReplayOnCommentInterface callback){
@@ -81,6 +81,7 @@ public class CustumAdapterForComments extends ArrayAdapter<CommentItem> {
     	        viewHolder.img_comment=(ImageView)convertView.findViewById(R.id.commentimage);
     	        viewHolder.btnShowLocation=(Button)convertView.findViewById(R.id.showmapbtn);
     	        viewHolder.btnReplayComment=(Button)convertView.findViewById(R.id.btnreplayComment);
+    	        viewHolder.btnCallContact=(Button)convertView.findViewById(R.id.typecomentBTN);
     	        
     	        convertView.setTag(viewHolder);
     	    }else{
@@ -109,42 +110,31 @@ public class CustumAdapterForComments extends ArrayAdapter<CommentItem> {
     	        viewHolder.tvLastName.setText(comment.getLastname());
     	        viewHolder.tvTime.setText(comment.getTime_c());
     	        viewHolder.tvComment.setText(comment.getMessage());
-    	        
-    	        Picasso.with(mContext).load(image_c)
-    	          .into(viewHolder.img_comment);
-    	        
-    	        
-    	        Picasso.with(mContext).load(image_p)
-  	          .into(viewHolder.img_profile);
-  	        
-    	        
-    	      //  viewHolder.img_profile.setImageBitmap(b);
-    	       // viewHolder.img_comment.setImageBitmap(b_c);
+    	        Picasso.with(mContext).load(image_c).into(viewHolder.img_comment);
+    	        Picasso.with(mContext).load(image_p).into(viewHolder.img_profile);
+
     	        viewHolder.btnShowLocation.setOnClickListener(new OnClickListener() {
-					
 					@Override
 					public void onClick(View v) {
 //KIKO_KOMENTS ___________________ZA__DIDI________________________________________________________________________________________________________________
-	//se nadevam deka ot tuka nekako mozi da se startuva activite  za prikaz na mapata eve tuka jas ke probam da gi stavam vo tast
-						// langitude i latitude 
-						callBack.startActivityForShowingLocation(comment.getLongitude(),comment.getLangitude() );
-						//Toast.makeText(getContext(),comment.getLangitude()+"  "+comment.getLongitude(), Toast.LENGTH_SHORT).show();	
+						callBack.startActivityForShowingLocation(comment.getLongitude(),comment.getLangitude() );	
 //KIKO_KOMENTS _____________________________________________________________________________________________________________________________________
 											
 					}
 				}) ;
     	        viewHolder.btnReplayComment.setOnClickListener(new OnClickListener() {
-					
     	  					@Override
     	  					public void onClick(View v) {
- 					
-    	  						//((HomeFragment)mContext).ReplayOnComment();
-    	  		//((MainActivity)mContext).rep
     	  						callBack.startActivityForReplayComent(comment.getPost_id());
     	  					}
     	  				}) ;
     	        
-    	        
+    	        viewHolder.btnCallContact.setOnClickListener(new OnClickListener() {
+  					@Override
+  					public void onClick(View v) {
+  						callBack.startActivityForCallingPerson(comment.getContact());
+  					}
+  				}) ;
     	        
     	        
     	    }

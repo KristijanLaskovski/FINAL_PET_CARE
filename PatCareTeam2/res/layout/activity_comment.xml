@@ -146,7 +146,7 @@
             android:layout_height="wrap_content"
             android:layout_alignLeft="@+id/tvsmallTypeComment"
             android:layout_alignParentBottom="true"
-            android:layout_marginLeft="14dp"
+            android:layout_marginLeft="5dp"
             android:layout_toRightOf="@+id/smallIMGlocation"
             android:text=""
             android:textAppearance="?android:attr/textAppearanceSmall" />

@@ -291,6 +291,16 @@ public class ProfileFragment  extends  android.support.v4.app.ListFragment imple
 
 
 
+	@Override
+	public void startActivityForCallingPerson(String phone) {
+		// TODO Auto-generated method stub
+		
+	}
+
+
+
+
+
 
 	
 }

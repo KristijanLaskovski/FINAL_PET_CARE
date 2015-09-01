@@ -18,6 +18,7 @@ import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.media.Image;
+import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Base64;
@@ -222,6 +223,14 @@ public class HomeFragment extends  android.support.v4.app.ListFragment implement
 			pDialog.dismiss();
 			updateList();
 		}
+	}
+
+	@Override
+	public void startActivityForCallingPerson(String phone) {
+		//TODO Auto-generated method stub
+		Intent intent = new Intent(Intent.ACTION_CALL, Uri.parse("tel:" + phone));
+		startActivity(intent);
+
 	}
 
 
