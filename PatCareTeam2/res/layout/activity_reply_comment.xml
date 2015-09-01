@@ -67,7 +67,7 @@
       </EditText>
 
        <Button
-           android:id="@+id/button1"
+           android:id="@+id/typecomentBTN"
            android:layout_width="40dp"
            android:layout_height="40dp"
            android:layout_alignBaseline="@+id/enteredReplaytoPost"

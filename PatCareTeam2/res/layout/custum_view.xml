@@ -109,7 +109,7 @@
 		         />
 
 		    <Button
-		        android:id="@+id/button1"
+		        android:id="@+id/typecomentBTN"
 		        android:layout_width="30dp"
 		        android:layout_height="30dp"
 		        android:layout_alignRight="@+id/view1"

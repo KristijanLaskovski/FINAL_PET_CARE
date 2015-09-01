@@ -74,7 +74,7 @@ public class CommentActivity extends AppCompatActivity implements OnClickListene
     ImageView mImageView;
 	private Button  mSubmit;
 	private Button  mTakePhoto;
-	private RadioGroup  rg;
+	private Button  mTypeComment;
 	private String image_comment_encoded;
 	Bitmap resized;
 	RadioButton rb;
@@ -122,30 +122,16 @@ public class CommentActivity extends AppCompatActivity implements OnClickListene
 		mTakePhoto = (Button)findViewById(R.id.BtnTakeAPhoto);
 		mTakePhoto.setOnClickListener(this);
 		mImageView=(ImageView)findViewById(R.id.takenImage1);
-		
+		mTypeComment= (Button)findViewById(R.id.typecomentBTN);
+		mTypeComment.setOnClickListener(this);
 		/*KIKO_COMMENTS   proba so radio button */
 		rb_text="Lost pet";
-		
-		 rg = (RadioGroup) findViewById(R.id.radioGroup1);
-		 rg.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
-	            @Override
-	            public void onCheckedChanged(RadioGroup group, int checkedId) {
-	                RadioButton rb = (RadioButton) group.findViewById(checkedId);
-	                if(null!=rb && checkedId > -1){
-	                   // Toast.makeText(CommentActivity.this, rb.getText(), Toast.LENGTH_SHORT).show();
-	                	rb_text=(String) rb.getText();
-	                }
-
-	            }
-	        });
-		
-		
-		
+	
 		/* location */
 		mCheckLocation = (Button)findViewById(R.id.checkLocation);
 		mCheckLocation.setOnClickListener(this);
-		latlng = (TextView) findViewById(R.id.latlng); /* ONLY FOR DEBUGGING */
-		locationAddress = (TextView) findViewById(R.id.locationAddress);
+	//	latlng = (TextView) findViewById(R.id.latlng); /* ONLY FOR DEBUGGING */
+		//locationAddress = (TextView) findViewById(R.id.locationAddress);
 		
 		locationManager = (LocationManager) getSystemService(LOCATION_SERVICE); /* i am getting location services from location manager */
 		
@@ -238,7 +224,7 @@ public class CommentActivity extends AppCompatActivity implements OnClickListene
 					if (deviceLocation != null) {
 						 lat = deviceLocation.getLatitude();
 						 lng = deviceLocation.getLongitude();
-						latlng.setText("Latitude is: " + lat + " and longitude is " + lng);
+						//latlng.setText("Latitude is: " + lat + " and longitude is " + lng);
 						/* 001 HERE YOU GET THE LOCATION, SAVE IT IN YOUR EXTRAS */
 						
 						/* now we're using GeocoderTask again, to obtain */
@@ -247,7 +233,7 @@ public class CommentActivity extends AppCompatActivity implements OnClickListene
 							@Override
 							public void onAddressObtained(Address address) {
 								if (address != null) {
-									 locationAddress.setText("Location address is: " + address.getThoroughfare() + " " +  address.getFeatureName() + " "  + address.getPostalCode() + " " + address.getCountryName() );	
+									// locationAddress.setText("Location address is: " + address.getThoroughfare() + " " +  address.getFeatureName() + " "  + address.getPostalCode() + " " + address.getCountryName() );	
 								}
 								
 							}
@@ -327,8 +313,8 @@ public class CommentActivity extends AppCompatActivity implements OnClickListene
 							Log.d("&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&","Address is not null.");	
 								 lat = address.getLatitude();
 								 lng = address.getLongitude();
-								 latlng.setText("Latitude is: " + lat + " and longitude is " + lng);
-								 locationAddress.setText("Location address is: " + address.getThoroughfare() + " " +  address.getFeatureName() + " "  + address.getPostalCode() + " " + address.getCountryName() );
+								// latlng.setText("Latitude is: " + lat + " and longitude is " + lng);
+								// locationAddress.setText("Location address is: " + address.getThoroughfare() + " " +  address.getFeatureName() + " "  + address.getPostalCode() + " " + address.getCountryName() );
 								/* 001 HERE YOU GET THE LOCATION, SAVE IT IN YOUR EXTRAS 
 								 * ti si go znaesh najdobro kodot, no mislam deka najubavo e na edno mesto
 								 * site podatoci da gi stavash, znachi da ne gi stavash tuka odma vo baza, tuku 
@@ -370,6 +356,12 @@ public class CommentActivity extends AppCompatActivity implements OnClickListene
 	public void onClick(View v) {
 		// TODO Auto-generated method stub
 		switch(v.getId()){
+		case R.id.typecomentBTN:
+			Log.d("##############################33","Tuka se povikuva ALERT DIALOGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG");	
+			
+			chooseTypeOfComment();
+			/* dialog box */
+			break;
 		case R.id.btnPostComment:
 			new PostComment().execute();
 			break;
@@ -382,9 +374,96 @@ public class CommentActivity extends AppCompatActivity implements OnClickListene
 			chooseLocationDialog();
 			/* dialog box */
 			break;
+	
 		}
 
 	}
+	
+	//KIKO_-------------------------------------------------------------------
+	
+	
+	
+	
+	int typeofComentChoose = -1;
+	public void chooseTypeOfComment(){
+		Log.d("##############################33","Tuka se povikuva chooseTypeOfComment()");	
+		
+		/* Variables */
+		dialogBuilder = new AlertDialog.Builder(this);
+		final String[] types_comment = {"You lost/found a pet", "Searching for a new pet","Give or sell a pet"};
+		
+		/* Process */
+		dialogBuilder.setTitle("Choose type of post");
+		
+		dialogBuilder.setPositiveButton(R.string.ok, new DialogInterface.OnClickListener() {
+			
+			@Override
+			public void onClick(DialogInterface dialog, int which) {
+				switch (typeofComentChoose) {
+				case 0:{
+					rb_text="Lost pet";
+					dialog.cancel();
+					break;
+				}
+				case 1:{
+					rb_text="Searching for pet";
+					dialog.cancel();
+					break;
+				}
+				case 2:{
+					rb_text="Sell a pet";
+					dialog.cancel();
+					break;
+				}
+				default:
+					break;
+				}
+			}
+		});
+		
+		dialogBuilder.setNegativeButton(R.string.cancel, new DialogInterface.OnClickListener() {
+			
+			@Override
+			public void onClick(DialogInterface dialog, int which) {
+				dialog.cancel();
+				
+			}
+		});
+		/* plus positive i negative OK i cancel */
+		
+		
+		dialogBuilder.setSingleChoiceItems(types_comment, -1, new DialogInterface.OnClickListener() {
+			
+			@Override
+			public void onClick(DialogInterface dialog, int which) {
+				
+				typeofComentChoose = which;
+
+			}
+		});
+		
+		/* Output */
+		AlertDialog dialogtypecommnet = dialogBuilder.create();
+		dialogtypecommnet.show();
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	//KIKO_-------------------------------------------------------------------
+	
+	
+	
 	
 	//hhhhhhhhhhhhhhhhhhhhhhhhh__________KIKO_COMMENT____POST___PHOTO_______________hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
 	

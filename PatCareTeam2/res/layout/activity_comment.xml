@@ -2,7 +2,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.patcareteam2.CommentActivity" >
+    tools:context="com.example.patcareteam2.CommentActivity"
+    android:background="#ffffff"
+     >
 
     <EditText
         android:id="@+id/ETforEnteringCommnets"
@@ -12,100 +14,76 @@
         android:layout_alignParentRight="true"
         android:ems="10"
         android:hint="@string/stringForCommnet"
-        android:inputType="textLongMessage" >
+           android:inputType="textMultiLine"
+           android:lines="3"
+        android:background="@null"
+       android:paddingLeft="8dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="5dp"
+         >
 
         <requestFocus />
     </EditText>
 
     <Button
         android:id="@+id/btnPostComment"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
         android:layout_marginBottom="5dp"
         android:layout_marginRight="6dp"
-        android:layout_marginTop="390dp"
-        android:background="@drawable/post_btn" />
+        android:background="@drawable/custum_send_replay" />
 
+   
     <Button
         android:id="@+id/BtnTakeAPhoto"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:layout_alignBaseline="@+id/btnPostComment"
-        android:layout_alignBottom="@+id/btnPostComment"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
-        android:layout_toLeftOf="@+id/btnPostComment"
+        android:layout_width="37dp"
+        android:layout_height="37dp"
+        android:layout_alignBaseline="@+id/checkLocation"
+        android:layout_alignBottom="@+id/checkLocation"
+        android:layout_marginLeft="5dp"
+        android:layout_toRightOf="@+id/typecomentBTN"
         android:background="@drawable/photo_btn" />
 
     <Button
         android:id="@+id/checkLocation"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:layout_alignBaseline="@+id/BtnTakeAPhoto"
-        android:layout_alignBottom="@+id/BtnTakeAPhoto"
-        android:layout_toLeftOf="@+id/BtnTakeAPhoto"
-        android:background="@drawable/location_btn" />
-
-    <TextView
-        android:id="@+id/locationAddress"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/latlng"
-        android:layout_marginBottom="14dp"
-        android:text="Large Text"
-        android:textAppearance="?android:attr/textAppearanceLarge" />
-
-    <TextView
-        android:id="@+id/latlng"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/checkLocation"
-        android:layout_alignLeft="@+id/locationAddress"
-        android:layout_marginBottom="16dp"
-        android:text="Large Text"
-        android:textAppearance="?android:attr/textAppearanceLarge" />
-
-    <RadioGroup
-        android:id="@+id/radioGroup1"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_below="@+id/ETforEnteringCommnets"
-        android:gravity="center_horizontal"
-        android:orientation="horizontal" 
+        android:layout_width="37dp"
+        android:layout_height="37dp"
+        android:layout_alignBaseline="@+id/typecomentBTN"
+        android:layout_alignBottom="@+id/typecomentBTN"
        
-        >
+        android:background="@drawable/location_btn"
+        android:layout_marginLeft="8dp"
+         />
 
-        <RadioButton
-            android:id="@+id/lostpet"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/losttv"
-            android:checked="true"
-             />
-
-        <RadioButton
-            android:id="@+id/foundpet"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/foundtv" />
-
-        <RadioButton
-            android:id="@+id/selgivepet"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/sellgivetv" />
-    </RadioGroup>
+    <Button
+        android:id="@+id/typecomentBTN"
+        android:layout_width="37dp"
+        android:layout_height="37dp"
+        android:layout_alignBottom="@+id/btnPostComment"
+        android:layout_toRightOf="@+id/checkLocation"
+        android:background="@drawable/custum_btn_type_comment" 
+        android:layout_marginLeft="5dp"
+        />
 
     <ImageView
         android:id="@+id/takenImage1"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="300dp"
         android:layout_alignParentLeft="true"
-        android:layout_below="@+id/radioGroup1"
-        android:layout_marginTop="48dp"
-        android:src="@drawable/camera" />
+        android:layout_below="@+id/ETforEnteringCommnets"
+        android:contentDescription="@string/title_section4"
+        android:src="@drawable/pozadinabela" />
+
+    <Button
+        android:id="@+id/callbtnInfo"
+        android:layout_width="37dp"
+        android:layout_height="37dp"
+        android:layout_alignBaseline="@+id/BtnTakeAPhoto"
+        android:layout_alignBottom="@+id/BtnTakeAPhoto"
+        android:layout_marginLeft="5dp"
+        android:layout_toRightOf="@+id/BtnTakeAPhoto"
+        android:background="@drawable/custum_btn_call" />
 
 </RelativeLayout>
