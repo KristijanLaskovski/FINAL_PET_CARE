@@ -2478,7 +2478,7 @@ containing a value of this type.
         public static final int TVComment=0x7f09008f;
         public static final int TVtime=0x7f090091;
         public static final int action0=0x7f09009f;
-        public static final int action_about_us=0x7f0900ad;
+        public static final int action_about_us=0x7f0900ae;
         public static final int action_bar=0x7f090057;
         public static final int action_bar_activity_content=0x7f090004;
         public static final int action_bar_container=0x7f090056;
@@ -2488,14 +2488,14 @@ containing a value of this type.
         public static final int action_bar_title=0x7f09003a;
         public static final int action_context_bar=0x7f090058;
         public static final int action_divider=0x7f0900a3;
-        public static final int action_exit=0x7f0900af;
+        public static final int action_exit=0x7f0900b0;
         public static final int action_menu_divider=0x7f090006;
         public static final int action_menu_presenter=0x7f090007;
         public static final int action_mode_bar=0x7f090054;
         public static final int action_mode_bar_stub=0x7f090053;
         public static final int action_mode_close_button=0x7f09003c;
-        public static final int action_preferences=0x7f0900ae;
-        public static final int action_settings=0x7f0900ac;
+        public static final int action_preferences=0x7f0900af;
+        public static final int action_settings=0x7f0900ad;
         public static final int activity_chooser_view_content=0x7f09003d;
         public static final int addComentBTN=0x7f090094;
         public static final int addLocation=0x7f09009b;
@@ -2581,6 +2581,7 @@ containing a value of this type.
         public static final int production=0x7f090013;
         public static final int profilFirstName=0x7f090098;
         public static final int profileLastName=0x7f090097;
+        public static final int progressBar=0x7f0900ac;
         public static final int progress_circular=0x7f090008;
         public static final int progress_horizontal=0x7f090009;
         public static final int prv=0x7f090096;
@@ -2740,10 +2741,11 @@ containing a value of this type.
         public static final int notification_template_media=0x7f030031;
         public static final int notification_template_part_chronometer=0x7f030032;
         public static final int notification_template_part_time=0x7f030033;
-        public static final int select_dialog_item_material=0x7f030034;
-        public static final int select_dialog_multichoice_material=0x7f030035;
-        public static final int select_dialog_singlechoice_material=0x7f030036;
-        public static final int support_simple_spinner_dropdown_item=0x7f030037;
+        public static final int progresbar_in_footer=0x7f030034;
+        public static final int select_dialog_item_material=0x7f030035;
+        public static final int select_dialog_multichoice_material=0x7f030036;
+        public static final int select_dialog_singlechoice_material=0x7f030037;
+        public static final int support_simple_spinner_dropdown_item=0x7f030038;
     }
     public static final class menu {
         public static final int comment=0x7f0f0000;

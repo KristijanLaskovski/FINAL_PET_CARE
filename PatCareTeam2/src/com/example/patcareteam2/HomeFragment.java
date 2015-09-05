@@ -5,6 +5,8 @@ import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 
+import org.apache.http.NameValuePair;
+import org.apache.http.message.BasicNameValuePair;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -15,12 +17,15 @@ import com.example.patcareteam2.CustumAdapterForComments.ReplayOnCommentInterfac
 
 import android.app.ProgressDialog;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.media.Image;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.os.Handler;
+import android.preference.PreferenceManager;
 import android.util.Base64;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -29,11 +34,14 @@ import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
+import android.widget.AbsListView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.ListAdapter;
 import android.widget.ListView;
+import android.widget.RelativeLayout;
 import android.widget.SimpleAdapter;
 import android.widget.Toast;
  
@@ -42,16 +50,23 @@ public class HomeFragment extends  android.support.v4.app.ListFragment implement
     public HomeFragment(){
     	
     }
-    
+    boolean loadingMore = true;
+    int pageCount = 1;
     ImageView imslika;
+	CustumAdapterForComments adapter;
     ArrayAdapter<CommentItem> arrayAdapterofComments;
     private ArrayList<CommentItem> NEW_Comments ;
     ListView listViewOnHome;
     Button btnAddAcommnet;
+    View footer;
     // Progress Dialog
 	private ProgressDialog pDialog;
 	private static final String READ_COMMENTS_URL = "http://www.petcarekl.com/webservice/commentspc.php";
+	private static final String READ_REMINDING_COMMENTS_URL = "http://www.petcarekl.com/webservice/remidingcomments.php";
 
+	//webservice/remidingcomments.php
+	
+	
 	// JSON IDS:
 	private static final String TAG_SUCCESS = "success";
 	private static final String TAG_TIME = "time_post";
@@ -83,7 +98,33 @@ public class HomeFragment extends  android.support.v4.app.ListFragment implement
 			}
 		});
 		
+		// Add footer view
+		 LinearLayout ll=(LinearLayout)inflater.inflate(R.layout.progresbar_in_footer, null,false);
+		 listViewOnHome.addFooterView(ll);
+		listViewOnHome.setOnScrollListener(new AbsListView.OnScrollListener() {
+            @Override
+            public void onScrollStateChanged(AbsListView absListView, int i) {
+            	loadingMore=false;
+            }
+ 
+            @Override
+            public void onScroll(AbsListView absListView, int firstItem, int visibleItemCount, final int totalItems) {
+                Log.e("Get position", "--firstItem:" + firstItem + "  visibleItemCount:" + visibleItemCount + "  totalItems:" + totalItems + "  pageCount:" + pageCount);
+                int lastInScreen = firstItem + visibleItemCount;  
+                if((lastInScreen==totalItems)&& loadingMore==false){     
+                    
+                new LoadREMINDINGComments().execute();
+                	//Toast.makeText(getActivity(), "on scroll",Toast.LENGTH_SHORT ).show();
+                	loadingMore=true;
+                   }
+                else{
+                	
+                }
+              
+            }
+        });
 		
+		new LoadComments().execute();
         return rootView;
     }
 	
@@ -104,7 +145,7 @@ public class HomeFragment extends  android.support.v4.app.ListFragment implement
 		// TODO Auto-generated method stub
 		super.onResume();
 		// loading the comments via AsyncTask
-		new LoadComments().execute();
+		
 	}
 
 	
@@ -173,7 +214,7 @@ public class HomeFragment extends  android.support.v4.app.ListFragment implement
 	 * Inserts the parsed data into the listview.
 	 */
 	private void updateList() {
-		CustumAdapterForComments adapter=new CustumAdapterForComments(getActivity(), NEW_Comments);
+		adapter=new CustumAdapterForComments(getActivity(), NEW_Comments);
         
 		adapter.setCallback(this);
         
@@ -222,6 +263,7 @@ public class HomeFragment extends  android.support.v4.app.ListFragment implement
 			super.onPostExecute(result);
 			pDialog.dismiss();
 			updateList();
+			loadingMore=false;
 		}
 	}
 
@@ -232,9 +274,121 @@ public class HomeFragment extends  android.support.v4.app.ListFragment implement
 		startActivity(intent);
 
 	}
+	
+	//_____________lodiranje_na_ostanati_komentari____________________________________________________________________________
 
+	
+	
+	
+	
+	
+	public class LoadREMINDINGComments extends AsyncTask<Void, Void, Boolean> {
 
+		@Override
+		protected void onPreExecute() {
+			super.onPreExecute();
+			//pDialog = new ProgressDialog(getActivity());
+			//pDialog.setMessage("Loading Comments...");
+			//pDialog.setIndeterminate(false);
+			//pDialog.setCancelable(true);
+			//pDialog.show();
+		}
 
+		@Override
+		protected Boolean doInBackground(Void... arg0) {
+			loadingMore = true;
+			updateJSONdatareminding();
+			return null;
+
+		}
+
+		@Override
+		protected void onPostExecute(Boolean result) {
+			super.onPostExecute(result);
+		//	pDialog.dismiss();
+			updatereminfingList();
+		}
+	}
+	
+	
+	
+	private void updatereminfingList() {
+		
+		adapter.notifyDataSetChanged();
+      
+	}
+	
+	
+	
+	
+	
+public void updateJSONdatareminding() {
+		
+
+         int success;
+
+			try {
+				// Building Parameters
+				List<NameValuePair> params = new ArrayList<NameValuePair>();
+				params.add(new BasicNameValuePair("loadedcomments", Integer.toString(NEW_Comments.size())));
+
+				
+				Log.d("!@#$%^&*())(((((((((((((((((((((((((((((((((((((", Integer.toString(NEW_Comments.size()));
+				
+				Log.d("request!", "starting");
+				// getting product details by making HTTP request
+				JSONParser jsonParser = new JSONParser();
+				JSONObject json = jsonParser.makeHttpRequest(READ_REMINDING_COMMENTS_URL, "POST",params);
+
+				// check your log for json response
+				Log.d("Login attempt", json.toString());
+
+				// json success tag
+				success = json.getInt(TAG_SUCCESS);
+				if (success == 1) {
+					
+				
+						mComments = json.getJSONArray(TAG_POSTS);
+
+						// looping through all posts according to the json object returned
+						for (int i = 0; i < mComments.length(); i++) {
+							
+							
+							
+							
+							JSONObject c = mComments.getJSONObject(i);
+							// gets the content of each tag
+							String title = c.getString(TAG_TIME);
+							String content = c.getString(TAG_MESSAGE);
+							String username = c.getString(TAG_USERNAME);
+							String firstname = c.getString(TAG_FIRST_NAME);
+							String lastname = c.getString(TAG_LAST_NAME);
+			             	String image_c = c.getString("image_c");
+							String image_p = c.getString("image_p");
+							String contact = c.getString("contact");
+							String langitude = c.getString("latitude");
+							String longitude = c.getString("longitude");
+							String type_c = c.getString("typecomment");
+							String post_id=c.getString("post_id");
+							CommentItem comitem=new CommentItem(content, firstname, lastname, title, image_p, image_c, langitude, longitude, contact, type_c,post_id);
+							NEW_Comments.add(comitem);
+							Log.d("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@", "loadedd coments on SCROLL   "+ mComments.length()+" "+content);
+							
+						}
+
+										
+				}
+					
+				}catch (JSONException e) {
+					e.printStackTrace();
+				}  
+		
+
+	}
+	
+
+	
+	//_____________lodiranje_na_ostanati_komentari____________________________________________________________________________
 
 
 	
