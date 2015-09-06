@@ -7,4 +7,4 @@
     android:divider="#8BCBBE"
     android:dividerHeight="1dp"
     
-    tools:context="com.example.patcareteam2.ProfileFragment" />
+    tools:context="com.petcarekl.patcareteam2.ProfileFragment" />

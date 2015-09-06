@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.patcareteam2"
+    package="com.petcarekl.patcareteam2"
     android:versionCode="1"
     android:versionName="1.0" >
 
@@ -10,6 +10,7 @@
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.CALL_PHONE" />
+
     <uses-feature
         android:name="android.hardware.camera"
         android:required="true" />
@@ -28,11 +29,11 @@
         android:label="@string/app_name"
         android:theme="@style/CustomActionBarTheme" >
         <meta-data
-            android:name="com.example.patcareteam2"
+            android:name="com.petcarekl.patcareteam2"
             android:value="AIzaSyCAN7HNP1aCJrDNHcLe-9POC8ar1lXqXls" />
         <!--
             <meta-data android:name="com.google.android.gms.version"
-    		android:value="@integer/google_play_services_version" />
+    		android:value="@integer/google_play_services_version" />
         -->
 
         <activity
@@ -87,7 +88,7 @@
             android:screenOrientation="portrait" >
         </activity>
         <activity
-            android:name=".ReplyComment"
+            android:name="com.example.patcareteam2.ReplyComment"
             android:label="@string/title_activity_reply_comment"
             android:screenOrientation="portrait"
             android:theme="@style/myDialog" >
@@ -100,8 +101,15 @@
         <activity
             android:name=".CommentsOnPost"
             android:label="@string/title_activity_comments_on_post"
-             android:screenOrientation="portrait"
-             >
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".TipActivity"
+            android:label="@string/title_activity_tip" >
+        </activity>
+        <activity
+            android:name=".User_Profile_Visit"
+            android:label="@string/title_activity_user__profile__visit" >
         </activity>
     </application>
 
