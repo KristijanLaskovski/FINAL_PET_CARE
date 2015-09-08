@@ -2,22 +2,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-     android:background="#34a9d5"
     tools:context="com.petcarekl.patcareteam2.TipActivity" >
-   <ImageView
-        android:id="@+id/imageView1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentTop="true"
-        android:src="@drawable/tipsforpetcare_withtext" />
+
+   
+
     <ScrollView
         android:id="@+id/scrollView1"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-     
-      android:layout_below="@id/imageView1"
+   
       android:background="#fff"
          >
 
@@ -25,6 +18,15 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical" >
+            
+            <ImageView
+       android:id="@+id/imagefortip"
+       android:layout_width="match_parent"
+       android:layout_height="220dp"
+       android:layout_alignParentLeft="true"
+       android:layout_alignParentRight="true"
+       android:layout_alignParentTop="true"
+       android:src="@drawable/tipsforpetcare_withtext" />
             
     <TextView
         android:id="@+id/tipTextView"
@@ -34,6 +36,7 @@
         android:gravity="fill_vertical|fill_horizontal"
         android:text="@string/contentofTip"
         android:textAppearance="?android:attr/textAppearanceMedium"
+        
         android:paddingLeft="15dp"
          android:paddingRight="15dp"
          />

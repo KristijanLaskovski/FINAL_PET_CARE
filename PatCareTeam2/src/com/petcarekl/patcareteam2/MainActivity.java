@@ -5,8 +5,10 @@ import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.ActionBar;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
+import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
+import android.content.IntentFilter;
 import android.content.SharedPreferences;
 import android.content.SharedPreferences.Editor;
 import android.os.Bundle;
@@ -17,6 +19,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 import android.support.v4.widget.DrawerLayout;
 
 import com.petcare.teamiki.R;
@@ -45,7 +48,9 @@ public class MainActivity extends ActionBarActivity implements
 	@Override
     public void onBackPressed() {
 
-       return;
+		Toast.makeText(MainActivity.this, "back", Toast.LENGTH_LONG).show();
+       //return;
+		finish();
     }
 
 	
@@ -66,6 +71,19 @@ public class MainActivity extends ActionBarActivity implements
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 
+		IntentFilter intentFilter = new IntentFilter();
+	    intentFilter.addAction("com.petcare.teamiki.ACTION_LOGOUT");
+	    registerReceiver(new BroadcastReceiver() {
+	        @Override
+	        public void onReceive(Context context, Intent intent) {
+	            Log.d("onReceive","Logout in progress");
+	            //At this point you should start the login activity and finish this one
+	            Intent login = new Intent(MainActivity.this, LoginActivity.class);
+	            startActivity(login);
+	            finish();
+	        }
+	    }, intentFilter);
+	    
 		mNavigationDrawerFragment = (NavigationDrawerFragment) getSupportFragmentManager()
 				.findFragmentById(R.id.navigation_drawer);
 		mTitle = getTitle();
@@ -171,6 +189,13 @@ public class MainActivity extends ActionBarActivity implements
 			Editor edit = sp.edit();
 			edit.putBoolean("logininformation", false);
 			edit.commit();
+			//finish();
+			
+			//pustame broadkast do site aktivitys na koi sto userot mora da e  logiran
+			Intent broadcastIntent = new Intent();
+			broadcastIntent.setAction("com.petcare.teamiki.ACTION_LOGOUT");
+			sendBroadcast(broadcastIntent);
+			
 			Intent i=new Intent(MainActivity.this, LoginActivity.class);
 			startActivity(i);
 			//finish();

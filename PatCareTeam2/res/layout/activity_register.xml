@@ -52,12 +52,12 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/lastName"
-         android:gravity="center"
         android:ems="10"
-        android:hint="@string/emailhint"
+        android:gravity="center"
+        android:hint="@string/usernamehint"
+        android:inputType="textEmailAddress"
         android:textColor="#ffffff"
-        android:textColorHint="#ffffff" 
-        android:inputType="textEmailAddress" />
+        android:textColorHint="#ffffff" />
 
     <EditText
         android:id="@+id/passwordRegister"

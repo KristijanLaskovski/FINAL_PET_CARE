@@ -19,8 +19,10 @@ import org.apache.http.NameValuePair;
 import org.apache.http.message.BasicNameValuePair;
 import android.app.Activity;
 import android.app.ProgressDialog;
+import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
+import android.content.IntentFilter;
 import android.content.SharedPreferences;
 import android.content.SharedPreferences.Editor;
 import android.net.ConnectivityManager;
@@ -75,9 +77,32 @@ public class LoginActivity extends Activity implements View.OnClickListener {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 		SharedPreferences	sp = PreferenceManager.getDefaultSharedPreferences(LoginActivity.this);
 	    Boolean user_login_inforamtion = sp.getBoolean("logininformation", false);
 	    		
+	    
+	    
+	    
+	    
 		if(user_login_inforamtion){
 			Intent i=new Intent("com.example.patcareteam2.MAINACTIVITY");
 			finish();

@@ -2,9 +2,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@android:color/white"
     android:choiceMode="singleChoice"
-    android:divider="#8BCBBE"
-    android:dividerHeight="1dp"
+    android:cacheColorHint="@android:color/transparent"
+        android:divider="@null"
+        android:dividerHeight="5dp"
+        android:listSelector="@android:color/transparent"
      android:id="@android:id/list"
     tools:context="com.petcarekl.patcareteam2.User_Profile_Visit" />

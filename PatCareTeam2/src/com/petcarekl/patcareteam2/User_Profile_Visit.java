@@ -41,7 +41,7 @@ import android.widget.AdapterView.OnItemClickListener;
 
 public class User_Profile_Visit extends ListActivity   implements ReplayOnCommentInterface{
 	
-	
+	String numberOFComentsProfile="0";
 	  TextView firstname,lastname;
 	    ListView listViewOnHome;
 	    Button btnAddAcommnet;
@@ -135,7 +135,7 @@ public class User_Profile_Visit extends ListActivity   implements ReplayOnCommen
 	      TextView lastname=(TextView)rl.findViewById(R.id.profileLastName);
 	      lastname.setText(Lastname);
 	      TextView numberofComments=(TextView)rl.findViewById(R.id.tvNumberOfComments);
-	      numberofComments.setText("54 comments");
+	      numberofComments.setText(numberOFComentsProfile+" comments");
 	      ImageView profileimage=(ImageView)rl.findViewById(R.id.replayImage);
 	     // profileimage.setImageBitmap(b);
 	      //proba za na profile
@@ -174,13 +174,13 @@ public void updateJSONdata() {
 				List<NameValuePair> params = new ArrayList<NameValuePair>();
 				params.add(new BasicNameValuePair("username",profileOf_USER));
 
-				Log.d("request!", "starting");
+				//Log.d("request!", "starting");
 				// getting product details by making HTTP request
 				JSONObject json = jsonParser.makeHttpRequest(READ_COMMENTS_PROFILE_URL, "POST",
 						params);
 
 				// check your log for json response
-				Log.d("Login attempt", json.toString());
+				//Log.d("Login attempt", json.toString());
 
 				// json success tag
 				success = json.getInt(TAG_SUCCESS);
@@ -188,7 +188,7 @@ public void updateJSONdata() {
 					
 				
 						mComments = json.getJSONArray(TAG_POSTS);
-
+						numberOFComentsProfile=Integer.toString(mComments.length());
 						// looping through all posts according to the json object returned
 						for (int i = 0; i < mComments.length(); i++) {
 							JSONObject c = mComments.getJSONObject(i);

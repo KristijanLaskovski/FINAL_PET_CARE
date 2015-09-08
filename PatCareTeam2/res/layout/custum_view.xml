@@ -47,6 +47,7 @@
 		        android:layout_alignLeft="@+id/replayImage"
 		        android:layout_below="@+id/replayImage"
 		        android:layout_marginTop="10dp"
+		        android:layout_marginBottom="8dp"
 		        android:text="@string/tvComment"
 		        android:textAppearance="?android:attr/textAppearanceSmall"
 		        android:textColor="#222" />
