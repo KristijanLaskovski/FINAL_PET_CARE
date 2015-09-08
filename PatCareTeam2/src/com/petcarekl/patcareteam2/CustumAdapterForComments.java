@@ -2,12 +2,14 @@ package com.petcarekl.patcareteam2;
 
 import java.util.ArrayList;
 
-import com.petcarekl.patcareteam2.R;
+import com.google.android.gms.maps.model.LatLng;
+import com.petcare.teamiki.R;
 import com.squareup.picasso.Picasso;
 
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.location.Address;
 import android.provider.ContactsContract.Contacts.Data;
 import android.util.Base64;
 import android.util.Log;
@@ -27,6 +29,7 @@ public class CustumAdapterForComments extends ArrayAdapter<CommentItem> {
 	ArrayList<CommentItem> comments;
 	Context mContext;
 	ReplayOnCommentInterface callBack;
+	
 	
 	   public interface ReplayOnCommentInterface{
 	    	 public void startActivityForReplayComent(String post_id);
@@ -84,6 +87,7 @@ public class CustumAdapterForComments extends ArrayAdapter<CommentItem> {
     	        viewHolder.btnShowLocation=(Button)convertView.findViewById(R.id.showmapbtn);
     	        viewHolder.btnReplayComment=(Button)convertView.findViewById(R.id.btnreplayComment);
     	        viewHolder.btnCallContact=(Button)convertView.findViewById(R.id.typecomentBTN);
+    	        viewHolder.address = (TextView) convertView.findViewById(R.id.tvaddress);
     	        
     	        convertView.setTag(viewHolder);
     	    }else{
@@ -94,15 +98,35 @@ public class CustumAdapterForComments extends ArrayAdapter<CommentItem> {
     	    
     	       String image_p=comment.getImage_p();
     	       String image_c=comment.getImage_c();
-
+    	       
+    	   
+    	       
     	    if(comment != null) {
     	        // get the TextView from the ViewHolder and then set the text (item name) and tag (item ID) values
-    	        viewHolder.tvName.setText(comment.getFirstname());
+    	 
+    	    	viewHolder.tvName.setText(comment.getFirstname());
     	        viewHolder.tvLastName.setText(comment.getLastname());
     	        viewHolder.tvTime.setText(comment.getTime_c());
     	        viewHolder.tvComment.setText(comment.getMessage());
-    	        Picasso.with(mContext).load(image_c).into(viewHolder.img_comment);
+    	        
+    	        if(comment.getHasimageC().equals("true")){
+    	        	
+    	        	Log.d("HAS IMAGE", comment.getHasimageC());
+    	        	 Picasso.with(mContext).load(image_c).into(viewHolder.img_comment);
+    	        	 
+    	        }if(comment.getHasimageC().equals("false")){
+    	        	
+    	        	Log.d("HAS IMAGE", comment.getHasimageC());
+    	        	viewHolder.img_comment.setVisibility(View.GONE);
+    	        }
+    	        
+    	        
+    	      // 
+    	        
+    	        
     	        Picasso.with(mContext).load(image_p).into(viewHolder.img_profile);
+    	        viewHolder.address.setText(comment.getAddress());
+    	      
 
     	        viewHolder.btnShowLocation.setOnClickListener(new OnClickListener() {
 					@Override
@@ -174,6 +198,7 @@ public class CustumAdapterForComments extends ArrayAdapter<CommentItem> {
          Button btnShowLocation;
          Button btnCallContact;
          Button btnReplayComment;
+         TextView address;
      }
      
      

@@ -35,7 +35,7 @@ import android.widget.ListView;
 import android.widget.SimpleAdapter;
 import android.widget.TextView;
 import android.widget.Toast;
-import com.petcarekl.patcareteam2.R;
+import com.petcare.teamiki.R;
 
 public class BuyFragment extends  android.support.v4.app.ListFragment {
 

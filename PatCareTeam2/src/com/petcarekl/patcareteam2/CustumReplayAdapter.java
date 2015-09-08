@@ -2,7 +2,7 @@ package com.petcarekl.patcareteam2;
 
 import java.util.ArrayList;
 
-import com.petcarekl.patcareteam2.R;
+import com.petcare.teamiki.R;
 import com.petcarekl.patcareteam2.CustumAdapterForComments.ViewHolderItem;
 import com.squareup.picasso.Picasso;
 

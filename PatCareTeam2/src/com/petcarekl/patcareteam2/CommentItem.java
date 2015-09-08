@@ -14,10 +14,12 @@ public class CommentItem {
 	public String type_c;
 	public String post_id;
 	public String user;
+	public String address;
+	public String hasimageC;
 	
 	public CommentItem(String user,String message, String firstname, String lastname,
 			String time_c, String image_p, String image_c, String langitude,
-			String longitude, String contact, String type_c,String post_id) {
+			String longitude, String contact, String type_c,String post_id,String address,String hasimageC) {
 		super();
 		this.user=user;
 		this.message = message;
@@ -31,10 +33,31 @@ public class CommentItem {
 		this.contact = contact;
 		this.type_c = type_c;
 		this.post_id=post_id;
+		this.address=address;
+		this.hasimageC=hasimageC;
 	}
+
+	
+	public String getHasimageC() {
+		return hasimageC;
+	}
+
+
+	public void setHasimageC(String hasimageC) {
+		this.hasimageC = hasimageC;
+	}
+
 
 	public String getUser() {
 		return user;
+	}
+
+	public String getAddress() {
+		return address;
+	}
+
+	public void setAddress(String address) {
+		this.address = address;
 	}
 
 	public void setUser(String user) {

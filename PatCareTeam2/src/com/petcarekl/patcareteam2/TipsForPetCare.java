@@ -14,7 +14,7 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.petcarekl.patcareteam2.R;
+import com.petcare.teamiki.R;
 import com.petcarekl.patcareteam2.CustumAdapterTips.ShowTipInterface;
 
 public class TipsForPetCare extends android.support.v4.app.ListFragment implements ShowTipInterface{

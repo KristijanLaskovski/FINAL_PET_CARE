@@ -15,7 +15,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 
-import com.petcarekl.patcareteam2.R;
+import com.petcare.teamiki.R;
 import com.squareup.picasso.OkHttpDownloader;
 import com.squareup.picasso.Picasso;
 

@@ -11,6 +11,7 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import com.petcare.teamiki.R;
 import com.petcarekl.patcareteam2.CustumAdapterForComments.ReplayOnCommentInterface;
 import com.squareup.picasso.Picasso;
 
@@ -207,7 +208,8 @@ public void updateJSONdata() {
 							String longitude = c.getString("longitude");
 							String type_c = c.getString("typecomment");
 							String post_id=c.getString("post_id");
-							
+							String post_address=c.getString("address");
+							String post_hasimage=c.getString("hasimage");
 							String content_text="";
 							String firstname_text="";
 							String lastname_text="";
@@ -229,7 +231,7 @@ public void updateJSONdata() {
 							ProfilePicture=image_p;
 							
 							
-							CommentItem comitem=new CommentItem(username,content_text, firstname_text,lastname_text, title, image_p, image_c, langitude, longitude, contact, type_c,post_id);
+							CommentItem comitem=new CommentItem(username,content_text, firstname_text,lastname_text, title, image_p, image_c, langitude, longitude, contact, type_c,post_id,post_address,post_hasimage);
 							NEW_Comments.add(comitem);
 							
 						}

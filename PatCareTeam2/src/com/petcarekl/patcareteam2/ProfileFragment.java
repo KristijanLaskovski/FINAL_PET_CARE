@@ -11,7 +11,7 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import com.petcarekl.patcareteam2.R;
+import com.petcare.teamiki.R;
 import com.petcarekl.patcareteam2.CustumAdapterForComments.ReplayOnCommentInterface;
 import com.petcarekl.patcareteam2.HomeFragment.LoadComments;
 import com.squareup.picasso.Picasso;
@@ -114,6 +114,14 @@ public class ProfileFragment  extends  android.support.v4.app.ListFragment imple
       Picasso.with(getActivity()).load(post_image)
         .into(profileimage);
       
+      rl.setOnClickListener(new OnClickListener()
+      {
+    	   @Override
+    	   public void onClick(View v)
+    	   {
+    		   
+    	   }
+    	});
       
       listViewOnHome.addHeaderView(rl);
       
@@ -207,7 +215,8 @@ public class ProfileFragment  extends  android.support.v4.app.ListFragment imple
 							String longitude = c.getString("longitude");
 							String type_c = c.getString("typecomment");
 							String post_id=c.getString("post_id");
-							
+							String post_address=c.getString("address");
+							String post_hasimage=c.getString("hasimage");
 							String content_text="";
 							String firstname_text="";
 							String lastname_text="";
@@ -229,7 +238,7 @@ public class ProfileFragment  extends  android.support.v4.app.ListFragment imple
 							
 							
 							
-							CommentItem comitem=new CommentItem(username,content_text, firstname_text,lastname_text, title, post_image, image_c, langitude, longitude, contact, type_c,post_id);
+							CommentItem comitem=new CommentItem(username,content_text, firstname_text,lastname_text, title, post_image, image_c, langitude, longitude, contact, type_c,post_id,post_address,post_hasimage);
 							NEW_Comments.add(comitem);
 							
 						}

@@ -28,7 +28,7 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
 
-import com.petcarekl.patcareteam2.R;
+import com.petcare.teamiki.R;
 
 /**
  * Fragment used for managing interactions for and presentation of a navigation drawer.

@@ -19,7 +19,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.support.v4.widget.DrawerLayout;
 
-import com.petcarekl.patcareteam2.R;
+import com.petcare.teamiki.R;
 
 
 @SuppressWarnings("deprecation")

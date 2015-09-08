@@ -34,7 +34,7 @@ import android.widget.ListView;
 import android.widget.Toast;
 import android.widget.AdapterView.OnItemClickListener;
 
-import com.petcarekl.patcareteam2.R;
+import com.petcare.teamiki.R;
 
 public class CommentsOnPost extends ListActivity {
 

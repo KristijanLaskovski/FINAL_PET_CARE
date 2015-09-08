@@ -2,7 +2,7 @@ package com.petcarekl.patcareteam2;
 
 import android.os.Bundle;
 import android.preference.PreferenceActivity;
-import com.petcarekl.patcareteam2.R;
+import com.petcare.teamiki.R;
 
 
 public class Preference extends PreferenceActivity{

@@ -5,7 +5,7 @@
  * should not be modified by hand.
  */
 
-package com.petcarekl.patcareteam2;
+package com.petcare.teamiki;
 
 public final class R {
     public static final class anim {
@@ -2475,10 +2475,10 @@ containing a value of this type.
     public static final class id {
         public static final int BtnTakeAPhoto=0x7f09006f;
         public static final int ETforEnteringCommnets=0x7f09006d;
-        public static final int TVComment=0x7f090091;
-        public static final int TVtime=0x7f090093;
-        public static final int action0=0x7f0900a0;
-        public static final int action_about_us=0x7f0900af;
+        public static final int TVComment=0x7f090092;
+        public static final int TVtime=0x7f090094;
+        public static final int action0=0x7f0900a2;
+        public static final int action_about_us=0x7f0900b1;
         public static final int action_bar=0x7f090057;
         public static final int action_bar_activity_content=0x7f090004;
         public static final int action_bar_container=0x7f090056;
@@ -2487,18 +2487,18 @@ containing a value of this type.
         public static final int action_bar_subtitle=0x7f09003b;
         public static final int action_bar_title=0x7f09003a;
         public static final int action_context_bar=0x7f090058;
-        public static final int action_divider=0x7f0900a4;
-        public static final int action_exit=0x7f0900b1;
+        public static final int action_divider=0x7f0900a6;
+        public static final int action_exit=0x7f0900b3;
         public static final int action_menu_divider=0x7f090006;
         public static final int action_menu_presenter=0x7f090007;
         public static final int action_mode_bar=0x7f090054;
         public static final int action_mode_bar_stub=0x7f090053;
         public static final int action_mode_close_button=0x7f09003c;
-        public static final int action_preferences=0x7f0900b0;
-        public static final int action_settings=0x7f0900ae;
+        public static final int action_preferences=0x7f0900b2;
+        public static final int action_settings=0x7f0900b0;
         public static final int activity_chooser_view_content=0x7f09003d;
-        public static final int addComentBTN=0x7f090096;
-        public static final int addLocation=0x7f09009c;
+        public static final int addComentBTN=0x7f090098;
+        public static final int addLocation=0x7f09009e;
         public static final int adjust_height=0x7f09000a;
         public static final int adjust_width=0x7f09000b;
         public static final int alertTitle=0x7f090047;
@@ -2507,19 +2507,19 @@ containing a value of this type.
         public static final int book_now=0x7f09001b;
         public static final int btnLogin=0x7f09007f;
         public static final int btnPostComment=0x7f09006e;
-        public static final int btnRegister=0x7f090089;
+        public static final int btnRegister=0x7f09008a;
         public static final int btnloginRegister=0x7f09007e;
-        public static final int btnreplayComment=0x7f090095;
+        public static final int btnreplayComment=0x7f090096;
         public static final int buttonPanel=0x7f09004d;
         public static final int buyButton=0x7f090017;
         public static final int buy_now=0x7f09001c;
         public static final int buy_with_google=0x7f09001d;
         public static final int callbtnInfo=0x7f090073;
-        public static final int cancel_action=0x7f0900a1;
+        public static final int cancel_action=0x7f0900a3;
         public static final int cast_notification_id=0x7f090000;
         public static final int checkLocation=0x7f090070;
         public static final int checkbox=0x7f09004f;
-        public static final int chronometer=0x7f0900a7;
+        public static final int chronometer=0x7f0900a9;
         public static final int classic=0x7f09001f;
         public static final int collapseActionView=0x7f090031;
         public static final int commentimage=0x7f090067;
@@ -2536,14 +2536,14 @@ containing a value of this type.
         public static final int dropdown=0x7f090036;
         public static final int edit_query=0x7f090059;
         public static final int end=0x7f090038;
-        public static final int end_padder=0x7f0900ac;
+        public static final int end_padder=0x7f0900ae;
         public static final int enteredReplaytoPost=0x7f09007b;
-        public static final int etLastName=0x7f090092;
+        public static final int etLastName=0x7f090093;
         public static final int etPassword=0x7f090080;
         public static final int etUsername=0x7f090081;
         public static final int expand_activities_button=0x7f09003e;
         public static final int expanded_menu=0x7f09004e;
-        public static final int firstname=0x7f090085;
+        public static final int firstname=0x7f090086;
         public static final int grayscale=0x7f090020;
         public static final int holo_dark=0x7f090011;
         public static final int holo_light=0x7f090012;
@@ -2553,44 +2553,45 @@ containing a value of this type.
         public static final int icon=0x7f090042;
         public static final int ifRoom=0x7f090032;
         public static final int image=0x7f09003f;
-        public static final int imageView1=0x7f09008a;
+        public static final int imageView1=0x7f09008b;
         public static final int imageView2=0x7f090069;
         public static final int imageView3=0x7f09006a;
         public static final int imageView4=0x7f09006b;
-        public static final int img=0x7f09009e;
-        public static final int info=0x7f0900ab;
-        public static final int lastName=0x7f090086;
+        public static final int img=0x7f0900a0;
+        public static final int info=0x7f0900ad;
+        public static final int lastName=0x7f090087;
         public static final int latlng=0x7f09007d;
-        public static final int line1=0x7f0900a5;
-        public static final int line3=0x7f0900a9;
+        public static final int line1=0x7f0900a7;
+        public static final int line3=0x7f0900ab;
         public static final int listMode=0x7f090023;
         public static final int list_item=0x7f090041;
+        public static final int map=0x7f090085;
         public static final int match_parent=0x7f090019;
-        public static final int media_actions=0x7f0900a3;
+        public static final int media_actions=0x7f0900a5;
         public static final int middle=0x7f090039;
         public static final int monochrome=0x7f090021;
         public static final int multiply=0x7f09002b;
-        public static final int navbartv=0x7f09009f;
+        public static final int navbartv=0x7f0900a1;
         public static final int navigation_drawer=0x7f090084;
         public static final int never=0x7f090033;
         public static final int none=0x7f09000c;
         public static final int normal=0x7f09000e;
-        public static final int obtainMyLocation=0x7f09009d;
+        public static final int obtainMyLocation=0x7f09009f;
         public static final int parentPanel=0x7f090044;
-        public static final int passwordRegister=0x7f090088;
+        public static final int passwordRegister=0x7f090089;
         public static final int production=0x7f090013;
-        public static final int profilFirstName=0x7f09009a;
-        public static final int profileLastName=0x7f090099;
-        public static final int progressBar=0x7f0900ad;
+        public static final int profilFirstName=0x7f09009c;
+        public static final int profileLastName=0x7f09009b;
+        public static final int progressBar=0x7f0900af;
         public static final int progress_circular=0x7f090008;
         public static final int progress_horizontal=0x7f090009;
-        public static final int prv=0x7f090098;
+        public static final int prv=0x7f09009a;
         public static final int radio=0x7f090051;
-        public static final int replayComment=0x7f09008f;
-        public static final int replayImage=0x7f09008c;
-        public static final int replayLastName=0x7f09008d;
+        public static final int replayComment=0x7f090090;
+        public static final int replayImage=0x7f09008d;
+        public static final int replayLastName=0x7f09008e;
         public static final int replayName=0x7f090068;
-        public static final int replayTime=0x7f09008e;
+        public static final int replayTime=0x7f09008f;
         public static final int sandbox=0x7f090014;
         public static final int satellite=0x7f09000f;
         public static final int screen=0x7f09002c;
@@ -2606,14 +2607,14 @@ containing a value of this type.
         public static final int search_plate=0x7f09005f;
         public static final int search_src_text=0x7f090060;
         public static final int search_voice_btn=0x7f090064;
-        public static final int section_label=0x7f090097;
+        public static final int section_label=0x7f090099;
         public static final int select_dialog_listview=0x7f090065;
         public static final int selectionDetails=0x7f090018;
         public static final int shortcut=0x7f090050;
         public static final int showCustom=0x7f090027;
         public static final int showHome=0x7f090028;
         public static final int showTitle=0x7f090029;
-        public static final int showmapbtn=0x7f090094;
+        public static final int showmapbtn=0x7f090095;
         public static final int slide=0x7f090022;
         public static final int smallIMGContact=0x7f090076;
         public static final int smallIMGlocation=0x7f090078;
@@ -2622,31 +2623,32 @@ containing a value of this type.
         public static final int src_atop=0x7f09002d;
         public static final int src_in=0x7f09002e;
         public static final int src_over=0x7f09002f;
-        public static final int status_bar_latest_event_content=0x7f0900a2;
+        public static final int status_bar_latest_event_content=0x7f0900a4;
         public static final int strict_sandbox=0x7f090015;
         public static final int submit_area=0x7f090062;
         public static final int tabMode=0x7f090024;
         public static final int takenImage1=0x7f090072;
         public static final int terrain=0x7f090010;
         public static final int test=0x7f090016;
-        public static final int text=0x7f0900aa;
-        public static final int text2=0x7f0900a8;
+        public static final int text=0x7f0900ac;
+        public static final int text2=0x7f0900aa;
         public static final int textSpacerNoButtons=0x7f09004a;
         public static final int textView2=0x7f09006c;
-        public static final int time=0x7f0900a6;
-        public static final int tipTextView=0x7f09008b;
+        public static final int time=0x7f0900a8;
+        public static final int tipTextView=0x7f09008c;
         public static final int title=0x7f090043;
         public static final int title_template=0x7f090046;
         public static final int topPanel=0x7f090045;
-        public static final int tvName=0x7f090090;
-        public static final int tvNumberOfComments=0x7f09009b;
+        public static final int tvName=0x7f090091;
+        public static final int tvNumberOfComments=0x7f09009d;
+        public static final int tvaddress=0x7f090097;
         public static final int tvsmallContactPhone=0x7f090077;
         public static final int tvsmallTypeComment=0x7f090075;
         public static final int tvsmalllocation=0x7f090079;
         public static final int typecomentBTN=0x7f090071;
         public static final int up=0x7f090002;
         public static final int useLogo=0x7f09002a;
-        public static final int usernameRegister=0x7f090087;
+        public static final int usernameRegister=0x7f090088;
         public static final int view1=0x7f09007a;
         public static final int view2=0x7f09007c;
         public static final int withText=0x7f090034;
@@ -2720,45 +2722,47 @@ containing a value of this type.
         public static final int activity_comments_on_post=0x7f03001b;
         public static final int activity_login=0x7f03001c;
         public static final int activity_main=0x7f03001d;
-        public static final int activity_register=0x7f03001e;
-        public static final int activity_reply_comment=0x7f03001f;
-        public static final int activity_tip=0x7f030020;
-        public static final int activity_user__profile__visit=0x7f030021;
-        public static final int custum_replay_comment=0x7f030022;
-        public static final int custum_view=0x7f030023;
-        public static final int fragment_buy=0x7f030024;
-        public static final int fragment_comment=0x7f030025;
-        public static final int fragment_home=0x7f030026;
-        public static final int fragment_main=0x7f030027;
-        public static final int fragment_navigation_drawer=0x7f030028;
-        public static final int frgment_tips_pet_care=0x7f030029;
-        public static final int header_profile=0x7f03002a;
-        public static final int header_tips_for_pet_care=0x7f03002b;
-        public static final int location_dialog=0x7f03002c;
-        public static final int navdrawer_costum=0x7f03002d;
-        public static final int notification_media_action=0x7f03002e;
-        public static final int notification_media_cancel_action=0x7f03002f;
-        public static final int notification_template_big_media=0x7f030030;
-        public static final int notification_template_big_media_narrow=0x7f030031;
-        public static final int notification_template_lines=0x7f030032;
-        public static final int notification_template_media=0x7f030033;
-        public static final int notification_template_part_chronometer=0x7f030034;
-        public static final int notification_template_part_time=0x7f030035;
-        public static final int progresbar_in_footer=0x7f030036;
-        public static final int select_dialog_item_material=0x7f030037;
-        public static final int select_dialog_multichoice_material=0x7f030038;
-        public static final int select_dialog_singlechoice_material=0x7f030039;
-        public static final int support_simple_spinner_dropdown_item=0x7f03003a;
+        public static final int activity_map_activity_pet_location=0x7f03001e;
+        public static final int activity_register=0x7f03001f;
+        public static final int activity_reply_comment=0x7f030020;
+        public static final int activity_tip=0x7f030021;
+        public static final int activity_user__profile__visit=0x7f030022;
+        public static final int custum_replay_comment=0x7f030023;
+        public static final int custum_view=0x7f030024;
+        public static final int fragment_buy=0x7f030025;
+        public static final int fragment_comment=0x7f030026;
+        public static final int fragment_home=0x7f030027;
+        public static final int fragment_main=0x7f030028;
+        public static final int fragment_navigation_drawer=0x7f030029;
+        public static final int frgment_tips_pet_care=0x7f03002a;
+        public static final int header_profile=0x7f03002b;
+        public static final int header_tips_for_pet_care=0x7f03002c;
+        public static final int location_dialog=0x7f03002d;
+        public static final int navdrawer_costum=0x7f03002e;
+        public static final int notification_media_action=0x7f03002f;
+        public static final int notification_media_cancel_action=0x7f030030;
+        public static final int notification_template_big_media=0x7f030031;
+        public static final int notification_template_big_media_narrow=0x7f030032;
+        public static final int notification_template_lines=0x7f030033;
+        public static final int notification_template_media=0x7f030034;
+        public static final int notification_template_part_chronometer=0x7f030035;
+        public static final int notification_template_part_time=0x7f030036;
+        public static final int progresbar_in_footer=0x7f030037;
+        public static final int select_dialog_item_material=0x7f030038;
+        public static final int select_dialog_multichoice_material=0x7f030039;
+        public static final int select_dialog_singlechoice_material=0x7f03003a;
+        public static final int support_simple_spinner_dropdown_item=0x7f03003b;
     }
     public static final class menu {
         public static final int comment=0x7f0f0000;
         public static final int comments_on_post=0x7f0f0001;
         public static final int global=0x7f0f0002;
         public static final int main=0x7f0f0003;
-        public static final int register=0x7f0f0004;
-        public static final int reply_comment=0x7f0f0005;
-        public static final int tip=0x7f0f0006;
-        public static final int user__profile__visit=0x7f0f0007;
+        public static final int map_activity_pet_location=0x7f0f0004;
+        public static final int register=0x7f0f0005;
+        public static final int reply_comment=0x7f0f0006;
+        public static final int tip=0x7f0f0007;
+        public static final int user__profile__visit=0x7f0f0008;
     }
     public static final class raw {
         public static final int gtm_analytics=0x7f060000;
@@ -2831,6 +2835,7 @@ containing a value of this type.
         public static final int action_preferences=0x7f080049;
         public static final int action_settings=0x7f080048;
         public static final int addAPost=0x7f080059;
+        public static final int adresoncustumview=0x7f08008c;
         public static final int app_name=0x7f08003e;
         /**  Brand name for Facebook [DO NOT TRANSLATE] 
          */
@@ -3025,6 +3030,7 @@ containing a value of this type.
         public static final int tip9=0x7f080086;
         public static final int title_activity_comment=0x7f080055;
         public static final int title_activity_comments_on_post=0x7f080073;
+        public static final int title_activity_map_activity_pet_location=0x7f08008b;
         public static final int title_activity_register=0x7f08005a;
         public static final int title_activity_reply_comment=0x7f080070;
         public static final int title_activity_tip=0x7f080088;
@@ -3493,35 +3499,35 @@ containing a value of this type.
            <colgroup align="left" />
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #ActionBar_background com.petcarekl.patcareteam2:background}</code></td><td> Specifies a background drawable for the action bar.</td></tr>
-           <tr><td><code>{@link #ActionBar_backgroundSplit com.petcarekl.patcareteam2:backgroundSplit}</code></td><td> Specifies a background drawable for the bottom component of a split action bar.</td></tr>
-           <tr><td><code>{@link #ActionBar_backgroundStacked com.petcarekl.patcareteam2:backgroundStacked}</code></td><td> Specifies a background drawable for a second stacked row of the action bar.</td></tr>
-           <tr><td><code>{@link #ActionBar_contentInsetEnd com.petcarekl.patcareteam2:contentInsetEnd}</code></td><td> Minimum inset for content views within a bar.</td></tr>
-           <tr><td><code>{@link #ActionBar_contentInsetLeft com.petcarekl.patcareteam2:contentInsetLeft}</code></td><td> Minimum inset for content views within a bar.</td></tr>
-           <tr><td><code>{@link #ActionBar_contentInsetRight com.petcarekl.patcareteam2:contentInsetRight}</code></td><td> Minimum inset for content views within a bar.</td></tr>
-           <tr><td><code>{@link #ActionBar_contentInsetStart com.petcarekl.patcareteam2:contentInsetStart}</code></td><td> Minimum inset for content views within a bar.</td></tr>
-           <tr><td><code>{@link #ActionBar_customNavigationLayout com.petcarekl.patcareteam2:customNavigationLayout}</code></td><td> Specifies a layout for custom navigation.</td></tr>
-           <tr><td><code>{@link #ActionBar_displayOptions com.petcarekl.patcareteam2:displayOptions}</code></td><td> Options affecting how the action bar is displayed.</td></tr>
-           <tr><td><code>{@link #ActionBar_divider com.petcarekl.patcareteam2:divider}</code></td><td> Specifies the drawable used for item dividers.</td></tr>
-           <tr><td><code>{@link #ActionBar_elevation com.petcarekl.patcareteam2:elevation}</code></td><td> Elevation for the action bar itself </td></tr>
-           <tr><td><code>{@link #ActionBar_height com.petcarekl.patcareteam2:height}</code></td><td> Specifies a fixed height.</td></tr>
-           <tr><td><code>{@link #ActionBar_hideOnContentScroll com.petcarekl.patcareteam2:hideOnContentScroll}</code></td><td> Set true to hide the action bar on a vertical nested scroll of content.</td></tr>
-           <tr><td><code>{@link #ActionBar_homeAsUpIndicator com.petcarekl.patcareteam2:homeAsUpIndicator}</code></td><td> Up navigation glyph </td></tr>
-           <tr><td><code>{@link #ActionBar_homeLayout com.petcarekl.patcareteam2:homeLayout}</code></td><td> Specifies a layout to use for the "home" section of the action bar.</td></tr>
-           <tr><td><code>{@link #ActionBar_icon com.petcarekl.patcareteam2:icon}</code></td><td> Specifies the drawable used for the application icon.</td></tr>
-           <tr><td><code>{@link #ActionBar_indeterminateProgressStyle com.petcarekl.patcareteam2:indeterminateProgressStyle}</code></td><td> Specifies a style resource to use for an indeterminate progress spinner.</td></tr>
-           <tr><td><code>{@link #ActionBar_itemPadding com.petcarekl.patcareteam2:itemPadding}</code></td><td> Specifies padding that should be applied to the left and right sides of
+           <tr><td><code>{@link #ActionBar_background com.petcare.teamiki:background}</code></td><td> Specifies a background drawable for the action bar.</td></tr>
+           <tr><td><code>{@link #ActionBar_backgroundSplit com.petcare.teamiki:backgroundSplit}</code></td><td> Specifies a background drawable for the bottom component of a split action bar.</td></tr>
+           <tr><td><code>{@link #ActionBar_backgroundStacked com.petcare.teamiki:backgroundStacked}</code></td><td> Specifies a background drawable for a second stacked row of the action bar.</td></tr>
+           <tr><td><code>{@link #ActionBar_contentInsetEnd com.petcare.teamiki:contentInsetEnd}</code></td><td> Minimum inset for content views within a bar.</td></tr>
+           <tr><td><code>{@link #ActionBar_contentInsetLeft com.petcare.teamiki:contentInsetLeft}</code></td><td> Minimum inset for content views within a bar.</td></tr>
+           <tr><td><code>{@link #ActionBar_contentInsetRight com.petcare.teamiki:contentInsetRight}</code></td><td> Minimum inset for content views within a bar.</td></tr>
+           <tr><td><code>{@link #ActionBar_contentInsetStart com.petcare.teamiki:contentInsetStart}</code></td><td> Minimum inset for content views within a bar.</td></tr>
+           <tr><td><code>{@link #ActionBar_customNavigationLayout com.petcare.teamiki:customNavigationLayout}</code></td><td> Specifies a layout for custom navigation.</td></tr>
+           <tr><td><code>{@link #ActionBar_displayOptions com.petcare.teamiki:displayOptions}</code></td><td> Options affecting how the action bar is displayed.</td></tr>
+           <tr><td><code>{@link #ActionBar_divider com.petcare.teamiki:divider}</code></td><td> Specifies the drawable used for item dividers.</td></tr>
+           <tr><td><code>{@link #ActionBar_elevation com.petcare.teamiki:elevation}</code></td><td> Elevation for the action bar itself </td></tr>
+           <tr><td><code>{@link #ActionBar_height com.petcare.teamiki:height}</code></td><td> Specifies a fixed height.</td></tr>
+           <tr><td><code>{@link #ActionBar_hideOnContentScroll com.petcare.teamiki:hideOnContentScroll}</code></td><td> Set true to hide the action bar on a vertical nested scroll of content.</td></tr>
+           <tr><td><code>{@link #ActionBar_homeAsUpIndicator com.petcare.teamiki:homeAsUpIndicator}</code></td><td> Up navigation glyph </td></tr>
+           <tr><td><code>{@link #ActionBar_homeLayout com.petcare.teamiki:homeLayout}</code></td><td> Specifies a layout to use for the "home" section of the action bar.</td></tr>
+           <tr><td><code>{@link #ActionBar_icon com.petcare.teamiki:icon}</code></td><td> Specifies the drawable used for the application icon.</td></tr>
+           <tr><td><code>{@link #ActionBar_indeterminateProgressStyle com.petcare.teamiki:indeterminateProgressStyle}</code></td><td> Specifies a style resource to use for an indeterminate progress spinner.</td></tr>
+           <tr><td><code>{@link #ActionBar_itemPadding com.petcare.teamiki:itemPadding}</code></td><td> Specifies padding that should be applied to the left and right sides of
              system-provided items in the bar.</td></tr>
-           <tr><td><code>{@link #ActionBar_logo com.petcarekl.patcareteam2:logo}</code></td><td> Specifies the drawable used for the application logo.</td></tr>
-           <tr><td><code>{@link #ActionBar_navigationMode com.petcarekl.patcareteam2:navigationMode}</code></td><td> The type of navigation to use.</td></tr>
-           <tr><td><code>{@link #ActionBar_popupTheme com.petcarekl.patcareteam2:popupTheme}</code></td><td> Reference to a theme that should be used to inflate popups
+           <tr><td><code>{@link #ActionBar_logo com.petcare.teamiki:logo}</code></td><td> Specifies the drawable used for the application logo.</td></tr>
+           <tr><td><code>{@link #ActionBar_navigationMode com.petcare.teamiki:navigationMode}</code></td><td> The type of navigation to use.</td></tr>
+           <tr><td><code>{@link #ActionBar_popupTheme com.petcare.teamiki:popupTheme}</code></td><td> Reference to a theme that should be used to inflate popups
              shown by widgets in the action bar.</td></tr>
-           <tr><td><code>{@link #ActionBar_progressBarPadding com.petcarekl.patcareteam2:progressBarPadding}</code></td><td> Specifies the horizontal padding on either end for an embedded progress bar.</td></tr>
-           <tr><td><code>{@link #ActionBar_progressBarStyle com.petcarekl.patcareteam2:progressBarStyle}</code></td><td> Specifies a style resource to use for an embedded progress bar.</td></tr>
-           <tr><td><code>{@link #ActionBar_subtitle com.petcarekl.patcareteam2:subtitle}</code></td><td> Specifies subtitle text used for navigationMode="normal" </td></tr>
-           <tr><td><code>{@link #ActionBar_subtitleTextStyle com.petcarekl.patcareteam2:subtitleTextStyle}</code></td><td> Specifies a style to use for subtitle text.</td></tr>
-           <tr><td><code>{@link #ActionBar_title com.petcarekl.patcareteam2:title}</code></td><td> Specifies title text used for navigationMode="normal" </td></tr>
-           <tr><td><code>{@link #ActionBar_titleTextStyle com.petcarekl.patcareteam2:titleTextStyle}</code></td><td> Specifies a style to use for title text.</td></tr>
+           <tr><td><code>{@link #ActionBar_progressBarPadding com.petcare.teamiki:progressBarPadding}</code></td><td> Specifies the horizontal padding on either end for an embedded progress bar.</td></tr>
+           <tr><td><code>{@link #ActionBar_progressBarStyle com.petcare.teamiki:progressBarStyle}</code></td><td> Specifies a style resource to use for an embedded progress bar.</td></tr>
+           <tr><td><code>{@link #ActionBar_subtitle com.petcare.teamiki:subtitle}</code></td><td> Specifies subtitle text used for navigationMode="normal" </td></tr>
+           <tr><td><code>{@link #ActionBar_subtitleTextStyle com.petcare.teamiki:subtitleTextStyle}</code></td><td> Specifies a style to use for subtitle text.</td></tr>
+           <tr><td><code>{@link #ActionBar_title com.petcare.teamiki:title}</code></td><td> Specifies title text used for navigationMode="normal" </td></tr>
+           <tr><td><code>{@link #ActionBar_titleTextStyle com.petcare.teamiki:titleTextStyle}</code></td><td> Specifies a style to use for title text.</td></tr>
            </table>
            @see #ActionBar_background
            @see #ActionBar_backgroundSplit
@@ -3569,7 +3575,7 @@ containing a value of this type.
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           <p>This is a private symbol.
-          @attr name com.petcarekl.patcareteam2:background
+          @attr name com.petcare.teamiki:background
         */
         public static final int ActionBar_background = 11;
         /**
@@ -3583,7 +3589,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 <p>May be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
 "<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
           <p>This is a private symbol.
-          @attr name com.petcarekl.patcareteam2:backgroundSplit
+          @attr name com.petcare.teamiki:backgroundSplit
         */
         public static final int ActionBar_backgroundSplit = 13;
         /**
@@ -3597,7 +3603,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 <p>May be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
 "<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
           <p>This is a private symbol.
-          @attr name com.petcarekl.patcareteam2:backgroundStacked
+          @attr name com.petcare.teamiki:backgroundStacked
         */
         public static final int ActionBar_backgroundStacked = 12;
         /**
@@ -3616,7 +3622,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
           <p>This is a private symbol.
-          @attr name com.petcarekl.patcareteam2:contentInsetEnd
+          @attr name com.petcare.teamiki:contentInsetEnd
         */
         public static final int ActionBar_contentInsetEnd = 22;
         /**
@@ -3635,7 +3641,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
           <p>This is a private symbol.
-          @attr name com.petcarekl.patcareteam2:contentInsetLeft
+          @attr name com.petcare.teamiki:contentInsetLeft
         */
         public static final int ActionBar_contentInsetLeft = 23;
         /**
@@ -3654,7 +3660,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
           <p>This is a private symbol.
-          @attr name com.petcarekl.patcareteam2:contentInsetRight
+          @attr name com.petcare.teamiki:contentInsetRight
         */
         public static final int ActionBar_contentInsetRight = 24;
         /**
@@ -3673,7 +3679,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
           <p>This is a private symbol.
-          @attr name com.petcarekl.patcareteam2:contentInsetStart
+          @attr name com.petcare.teamiki:contentInsetStart
         */
         public static final int ActionBar_contentInsetStart = 21;
         /**
@@ -3685,7 +3691,7 @@ containing a value of this type.
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           <p>This is a private symbol.
-          @attr name com.petcarekl.patcareteam2:customNavigationLayout
+          @attr name com.petcare.teamiki:customNavigationLayout
         */
         public static final int ActionBar_customNavigationLayout = 14;
         /**
@@ -3709,7 +3715,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 <tr><td><code>disableHome</code></td><td>0x20</td><td></td></tr>
 </table>
           <p>This is a private symbol.
-          @attr name com.petcarekl.patcareteam2:displayOptions
+          @attr name com.petcare.teamiki:displayOptions
         */
         public static final int ActionBar_displayOptions = 4;
         /**
@@ -3721,7 +3727,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           <p>This is a private symbol.
-          @attr name com.petcarekl.patcareteam2:divider
+          @attr name com.petcare.teamiki:divider
         */
         public static final int ActionBar_divider = 10;
         /**
@@ -3739,7 +3745,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
           <p>This is a private symbol.
-          @attr name com.petcarekl.patcareteam2:elevation
+          @attr name com.petcare.teamiki:elevation
         */
         public static final int ActionBar_elevation = 25;
         /**
@@ -3757,7 +3763,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
           <p>This is a private symbol.
-          @attr name com.petcarekl.patcareteam2:height
+          @attr name com.petcare.teamiki:height
         */
         public static final int ActionBar_height = 1;
         /**
@@ -3773,7 +3779,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
           <p>This is a private symbol.
-          @attr name com.petcarekl.patcareteam2:hideOnContentScroll
+          @attr name com.petcare.teamiki:hideOnContentScroll
         */
         public static final int ActionBar_hideOnContentScroll = 20;
         /**
@@ -3785,7 +3791,7 @@ containing a value of this type.
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           <p>This is a private symbol.
-          @attr name com.petcarekl.patcareteam2:homeAsUpIndicator
+          @attr name com.petcare.teamiki:homeAsUpIndicator
         */
         public static final int ActionBar_homeAsUpIndicator = 2;
         /**
@@ -3797,7 +3803,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           <p>This is a private symbol.
-          @attr name com.petcarekl.patcareteam2:homeLayout
+          @attr name com.petcare.teamiki:homeLayout
         */
         public static final int ActionBar_homeLayout = 15;
         /**
@@ -3809,7 +3815,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           <p>This is a private symbol.
-          @attr name com.petcarekl.patcareteam2:icon
+          @attr name com.petcare.teamiki:icon
         */
         public static final int ActionBar_icon = 8;
         /**
@@ -3821,7 +3827,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           <p>This is a private symbol.
-          @attr name com.petcarekl.patcareteam2:indeterminateProgressStyle
+          @attr name com.petcare.teamiki:indeterminateProgressStyle
         */
         public static final int ActionBar_indeterminateProgressStyle = 17;
         /**
@@ -3840,7 +3846,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
           <p>This is a private symbol.
-          @attr name com.petcarekl.patcareteam2:itemPadding
+          @attr name com.petcare.teamiki:itemPadding
         */
         public static final int ActionBar_itemPadding = 19;
         /**
@@ -3852,7 +3858,7 @@ containing a value of this type.
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           <p>This is a private symbol.
-          @attr name com.petcarekl.patcareteam2:logo
+          @attr name com.petcare.teamiki:logo
         */
         public static final int ActionBar_logo = 9;
         /**
@@ -3872,7 +3878,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 <tr><td><code>tabMode</code></td><td>2</td><td> The action bar will use a series of horizontal tabs for navigation. </td></tr>
 </table>
           <p>This is a private symbol.
-          @attr name com.petcarekl.patcareteam2:navigationMode
+          @attr name com.petcare.teamiki:navigationMode
         */
         public static final int ActionBar_navigationMode = 3;
         /**
@@ -3885,7 +3891,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           <p>This is a private symbol.
-          @attr name com.petcarekl.patcareteam2:popupTheme
+          @attr name com.petcare.teamiki:popupTheme
         */
         public static final int ActionBar_popupTheme = 26;
         /**
@@ -3903,7 +3909,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
           <p>This is a private symbol.
-          @attr name com.petcarekl.patcareteam2:progressBarPadding
+          @attr name com.petcare.teamiki:progressBarPadding
         */
         public static final int ActionBar_progressBarPadding = 18;
         /**
@@ -3915,7 +3921,7 @@ containing a value of this type.
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           <p>This is a private symbol.
-          @attr name com.petcarekl.patcareteam2:progressBarStyle
+          @attr name com.petcare.teamiki:progressBarStyle
         */
         public static final int ActionBar_progressBarStyle = 16;
         /**
@@ -3931,7 +3937,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
           <p>This is a private symbol.
-          @attr name com.petcarekl.patcareteam2:subtitle
+          @attr name com.petcare.teamiki:subtitle
         */
         public static final int ActionBar_subtitle = 5;
         /**
@@ -3943,7 +3949,7 @@ containing a value of this type.
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           <p>This is a private symbol.
-          @attr name com.petcarekl.patcareteam2:subtitleTextStyle
+          @attr name com.petcare.teamiki:subtitleTextStyle
         */
         public static final int ActionBar_subtitleTextStyle = 7;
         /**
@@ -3959,7 +3965,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
           <p>This is a private symbol.
-          @attr name com.petcarekl.patcareteam2:title
+          @attr name com.petcare.teamiki:title
         */
         public static final int ActionBar_title = 0;
         /**
@@ -3971,7 +3977,7 @@ containing a value of this type.
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           <p>This is a private symbol.
-          @attr name com.petcarekl.patcareteam2:titleTextStyle
+          @attr name com.petcare.teamiki:titleTextStyle
         */
         public static final int ActionBar_titleTextStyle = 6;
         /**  Valid LayoutParams for views placed in the action bar as custom views. 
@@ -4023,12 +4029,12 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
            <colgroup align="left" />
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #ActionMode_background com.petcarekl.patcareteam2:background}</code></td><td> Specifies a background for the action mode bar.</td></tr>
-           <tr><td><code>{@link #ActionMode_backgroundSplit com.petcarekl.patcareteam2:backgroundSplit}</code></td><td> Specifies a background for the split action mode bar.</td></tr>
-           <tr><td><code>{@link #ActionMode_closeItemLayout com.petcarekl.patcareteam2:closeItemLayout}</code></td><td> Specifies a layout to use for the "close" item at the starting edge.</td></tr>
-           <tr><td><code>{@link #ActionMode_height com.petcarekl.patcareteam2:height}</code></td><td> Specifies a fixed height for the action mode bar.</td></tr>
-           <tr><td><code>{@link #ActionMode_subtitleTextStyle com.petcarekl.patcareteam2:subtitleTextStyle}</code></td><td> Specifies a style to use for subtitle text.</td></tr>
-           <tr><td><code>{@link #ActionMode_titleTextStyle com.petcarekl.patcareteam2:titleTextStyle}</code></td><td> Specifies a style to use for title text.</td></tr>
+           <tr><td><code>{@link #ActionMode_background com.petcare.teamiki:background}</code></td><td> Specifies a background for the action mode bar.</td></tr>
+           <tr><td><code>{@link #ActionMode_backgroundSplit com.petcare.teamiki:backgroundSplit}</code></td><td> Specifies a background for the split action mode bar.</td></tr>
+           <tr><td><code>{@link #ActionMode_closeItemLayout com.petcare.teamiki:closeItemLayout}</code></td><td> Specifies a layout to use for the "close" item at the starting edge.</td></tr>
+           <tr><td><code>{@link #ActionMode_height com.petcare.teamiki:height}</code></td><td> Specifies a fixed height for the action mode bar.</td></tr>
+           <tr><td><code>{@link #ActionMode_subtitleTextStyle com.petcare.teamiki:subtitleTextStyle}</code></td><td> Specifies a style to use for subtitle text.</td></tr>
+           <tr><td><code>{@link #ActionMode_titleTextStyle com.petcare.teamiki:titleTextStyle}</code></td><td> Specifies a style to use for title text.</td></tr>
            </table>
            @see #ActionMode_background
            @see #ActionMode_backgroundSplit
@@ -4050,7 +4056,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           <p>This is a private symbol.
-          @attr name com.petcarekl.patcareteam2:background
+          @attr name com.petcare.teamiki:background
         */
         public static final int ActionMode_background = 3;
         /**
@@ -4064,7 +4070,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 <p>May be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
 "<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
           <p>This is a private symbol.
-          @attr name com.petcarekl.patcareteam2:backgroundSplit
+          @attr name com.petcare.teamiki:backgroundSplit
         */
         public static final int ActionMode_backgroundSplit = 4;
         /**
@@ -4076,7 +4082,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           <p>This is a private symbol.
-          @attr name com.petcarekl.patcareteam2:closeItemLayout
+          @attr name com.petcare.teamiki:closeItemLayout
         */
         public static final int ActionMode_closeItemLayout = 5;
         /**
@@ -4094,7 +4100,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
           <p>This is a private symbol.
-          @attr name com.petcarekl.patcareteam2:height
+          @attr name com.petcare.teamiki:height
         */
         public static final int ActionMode_height = 0;
         /**
@@ -4106,7 +4112,7 @@ containing a value of this type.
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           <p>This is a private symbol.
-          @attr name com.petcarekl.patcareteam2:subtitleTextStyle
+          @attr name com.petcare.teamiki:subtitleTextStyle
         */
         public static final int ActionMode_subtitleTextStyle = 2;
         /**
@@ -4118,7 +4124,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           <p>This is a private symbol.
-          @attr name com.petcarekl.patcareteam2:titleTextStyle
+          @attr name com.petcare.teamiki:titleTextStyle
         */
         public static final int ActionMode_titleTextStyle = 1;
         /**  Attrbitutes for a ActivityChooserView. 
@@ -4127,8 +4133,8 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
            <colgroup align="left" />
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #ActivityChooserView_expandActivityOverflowButtonDrawable com.petcarekl.patcareteam2:expandActivityOverflowButtonDrawable}</code></td><td> The drawable to show in the button for expanding the activities overflow popup.</td></tr>
-           <tr><td><code>{@link #ActivityChooserView_initialActivityCount com.petcarekl.patcareteam2:initialActivityCount}</code></td><td> The maximal number of items initially shown in the activity list.</td></tr>
+           <tr><td><code>{@link #ActivityChooserView_expandActivityOverflowButtonDrawable com.petcare.teamiki:expandActivityOverflowButtonDrawable}</code></td><td> The drawable to show in the button for expanding the activities overflow popup.</td></tr>
+           <tr><td><code>{@link #ActivityChooserView_initialActivityCount com.petcare.teamiki:initialActivityCount}</code></td><td> The maximal number of items initially shown in the activity list.</td></tr>
            </table>
            @see #ActivityChooserView_expandActivityOverflowButtonDrawable
            @see #ActivityChooserView_initialActivityCount
@@ -4150,7 +4156,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           <p>This is a private symbol.
-          @attr name com.petcarekl.patcareteam2:expandActivityOverflowButtonDrawable
+          @attr name com.petcare.teamiki:expandActivityOverflowButtonDrawable
         */
         public static final int ActivityChooserView_expandActivityOverflowButtonDrawable = 1;
         /**
@@ -4166,7 +4172,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
           <p>This is a private symbol.
-          @attr name com.petcarekl.patcareteam2:initialActivityCount
+          @attr name com.petcare.teamiki:initialActivityCount
         */
         public static final int ActivityChooserView_initialActivityCount = 0;
         /** Attributes that can be used with a AdsAttrs.
@@ -4175,11 +4181,11 @@ containing a value of this type.
            <colgroup align="left" />
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #AdsAttrs_adSize com.petcarekl.patcareteam2:adSize}</code></td><td>
+           <tr><td><code>{@link #AdsAttrs_adSize com.petcare.teamiki:adSize}</code></td><td>
     The size of the ad.</td></tr>
-           <tr><td><code>{@link #AdsAttrs_adSizes com.petcarekl.patcareteam2:adSizes}</code></td><td>
+           <tr><td><code>{@link #AdsAttrs_adSizes com.petcare.teamiki:adSizes}</code></td><td>
     A comma-separated list of the supported ad sizes.</td></tr>
-           <tr><td><code>{@link #AdsAttrs_adUnitId com.petcarekl.patcareteam2:adUnitId}</code></td><td> The ad unit ID.</td></tr>
+           <tr><td><code>{@link #AdsAttrs_adUnitId com.petcare.teamiki:adUnitId}</code></td><td> The ad unit ID.</td></tr>
            </table>
            @see #AdsAttrs_adSize
            @see #AdsAttrs_adSizes
@@ -4205,7 +4211,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
           <p>This is a private symbol.
-          @attr name com.petcarekl.patcareteam2:adSize
+          @attr name com.petcare.teamiki:adSize
         */
         public static final int AdsAttrs_adSize = 0;
         /**
@@ -4225,7 +4231,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
           <p>This is a private symbol.
-          @attr name com.petcarekl.patcareteam2:adSizes
+          @attr name com.petcare.teamiki:adSizes
         */
         public static final int AdsAttrs_adSizes = 1;
         /**
@@ -4241,7 +4247,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
           <p>This is a private symbol.
-          @attr name com.petcarekl.patcareteam2:adUnitId
+          @attr name com.petcare.teamiki:adUnitId
         */
         public static final int AdsAttrs_adUnitId = 2;
         /**  The set of attributes that describe a AlertDialog's theme. 
@@ -4251,11 +4257,11 @@ containing a value of this type.
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
            <tr><td><code>{@link #AlertDialog_android_layout android:layout}</code></td><td></td></tr>
-           <tr><td><code>{@link #AlertDialog_buttonPanelSideLayout com.petcarekl.patcareteam2:buttonPanelSideLayout}</code></td><td></td></tr>
-           <tr><td><code>{@link #AlertDialog_listItemLayout com.petcarekl.patcareteam2:listItemLayout}</code></td><td></td></tr>
-           <tr><td><code>{@link #AlertDialog_listLayout com.petcarekl.patcareteam2:listLayout}</code></td><td></td></tr>
-           <tr><td><code>{@link #AlertDialog_multiChoiceItemLayout com.petcarekl.patcareteam2:multiChoiceItemLayout}</code></td><td></td></tr>
-           <tr><td><code>{@link #AlertDialog_singleChoiceItemLayout com.petcarekl.patcareteam2:singleChoiceItemLayout}</code></td><td></td></tr>
+           <tr><td><code>{@link #AlertDialog_buttonPanelSideLayout com.petcare.teamiki:buttonPanelSideLayout}</code></td><td></td></tr>
+           <tr><td><code>{@link #AlertDialog_listItemLayout com.petcare.teamiki:listItemLayout}</code></td><td></td></tr>
+           <tr><td><code>{@link #AlertDialog_listLayout com.petcare.teamiki:listLayout}</code></td><td></td></tr>
+           <tr><td><code>{@link #AlertDialog_multiChoiceItemLayout com.petcare.teamiki:multiChoiceItemLayout}</code></td><td></td></tr>
+           <tr><td><code>{@link #AlertDialog_singleChoiceItemLayout com.petcare.teamiki:singleChoiceItemLayout}</code></td><td></td></tr>
            </table>
            @see #AlertDialog_android_layout
            @see #AlertDialog_buttonPanelSideLayout
@@ -4275,53 +4281,53 @@ containing a value of this type.
         */
         public static final int AlertDialog_android_layout = 0;
         /**
-          <p>This symbol is the offset where the {@link com.petcarekl.patcareteam2.R.attr#buttonPanelSideLayout}
+          <p>This symbol is the offset where the {@link com.petcare.teamiki.R.attr#buttonPanelSideLayout}
           attribute's value can be found in the {@link #AlertDialog} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.petcarekl.patcareteam2:buttonPanelSideLayout
+          @attr name com.petcare.teamiki:buttonPanelSideLayout
         */
         public static final int AlertDialog_buttonPanelSideLayout = 1;
         /**
-          <p>This symbol is the offset where the {@link com.petcarekl.patcareteam2.R.attr#listItemLayout}
+          <p>This symbol is the offset where the {@link com.petcare.teamiki.R.attr#listItemLayout}
           attribute's value can be found in the {@link #AlertDialog} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.petcarekl.patcareteam2:listItemLayout
+          @attr name com.petcare.teamiki:listItemLayout
         */
         public static final int AlertDialog_listItemLayout = 5;
         /**
-          <p>This symbol is the offset where the {@link com.petcarekl.patcareteam2.R.attr#listLayout}
+          <p>This symbol is the offset where the {@link com.petcare.teamiki.R.attr#listLayout}
           attribute's value can be found in the {@link #AlertDialog} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.petcarekl.patcareteam2:listLayout
+          @attr name com.petcare.teamiki:listLayout
         */
         public static final int AlertDialog_listLayout = 2;
         /**
-          <p>This symbol is the offset where the {@link com.petcarekl.patcareteam2.R.attr#multiChoiceItemLayout}
+          <p>This symbol is the offset where the {@link com.petcare.teamiki.R.attr#multiChoiceItemLayout}
           attribute's value can be found in the {@link #AlertDialog} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.petcarekl.patcareteam2:multiChoiceItemLayout
+          @attr name com.petcare.teamiki:multiChoiceItemLayout
         */
         public static final int AlertDialog_multiChoiceItemLayout = 3;
         /**
-          <p>This symbol is the offset where the {@link com.petcarekl.patcareteam2.R.attr#singleChoiceItemLayout}
+          <p>This symbol is the offset where the {@link com.petcare.teamiki.R.attr#singleChoiceItemLayout}
           attribute's value can be found in the {@link #AlertDialog} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.petcarekl.patcareteam2:singleChoiceItemLayout
+          @attr name com.petcare.teamiki:singleChoiceItemLayout
         */
         public static final int AlertDialog_singleChoiceItemLayout = 4;
         /** Attributes that can be used with a AppCompatTextView.
@@ -4331,7 +4337,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
            <tr><td><code>{@link #AppCompatTextView_android_textAppearance android:textAppearance}</code></td><td></td></tr>
-           <tr><td><code>{@link #AppCompatTextView_textAllCaps com.petcarekl.patcareteam2:textAllCaps}</code></td><td> Present the text in ALL CAPS.</td></tr>
+           <tr><td><code>{@link #AppCompatTextView_textAllCaps com.petcare.teamiki:textAllCaps}</code></td><td> Present the text in ALL CAPS.</td></tr>
            </table>
            @see #AppCompatTextView_android_textAppearance
            @see #AppCompatTextView_textAllCaps
@@ -4355,7 +4361,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
 <p>May be a boolean value, either "<code>true</code>" or "<code>false</code>".
           <p>This is a private symbol.
-          @attr name com.petcarekl.patcareteam2:textAllCaps
+          @attr name com.petcare.teamiki:textAllCaps
         */
         public static final int AppCompatTextView_textAllCaps = 1;
         /**  Attributes that can be specified to define a custom theme 
@@ -4364,7 +4370,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
            <colgroup align="left" />
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #CustomWalletTheme_windowTransitionStyle com.petcarekl.patcareteam2:windowTransitionStyle}</code></td><td> Defines the set of transition to be used between activities </td></tr>
+           <tr><td><code>{@link #CustomWalletTheme_windowTransitionStyle com.petcare.teamiki:windowTransitionStyle}</code></td><td> Defines the set of transition to be used between activities </td></tr>
            </table>
            @see #CustomWalletTheme_windowTransitionStyle
          */
@@ -4387,7 +4393,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 <tr><td><code>none</code></td><td>2</td><td></td></tr>
 </table>
           <p>This is a private symbol.
-          @attr name com.petcarekl.patcareteam2:windowTransitionStyle
+          @attr name com.petcare.teamiki:windowTransitionStyle
         */
         public static final int CustomWalletTheme_windowTransitionStyle = 0;
         /** Attributes that can be used with a DrawerArrowToggle.
@@ -4396,14 +4402,14 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
            <colgroup align="left" />
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #DrawerArrowToggle_barSize com.petcarekl.patcareteam2:barSize}</code></td><td> The size of the bars when they are parallel to each other </td></tr>
-           <tr><td><code>{@link #DrawerArrowToggle_color com.petcarekl.patcareteam2:color}</code></td><td> The drawing color for the bars </td></tr>
-           <tr><td><code>{@link #DrawerArrowToggle_drawableSize com.petcarekl.patcareteam2:drawableSize}</code></td><td> The total size of the drawable </td></tr>
-           <tr><td><code>{@link #DrawerArrowToggle_gapBetweenBars com.petcarekl.patcareteam2:gapBetweenBars}</code></td><td> The max gap between the bars when they are parallel to each other </td></tr>
-           <tr><td><code>{@link #DrawerArrowToggle_middleBarArrowSize com.petcarekl.patcareteam2:middleBarArrowSize}</code></td><td> The size of the middle bar when top and bottom bars merge into middle bar to form an arrow </td></tr>
-           <tr><td><code>{@link #DrawerArrowToggle_spinBars com.petcarekl.patcareteam2:spinBars}</code></td><td> Whether bars should rotate or not during transition </td></tr>
-           <tr><td><code>{@link #DrawerArrowToggle_thickness com.petcarekl.patcareteam2:thickness}</code></td><td> The thickness (stroke size) for the bar paint </td></tr>
-           <tr><td><code>{@link #DrawerArrowToggle_topBottomBarArrowSize com.petcarekl.patcareteam2:topBottomBarArrowSize}</code></td><td> The size of the top and bottom bars when they merge to the middle bar to form an arrow </td></tr>
+           <tr><td><code>{@link #DrawerArrowToggle_barSize com.petcare.teamiki:barSize}</code></td><td> The size of the bars when they are parallel to each other </td></tr>
+           <tr><td><code>{@link #DrawerArrowToggle_color com.petcare.teamiki:color}</code></td><td> The drawing color for the bars </td></tr>
+           <tr><td><code>{@link #DrawerArrowToggle_drawableSize com.petcare.teamiki:drawableSize}</code></td><td> The total size of the drawable </td></tr>
+           <tr><td><code>{@link #DrawerArrowToggle_gapBetweenBars com.petcare.teamiki:gapBetweenBars}</code></td><td> The max gap between the bars when they are parallel to each other </td></tr>
+           <tr><td><code>{@link #DrawerArrowToggle_middleBarArrowSize com.petcare.teamiki:middleBarArrowSize}</code></td><td> The size of the middle bar when top and bottom bars merge into middle bar to form an arrow </td></tr>
+           <tr><td><code>{@link #DrawerArrowToggle_spinBars com.petcare.teamiki:spinBars}</code></td><td> Whether bars should rotate or not during transition </td></tr>
+           <tr><td><code>{@link #DrawerArrowToggle_thickness com.petcare.teamiki:thickness}</code></td><td> The thickness (stroke size) for the bar paint </td></tr>
+           <tr><td><code>{@link #DrawerArrowToggle_topBottomBarArrowSize com.petcare.teamiki:topBottomBarArrowSize}</code></td><td> The size of the top and bottom bars when they merge to the middle bar to form an arrow </td></tr>
            </table>
            @see #DrawerArrowToggle_barSize
            @see #DrawerArrowToggle_color
@@ -4433,7 +4439,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
           <p>This is a private symbol.
-          @attr name com.petcarekl.patcareteam2:barSize
+          @attr name com.petcare.teamiki:barSize
         */
         public static final int DrawerArrowToggle_barSize = 6;
         /**
@@ -4450,7 +4456,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
           <p>This is a private symbol.
-          @attr name com.petcarekl.patcareteam2:color
+          @attr name com.petcare.teamiki:color
         */
         public static final int DrawerArrowToggle_color = 0;
         /**
@@ -4468,7 +4474,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
           <p>This is a private symbol.
-          @attr name com.petcarekl.patcareteam2:drawableSize
+          @attr name com.petcare.teamiki:drawableSize
         */
         public static final int DrawerArrowToggle_drawableSize = 2;
         /**
@@ -4486,7 +4492,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
           <p>This is a private symbol.
-          @attr name com.petcarekl.patcareteam2:gapBetweenBars
+          @attr name com.petcare.teamiki:gapBetweenBars
         */
         public static final int DrawerArrowToggle_gapBetweenBars = 3;
         /**
@@ -4504,7 +4510,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
           <p>This is a private symbol.
-          @attr name com.petcarekl.patcareteam2:middleBarArrowSize
+          @attr name com.petcare.teamiki:middleBarArrowSize
         */
         public static final int DrawerArrowToggle_middleBarArrowSize = 5;
         /**
@@ -4520,7 +4526,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
           <p>This is a private symbol.
-          @attr name com.petcarekl.patcareteam2:spinBars
+          @attr name com.petcare.teamiki:spinBars
         */
         public static final int DrawerArrowToggle_spinBars = 1;
         /**
@@ -4538,7 +4544,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
           <p>This is a private symbol.
-          @attr name com.petcarekl.patcareteam2:thickness
+          @attr name com.petcare.teamiki:thickness
         */
         public static final int DrawerArrowToggle_thickness = 7;
         /**
@@ -4556,7 +4562,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
           <p>This is a private symbol.
-          @attr name com.petcarekl.patcareteam2:topBottomBarArrowSize
+          @attr name com.petcare.teamiki:topBottomBarArrowSize
         */
         public static final int DrawerArrowToggle_topBottomBarArrowSize = 4;
         /** Attributes that can be used with a LinearLayoutCompat.
@@ -4574,11 +4580,11 @@ containing a value of this type.
            <tr><td><code>{@link #LinearLayoutCompat_android_orientation android:orientation}</code></td><td> Should the layout be a column or a row?  Use "horizontal"
              for a row, "vertical" for a column.</td></tr>
            <tr><td><code>{@link #LinearLayoutCompat_android_weightSum android:weightSum}</code></td><td> Defines the maximum weight sum.</td></tr>
-           <tr><td><code>{@link #LinearLayoutCompat_divider com.petcarekl.patcareteam2:divider}</code></td><td> Drawable to use as a vertical divider between buttons.</td></tr>
-           <tr><td><code>{@link #LinearLayoutCompat_dividerPadding com.petcarekl.patcareteam2:dividerPadding}</code></td><td> Size of padding on either end of a divider.</td></tr>
-           <tr><td><code>{@link #LinearLayoutCompat_measureWithLargestChild com.petcarekl.patcareteam2:measureWithLargestChild}</code></td><td> When set to true, all children with a weight will be considered having
+           <tr><td><code>{@link #LinearLayoutCompat_divider com.petcare.teamiki:divider}</code></td><td> Drawable to use as a vertical divider between buttons.</td></tr>
+           <tr><td><code>{@link #LinearLayoutCompat_dividerPadding com.petcare.teamiki:dividerPadding}</code></td><td> Size of padding on either end of a divider.</td></tr>
+           <tr><td><code>{@link #LinearLayoutCompat_measureWithLargestChild com.petcare.teamiki:measureWithLargestChild}</code></td><td> When set to true, all children with a weight will be considered having
              the minimum size of the largest child.</td></tr>
-           <tr><td><code>{@link #LinearLayoutCompat_showDividers com.petcarekl.patcareteam2:showDividers}</code></td><td> Setting for which dividers to show.</td></tr>
+           <tr><td><code>{@link #LinearLayoutCompat_showDividers com.petcare.teamiki:showDividers}</code></td><td> Setting for which dividers to show.</td></tr>
            </table>
            @see #LinearLayoutCompat_android_baselineAligned
            @see #LinearLayoutCompat_android_baselineAlignedChildIndex
@@ -4656,7 +4662,7 @@ containing a value of this type.
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           <p>This is a private symbol.
-          @attr name com.petcarekl.patcareteam2:divider
+          @attr name com.petcare.teamiki:divider
         */
         public static final int LinearLayoutCompat_divider = 5;
         /**
@@ -4674,7 +4680,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
           <p>This is a private symbol.
-          @attr name com.petcarekl.patcareteam2:dividerPadding
+          @attr name com.petcare.teamiki:dividerPadding
         */
         public static final int LinearLayoutCompat_dividerPadding = 8;
         /**
@@ -4692,7 +4698,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
           <p>This is a private symbol.
-          @attr name com.petcarekl.patcareteam2:measureWithLargestChild
+          @attr name com.petcare.teamiki:measureWithLargestChild
         */
         public static final int LinearLayoutCompat_measureWithLargestChild = 6;
         /**
@@ -4713,7 +4719,7 @@ containing a value of this type.
 <tr><td><code>end</code></td><td>4</td><td></td></tr>
 </table>
           <p>This is a private symbol.
-          @attr name com.petcarekl.patcareteam2:showDividers
+          @attr name com.petcare.teamiki:showDividers
         */
         public static final int LinearLayoutCompat_showDividers = 7;
         /** Attributes that can be used with a LinearLayoutCompat_Layout.
@@ -4798,12 +4804,12 @@ containing a value of this type.
            <colgroup align="left" />
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #LoadingImageView_circleCrop com.petcarekl.patcareteam2:circleCrop}</code></td><td>
+           <tr><td><code>{@link #LoadingImageView_circleCrop com.petcare.teamiki:circleCrop}</code></td><td>
         Whether or not this view should have a circular clip applied
         </td></tr>
-           <tr><td><code>{@link #LoadingImageView_imageAspectRatio com.petcarekl.patcareteam2:imageAspectRatio}</code></td><td>
+           <tr><td><code>{@link #LoadingImageView_imageAspectRatio com.petcare.teamiki:imageAspectRatio}</code></td><td>
         The fixed aspect ratio to use in aspect ratio adjustments.</td></tr>
-           <tr><td><code>{@link #LoadingImageView_imageAspectRatioAdjust com.petcarekl.patcareteam2:imageAspectRatioAdjust}</code></td><td>
+           <tr><td><code>{@link #LoadingImageView_imageAspectRatioAdjust com.petcare.teamiki:imageAspectRatioAdjust}</code></td><td>
         What kind of aspect ratio adjustment to do.</td></tr>
            </table>
            @see #LoadingImageView_circleCrop
@@ -4828,7 +4834,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
           <p>This is a private symbol.
-          @attr name com.petcarekl.patcareteam2:circleCrop
+          @attr name com.petcare.teamiki:circleCrop
         */
         public static final int LoadingImageView_circleCrop = 2;
         /**
@@ -4846,7 +4852,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
           <p>This is a private symbol.
-          @attr name com.petcarekl.patcareteam2:imageAspectRatio
+          @attr name com.petcare.teamiki:imageAspectRatio
         */
         public static final int LoadingImageView_imageAspectRatio = 1;
         /**
@@ -4869,7 +4875,7 @@ containing a value of this type.
 <tr><td><code>adjust_height</code></td><td>2</td><td></td></tr>
 </table>
           <p>This is a private symbol.
-          @attr name com.petcarekl.patcareteam2:imageAspectRatioAdjust
+          @attr name com.petcare.teamiki:imageAspectRatioAdjust
         */
         public static final int LoadingImageView_imageAspectRatioAdjust = 0;
         /** Attributes that can be used with a MapAttrs.
@@ -4878,22 +4884,22 @@ containing a value of this type.
            <colgroup align="left" />
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #MapAttrs_cameraBearing com.petcarekl.patcareteam2:cameraBearing}</code></td><td></td></tr>
-           <tr><td><code>{@link #MapAttrs_cameraTargetLat com.petcarekl.patcareteam2:cameraTargetLat}</code></td><td></td></tr>
-           <tr><td><code>{@link #MapAttrs_cameraTargetLng com.petcarekl.patcareteam2:cameraTargetLng}</code></td><td></td></tr>
-           <tr><td><code>{@link #MapAttrs_cameraTilt com.petcarekl.patcareteam2:cameraTilt}</code></td><td></td></tr>
-           <tr><td><code>{@link #MapAttrs_cameraZoom com.petcarekl.patcareteam2:cameraZoom}</code></td><td></td></tr>
-           <tr><td><code>{@link #MapAttrs_liteMode com.petcarekl.patcareteam2:liteMode}</code></td><td></td></tr>
-           <tr><td><code>{@link #MapAttrs_mapType com.petcarekl.patcareteam2:mapType}</code></td><td></td></tr>
-           <tr><td><code>{@link #MapAttrs_uiCompass com.petcarekl.patcareteam2:uiCompass}</code></td><td></td></tr>
-           <tr><td><code>{@link #MapAttrs_uiMapToolbar com.petcarekl.patcareteam2:uiMapToolbar}</code></td><td></td></tr>
-           <tr><td><code>{@link #MapAttrs_uiRotateGestures com.petcarekl.patcareteam2:uiRotateGestures}</code></td><td></td></tr>
-           <tr><td><code>{@link #MapAttrs_uiScrollGestures com.petcarekl.patcareteam2:uiScrollGestures}</code></td><td></td></tr>
-           <tr><td><code>{@link #MapAttrs_uiTiltGestures com.petcarekl.patcareteam2:uiTiltGestures}</code></td><td></td></tr>
-           <tr><td><code>{@link #MapAttrs_uiZoomControls com.petcarekl.patcareteam2:uiZoomControls}</code></td><td></td></tr>
-           <tr><td><code>{@link #MapAttrs_uiZoomGestures com.petcarekl.patcareteam2:uiZoomGestures}</code></td><td></td></tr>
-           <tr><td><code>{@link #MapAttrs_useViewLifecycle com.petcarekl.patcareteam2:useViewLifecycle}</code></td><td></td></tr>
-           <tr><td><code>{@link #MapAttrs_zOrderOnTop com.petcarekl.patcareteam2:zOrderOnTop}</code></td><td></td></tr>
+           <tr><td><code>{@link #MapAttrs_cameraBearing com.petcare.teamiki:cameraBearing}</code></td><td></td></tr>
+           <tr><td><code>{@link #MapAttrs_cameraTargetLat com.petcare.teamiki:cameraTargetLat}</code></td><td></td></tr>
+           <tr><td><code>{@link #MapAttrs_cameraTargetLng com.petcare.teamiki:cameraTargetLng}</code></td><td></td></tr>
+           <tr><td><code>{@link #MapAttrs_cameraTilt com.petcare.teamiki:cameraTilt}</code></td><td></td></tr>
+           <tr><td><code>{@link #MapAttrs_cameraZoom com.petcare.teamiki:cameraZoom}</code></td><td></td></tr>
+           <tr><td><code>{@link #MapAttrs_liteMode com.petcare.teamiki:liteMode}</code></td><td></td></tr>
+           <tr><td><code>{@link #MapAttrs_mapType com.petcare.teamiki:mapType}</code></td><td></td></tr>
+           <tr><td><code>{@link #MapAttrs_uiCompass com.petcare.teamiki:uiCompass}</code></td><td></td></tr>
+           <tr><td><code>{@link #MapAttrs_uiMapToolbar com.petcare.teamiki:uiMapToolbar}</code></td><td></td></tr>
+           <tr><td><code>{@link #MapAttrs_uiRotateGestures com.petcare.teamiki:uiRotateGestures}</code></td><td></td></tr>
+           <tr><td><code>{@link #MapAttrs_uiScrollGestures com.petcare.teamiki:uiScrollGestures}</code></td><td></td></tr>
+           <tr><td><code>{@link #MapAttrs_uiTiltGestures com.petcare.teamiki:uiTiltGestures}</code></td><td></td></tr>
+           <tr><td><code>{@link #MapAttrs_uiZoomControls com.petcare.teamiki:uiZoomControls}</code></td><td></td></tr>
+           <tr><td><code>{@link #MapAttrs_uiZoomGestures com.petcare.teamiki:uiZoomGestures}</code></td><td></td></tr>
+           <tr><td><code>{@link #MapAttrs_useViewLifecycle com.petcare.teamiki:useViewLifecycle}</code></td><td></td></tr>
+           <tr><td><code>{@link #MapAttrs_zOrderOnTop com.petcare.teamiki:zOrderOnTop}</code></td><td></td></tr>
            </table>
            @see #MapAttrs_cameraBearing
            @see #MapAttrs_cameraTargetLat
@@ -4919,7 +4925,7 @@ containing a value of this type.
             0x7f010012, 0x7f010013, 0x7f010014, 0x7f010015
         };
         /**
-          <p>This symbol is the offset where the {@link com.petcarekl.patcareteam2.R.attr#cameraBearing}
+          <p>This symbol is the offset where the {@link com.petcare.teamiki.R.attr#cameraBearing}
           attribute's value can be found in the {@link #MapAttrs} array.
 
 
@@ -4929,11 +4935,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.petcarekl.patcareteam2:cameraBearing
+          @attr name com.petcare.teamiki:cameraBearing
         */
         public static final int MapAttrs_cameraBearing = 1;
         /**
-          <p>This symbol is the offset where the {@link com.petcarekl.patcareteam2.R.attr#cameraTargetLat}
+          <p>This symbol is the offset where the {@link com.petcare.teamiki.R.attr#cameraTargetLat}
           attribute's value can be found in the {@link #MapAttrs} array.
 
 
@@ -4943,11 +4949,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.petcarekl.patcareteam2:cameraTargetLat
+          @attr name com.petcare.teamiki:cameraTargetLat
         */
         public static final int MapAttrs_cameraTargetLat = 2;
         /**
-          <p>This symbol is the offset where the {@link com.petcarekl.patcareteam2.R.attr#cameraTargetLng}
+          <p>This symbol is the offset where the {@link com.petcare.teamiki.R.attr#cameraTargetLng}
           attribute's value can be found in the {@link #MapAttrs} array.
 
 
@@ -4957,11 +4963,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.petcarekl.patcareteam2:cameraTargetLng
+          @attr name com.petcare.teamiki:cameraTargetLng
         */
         public static final int MapAttrs_cameraTargetLng = 3;
         /**
-          <p>This symbol is the offset where the {@link com.petcarekl.patcareteam2.R.attr#cameraTilt}
+          <p>This symbol is the offset where the {@link com.petcare.teamiki.R.attr#cameraTilt}
           attribute's value can be found in the {@link #MapAttrs} array.
 
 
@@ -4971,11 +4977,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.petcarekl.patcareteam2:cameraTilt
+          @attr name com.petcare.teamiki:cameraTilt
         */
         public static final int MapAttrs_cameraTilt = 4;
         /**
-          <p>This symbol is the offset where the {@link com.petcarekl.patcareteam2.R.attr#cameraZoom}
+          <p>This symbol is the offset where the {@link com.petcare.teamiki.R.attr#cameraZoom}
           attribute's value can be found in the {@link #MapAttrs} array.
 
 
@@ -4985,11 +4991,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.petcarekl.patcareteam2:cameraZoom
+          @attr name com.petcare.teamiki:cameraZoom
         */
         public static final int MapAttrs_cameraZoom = 5;
         /**
-          <p>This symbol is the offset where the {@link com.petcarekl.patcareteam2.R.attr#liteMode}
+          <p>This symbol is the offset where the {@link com.petcare.teamiki.R.attr#liteMode}
           attribute's value can be found in the {@link #MapAttrs} array.
 
 
@@ -4999,11 +5005,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.petcarekl.patcareteam2:liteMode
+          @attr name com.petcare.teamiki:liteMode
         */
         public static final int MapAttrs_liteMode = 6;
         /**
-          <p>This symbol is the offset where the {@link com.petcarekl.patcareteam2.R.attr#mapType}
+          <p>This symbol is the offset where the {@link com.petcare.teamiki.R.attr#mapType}
           attribute's value can be found in the {@link #MapAttrs} array.
 
 
@@ -5019,11 +5025,11 @@ containing a value of this type.
 <tr><td><code>terrain</code></td><td>3</td><td></td></tr>
 <tr><td><code>hybrid</code></td><td>4</td><td></td></tr>
 </table>
-          @attr name com.petcarekl.patcareteam2:mapType
+          @attr name com.petcare.teamiki:mapType
         */
         public static final int MapAttrs_mapType = 0;
         /**
-          <p>This symbol is the offset where the {@link com.petcarekl.patcareteam2.R.attr#uiCompass}
+          <p>This symbol is the offset where the {@link com.petcare.teamiki.R.attr#uiCompass}
           attribute's value can be found in the {@link #MapAttrs} array.
 
 
@@ -5033,11 +5039,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.petcarekl.patcareteam2:uiCompass
+          @attr name com.petcare.teamiki:uiCompass
         */
         public static final int MapAttrs_uiCompass = 7;
         /**
-          <p>This symbol is the offset where the {@link com.petcarekl.patcareteam2.R.attr#uiMapToolbar}
+          <p>This symbol is the offset where the {@link com.petcare.teamiki.R.attr#uiMapToolbar}
           attribute's value can be found in the {@link #MapAttrs} array.
 
 
@@ -5047,11 +5053,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.petcarekl.patcareteam2:uiMapToolbar
+          @attr name com.petcare.teamiki:uiMapToolbar
         */
         public static final int MapAttrs_uiMapToolbar = 15;
         /**
-          <p>This symbol is the offset where the {@link com.petcarekl.patcareteam2.R.attr#uiRotateGestures}
+          <p>This symbol is the offset where the {@link com.petcare.teamiki.R.attr#uiRotateGestures}
           attribute's value can be found in the {@link #MapAttrs} array.
 
 
@@ -5061,11 +5067,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.petcarekl.patcareteam2:uiRotateGestures
+          @attr name com.petcare.teamiki:uiRotateGestures
         */
         public static final int MapAttrs_uiRotateGestures = 8;
         /**
-          <p>This symbol is the offset where the {@link com.petcarekl.patcareteam2.R.attr#uiScrollGestures}
+          <p>This symbol is the offset where the {@link com.petcare.teamiki.R.attr#uiScrollGestures}
           attribute's value can be found in the {@link #MapAttrs} array.
 
 
@@ -5075,11 +5081,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.petcarekl.patcareteam2:uiScrollGestures
+          @attr name com.petcare.teamiki:uiScrollGestures
         */
         public static final int MapAttrs_uiScrollGestures = 9;
         /**
-          <p>This symbol is the offset where the {@link com.petcarekl.patcareteam2.R.attr#uiTiltGestures}
+          <p>This symbol is the offset where the {@link com.petcare.teamiki.R.attr#uiTiltGestures}
           attribute's value can be found in the {@link #MapAttrs} array.
 
 
@@ -5089,11 +5095,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.petcarekl.patcareteam2:uiTiltGestures
+          @attr name com.petcare.teamiki:uiTiltGestures
         */
         public static final int MapAttrs_uiTiltGestures = 10;
         /**
-          <p>This symbol is the offset where the {@link com.petcarekl.patcareteam2.R.attr#uiZoomControls}
+          <p>This symbol is the offset where the {@link com.petcare.teamiki.R.attr#uiZoomControls}
           attribute's value can be found in the {@link #MapAttrs} array.
 
 
@@ -5103,11 +5109,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.petcarekl.patcareteam2:uiZoomControls
+          @attr name com.petcare.teamiki:uiZoomControls
         */
         public static final int MapAttrs_uiZoomControls = 11;
         /**
-          <p>This symbol is the offset where the {@link com.petcarekl.patcareteam2.R.attr#uiZoomGestures}
+          <p>This symbol is the offset where the {@link com.petcare.teamiki.R.attr#uiZoomGestures}
           attribute's value can be found in the {@link #MapAttrs} array.
 
 
@@ -5117,11 +5123,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.petcarekl.patcareteam2:uiZoomGestures
+          @attr name com.petcare.teamiki:uiZoomGestures
         */
         public static final int MapAttrs_uiZoomGestures = 12;
         /**
-          <p>This symbol is the offset where the {@link com.petcarekl.patcareteam2.R.attr#useViewLifecycle}
+          <p>This symbol is the offset where the {@link com.petcare.teamiki.R.attr#useViewLifecycle}
           attribute's value can be found in the {@link #MapAttrs} array.
 
 
@@ -5131,11 +5137,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.petcarekl.patcareteam2:useViewLifecycle
+          @attr name com.petcare.teamiki:useViewLifecycle
         */
         public static final int MapAttrs_useViewLifecycle = 13;
         /**
-          <p>This symbol is the offset where the {@link com.petcarekl.patcareteam2.R.attr#zOrderOnTop}
+          <p>This symbol is the offset where the {@link com.petcare.teamiki.R.attr#zOrderOnTop}
           attribute's value can be found in the {@link #MapAttrs} array.
 
 
@@ -5145,7 +5151,7 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.petcarekl.patcareteam2:zOrderOnTop
+          @attr name com.petcare.teamiki:zOrderOnTop
         */
         public static final int MapAttrs_zOrderOnTop = 14;
         /**  Base attributes that are available to all groups. 
@@ -5234,10 +5240,10 @@ containing a value of this type.
            <colgroup align="left" />
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #MenuItem_actionLayout com.petcarekl.patcareteam2:actionLayout}</code></td><td> An optional layout to be used as an action view.</td></tr>
-           <tr><td><code>{@link #MenuItem_actionProviderClass com.petcarekl.patcareteam2:actionProviderClass}</code></td><td> The name of an optional ActionProvider class to instantiate an action view
+           <tr><td><code>{@link #MenuItem_actionLayout com.petcare.teamiki:actionLayout}</code></td><td> An optional layout to be used as an action view.</td></tr>
+           <tr><td><code>{@link #MenuItem_actionProviderClass com.petcare.teamiki:actionProviderClass}</code></td><td> The name of an optional ActionProvider class to instantiate an action view
              and perform operations such as default action for that menu item.</td></tr>
-           <tr><td><code>{@link #MenuItem_actionViewClass com.petcarekl.patcareteam2:actionViewClass}</code></td><td> The name of an optional View class to instantiate and use as an
+           <tr><td><code>{@link #MenuItem_actionViewClass com.petcare.teamiki:actionViewClass}</code></td><td> The name of an optional View class to instantiate and use as an
              action view.</td></tr>
            <tr><td><code>{@link #MenuItem_android_alphabeticShortcut android:alphabeticShortcut}</code></td><td> The alphabetic shortcut key.</td></tr>
            <tr><td><code>{@link #MenuItem_android_checkable android:checkable}</code></td><td> Whether the item is capable of displaying a check mark.</td></tr>
@@ -5253,7 +5259,7 @@ containing a value of this type.
            <tr><td><code>{@link #MenuItem_android_title android:title}</code></td><td> The title associated with the item.</td></tr>
            <tr><td><code>{@link #MenuItem_android_titleCondensed android:titleCondensed}</code></td><td> The condensed title associated with the item.</td></tr>
            <tr><td><code>{@link #MenuItem_android_visible android:visible}</code></td><td> Whether the item is shown/visible.</td></tr>
-           <tr><td><code>{@link #MenuItem_showAsAction com.petcarekl.patcareteam2:showAsAction}</code></td><td> How this item should display in the Action Bar, if present.</td></tr>
+           <tr><td><code>{@link #MenuItem_showAsAction com.petcare.teamiki:showAsAction}</code></td><td> How this item should display in the Action Bar, if present.</td></tr>
            </table>
            @see #MenuItem_actionLayout
            @see #MenuItem_actionProviderClass
@@ -5291,7 +5297,7 @@ containing a value of this type.
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           <p>This is a private symbol.
-          @attr name com.petcarekl.patcareteam2:actionLayout
+          @attr name com.petcare.teamiki:actionLayout
         */
         public static final int MenuItem_actionLayout = 14;
         /**
@@ -5310,7 +5316,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
           <p>This is a private symbol.
-          @attr name com.petcarekl.patcareteam2:actionProviderClass
+          @attr name com.petcare.teamiki:actionProviderClass
         */
         public static final int MenuItem_actionProviderClass = 16;
         /**
@@ -5328,7 +5334,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
           <p>This is a private symbol.
-          @attr name com.petcarekl.patcareteam2:actionViewClass
+          @attr name com.petcare.teamiki:actionViewClass
         */
         public static final int MenuItem_actionViewClass = 15;
         /**
@@ -5484,7 +5490,7 @@ containing a value of this type.
                  larger segment of its container. </td></tr>
 </table>
           <p>This is a private symbol.
-          @attr name com.petcarekl.patcareteam2:showAsAction
+          @attr name com.petcare.teamiki:showAsAction
         */
         public static final int MenuItem_showAsAction = 13;
         /** Attributes that can be used with a MenuView.
@@ -5500,7 +5506,7 @@ containing a value of this type.
            <tr><td><code>{@link #MenuView_android_itemTextAppearance android:itemTextAppearance}</code></td><td> Default appearance of menu item text.</td></tr>
            <tr><td><code>{@link #MenuView_android_verticalDivider android:verticalDivider}</code></td><td> Default vertical divider between menu items.</td></tr>
            <tr><td><code>{@link #MenuView_android_windowAnimationStyle android:windowAnimationStyle}</code></td><td> Default animations for the menu.</td></tr>
-           <tr><td><code>{@link #MenuView_preserveIconSpacing com.petcarekl.patcareteam2:preserveIconSpacing}</code></td><td> Whether space should be reserved in layout when an icon is missing.</td></tr>
+           <tr><td><code>{@link #MenuView_preserveIconSpacing com.petcare.teamiki:preserveIconSpacing}</code></td><td> Whether space should be reserved in layout when an icon is missing.</td></tr>
            </table>
            @see #MenuView_android_headerBackground
            @see #MenuView_android_horizontalDivider
@@ -5591,7 +5597,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
           <p>This is a private symbol.
-          @attr name com.petcarekl.patcareteam2:preserveIconSpacing
+          @attr name com.petcare.teamiki:preserveIconSpacing
         */
         public static final int MenuView_preserveIconSpacing = 7;
         /** Attributes that can be used with a PopupWindow.
@@ -5601,7 +5607,7 @@ containing a value of this type.
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
            <tr><td><code>{@link #PopupWindow_android_popupBackground android:popupBackground}</code></td><td></td></tr>
-           <tr><td><code>{@link #PopupWindow_overlapAnchor com.petcarekl.patcareteam2:overlapAnchor}</code></td><td> Whether the popup window should overlap its anchor view.</td></tr>
+           <tr><td><code>{@link #PopupWindow_overlapAnchor com.petcare.teamiki:overlapAnchor}</code></td><td> Whether the popup window should overlap its anchor view.</td></tr>
            </table>
            @see #PopupWindow_android_popupBackground
            @see #PopupWindow_overlapAnchor
@@ -5628,7 +5634,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
           <p>This is a private symbol.
-          @attr name com.petcarekl.patcareteam2:overlapAnchor
+          @attr name com.petcare.teamiki:overlapAnchor
         */
         public static final int PopupWindow_overlapAnchor = 1;
         /** Attributes that can be used with a PopupWindowBackgroundState.
@@ -5637,7 +5643,7 @@ containing a value of this type.
            <colgroup align="left" />
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #PopupWindowBackgroundState_state_above_anchor com.petcarekl.patcareteam2:state_above_anchor}</code></td><td> State identifier indicating the popup will be above the anchor.</td></tr>
+           <tr><td><code>{@link #PopupWindowBackgroundState_state_above_anchor com.petcare.teamiki:state_above_anchor}</code></td><td> State identifier indicating the popup will be above the anchor.</td></tr>
            </table>
            @see #PopupWindowBackgroundState_state_above_anchor
          */
@@ -5657,7 +5663,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
           <p>This is a private symbol.
-          @attr name com.petcarekl.patcareteam2:state_above_anchor
+          @attr name com.petcare.teamiki:state_above_anchor
         */
         public static final int PopupWindowBackgroundState_state_above_anchor = 0;
         /** Attributes that can be used with a SearchView.
@@ -5670,20 +5676,20 @@ containing a value of this type.
            <tr><td><code>{@link #SearchView_android_imeOptions android:imeOptions}</code></td><td> The IME options to set on the query text field.</td></tr>
            <tr><td><code>{@link #SearchView_android_inputType android:inputType}</code></td><td> The input type to set on the query text field.</td></tr>
            <tr><td><code>{@link #SearchView_android_maxWidth android:maxWidth}</code></td><td> An optional maximum width of the SearchView.</td></tr>
-           <tr><td><code>{@link #SearchView_closeIcon com.petcarekl.patcareteam2:closeIcon}</code></td><td> Close button icon </td></tr>
-           <tr><td><code>{@link #SearchView_commitIcon com.petcarekl.patcareteam2:commitIcon}</code></td><td> Commit icon shown in the query suggestion row </td></tr>
-           <tr><td><code>{@link #SearchView_defaultQueryHint com.petcarekl.patcareteam2:defaultQueryHint}</code></td><td> Default query hint used when {@code queryHint} is undefined and
+           <tr><td><code>{@link #SearchView_closeIcon com.petcare.teamiki:closeIcon}</code></td><td> Close button icon </td></tr>
+           <tr><td><code>{@link #SearchView_commitIcon com.petcare.teamiki:commitIcon}</code></td><td> Commit icon shown in the query suggestion row </td></tr>
+           <tr><td><code>{@link #SearchView_defaultQueryHint com.petcare.teamiki:defaultQueryHint}</code></td><td> Default query hint used when {@code queryHint} is undefined and
              the search view's {@code SearchableInfo} does not provide a hint.</td></tr>
-           <tr><td><code>{@link #SearchView_goIcon com.petcarekl.patcareteam2:goIcon}</code></td><td> Go button icon </td></tr>
-           <tr><td><code>{@link #SearchView_iconifiedByDefault com.petcarekl.patcareteam2:iconifiedByDefault}</code></td><td> The default state of the SearchView.</td></tr>
-           <tr><td><code>{@link #SearchView_layout com.petcarekl.patcareteam2:layout}</code></td><td> The layout to use for the search view.</td></tr>
-           <tr><td><code>{@link #SearchView_queryBackground com.petcarekl.patcareteam2:queryBackground}</code></td><td> Background for the section containing the search query </td></tr>
-           <tr><td><code>{@link #SearchView_queryHint com.petcarekl.patcareteam2:queryHint}</code></td><td> An optional user-defined query hint string to be displayed in the empty query field.</td></tr>
-           <tr><td><code>{@link #SearchView_searchHintIcon com.petcarekl.patcareteam2:searchHintIcon}</code></td><td> Search icon displayed as a text field hint </td></tr>
-           <tr><td><code>{@link #SearchView_searchIcon com.petcarekl.patcareteam2:searchIcon}</code></td><td> Search icon </td></tr>
-           <tr><td><code>{@link #SearchView_submitBackground com.petcarekl.patcareteam2:submitBackground}</code></td><td> Background for the section containing the action (e.</td></tr>
-           <tr><td><code>{@link #SearchView_suggestionRowLayout com.petcarekl.patcareteam2:suggestionRowLayout}</code></td><td> Layout for query suggestion rows </td></tr>
-           <tr><td><code>{@link #SearchView_voiceIcon com.petcarekl.patcareteam2:voiceIcon}</code></td><td> Voice button icon </td></tr>
+           <tr><td><code>{@link #SearchView_goIcon com.petcare.teamiki:goIcon}</code></td><td> Go button icon </td></tr>
+           <tr><td><code>{@link #SearchView_iconifiedByDefault com.petcare.teamiki:iconifiedByDefault}</code></td><td> The default state of the SearchView.</td></tr>
+           <tr><td><code>{@link #SearchView_layout com.petcare.teamiki:layout}</code></td><td> The layout to use for the search view.</td></tr>
+           <tr><td><code>{@link #SearchView_queryBackground com.petcare.teamiki:queryBackground}</code></td><td> Background for the section containing the search query </td></tr>
+           <tr><td><code>{@link #SearchView_queryHint com.petcare.teamiki:queryHint}</code></td><td> An optional user-defined query hint string to be displayed in the empty query field.</td></tr>
+           <tr><td><code>{@link #SearchView_searchHintIcon com.petcare.teamiki:searchHintIcon}</code></td><td> Search icon displayed as a text field hint </td></tr>
+           <tr><td><code>{@link #SearchView_searchIcon com.petcare.teamiki:searchIcon}</code></td><td> Search icon </td></tr>
+           <tr><td><code>{@link #SearchView_submitBackground com.petcare.teamiki:submitBackground}</code></td><td> Background for the section containing the action (e.</td></tr>
+           <tr><td><code>{@link #SearchView_suggestionRowLayout com.petcare.teamiki:suggestionRowLayout}</code></td><td> Layout for query suggestion rows </td></tr>
+           <tr><td><code>{@link #SearchView_voiceIcon com.petcare.teamiki:voiceIcon}</code></td><td> Voice button icon </td></tr>
            </table>
            @see #SearchView_android_focusable
            @see #SearchView_android_imeOptions
@@ -5752,7 +5758,7 @@ containing a value of this type.
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           <p>This is a private symbol.
-          @attr name com.petcarekl.patcareteam2:closeIcon
+          @attr name com.petcare.teamiki:closeIcon
         */
         public static final int SearchView_closeIcon = 8;
         /**
@@ -5764,7 +5770,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           <p>This is a private symbol.
-          @attr name com.petcarekl.patcareteam2:commitIcon
+          @attr name com.petcare.teamiki:commitIcon
         */
         public static final int SearchView_commitIcon = 13;
         /**
@@ -5781,7 +5787,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
           <p>This is a private symbol.
-          @attr name com.petcarekl.patcareteam2:defaultQueryHint
+          @attr name com.petcare.teamiki:defaultQueryHint
         */
         public static final int SearchView_defaultQueryHint = 7;
         /**
@@ -5793,7 +5799,7 @@ containing a value of this type.
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           <p>This is a private symbol.
-          @attr name com.petcarekl.patcareteam2:goIcon
+          @attr name com.petcare.teamiki:goIcon
         */
         public static final int SearchView_goIcon = 9;
         /**
@@ -5810,7 +5816,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
           <p>This is a private symbol.
-          @attr name com.petcarekl.patcareteam2:iconifiedByDefault
+          @attr name com.petcare.teamiki:iconifiedByDefault
         */
         public static final int SearchView_iconifiedByDefault = 5;
         /**
@@ -5822,7 +5828,7 @@ containing a value of this type.
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           <p>This is a private symbol.
-          @attr name com.petcarekl.patcareteam2:layout
+          @attr name com.petcare.teamiki:layout
         */
         public static final int SearchView_layout = 4;
         /**
@@ -5834,7 +5840,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           <p>This is a private symbol.
-          @attr name com.petcarekl.patcareteam2:queryBackground
+          @attr name com.petcare.teamiki:queryBackground
         */
         public static final int SearchView_queryBackground = 15;
         /**
@@ -5850,7 +5856,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
           <p>This is a private symbol.
-          @attr name com.petcarekl.patcareteam2:queryHint
+          @attr name com.petcare.teamiki:queryHint
         */
         public static final int SearchView_queryHint = 6;
         /**
@@ -5862,7 +5868,7 @@ containing a value of this type.
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           <p>This is a private symbol.
-          @attr name com.petcarekl.patcareteam2:searchHintIcon
+          @attr name com.petcare.teamiki:searchHintIcon
         */
         public static final int SearchView_searchHintIcon = 11;
         /**
@@ -5874,7 +5880,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           <p>This is a private symbol.
-          @attr name com.petcarekl.patcareteam2:searchIcon
+          @attr name com.petcare.teamiki:searchIcon
         */
         public static final int SearchView_searchIcon = 10;
         /**
@@ -5886,7 +5892,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           <p>This is a private symbol.
-          @attr name com.petcarekl.patcareteam2:submitBackground
+          @attr name com.petcare.teamiki:submitBackground
         */
         public static final int SearchView_submitBackground = 16;
         /**
@@ -5898,7 +5904,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           <p>This is a private symbol.
-          @attr name com.petcarekl.patcareteam2:suggestionRowLayout
+          @attr name com.petcare.teamiki:suggestionRowLayout
         */
         public static final int SearchView_suggestionRowLayout = 14;
         /**
@@ -5910,7 +5916,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           <p>This is a private symbol.
-          @attr name com.petcarekl.patcareteam2:voiceIcon
+          @attr name com.petcare.teamiki:voiceIcon
         */
         public static final int SearchView_voiceIcon = 12;
         /** Attributes that can be used with a Spinner.
@@ -5928,12 +5934,12 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
            <tr><td><code>{@link #Spinner_android_dropDownWidth android:dropDownWidth}</code></td><td> Width of the dropdown in spinnerMode="dropdown".</td></tr>
            <tr><td><code>{@link #Spinner_android_gravity android:gravity}</code></td><td> Gravity setting for positioning the currently selected item.</td></tr>
            <tr><td><code>{@link #Spinner_android_popupBackground android:popupBackground}</code></td><td> Background drawable to use for the dropdown in spinnerMode="dropdown".</td></tr>
-           <tr><td><code>{@link #Spinner_disableChildrenWhenDisabled com.petcarekl.patcareteam2:disableChildrenWhenDisabled}</code></td><td> Whether this spinner should mark child views as enabled/disabled when
+           <tr><td><code>{@link #Spinner_disableChildrenWhenDisabled com.petcare.teamiki:disableChildrenWhenDisabled}</code></td><td> Whether this spinner should mark child views as enabled/disabled when
              the spinner itself is enabled/disabled.</td></tr>
-           <tr><td><code>{@link #Spinner_popupPromptView com.petcarekl.patcareteam2:popupPromptView}</code></td><td> Reference to a layout to use for displaying a prompt in the dropdown for
+           <tr><td><code>{@link #Spinner_popupPromptView com.petcare.teamiki:popupPromptView}</code></td><td> Reference to a layout to use for displaying a prompt in the dropdown for
              spinnerMode="dropdown".</td></tr>
-           <tr><td><code>{@link #Spinner_prompt com.petcarekl.patcareteam2:prompt}</code></td><td> The prompt to display when the spinner's dialog is shown.</td></tr>
-           <tr><td><code>{@link #Spinner_spinnerMode com.petcarekl.patcareteam2:spinnerMode}</code></td><td> Display mode for spinner options.</td></tr>
+           <tr><td><code>{@link #Spinner_prompt com.petcare.teamiki:prompt}</code></td><td> The prompt to display when the spinner's dialog is shown.</td></tr>
+           <tr><td><code>{@link #Spinner_spinnerMode com.petcare.teamiki:spinnerMode}</code></td><td> Display mode for spinner options.</td></tr>
            </table>
            @see #Spinner_android_background
            @see #Spinner_android_dropDownHorizontalOffset
@@ -6028,7 +6034,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
           <p>This is a private symbol.
-          @attr name com.petcarekl.patcareteam2:disableChildrenWhenDisabled
+          @attr name com.petcare.teamiki:disableChildrenWhenDisabled
         */
         public static final int Spinner_disableChildrenWhenDisabled = 10;
         /**
@@ -6042,7 +6048,7 @@ containing a value of this type.
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           <p>This is a private symbol.
-          @attr name com.petcarekl.patcareteam2:popupPromptView
+          @attr name com.petcare.teamiki:popupPromptView
         */
         public static final int Spinner_popupPromptView = 9;
         /**
@@ -6054,7 +6060,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           <p>This is a private symbol.
-          @attr name com.petcarekl.patcareteam2:prompt
+          @attr name com.petcare.teamiki:prompt
         */
         public static final int Spinner_prompt = 7;
         /**
@@ -6074,7 +6080,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
                  anchored to the spinner widget itself. </td></tr>
 </table>
           <p>This is a private symbol.
-          @attr name com.petcarekl.patcareteam2:spinnerMode
+          @attr name com.petcare.teamiki:spinnerMode
         */
         public static final int Spinner_spinnerMode = 8;
         /** Attributes that can be used with a SwitchCompat.
@@ -6086,13 +6092,13 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
            <tr><td><code>{@link #SwitchCompat_android_textOff android:textOff}</code></td><td> Text to use when the switch is in the unchecked/"off" state.</td></tr>
            <tr><td><code>{@link #SwitchCompat_android_textOn android:textOn}</code></td><td> Text to use when the switch is in the checked/"on" state.</td></tr>
            <tr><td><code>{@link #SwitchCompat_android_thumb android:thumb}</code></td><td> Drawable to use as the "thumb" that switches back and forth.</td></tr>
-           <tr><td><code>{@link #SwitchCompat_showText com.petcarekl.patcareteam2:showText}</code></td><td> Whether to draw on/off text.</td></tr>
-           <tr><td><code>{@link #SwitchCompat_splitTrack com.petcarekl.patcareteam2:splitTrack}</code></td><td> Whether to split the track and leave a gap for the thumb drawable.</td></tr>
-           <tr><td><code>{@link #SwitchCompat_switchMinWidth com.petcarekl.patcareteam2:switchMinWidth}</code></td><td> Minimum width for the switch component </td></tr>
-           <tr><td><code>{@link #SwitchCompat_switchPadding com.petcarekl.patcareteam2:switchPadding}</code></td><td> Minimum space between the switch and caption text </td></tr>
-           <tr><td><code>{@link #SwitchCompat_switchTextAppearance com.petcarekl.patcareteam2:switchTextAppearance}</code></td><td> TextAppearance style for text displayed on the switch thumb.</td></tr>
-           <tr><td><code>{@link #SwitchCompat_thumbTextPadding com.petcarekl.patcareteam2:thumbTextPadding}</code></td><td> Amount of padding on either side of text within the switch thumb.</td></tr>
-           <tr><td><code>{@link #SwitchCompat_track com.petcarekl.patcareteam2:track}</code></td><td> Drawable to use as the "track" that the switch thumb slides within.</td></tr>
+           <tr><td><code>{@link #SwitchCompat_showText com.petcare.teamiki:showText}</code></td><td> Whether to draw on/off text.</td></tr>
+           <tr><td><code>{@link #SwitchCompat_splitTrack com.petcare.teamiki:splitTrack}</code></td><td> Whether to split the track and leave a gap for the thumb drawable.</td></tr>
+           <tr><td><code>{@link #SwitchCompat_switchMinWidth com.petcare.teamiki:switchMinWidth}</code></td><td> Minimum width for the switch component </td></tr>
+           <tr><td><code>{@link #SwitchCompat_switchPadding com.petcare.teamiki:switchPadding}</code></td><td> Minimum space between the switch and caption text </td></tr>
+           <tr><td><code>{@link #SwitchCompat_switchTextAppearance com.petcare.teamiki:switchTextAppearance}</code></td><td> TextAppearance style for text displayed on the switch thumb.</td></tr>
+           <tr><td><code>{@link #SwitchCompat_thumbTextPadding com.petcare.teamiki:thumbTextPadding}</code></td><td> Amount of padding on either side of text within the switch thumb.</td></tr>
+           <tr><td><code>{@link #SwitchCompat_track com.petcare.teamiki:track}</code></td><td> Drawable to use as the "track" that the switch thumb slides within.</td></tr>
            </table>
            @see #SwitchCompat_android_textOff
            @see #SwitchCompat_android_textOn
@@ -6150,7 +6156,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
           <p>This is a private symbol.
-          @attr name com.petcarekl.patcareteam2:showText
+          @attr name com.petcare.teamiki:showText
         */
         public static final int SwitchCompat_showText = 9;
         /**
@@ -6166,7 +6172,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
           <p>This is a private symbol.
-          @attr name com.petcarekl.patcareteam2:splitTrack
+          @attr name com.petcare.teamiki:splitTrack
         */
         public static final int SwitchCompat_splitTrack = 8;
         /**
@@ -6184,7 +6190,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
           <p>This is a private symbol.
-          @attr name com.petcarekl.patcareteam2:switchMinWidth
+          @attr name com.petcare.teamiki:switchMinWidth
         */
         public static final int SwitchCompat_switchMinWidth = 6;
         /**
@@ -6202,7 +6208,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
           <p>This is a private symbol.
-          @attr name com.petcarekl.patcareteam2:switchPadding
+          @attr name com.petcare.teamiki:switchPadding
         */
         public static final int SwitchCompat_switchPadding = 7;
         /**
@@ -6214,7 +6220,7 @@ containing a value of this type.
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           <p>This is a private symbol.
-          @attr name com.petcarekl.patcareteam2:switchTextAppearance
+          @attr name com.petcare.teamiki:switchTextAppearance
         */
         public static final int SwitchCompat_switchTextAppearance = 5;
         /**
@@ -6232,7 +6238,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
           <p>This is a private symbol.
-          @attr name com.petcarekl.patcareteam2:thumbTextPadding
+          @attr name com.petcare.teamiki:thumbTextPadding
         */
         public static final int SwitchCompat_thumbTextPadding = 4;
         /**
@@ -6244,7 +6250,7 @@ containing a value of this type.
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           <p>This is a private symbol.
-          @attr name com.petcarekl.patcareteam2:track
+          @attr name com.petcare.teamiki:track
         */
         public static final int SwitchCompat_track = 3;
         /** Attributes that can be used with a TextAppearance.
@@ -6257,7 +6263,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
            <tr><td><code>{@link #TextAppearance_android_textSize android:textSize}</code></td><td></td></tr>
            <tr><td><code>{@link #TextAppearance_android_textStyle android:textStyle}</code></td><td></td></tr>
            <tr><td><code>{@link #TextAppearance_android_typeface android:typeface}</code></td><td></td></tr>
-           <tr><td><code>{@link #TextAppearance_textAllCaps com.petcarekl.patcareteam2:textAllCaps}</code></td><td> Present the text in ALL CAPS.</td></tr>
+           <tr><td><code>{@link #TextAppearance_textAllCaps com.petcare.teamiki:textAllCaps}</code></td><td> Present the text in ALL CAPS.</td></tr>
            </table>
            @see #TextAppearance_android_textColor
            @see #TextAppearance_android_textSize
@@ -6303,7 +6309,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
 <p>May be a boolean value, either "<code>true</code>" or "<code>false</code>".
           <p>This is a private symbol.
-          @attr name com.petcarekl.patcareteam2:textAllCaps
+          @attr name com.petcare.teamiki:textAllCaps
         */
         public static final int TextAppearance_textAllCaps = 4;
         /**  These are the standard attributes that make up a complete theme. 
@@ -6312,129 +6318,129 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
            <colgroup align="left" />
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #Theme_actionBarDivider com.petcarekl.patcareteam2:actionBarDivider}</code></td><td> Custom divider drawable to use for elements in the action bar.</td></tr>
-           <tr><td><code>{@link #Theme_actionBarItemBackground com.petcarekl.patcareteam2:actionBarItemBackground}</code></td><td> Custom item state list drawable background for action bar items.</td></tr>
-           <tr><td><code>{@link #Theme_actionBarPopupTheme com.petcarekl.patcareteam2:actionBarPopupTheme}</code></td><td> Reference to a theme that should be used to inflate popups
+           <tr><td><code>{@link #Theme_actionBarDivider com.petcare.teamiki:actionBarDivider}</code></td><td> Custom divider drawable to use for elements in the action bar.</td></tr>
+           <tr><td><code>{@link #Theme_actionBarItemBackground com.petcare.teamiki:actionBarItemBackground}</code></td><td> Custom item state list drawable background for action bar items.</td></tr>
+           <tr><td><code>{@link #Theme_actionBarPopupTheme com.petcare.teamiki:actionBarPopupTheme}</code></td><td> Reference to a theme that should be used to inflate popups
              shown by widgets in the action bar.</td></tr>
-           <tr><td><code>{@link #Theme_actionBarSize com.petcarekl.patcareteam2:actionBarSize}</code></td><td> Size of the Action Bar, including the contextual
+           <tr><td><code>{@link #Theme_actionBarSize com.petcare.teamiki:actionBarSize}</code></td><td> Size of the Action Bar, including the contextual
              bar used to present Action Modes.</td></tr>
-           <tr><td><code>{@link #Theme_actionBarSplitStyle com.petcarekl.patcareteam2:actionBarSplitStyle}</code></td><td> Reference to a style for the split Action Bar.</td></tr>
-           <tr><td><code>{@link #Theme_actionBarStyle com.petcarekl.patcareteam2:actionBarStyle}</code></td><td> Reference to a style for the Action Bar </td></tr>
-           <tr><td><code>{@link #Theme_actionBarTabBarStyle com.petcarekl.patcareteam2:actionBarTabBarStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_actionBarTabStyle com.petcarekl.patcareteam2:actionBarTabStyle}</code></td><td> Default style for tabs within an action bar </td></tr>
-           <tr><td><code>{@link #Theme_actionBarTabTextStyle com.petcarekl.patcareteam2:actionBarTabTextStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_actionBarTheme com.petcarekl.patcareteam2:actionBarTheme}</code></td><td> Reference to a theme that should be used to inflate the
+           <tr><td><code>{@link #Theme_actionBarSplitStyle com.petcare.teamiki:actionBarSplitStyle}</code></td><td> Reference to a style for the split Action Bar.</td></tr>
+           <tr><td><code>{@link #Theme_actionBarStyle com.petcare.teamiki:actionBarStyle}</code></td><td> Reference to a style for the Action Bar </td></tr>
+           <tr><td><code>{@link #Theme_actionBarTabBarStyle com.petcare.teamiki:actionBarTabBarStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_actionBarTabStyle com.petcare.teamiki:actionBarTabStyle}</code></td><td> Default style for tabs within an action bar </td></tr>
+           <tr><td><code>{@link #Theme_actionBarTabTextStyle com.petcare.teamiki:actionBarTabTextStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_actionBarTheme com.petcare.teamiki:actionBarTheme}</code></td><td> Reference to a theme that should be used to inflate the
              action bar.</td></tr>
-           <tr><td><code>{@link #Theme_actionBarWidgetTheme com.petcarekl.patcareteam2:actionBarWidgetTheme}</code></td><td> Reference to a theme that should be used to inflate widgets
+           <tr><td><code>{@link #Theme_actionBarWidgetTheme com.petcare.teamiki:actionBarWidgetTheme}</code></td><td> Reference to a theme that should be used to inflate widgets
              and layouts destined for the action bar.</td></tr>
-           <tr><td><code>{@link #Theme_actionButtonStyle com.petcarekl.patcareteam2:actionButtonStyle}</code></td><td> Default action button style.</td></tr>
-           <tr><td><code>{@link #Theme_actionDropDownStyle com.petcarekl.patcareteam2:actionDropDownStyle}</code></td><td> Default ActionBar dropdown style.</td></tr>
-           <tr><td><code>{@link #Theme_actionMenuTextAppearance com.petcarekl.patcareteam2:actionMenuTextAppearance}</code></td><td> TextAppearance style that will be applied to text that
+           <tr><td><code>{@link #Theme_actionButtonStyle com.petcare.teamiki:actionButtonStyle}</code></td><td> Default action button style.</td></tr>
+           <tr><td><code>{@link #Theme_actionDropDownStyle com.petcare.teamiki:actionDropDownStyle}</code></td><td> Default ActionBar dropdown style.</td></tr>
+           <tr><td><code>{@link #Theme_actionMenuTextAppearance com.petcare.teamiki:actionMenuTextAppearance}</code></td><td> TextAppearance style that will be applied to text that
              appears within action menu items.</td></tr>
-           <tr><td><code>{@link #Theme_actionMenuTextColor com.petcarekl.patcareteam2:actionMenuTextColor}</code></td><td> Color for text that appears within action menu items.</td></tr>
-           <tr><td><code>{@link #Theme_actionModeBackground com.petcarekl.patcareteam2:actionModeBackground}</code></td><td> Background drawable to use for action mode UI </td></tr>
-           <tr><td><code>{@link #Theme_actionModeCloseButtonStyle com.petcarekl.patcareteam2:actionModeCloseButtonStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_actionModeCloseDrawable com.petcarekl.patcareteam2:actionModeCloseDrawable}</code></td><td> Drawable to use for the close action mode button </td></tr>
-           <tr><td><code>{@link #Theme_actionModeCopyDrawable com.petcarekl.patcareteam2:actionModeCopyDrawable}</code></td><td> Drawable to use for the Copy action button in Contextual Action Bar </td></tr>
-           <tr><td><code>{@link #Theme_actionModeCutDrawable com.petcarekl.patcareteam2:actionModeCutDrawable}</code></td><td> Drawable to use for the Cut action button in Contextual Action Bar </td></tr>
-           <tr><td><code>{@link #Theme_actionModeFindDrawable com.petcarekl.patcareteam2:actionModeFindDrawable}</code></td><td> Drawable to use for the Find action button in WebView selection action modes </td></tr>
-           <tr><td><code>{@link #Theme_actionModePasteDrawable com.petcarekl.patcareteam2:actionModePasteDrawable}</code></td><td> Drawable to use for the Paste action button in Contextual Action Bar </td></tr>
-           <tr><td><code>{@link #Theme_actionModePopupWindowStyle com.petcarekl.patcareteam2:actionModePopupWindowStyle}</code></td><td> PopupWindow style to use for action modes when showing as a window overlay.</td></tr>
-           <tr><td><code>{@link #Theme_actionModeSelectAllDrawable com.petcarekl.patcareteam2:actionModeSelectAllDrawable}</code></td><td> Drawable to use for the Select all action button in Contextual Action Bar </td></tr>
-           <tr><td><code>{@link #Theme_actionModeShareDrawable com.petcarekl.patcareteam2:actionModeShareDrawable}</code></td><td> Drawable to use for the Share action button in WebView selection action modes </td></tr>
-           <tr><td><code>{@link #Theme_actionModeSplitBackground com.petcarekl.patcareteam2:actionModeSplitBackground}</code></td><td> Background drawable to use for action mode UI in the lower split bar </td></tr>
-           <tr><td><code>{@link #Theme_actionModeStyle com.petcarekl.patcareteam2:actionModeStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_actionModeWebSearchDrawable com.petcarekl.patcareteam2:actionModeWebSearchDrawable}</code></td><td> Drawable to use for the Web Search action button in WebView selection action modes </td></tr>
-           <tr><td><code>{@link #Theme_actionOverflowButtonStyle com.petcarekl.patcareteam2:actionOverflowButtonStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_actionOverflowMenuStyle com.petcarekl.patcareteam2:actionOverflowMenuStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_activityChooserViewStyle com.petcarekl.patcareteam2:activityChooserViewStyle}</code></td><td> Default ActivityChooserView style.</td></tr>
-           <tr><td><code>{@link #Theme_alertDialogButtonGroupStyle com.petcarekl.patcareteam2:alertDialogButtonGroupStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_alertDialogCenterButtons com.petcarekl.patcareteam2:alertDialogCenterButtons}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_alertDialogStyle com.petcarekl.patcareteam2:alertDialogStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_alertDialogTheme com.petcarekl.patcareteam2:alertDialogTheme}</code></td><td> Theme to use for alert dialogs spawned from this theme.</td></tr>
+           <tr><td><code>{@link #Theme_actionMenuTextColor com.petcare.teamiki:actionMenuTextColor}</code></td><td> Color for text that appears within action menu items.</td></tr>
+           <tr><td><code>{@link #Theme_actionModeBackground com.petcare.teamiki:actionModeBackground}</code></td><td> Background drawable to use for action mode UI </td></tr>
+           <tr><td><code>{@link #Theme_actionModeCloseButtonStyle com.petcare.teamiki:actionModeCloseButtonStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_actionModeCloseDrawable com.petcare.teamiki:actionModeCloseDrawable}</code></td><td> Drawable to use for the close action mode button </td></tr>
+           <tr><td><code>{@link #Theme_actionModeCopyDrawable com.petcare.teamiki:actionModeCopyDrawable}</code></td><td> Drawable to use for the Copy action button in Contextual Action Bar </td></tr>
+           <tr><td><code>{@link #Theme_actionModeCutDrawable com.petcare.teamiki:actionModeCutDrawable}</code></td><td> Drawable to use for the Cut action button in Contextual Action Bar </td></tr>
+           <tr><td><code>{@link #Theme_actionModeFindDrawable com.petcare.teamiki:actionModeFindDrawable}</code></td><td> Drawable to use for the Find action button in WebView selection action modes </td></tr>
+           <tr><td><code>{@link #Theme_actionModePasteDrawable com.petcare.teamiki:actionModePasteDrawable}</code></td><td> Drawable to use for the Paste action button in Contextual Action Bar </td></tr>
+           <tr><td><code>{@link #Theme_actionModePopupWindowStyle com.petcare.teamiki:actionModePopupWindowStyle}</code></td><td> PopupWindow style to use for action modes when showing as a window overlay.</td></tr>
+           <tr><td><code>{@link #Theme_actionModeSelectAllDrawable com.petcare.teamiki:actionModeSelectAllDrawable}</code></td><td> Drawable to use for the Select all action button in Contextual Action Bar </td></tr>
+           <tr><td><code>{@link #Theme_actionModeShareDrawable com.petcare.teamiki:actionModeShareDrawable}</code></td><td> Drawable to use for the Share action button in WebView selection action modes </td></tr>
+           <tr><td><code>{@link #Theme_actionModeSplitBackground com.petcare.teamiki:actionModeSplitBackground}</code></td><td> Background drawable to use for action mode UI in the lower split bar </td></tr>
+           <tr><td><code>{@link #Theme_actionModeStyle com.petcare.teamiki:actionModeStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_actionModeWebSearchDrawable com.petcare.teamiki:actionModeWebSearchDrawable}</code></td><td> Drawable to use for the Web Search action button in WebView selection action modes </td></tr>
+           <tr><td><code>{@link #Theme_actionOverflowButtonStyle com.petcare.teamiki:actionOverflowButtonStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_actionOverflowMenuStyle com.petcare.teamiki:actionOverflowMenuStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_activityChooserViewStyle com.petcare.teamiki:activityChooserViewStyle}</code></td><td> Default ActivityChooserView style.</td></tr>
+           <tr><td><code>{@link #Theme_alertDialogButtonGroupStyle com.petcare.teamiki:alertDialogButtonGroupStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_alertDialogCenterButtons com.petcare.teamiki:alertDialogCenterButtons}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_alertDialogStyle com.petcare.teamiki:alertDialogStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_alertDialogTheme com.petcare.teamiki:alertDialogTheme}</code></td><td> Theme to use for alert dialogs spawned from this theme.</td></tr>
            <tr><td><code>{@link #Theme_android_windowAnimationStyle android:windowAnimationStyle}</code></td><td></td></tr>
            <tr><td><code>{@link #Theme_android_windowIsFloating android:windowIsFloating}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_autoCompleteTextViewStyle com.petcarekl.patcareteam2:autoCompleteTextViewStyle}</code></td><td> Default AutoCompleteTextView style.</td></tr>
-           <tr><td><code>{@link #Theme_borderlessButtonStyle com.petcarekl.patcareteam2:borderlessButtonStyle}</code></td><td> Style for buttons without an explicit border, often used in groups.</td></tr>
-           <tr><td><code>{@link #Theme_buttonBarButtonStyle com.petcarekl.patcareteam2:buttonBarButtonStyle}</code></td><td> Style for buttons within button bars </td></tr>
-           <tr><td><code>{@link #Theme_buttonBarNegativeButtonStyle com.petcarekl.patcareteam2:buttonBarNegativeButtonStyle}</code></td><td> Style for the "negative" buttons within button bars </td></tr>
-           <tr><td><code>{@link #Theme_buttonBarNeutralButtonStyle com.petcarekl.patcareteam2:buttonBarNeutralButtonStyle}</code></td><td> Style for the "neutral" buttons within button bars </td></tr>
-           <tr><td><code>{@link #Theme_buttonBarPositiveButtonStyle com.petcarekl.patcareteam2:buttonBarPositiveButtonStyle}</code></td><td> Style for the "positive" buttons within button bars </td></tr>
-           <tr><td><code>{@link #Theme_buttonBarStyle com.petcarekl.patcareteam2:buttonBarStyle}</code></td><td> Style for button bars </td></tr>
-           <tr><td><code>{@link #Theme_buttonStyle com.petcarekl.patcareteam2:buttonStyle}</code></td><td> Normal Button style.</td></tr>
-           <tr><td><code>{@link #Theme_buttonStyleSmall com.petcarekl.patcareteam2:buttonStyleSmall}</code></td><td> Small Button style.</td></tr>
-           <tr><td><code>{@link #Theme_checkboxStyle com.petcarekl.patcareteam2:checkboxStyle}</code></td><td> Default Checkbox style.</td></tr>
-           <tr><td><code>{@link #Theme_checkedTextViewStyle com.petcarekl.patcareteam2:checkedTextViewStyle}</code></td><td> Default CheckedTextView style.</td></tr>
-           <tr><td><code>{@link #Theme_colorAccent com.petcarekl.patcareteam2:colorAccent}</code></td><td> Bright complement to the primary branding color.</td></tr>
-           <tr><td><code>{@link #Theme_colorButtonNormal com.petcarekl.patcareteam2:colorButtonNormal}</code></td><td> The color applied to framework buttons in their normal state.</td></tr>
-           <tr><td><code>{@link #Theme_colorControlActivated com.petcarekl.patcareteam2:colorControlActivated}</code></td><td> The color applied to framework controls in their activated (ex.</td></tr>
-           <tr><td><code>{@link #Theme_colorControlHighlight com.petcarekl.patcareteam2:colorControlHighlight}</code></td><td> The color applied to framework control highlights (ex.</td></tr>
-           <tr><td><code>{@link #Theme_colorControlNormal com.petcarekl.patcareteam2:colorControlNormal}</code></td><td> The color applied to framework controls in their normal state.</td></tr>
-           <tr><td><code>{@link #Theme_colorPrimary com.petcarekl.patcareteam2:colorPrimary}</code></td><td> The primary branding color for the app.</td></tr>
-           <tr><td><code>{@link #Theme_colorPrimaryDark com.petcarekl.patcareteam2:colorPrimaryDark}</code></td><td> Dark variant of the primary branding color.</td></tr>
-           <tr><td><code>{@link #Theme_colorSwitchThumbNormal com.petcarekl.patcareteam2:colorSwitchThumbNormal}</code></td><td> The color applied to framework switch thumbs in their normal state.</td></tr>
-           <tr><td><code>{@link #Theme_dialogPreferredPadding com.petcarekl.patcareteam2:dialogPreferredPadding}</code></td><td> Preferred padding for dialog content.</td></tr>
-           <tr><td><code>{@link #Theme_dialogTheme com.petcarekl.patcareteam2:dialogTheme}</code></td><td> Theme to use for dialogs spawned from this theme.</td></tr>
-           <tr><td><code>{@link #Theme_dividerHorizontal com.petcarekl.patcareteam2:dividerHorizontal}</code></td><td> A drawable that may be used as a horizontal divider between visual elements.</td></tr>
-           <tr><td><code>{@link #Theme_dividerVertical com.petcarekl.patcareteam2:dividerVertical}</code></td><td> A drawable that may be used as a vertical divider between visual elements.</td></tr>
-           <tr><td><code>{@link #Theme_dropDownListViewStyle com.petcarekl.patcareteam2:dropDownListViewStyle}</code></td><td> ListPopupWindow compatibility </td></tr>
-           <tr><td><code>{@link #Theme_dropdownListPreferredItemHeight com.petcarekl.patcareteam2:dropdownListPreferredItemHeight}</code></td><td> The preferred item height for dropdown lists.</td></tr>
-           <tr><td><code>{@link #Theme_editTextBackground com.petcarekl.patcareteam2:editTextBackground}</code></td><td> EditText background drawable.</td></tr>
-           <tr><td><code>{@link #Theme_editTextColor com.petcarekl.patcareteam2:editTextColor}</code></td><td> EditText text foreground color.</td></tr>
-           <tr><td><code>{@link #Theme_editTextStyle com.petcarekl.patcareteam2:editTextStyle}</code></td><td> Default EditText style.</td></tr>
-           <tr><td><code>{@link #Theme_homeAsUpIndicator com.petcarekl.patcareteam2:homeAsUpIndicator}</code></td><td> Specifies a drawable to use for the 'home as up' indicator.</td></tr>
-           <tr><td><code>{@link #Theme_listChoiceBackgroundIndicator com.petcarekl.patcareteam2:listChoiceBackgroundIndicator}</code></td><td> Drawable used as a background for selected list items.</td></tr>
-           <tr><td><code>{@link #Theme_listDividerAlertDialog com.petcarekl.patcareteam2:listDividerAlertDialog}</code></td><td> The list divider used in alert dialogs.</td></tr>
-           <tr><td><code>{@link #Theme_listPopupWindowStyle com.petcarekl.patcareteam2:listPopupWindowStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_listPreferredItemHeight com.petcarekl.patcareteam2:listPreferredItemHeight}</code></td><td> The preferred list item height.</td></tr>
-           <tr><td><code>{@link #Theme_listPreferredItemHeightLarge com.petcarekl.patcareteam2:listPreferredItemHeightLarge}</code></td><td> A larger, more robust list item height.</td></tr>
-           <tr><td><code>{@link #Theme_listPreferredItemHeightSmall com.petcarekl.patcareteam2:listPreferredItemHeightSmall}</code></td><td> A smaller, sleeker list item height.</td></tr>
-           <tr><td><code>{@link #Theme_listPreferredItemPaddingLeft com.petcarekl.patcareteam2:listPreferredItemPaddingLeft}</code></td><td> The preferred padding along the left edge of list items.</td></tr>
-           <tr><td><code>{@link #Theme_listPreferredItemPaddingRight com.petcarekl.patcareteam2:listPreferredItemPaddingRight}</code></td><td> The preferred padding along the right edge of list items.</td></tr>
-           <tr><td><code>{@link #Theme_panelBackground com.petcarekl.patcareteam2:panelBackground}</code></td><td> The background of a panel when it is inset from the left and right edges of the screen.</td></tr>
-           <tr><td><code>{@link #Theme_panelMenuListTheme com.petcarekl.patcareteam2:panelMenuListTheme}</code></td><td> Default Panel Menu style.</td></tr>
-           <tr><td><code>{@link #Theme_panelMenuListWidth com.petcarekl.patcareteam2:panelMenuListWidth}</code></td><td> Default Panel Menu width.</td></tr>
-           <tr><td><code>{@link #Theme_popupMenuStyle com.petcarekl.patcareteam2:popupMenuStyle}</code></td><td> Default PopupMenu style.</td></tr>
-           <tr><td><code>{@link #Theme_popupWindowStyle com.petcarekl.patcareteam2:popupWindowStyle}</code></td><td> Default PopupWindow style.</td></tr>
-           <tr><td><code>{@link #Theme_radioButtonStyle com.petcarekl.patcareteam2:radioButtonStyle}</code></td><td> Default RadioButton style.</td></tr>
-           <tr><td><code>{@link #Theme_ratingBarStyle com.petcarekl.patcareteam2:ratingBarStyle}</code></td><td> Default RatingBar style.</td></tr>
-           <tr><td><code>{@link #Theme_searchViewStyle com.petcarekl.patcareteam2:searchViewStyle}</code></td><td> Style for the search query widget.</td></tr>
-           <tr><td><code>{@link #Theme_selectableItemBackground com.petcarekl.patcareteam2:selectableItemBackground}</code></td><td> A style that may be applied to buttons or other selectable items
+           <tr><td><code>{@link #Theme_autoCompleteTextViewStyle com.petcare.teamiki:autoCompleteTextViewStyle}</code></td><td> Default AutoCompleteTextView style.</td></tr>
+           <tr><td><code>{@link #Theme_borderlessButtonStyle com.petcare.teamiki:borderlessButtonStyle}</code></td><td> Style for buttons without an explicit border, often used in groups.</td></tr>
+           <tr><td><code>{@link #Theme_buttonBarButtonStyle com.petcare.teamiki:buttonBarButtonStyle}</code></td><td> Style for buttons within button bars </td></tr>
+           <tr><td><code>{@link #Theme_buttonBarNegativeButtonStyle com.petcare.teamiki:buttonBarNegativeButtonStyle}</code></td><td> Style for the "negative" buttons within button bars </td></tr>
+           <tr><td><code>{@link #Theme_buttonBarNeutralButtonStyle com.petcare.teamiki:buttonBarNeutralButtonStyle}</code></td><td> Style for the "neutral" buttons within button bars </td></tr>
+           <tr><td><code>{@link #Theme_buttonBarPositiveButtonStyle com.petcare.teamiki:buttonBarPositiveButtonStyle}</code></td><td> Style for the "positive" buttons within button bars </td></tr>
+           <tr><td><code>{@link #Theme_buttonBarStyle com.petcare.teamiki:buttonBarStyle}</code></td><td> Style for button bars </td></tr>
+           <tr><td><code>{@link #Theme_buttonStyle com.petcare.teamiki:buttonStyle}</code></td><td> Normal Button style.</td></tr>
+           <tr><td><code>{@link #Theme_buttonStyleSmall com.petcare.teamiki:buttonStyleSmall}</code></td><td> Small Button style.</td></tr>
+           <tr><td><code>{@link #Theme_checkboxStyle com.petcare.teamiki:checkboxStyle}</code></td><td> Default Checkbox style.</td></tr>
+           <tr><td><code>{@link #Theme_checkedTextViewStyle com.petcare.teamiki:checkedTextViewStyle}</code></td><td> Default CheckedTextView style.</td></tr>
+           <tr><td><code>{@link #Theme_colorAccent com.petcare.teamiki:colorAccent}</code></td><td> Bright complement to the primary branding color.</td></tr>
+           <tr><td><code>{@link #Theme_colorButtonNormal com.petcare.teamiki:colorButtonNormal}</code></td><td> The color applied to framework buttons in their normal state.</td></tr>
+           <tr><td><code>{@link #Theme_colorControlActivated com.petcare.teamiki:colorControlActivated}</code></td><td> The color applied to framework controls in their activated (ex.</td></tr>
+           <tr><td><code>{@link #Theme_colorControlHighlight com.petcare.teamiki:colorControlHighlight}</code></td><td> The color applied to framework control highlights (ex.</td></tr>
+           <tr><td><code>{@link #Theme_colorControlNormal com.petcare.teamiki:colorControlNormal}</code></td><td> The color applied to framework controls in their normal state.</td></tr>
+           <tr><td><code>{@link #Theme_colorPrimary com.petcare.teamiki:colorPrimary}</code></td><td> The primary branding color for the app.</td></tr>
+           <tr><td><code>{@link #Theme_colorPrimaryDark com.petcare.teamiki:colorPrimaryDark}</code></td><td> Dark variant of the primary branding color.</td></tr>
+           <tr><td><code>{@link #Theme_colorSwitchThumbNormal com.petcare.teamiki:colorSwitchThumbNormal}</code></td><td> The color applied to framework switch thumbs in their normal state.</td></tr>
+           <tr><td><code>{@link #Theme_dialogPreferredPadding com.petcare.teamiki:dialogPreferredPadding}</code></td><td> Preferred padding for dialog content.</td></tr>
+           <tr><td><code>{@link #Theme_dialogTheme com.petcare.teamiki:dialogTheme}</code></td><td> Theme to use for dialogs spawned from this theme.</td></tr>
+           <tr><td><code>{@link #Theme_dividerHorizontal com.petcare.teamiki:dividerHorizontal}</code></td><td> A drawable that may be used as a horizontal divider between visual elements.</td></tr>
+           <tr><td><code>{@link #Theme_dividerVertical com.petcare.teamiki:dividerVertical}</code></td><td> A drawable that may be used as a vertical divider between visual elements.</td></tr>
+           <tr><td><code>{@link #Theme_dropDownListViewStyle com.petcare.teamiki:dropDownListViewStyle}</code></td><td> ListPopupWindow compatibility </td></tr>
+           <tr><td><code>{@link #Theme_dropdownListPreferredItemHeight com.petcare.teamiki:dropdownListPreferredItemHeight}</code></td><td> The preferred item height for dropdown lists.</td></tr>
+           <tr><td><code>{@link #Theme_editTextBackground com.petcare.teamiki:editTextBackground}</code></td><td> EditText background drawable.</td></tr>
+           <tr><td><code>{@link #Theme_editTextColor com.petcare.teamiki:editTextColor}</code></td><td> EditText text foreground color.</td></tr>
+           <tr><td><code>{@link #Theme_editTextStyle com.petcare.teamiki:editTextStyle}</code></td><td> Default EditText style.</td></tr>
+           <tr><td><code>{@link #Theme_homeAsUpIndicator com.petcare.teamiki:homeAsUpIndicator}</code></td><td> Specifies a drawable to use for the 'home as up' indicator.</td></tr>
+           <tr><td><code>{@link #Theme_listChoiceBackgroundIndicator com.petcare.teamiki:listChoiceBackgroundIndicator}</code></td><td> Drawable used as a background for selected list items.</td></tr>
+           <tr><td><code>{@link #Theme_listDividerAlertDialog com.petcare.teamiki:listDividerAlertDialog}</code></td><td> The list divider used in alert dialogs.</td></tr>
+           <tr><td><code>{@link #Theme_listPopupWindowStyle com.petcare.teamiki:listPopupWindowStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_listPreferredItemHeight com.petcare.teamiki:listPreferredItemHeight}</code></td><td> The preferred list item height.</td></tr>
+           <tr><td><code>{@link #Theme_listPreferredItemHeightLarge com.petcare.teamiki:listPreferredItemHeightLarge}</code></td><td> A larger, more robust list item height.</td></tr>
+           <tr><td><code>{@link #Theme_listPreferredItemHeightSmall com.petcare.teamiki:listPreferredItemHeightSmall}</code></td><td> A smaller, sleeker list item height.</td></tr>
+           <tr><td><code>{@link #Theme_listPreferredItemPaddingLeft com.petcare.teamiki:listPreferredItemPaddingLeft}</code></td><td> The preferred padding along the left edge of list items.</td></tr>
+           <tr><td><code>{@link #Theme_listPreferredItemPaddingRight com.petcare.teamiki:listPreferredItemPaddingRight}</code></td><td> The preferred padding along the right edge of list items.</td></tr>
+           <tr><td><code>{@link #Theme_panelBackground com.petcare.teamiki:panelBackground}</code></td><td> The background of a panel when it is inset from the left and right edges of the screen.</td></tr>
+           <tr><td><code>{@link #Theme_panelMenuListTheme com.petcare.teamiki:panelMenuListTheme}</code></td><td> Default Panel Menu style.</td></tr>
+           <tr><td><code>{@link #Theme_panelMenuListWidth com.petcare.teamiki:panelMenuListWidth}</code></td><td> Default Panel Menu width.</td></tr>
+           <tr><td><code>{@link #Theme_popupMenuStyle com.petcare.teamiki:popupMenuStyle}</code></td><td> Default PopupMenu style.</td></tr>
+           <tr><td><code>{@link #Theme_popupWindowStyle com.petcare.teamiki:popupWindowStyle}</code></td><td> Default PopupWindow style.</td></tr>
+           <tr><td><code>{@link #Theme_radioButtonStyle com.petcare.teamiki:radioButtonStyle}</code></td><td> Default RadioButton style.</td></tr>
+           <tr><td><code>{@link #Theme_ratingBarStyle com.petcare.teamiki:ratingBarStyle}</code></td><td> Default RatingBar style.</td></tr>
+           <tr><td><code>{@link #Theme_searchViewStyle com.petcare.teamiki:searchViewStyle}</code></td><td> Style for the search query widget.</td></tr>
+           <tr><td><code>{@link #Theme_selectableItemBackground com.petcare.teamiki:selectableItemBackground}</code></td><td> A style that may be applied to buttons or other selectable items
              that should react to pressed and focus states, but that do not
              have a clear visual border along the edges.</td></tr>
-           <tr><td><code>{@link #Theme_selectableItemBackgroundBorderless com.petcarekl.patcareteam2:selectableItemBackgroundBorderless}</code></td><td> Background drawable for borderless standalone items that need focus/pressed states.</td></tr>
-           <tr><td><code>{@link #Theme_spinnerDropDownItemStyle com.petcarekl.patcareteam2:spinnerDropDownItemStyle}</code></td><td> Default Spinner style.</td></tr>
-           <tr><td><code>{@link #Theme_spinnerStyle com.petcarekl.patcareteam2:spinnerStyle}</code></td><td> Default Spinner style.</td></tr>
-           <tr><td><code>{@link #Theme_switchStyle com.petcarekl.patcareteam2:switchStyle}</code></td><td> Default style for the Switch widget.</td></tr>
-           <tr><td><code>{@link #Theme_textAppearanceLargePopupMenu com.petcarekl.patcareteam2:textAppearanceLargePopupMenu}</code></td><td> Text color, typeface, size, and style for the text inside of a popup menu.</td></tr>
-           <tr><td><code>{@link #Theme_textAppearanceListItem com.petcarekl.patcareteam2:textAppearanceListItem}</code></td><td> The preferred TextAppearance for the primary text of list items.</td></tr>
-           <tr><td><code>{@link #Theme_textAppearanceListItemSmall com.petcarekl.patcareteam2:textAppearanceListItemSmall}</code></td><td> The preferred TextAppearance for the primary text of small list items.</td></tr>
-           <tr><td><code>{@link #Theme_textAppearanceSearchResultSubtitle com.petcarekl.patcareteam2:textAppearanceSearchResultSubtitle}</code></td><td> Text color, typeface, size, and style for system search result subtitle.</td></tr>
-           <tr><td><code>{@link #Theme_textAppearanceSearchResultTitle com.petcarekl.patcareteam2:textAppearanceSearchResultTitle}</code></td><td> Text color, typeface, size, and style for system search result title.</td></tr>
-           <tr><td><code>{@link #Theme_textAppearanceSmallPopupMenu com.petcarekl.patcareteam2:textAppearanceSmallPopupMenu}</code></td><td> Text color, typeface, size, and style for small text inside of a popup menu.</td></tr>
-           <tr><td><code>{@link #Theme_textColorAlertDialogListItem com.petcarekl.patcareteam2:textColorAlertDialogListItem}</code></td><td> Color of list item text in alert dialogs.</td></tr>
-           <tr><td><code>{@link #Theme_textColorSearchUrl com.petcarekl.patcareteam2:textColorSearchUrl}</code></td><td> Text color for urls in search suggestions, used by things like global search </td></tr>
-           <tr><td><code>{@link #Theme_toolbarNavigationButtonStyle com.petcarekl.patcareteam2:toolbarNavigationButtonStyle}</code></td><td> Default Toolar NavigationButtonStyle </td></tr>
-           <tr><td><code>{@link #Theme_toolbarStyle com.petcarekl.patcareteam2:toolbarStyle}</code></td><td> Default Toolbar style.</td></tr>
-           <tr><td><code>{@link #Theme_windowActionBar com.petcarekl.patcareteam2:windowActionBar}</code></td><td> Flag indicating whether this window should have an Action Bar
+           <tr><td><code>{@link #Theme_selectableItemBackgroundBorderless com.petcare.teamiki:selectableItemBackgroundBorderless}</code></td><td> Background drawable for borderless standalone items that need focus/pressed states.</td></tr>
+           <tr><td><code>{@link #Theme_spinnerDropDownItemStyle com.petcare.teamiki:spinnerDropDownItemStyle}</code></td><td> Default Spinner style.</td></tr>
+           <tr><td><code>{@link #Theme_spinnerStyle com.petcare.teamiki:spinnerStyle}</code></td><td> Default Spinner style.</td></tr>
+           <tr><td><code>{@link #Theme_switchStyle com.petcare.teamiki:switchStyle}</code></td><td> Default style for the Switch widget.</td></tr>
+           <tr><td><code>{@link #Theme_textAppearanceLargePopupMenu com.petcare.teamiki:textAppearanceLargePopupMenu}</code></td><td> Text color, typeface, size, and style for the text inside of a popup menu.</td></tr>
+           <tr><td><code>{@link #Theme_textAppearanceListItem com.petcare.teamiki:textAppearanceListItem}</code></td><td> The preferred TextAppearance for the primary text of list items.</td></tr>
+           <tr><td><code>{@link #Theme_textAppearanceListItemSmall com.petcare.teamiki:textAppearanceListItemSmall}</code></td><td> The preferred TextAppearance for the primary text of small list items.</td></tr>
+           <tr><td><code>{@link #Theme_textAppearanceSearchResultSubtitle com.petcare.teamiki:textAppearanceSearchResultSubtitle}</code></td><td> Text color, typeface, size, and style for system search result subtitle.</td></tr>
+           <tr><td><code>{@link #Theme_textAppearanceSearchResultTitle com.petcare.teamiki:textAppearanceSearchResultTitle}</code></td><td> Text color, typeface, size, and style for system search result title.</td></tr>
+           <tr><td><code>{@link #Theme_textAppearanceSmallPopupMenu com.petcare.teamiki:textAppearanceSmallPopupMenu}</code></td><td> Text color, typeface, size, and style for small text inside of a popup menu.</td></tr>
+           <tr><td><code>{@link #Theme_textColorAlertDialogListItem com.petcare.teamiki:textColorAlertDialogListItem}</code></td><td> Color of list item text in alert dialogs.</td></tr>
+           <tr><td><code>{@link #Theme_textColorSearchUrl com.petcare.teamiki:textColorSearchUrl}</code></td><td> Text color for urls in search suggestions, used by things like global search </td></tr>
+           <tr><td><code>{@link #Theme_toolbarNavigationButtonStyle com.petcare.teamiki:toolbarNavigationButtonStyle}</code></td><td> Default Toolar NavigationButtonStyle </td></tr>
+           <tr><td><code>{@link #Theme_toolbarStyle com.petcare.teamiki:toolbarStyle}</code></td><td> Default Toolbar style.</td></tr>
+           <tr><td><code>{@link #Theme_windowActionBar com.petcare.teamiki:windowActionBar}</code></td><td> Flag indicating whether this window should have an Action Bar
              in place of the usual title bar.</td></tr>
-           <tr><td><code>{@link #Theme_windowActionBarOverlay com.petcarekl.patcareteam2:windowActionBarOverlay}</code></td><td> Flag indicating whether this window's Action Bar should overlay
+           <tr><td><code>{@link #Theme_windowActionBarOverlay com.petcare.teamiki:windowActionBarOverlay}</code></td><td> Flag indicating whether this window's Action Bar should overlay
              application content.</td></tr>
-           <tr><td><code>{@link #Theme_windowActionModeOverlay com.petcarekl.patcareteam2:windowActionModeOverlay}</code></td><td> Flag indicating whether action modes should overlay window content
+           <tr><td><code>{@link #Theme_windowActionModeOverlay com.petcare.teamiki:windowActionModeOverlay}</code></td><td> Flag indicating whether action modes should overlay window content
              when there is not reserved space for their UI (such as an Action Bar).</td></tr>
-           <tr><td><code>{@link #Theme_windowFixedHeightMajor com.petcarekl.patcareteam2:windowFixedHeightMajor}</code></td><td> A fixed height for the window along the major axis of the screen,
+           <tr><td><code>{@link #Theme_windowFixedHeightMajor com.petcare.teamiki:windowFixedHeightMajor}</code></td><td> A fixed height for the window along the major axis of the screen,
              that is, when in portrait.</td></tr>
-           <tr><td><code>{@link #Theme_windowFixedHeightMinor com.petcarekl.patcareteam2:windowFixedHeightMinor}</code></td><td> A fixed height for the window along the minor axis of the screen,
+           <tr><td><code>{@link #Theme_windowFixedHeightMinor com.petcare.teamiki:windowFixedHeightMinor}</code></td><td> A fixed height for the window along the minor axis of the screen,
              that is, when in landscape.</td></tr>
-           <tr><td><code>{@link #Theme_windowFixedWidthMajor com.petcarekl.patcareteam2:windowFixedWidthMajor}</code></td><td> A fixed width for the window along the major axis of the screen,
+           <tr><td><code>{@link #Theme_windowFixedWidthMajor com.petcare.teamiki:windowFixedWidthMajor}</code></td><td> A fixed width for the window along the major axis of the screen,
              that is, when in landscape.</td></tr>
-           <tr><td><code>{@link #Theme_windowFixedWidthMinor com.petcarekl.patcareteam2:windowFixedWidthMinor}</code></td><td> A fixed width for the window along the minor axis of the screen,
+           <tr><td><code>{@link #Theme_windowFixedWidthMinor com.petcare.teamiki:windowFixedWidthMinor}</code></td><td> A fixed width for the window along the minor axis of the screen,
              that is, when in portrait.</td></tr>
-           <tr><td><code>{@link #Theme_windowMinWidthMajor com.petcarekl.patcareteam2:windowMinWidthMajor}</code></td><td> The minimum width the window is allowed to be, along the major
+           <tr><td><code>{@link #Theme_windowMinWidthMajor com.petcare.teamiki:windowMinWidthMajor}</code></td><td> The minimum width the window is allowed to be, along the major
              axis of the screen.</td></tr>
-           <tr><td><code>{@link #Theme_windowMinWidthMinor com.petcarekl.patcareteam2:windowMinWidthMinor}</code></td><td> The minimum width the window is allowed to be, along the minor
+           <tr><td><code>{@link #Theme_windowMinWidthMinor com.petcare.teamiki:windowMinWidthMinor}</code></td><td> The minimum width the window is allowed to be, along the minor
              axis of the screen.</td></tr>
-           <tr><td><code>{@link #Theme_windowNoTitle com.petcarekl.patcareteam2:windowNoTitle}</code></td><td> Flag indicating whether there should be no title on this window.</td></tr>
+           <tr><td><code>{@link #Theme_windowNoTitle com.petcare.teamiki:windowNoTitle}</code></td><td> Flag indicating whether there should be no title on this window.</td></tr>
            </table>
            @see #Theme_actionBarDivider
            @see #Theme_actionBarItemBackground
@@ -6582,7 +6588,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           <p>This is a private symbol.
-          @attr name com.petcarekl.patcareteam2:actionBarDivider
+          @attr name com.petcare.teamiki:actionBarDivider
         */
         public static final int Theme_actionBarDivider = 23;
         /**
@@ -6594,7 +6600,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           <p>This is a private symbol.
-          @attr name com.petcarekl.patcareteam2:actionBarItemBackground
+          @attr name com.petcare.teamiki:actionBarItemBackground
         */
         public static final int Theme_actionBarItemBackground = 24;
         /**
@@ -6607,7 +6613,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           <p>This is a private symbol.
-          @attr name com.petcarekl.patcareteam2:actionBarPopupTheme
+          @attr name com.petcare.teamiki:actionBarPopupTheme
         */
         public static final int Theme_actionBarPopupTheme = 17;
         /**
@@ -6634,7 +6640,7 @@ containing a value of this type.
 <tr><td><code>wrap_content</code></td><td>0</td><td></td></tr>
 </table>
           <p>This is a private symbol.
-          @attr name com.petcarekl.patcareteam2:actionBarSize
+          @attr name com.petcare.teamiki:actionBarSize
         */
         public static final int Theme_actionBarSize = 22;
         /**
@@ -6649,7 +6655,7 @@ containing a value of this type.
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           <p>This is a private symbol.
-          @attr name com.petcarekl.patcareteam2:actionBarSplitStyle
+          @attr name com.petcare.teamiki:actionBarSplitStyle
         */
         public static final int Theme_actionBarSplitStyle = 19;
         /**
@@ -6661,17 +6667,17 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           <p>This is a private symbol.
-          @attr name com.petcarekl.patcareteam2:actionBarStyle
+          @attr name com.petcare.teamiki:actionBarStyle
         */
         public static final int Theme_actionBarStyle = 18;
         /**
-          <p>This symbol is the offset where the {@link com.petcarekl.patcareteam2.R.attr#actionBarTabBarStyle}
+          <p>This symbol is the offset where the {@link com.petcare.teamiki.R.attr#actionBarTabBarStyle}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.petcarekl.patcareteam2:actionBarTabBarStyle
+          @attr name com.petcare.teamiki:actionBarTabBarStyle
         */
         public static final int Theme_actionBarTabBarStyle = 13;
         /**
@@ -6683,17 +6689,17 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           <p>This is a private symbol.
-          @attr name com.petcarekl.patcareteam2:actionBarTabStyle
+          @attr name com.petcare.teamiki:actionBarTabStyle
         */
         public static final int Theme_actionBarTabStyle = 12;
         /**
-          <p>This symbol is the offset where the {@link com.petcarekl.patcareteam2.R.attr#actionBarTabTextStyle}
+          <p>This symbol is the offset where the {@link com.petcare.teamiki.R.attr#actionBarTabTextStyle}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.petcarekl.patcareteam2:actionBarTabTextStyle
+          @attr name com.petcare.teamiki:actionBarTabTextStyle
         */
         public static final int Theme_actionBarTabTextStyle = 14;
         /**
@@ -6707,7 +6713,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           <p>This is a private symbol.
-          @attr name com.petcarekl.patcareteam2:actionBarTheme
+          @attr name com.petcare.teamiki:actionBarTheme
         */
         public static final int Theme_actionBarTheme = 20;
         /**
@@ -6725,7 +6731,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           <p>This is a private symbol.
-          @attr name com.petcarekl.patcareteam2:actionBarWidgetTheme
+          @attr name com.petcare.teamiki:actionBarWidgetTheme
         */
         public static final int Theme_actionBarWidgetTheme = 21;
         /**
@@ -6737,7 +6743,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           <p>This is a private symbol.
-          @attr name com.petcarekl.patcareteam2:actionButtonStyle
+          @attr name com.petcare.teamiki:actionButtonStyle
         */
         public static final int Theme_actionButtonStyle = 49;
         /**
@@ -6749,7 +6755,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           <p>This is a private symbol.
-          @attr name com.petcarekl.patcareteam2:actionDropDownStyle
+          @attr name com.petcare.teamiki:actionDropDownStyle
         */
         public static final int Theme_actionDropDownStyle = 45;
         /**
@@ -6762,7 +6768,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           <p>This is a private symbol.
-          @attr name com.petcarekl.patcareteam2:actionMenuTextAppearance
+          @attr name com.petcare.teamiki:actionMenuTextAppearance
         */
         public static final int Theme_actionMenuTextAppearance = 25;
         /**
@@ -6777,7 +6783,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 <p>May be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
 "<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
           <p>This is a private symbol.
-          @attr name com.petcarekl.patcareteam2:actionMenuTextColor
+          @attr name com.petcare.teamiki:actionMenuTextColor
         */
         public static final int Theme_actionMenuTextColor = 26;
         /**
@@ -6789,17 +6795,17 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           <p>This is a private symbol.
-          @attr name com.petcarekl.patcareteam2:actionModeBackground
+          @attr name com.petcare.teamiki:actionModeBackground
         */
         public static final int Theme_actionModeBackground = 29;
         /**
-          <p>This symbol is the offset where the {@link com.petcarekl.patcareteam2.R.attr#actionModeCloseButtonStyle}
+          <p>This symbol is the offset where the {@link com.petcare.teamiki.R.attr#actionModeCloseButtonStyle}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.petcarekl.patcareteam2:actionModeCloseButtonStyle
+          @attr name com.petcare.teamiki:actionModeCloseButtonStyle
         */
         public static final int Theme_actionModeCloseButtonStyle = 28;
         /**
@@ -6811,7 +6817,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           <p>This is a private symbol.
-          @attr name com.petcarekl.patcareteam2:actionModeCloseDrawable
+          @attr name com.petcare.teamiki:actionModeCloseDrawable
         */
         public static final int Theme_actionModeCloseDrawable = 31;
         /**
@@ -6823,7 +6829,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           <p>This is a private symbol.
-          @attr name com.petcarekl.patcareteam2:actionModeCopyDrawable
+          @attr name com.petcare.teamiki:actionModeCopyDrawable
         */
         public static final int Theme_actionModeCopyDrawable = 33;
         /**
@@ -6835,7 +6841,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           <p>This is a private symbol.
-          @attr name com.petcarekl.patcareteam2:actionModeCutDrawable
+          @attr name com.petcare.teamiki:actionModeCutDrawable
         */
         public static final int Theme_actionModeCutDrawable = 32;
         /**
@@ -6847,7 +6853,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           <p>This is a private symbol.
-          @attr name com.petcarekl.patcareteam2:actionModeFindDrawable
+          @attr name com.petcare.teamiki:actionModeFindDrawable
         */
         public static final int Theme_actionModeFindDrawable = 37;
         /**
@@ -6859,7 +6865,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           <p>This is a private symbol.
-          @attr name com.petcarekl.patcareteam2:actionModePasteDrawable
+          @attr name com.petcare.teamiki:actionModePasteDrawable
         */
         public static final int Theme_actionModePasteDrawable = 34;
         /**
@@ -6871,7 +6877,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           <p>This is a private symbol.
-          @attr name com.petcarekl.patcareteam2:actionModePopupWindowStyle
+          @attr name com.petcare.teamiki:actionModePopupWindowStyle
         */
         public static final int Theme_actionModePopupWindowStyle = 39;
         /**
@@ -6883,7 +6889,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           <p>This is a private symbol.
-          @attr name com.petcarekl.patcareteam2:actionModeSelectAllDrawable
+          @attr name com.petcare.teamiki:actionModeSelectAllDrawable
         */
         public static final int Theme_actionModeSelectAllDrawable = 35;
         /**
@@ -6895,7 +6901,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           <p>This is a private symbol.
-          @attr name com.petcarekl.patcareteam2:actionModeShareDrawable
+          @attr name com.petcare.teamiki:actionModeShareDrawable
         */
         public static final int Theme_actionModeShareDrawable = 36;
         /**
@@ -6907,17 +6913,17 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           <p>This is a private symbol.
-          @attr name com.petcarekl.patcareteam2:actionModeSplitBackground
+          @attr name com.petcare.teamiki:actionModeSplitBackground
         */
         public static final int Theme_actionModeSplitBackground = 30;
         /**
-          <p>This symbol is the offset where the {@link com.petcarekl.patcareteam2.R.attr#actionModeStyle}
+          <p>This symbol is the offset where the {@link com.petcare.teamiki.R.attr#actionModeStyle}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.petcarekl.patcareteam2:actionModeStyle
+          @attr name com.petcare.teamiki:actionModeStyle
         */
         public static final int Theme_actionModeStyle = 27;
         /**
@@ -6929,27 +6935,27 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           <p>This is a private symbol.
-          @attr name com.petcarekl.patcareteam2:actionModeWebSearchDrawable
+          @attr name com.petcare.teamiki:actionModeWebSearchDrawable
         */
         public static final int Theme_actionModeWebSearchDrawable = 38;
         /**
-          <p>This symbol is the offset where the {@link com.petcarekl.patcareteam2.R.attr#actionOverflowButtonStyle}
+          <p>This symbol is the offset where the {@link com.petcare.teamiki.R.attr#actionOverflowButtonStyle}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.petcarekl.patcareteam2:actionOverflowButtonStyle
+          @attr name com.petcare.teamiki:actionOverflowButtonStyle
         */
         public static final int Theme_actionOverflowButtonStyle = 15;
         /**
-          <p>This symbol is the offset where the {@link com.petcarekl.patcareteam2.R.attr#actionOverflowMenuStyle}
+          <p>This symbol is the offset where the {@link com.petcare.teamiki.R.attr#actionOverflowMenuStyle}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.petcarekl.patcareteam2:actionOverflowMenuStyle
+          @attr name com.petcare.teamiki:actionOverflowMenuStyle
         */
         public static final int Theme_actionOverflowMenuStyle = 16;
         /**
@@ -6961,21 +6967,21 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           <p>This is a private symbol.
-          @attr name com.petcarekl.patcareteam2:activityChooserViewStyle
+          @attr name com.petcare.teamiki:activityChooserViewStyle
         */
         public static final int Theme_activityChooserViewStyle = 57;
         /**
-          <p>This symbol is the offset where the {@link com.petcarekl.patcareteam2.R.attr#alertDialogButtonGroupStyle}
+          <p>This symbol is the offset where the {@link com.petcare.teamiki.R.attr#alertDialogButtonGroupStyle}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.petcarekl.patcareteam2:alertDialogButtonGroupStyle
+          @attr name com.petcare.teamiki:alertDialogButtonGroupStyle
         */
         public static final int Theme_alertDialogButtonGroupStyle = 90;
         /**
-          <p>This symbol is the offset where the {@link com.petcarekl.patcareteam2.R.attr#alertDialogCenterButtons}
+          <p>This symbol is the offset where the {@link com.petcare.teamiki.R.attr#alertDialogCenterButtons}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -6985,17 +6991,17 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.petcarekl.patcareteam2:alertDialogCenterButtons
+          @attr name com.petcare.teamiki:alertDialogCenterButtons
         */
         public static final int Theme_alertDialogCenterButtons = 91;
         /**
-          <p>This symbol is the offset where the {@link com.petcarekl.patcareteam2.R.attr#alertDialogStyle}
+          <p>This symbol is the offset where the {@link com.petcare.teamiki.R.attr#alertDialogStyle}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.petcarekl.patcareteam2:alertDialogStyle
+          @attr name com.petcare.teamiki:alertDialogStyle
         */
         public static final int Theme_alertDialogStyle = 89;
         /**
@@ -7007,7 +7013,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           <p>This is a private symbol.
-          @attr name com.petcarekl.patcareteam2:alertDialogTheme
+          @attr name com.petcare.teamiki:alertDialogTheme
         */
         public static final int Theme_alertDialogTheme = 92;
         /**
@@ -7031,7 +7037,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           <p>This is a private symbol.
-          @attr name com.petcarekl.patcareteam2:autoCompleteTextViewStyle
+          @attr name com.petcare.teamiki:autoCompleteTextViewStyle
         */
         public static final int Theme_autoCompleteTextViewStyle = 97;
         /**
@@ -7043,7 +7049,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           <p>This is a private symbol.
-          @attr name com.petcarekl.patcareteam2:borderlessButtonStyle
+          @attr name com.petcare.teamiki:borderlessButtonStyle
         */
         public static final int Theme_borderlessButtonStyle = 54;
         /**
@@ -7055,7 +7061,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           <p>This is a private symbol.
-          @attr name com.petcarekl.patcareteam2:buttonBarButtonStyle
+          @attr name com.petcare.teamiki:buttonBarButtonStyle
         */
         public static final int Theme_buttonBarButtonStyle = 51;
         /**
@@ -7067,7 +7073,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           <p>This is a private symbol.
-          @attr name com.petcarekl.patcareteam2:buttonBarNegativeButtonStyle
+          @attr name com.petcare.teamiki:buttonBarNegativeButtonStyle
         */
         public static final int Theme_buttonBarNegativeButtonStyle = 95;
         /**
@@ -7079,7 +7085,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           <p>This is a private symbol.
-          @attr name com.petcarekl.patcareteam2:buttonBarNeutralButtonStyle
+          @attr name com.petcare.teamiki:buttonBarNeutralButtonStyle
         */
         public static final int Theme_buttonBarNeutralButtonStyle = 96;
         /**
@@ -7091,7 +7097,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           <p>This is a private symbol.
-          @attr name com.petcarekl.patcareteam2:buttonBarPositiveButtonStyle
+          @attr name com.petcare.teamiki:buttonBarPositiveButtonStyle
         */
         public static final int Theme_buttonBarPositiveButtonStyle = 94;
         /**
@@ -7103,7 +7109,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           <p>This is a private symbol.
-          @attr name com.petcarekl.patcareteam2:buttonBarStyle
+          @attr name com.petcare.teamiki:buttonBarStyle
         */
         public static final int Theme_buttonBarStyle = 50;
         /**
@@ -7115,7 +7121,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           <p>This is a private symbol.
-          @attr name com.petcarekl.patcareteam2:buttonStyle
+          @attr name com.petcare.teamiki:buttonStyle
         */
         public static final int Theme_buttonStyle = 98;
         /**
@@ -7127,7 +7133,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           <p>This is a private symbol.
-          @attr name com.petcarekl.patcareteam2:buttonStyleSmall
+          @attr name com.petcare.teamiki:buttonStyleSmall
         */
         public static final int Theme_buttonStyleSmall = 99;
         /**
@@ -7139,7 +7145,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           <p>This is a private symbol.
-          @attr name com.petcarekl.patcareteam2:checkboxStyle
+          @attr name com.petcare.teamiki:checkboxStyle
         */
         public static final int Theme_checkboxStyle = 100;
         /**
@@ -7151,7 +7157,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           <p>This is a private symbol.
-          @attr name com.petcarekl.patcareteam2:checkedTextViewStyle
+          @attr name com.petcare.teamiki:checkedTextViewStyle
         */
         public static final int Theme_checkedTextViewStyle = 101;
         /**
@@ -7169,7 +7175,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
           <p>This is a private symbol.
-          @attr name com.petcarekl.patcareteam2:colorAccent
+          @attr name com.petcare.teamiki:colorAccent
         */
         public static final int Theme_colorAccent = 83;
         /**
@@ -7186,7 +7192,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
           <p>This is a private symbol.
-          @attr name com.petcarekl.patcareteam2:colorButtonNormal
+          @attr name com.petcare.teamiki:colorButtonNormal
         */
         public static final int Theme_colorButtonNormal = 87;
         /**
@@ -7203,7 +7209,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
           <p>This is a private symbol.
-          @attr name com.petcarekl.patcareteam2:colorControlActivated
+          @attr name com.petcare.teamiki:colorControlActivated
         */
         public static final int Theme_colorControlActivated = 85;
         /**
@@ -7220,7 +7226,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
           <p>This is a private symbol.
-          @attr name com.petcarekl.patcareteam2:colorControlHighlight
+          @attr name com.petcare.teamiki:colorControlHighlight
         */
         public static final int Theme_colorControlHighlight = 86;
         /**
@@ -7237,7 +7243,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
           <p>This is a private symbol.
-          @attr name com.petcarekl.patcareteam2:colorControlNormal
+          @attr name com.petcare.teamiki:colorControlNormal
         */
         public static final int Theme_colorControlNormal = 84;
         /**
@@ -7255,7 +7261,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
           <p>This is a private symbol.
-          @attr name com.petcarekl.patcareteam2:colorPrimary
+          @attr name com.petcare.teamiki:colorPrimary
         */
         public static final int Theme_colorPrimary = 81;
         /**
@@ -7273,7 +7279,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
           <p>This is a private symbol.
-          @attr name com.petcarekl.patcareteam2:colorPrimaryDark
+          @attr name com.petcare.teamiki:colorPrimaryDark
         */
         public static final int Theme_colorPrimaryDark = 82;
         /**
@@ -7290,7 +7296,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
           <p>This is a private symbol.
-          @attr name com.petcarekl.patcareteam2:colorSwitchThumbNormal
+          @attr name com.petcare.teamiki:colorSwitchThumbNormal
         */
         public static final int Theme_colorSwitchThumbNormal = 88;
         /**
@@ -7308,7 +7314,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
           <p>This is a private symbol.
-          @attr name com.petcarekl.patcareteam2:dialogPreferredPadding
+          @attr name com.petcare.teamiki:dialogPreferredPadding
         */
         public static final int Theme_dialogPreferredPadding = 43;
         /**
@@ -7320,7 +7326,7 @@ containing a value of this type.
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           <p>This is a private symbol.
-          @attr name com.petcarekl.patcareteam2:dialogTheme
+          @attr name com.petcare.teamiki:dialogTheme
         */
         public static final int Theme_dialogTheme = 42;
         /**
@@ -7332,7 +7338,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           <p>This is a private symbol.
-          @attr name com.petcarekl.patcareteam2:dividerHorizontal
+          @attr name com.petcare.teamiki:dividerHorizontal
         */
         public static final int Theme_dividerHorizontal = 56;
         /**
@@ -7344,7 +7350,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           <p>This is a private symbol.
-          @attr name com.petcarekl.patcareteam2:dividerVertical
+          @attr name com.petcare.teamiki:dividerVertical
         */
         public static final int Theme_dividerVertical = 55;
         /**
@@ -7356,7 +7362,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           <p>This is a private symbol.
-          @attr name com.petcarekl.patcareteam2:dropDownListViewStyle
+          @attr name com.petcare.teamiki:dropDownListViewStyle
         */
         public static final int Theme_dropDownListViewStyle = 73;
         /**
@@ -7374,7 +7380,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
           <p>This is a private symbol.
-          @attr name com.petcarekl.patcareteam2:dropdownListPreferredItemHeight
+          @attr name com.petcare.teamiki:dropdownListPreferredItemHeight
         */
         public static final int Theme_dropdownListPreferredItemHeight = 46;
         /**
@@ -7386,7 +7392,7 @@ containing a value of this type.
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           <p>This is a private symbol.
-          @attr name com.petcarekl.patcareteam2:editTextBackground
+          @attr name com.petcare.teamiki:editTextBackground
         */
         public static final int Theme_editTextBackground = 63;
         /**
@@ -7400,7 +7406,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 <p>May be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
 "<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
           <p>This is a private symbol.
-          @attr name com.petcarekl.patcareteam2:editTextColor
+          @attr name com.petcare.teamiki:editTextColor
         */
         public static final int Theme_editTextColor = 62;
         /**
@@ -7412,7 +7418,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           <p>This is a private symbol.
-          @attr name com.petcarekl.patcareteam2:editTextStyle
+          @attr name com.petcare.teamiki:editTextStyle
         */
         public static final int Theme_editTextStyle = 102;
         /**
@@ -7424,7 +7430,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           <p>This is a private symbol.
-          @attr name com.petcarekl.patcareteam2:homeAsUpIndicator
+          @attr name com.petcare.teamiki:homeAsUpIndicator
         */
         public static final int Theme_homeAsUpIndicator = 48;
         /**
@@ -7436,7 +7442,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           <p>This is a private symbol.
-          @attr name com.petcarekl.patcareteam2:listChoiceBackgroundIndicator
+          @attr name com.petcare.teamiki:listChoiceBackgroundIndicator
         */
         public static final int Theme_listChoiceBackgroundIndicator = 80;
         /**
@@ -7448,17 +7454,17 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           <p>This is a private symbol.
-          @attr name com.petcarekl.patcareteam2:listDividerAlertDialog
+          @attr name com.petcare.teamiki:listDividerAlertDialog
         */
         public static final int Theme_listDividerAlertDialog = 44;
         /**
-          <p>This symbol is the offset where the {@link com.petcarekl.patcareteam2.R.attr#listPopupWindowStyle}
+          <p>This symbol is the offset where the {@link com.petcare.teamiki.R.attr#listPopupWindowStyle}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.petcarekl.patcareteam2:listPopupWindowStyle
+          @attr name com.petcare.teamiki:listPopupWindowStyle
         */
         public static final int Theme_listPopupWindowStyle = 74;
         /**
@@ -7476,7 +7482,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
           <p>This is a private symbol.
-          @attr name com.petcarekl.patcareteam2:listPreferredItemHeight
+          @attr name com.petcare.teamiki:listPreferredItemHeight
         */
         public static final int Theme_listPreferredItemHeight = 68;
         /**
@@ -7494,7 +7500,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
           <p>This is a private symbol.
-          @attr name com.petcarekl.patcareteam2:listPreferredItemHeightLarge
+          @attr name com.petcare.teamiki:listPreferredItemHeightLarge
         */
         public static final int Theme_listPreferredItemHeightLarge = 70;
         /**
@@ -7512,7 +7518,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
           <p>This is a private symbol.
-          @attr name com.petcarekl.patcareteam2:listPreferredItemHeightSmall
+          @attr name com.petcare.teamiki:listPreferredItemHeightSmall
         */
         public static final int Theme_listPreferredItemHeightSmall = 69;
         /**
@@ -7530,7 +7536,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
           <p>This is a private symbol.
-          @attr name com.petcarekl.patcareteam2:listPreferredItemPaddingLeft
+          @attr name com.petcare.teamiki:listPreferredItemPaddingLeft
         */
         public static final int Theme_listPreferredItemPaddingLeft = 71;
         /**
@@ -7548,7 +7554,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
           <p>This is a private symbol.
-          @attr name com.petcarekl.patcareteam2:listPreferredItemPaddingRight
+          @attr name com.petcare.teamiki:listPreferredItemPaddingRight
         */
         public static final int Theme_listPreferredItemPaddingRight = 72;
         /**
@@ -7560,7 +7566,7 @@ containing a value of this type.
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           <p>This is a private symbol.
-          @attr name com.petcarekl.patcareteam2:panelBackground
+          @attr name com.petcare.teamiki:panelBackground
         */
         public static final int Theme_panelBackground = 77;
         /**
@@ -7572,7 +7578,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           <p>This is a private symbol.
-          @attr name com.petcarekl.patcareteam2:panelMenuListTheme
+          @attr name com.petcare.teamiki:panelMenuListTheme
         */
         public static final int Theme_panelMenuListTheme = 79;
         /**
@@ -7590,7 +7596,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
           <p>This is a private symbol.
-          @attr name com.petcarekl.patcareteam2:panelMenuListWidth
+          @attr name com.petcare.teamiki:panelMenuListWidth
         */
         public static final int Theme_panelMenuListWidth = 78;
         /**
@@ -7602,7 +7608,7 @@ containing a value of this type.
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           <p>This is a private symbol.
-          @attr name com.petcarekl.patcareteam2:popupMenuStyle
+          @attr name com.petcare.teamiki:popupMenuStyle
         */
         public static final int Theme_popupMenuStyle = 60;
         /**
@@ -7614,7 +7620,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           <p>This is a private symbol.
-          @attr name com.petcarekl.patcareteam2:popupWindowStyle
+          @attr name com.petcare.teamiki:popupWindowStyle
         */
         public static final int Theme_popupWindowStyle = 61;
         /**
@@ -7626,7 +7632,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           <p>This is a private symbol.
-          @attr name com.petcarekl.patcareteam2:radioButtonStyle
+          @attr name com.petcare.teamiki:radioButtonStyle
         */
         public static final int Theme_radioButtonStyle = 103;
         /**
@@ -7638,7 +7644,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           <p>This is a private symbol.
-          @attr name com.petcarekl.patcareteam2:ratingBarStyle
+          @attr name com.petcare.teamiki:ratingBarStyle
         */
         public static final int Theme_ratingBarStyle = 104;
         /**
@@ -7650,7 +7656,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           <p>This is a private symbol.
-          @attr name com.petcarekl.patcareteam2:searchViewStyle
+          @attr name com.petcare.teamiki:searchViewStyle
         */
         public static final int Theme_searchViewStyle = 67;
         /**
@@ -7664,7 +7670,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           <p>This is a private symbol.
-          @attr name com.petcarekl.patcareteam2:selectableItemBackground
+          @attr name com.petcare.teamiki:selectableItemBackground
         */
         public static final int Theme_selectableItemBackground = 52;
         /**
@@ -7676,7 +7682,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           <p>This is a private symbol.
-          @attr name com.petcarekl.patcareteam2:selectableItemBackgroundBorderless
+          @attr name com.petcare.teamiki:selectableItemBackgroundBorderless
         */
         public static final int Theme_selectableItemBackgroundBorderless = 53;
         /**
@@ -7688,7 +7694,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           <p>This is a private symbol.
-          @attr name com.petcarekl.patcareteam2:spinnerDropDownItemStyle
+          @attr name com.petcare.teamiki:spinnerDropDownItemStyle
         */
         public static final int Theme_spinnerDropDownItemStyle = 47;
         /**
@@ -7700,7 +7706,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           <p>This is a private symbol.
-          @attr name com.petcarekl.patcareteam2:spinnerStyle
+          @attr name com.petcare.teamiki:spinnerStyle
         */
         public static final int Theme_spinnerStyle = 105;
         /**
@@ -7712,7 +7718,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           <p>This is a private symbol.
-          @attr name com.petcarekl.patcareteam2:switchStyle
+          @attr name com.petcare.teamiki:switchStyle
         */
         public static final int Theme_switchStyle = 106;
         /**
@@ -7724,7 +7730,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           <p>This is a private symbol.
-          @attr name com.petcarekl.patcareteam2:textAppearanceLargePopupMenu
+          @attr name com.petcare.teamiki:textAppearanceLargePopupMenu
         */
         public static final int Theme_textAppearanceLargePopupMenu = 40;
         /**
@@ -7736,7 +7742,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           <p>This is a private symbol.
-          @attr name com.petcarekl.patcareteam2:textAppearanceListItem
+          @attr name com.petcare.teamiki:textAppearanceListItem
         */
         public static final int Theme_textAppearanceListItem = 75;
         /**
@@ -7748,7 +7754,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           <p>This is a private symbol.
-          @attr name com.petcarekl.patcareteam2:textAppearanceListItemSmall
+          @attr name com.petcare.teamiki:textAppearanceListItemSmall
         */
         public static final int Theme_textAppearanceListItemSmall = 76;
         /**
@@ -7760,7 +7766,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           <p>This is a private symbol.
-          @attr name com.petcarekl.patcareteam2:textAppearanceSearchResultSubtitle
+          @attr name com.petcare.teamiki:textAppearanceSearchResultSubtitle
         */
         public static final int Theme_textAppearanceSearchResultSubtitle = 65;
         /**
@@ -7772,7 +7778,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           <p>This is a private symbol.
-          @attr name com.petcarekl.patcareteam2:textAppearanceSearchResultTitle
+          @attr name com.petcare.teamiki:textAppearanceSearchResultTitle
         */
         public static final int Theme_textAppearanceSearchResultTitle = 64;
         /**
@@ -7784,7 +7790,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           <p>This is a private symbol.
-          @attr name com.petcarekl.patcareteam2:textAppearanceSmallPopupMenu
+          @attr name com.petcare.teamiki:textAppearanceSmallPopupMenu
         */
         public static final int Theme_textAppearanceSmallPopupMenu = 41;
         /**
@@ -7798,7 +7804,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 <p>May be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
 "<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
           <p>This is a private symbol.
-          @attr name com.petcarekl.patcareteam2:textColorAlertDialogListItem
+          @attr name com.petcare.teamiki:textColorAlertDialogListItem
         */
         public static final int Theme_textColorAlertDialogListItem = 93;
         /**
@@ -7812,7 +7818,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 <p>May be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
 "<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
           <p>This is a private symbol.
-          @attr name com.petcarekl.patcareteam2:textColorSearchUrl
+          @attr name com.petcare.teamiki:textColorSearchUrl
         */
         public static final int Theme_textColorSearchUrl = 66;
         /**
@@ -7824,7 +7830,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           <p>This is a private symbol.
-          @attr name com.petcarekl.patcareteam2:toolbarNavigationButtonStyle
+          @attr name com.petcare.teamiki:toolbarNavigationButtonStyle
         */
         public static final int Theme_toolbarNavigationButtonStyle = 59;
         /**
@@ -7836,7 +7842,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           <p>This is a private symbol.
-          @attr name com.petcarekl.patcareteam2:toolbarStyle
+          @attr name com.petcare.teamiki:toolbarStyle
         */
         public static final int Theme_toolbarStyle = 58;
         /**
@@ -7853,7 +7859,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
           <p>This is a private symbol.
-          @attr name com.petcarekl.patcareteam2:windowActionBar
+          @attr name com.petcare.teamiki:windowActionBar
         */
         public static final int Theme_windowActionBar = 2;
         /**
@@ -7871,7 +7877,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
           <p>This is a private symbol.
-          @attr name com.petcarekl.patcareteam2:windowActionBarOverlay
+          @attr name com.petcare.teamiki:windowActionBarOverlay
         */
         public static final int Theme_windowActionBarOverlay = 4;
         /**
@@ -7888,7 +7894,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
           <p>This is a private symbol.
-          @attr name com.petcarekl.patcareteam2:windowActionModeOverlay
+          @attr name com.petcare.teamiki:windowActionModeOverlay
         */
         public static final int Theme_windowActionModeOverlay = 5;
         /**
@@ -7911,7 +7917,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
           <p>This is a private symbol.
-          @attr name com.petcarekl.patcareteam2:windowFixedHeightMajor
+          @attr name com.petcare.teamiki:windowFixedHeightMajor
         */
         public static final int Theme_windowFixedHeightMajor = 9;
         /**
@@ -7934,7 +7940,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
           <p>This is a private symbol.
-          @attr name com.petcarekl.patcareteam2:windowFixedHeightMinor
+          @attr name com.petcare.teamiki:windowFixedHeightMinor
         */
         public static final int Theme_windowFixedHeightMinor = 7;
         /**
@@ -7957,7 +7963,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
           <p>This is a private symbol.
-          @attr name com.petcarekl.patcareteam2:windowFixedWidthMajor
+          @attr name com.petcare.teamiki:windowFixedWidthMajor
         */
         public static final int Theme_windowFixedWidthMajor = 6;
         /**
@@ -7980,7 +7986,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
           <p>This is a private symbol.
-          @attr name com.petcarekl.patcareteam2:windowFixedWidthMinor
+          @attr name com.petcare.teamiki:windowFixedWidthMinor
         */
         public static final int Theme_windowFixedWidthMinor = 8;
         /**
@@ -8004,7 +8010,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
           <p>This is a private symbol.
-          @attr name com.petcarekl.patcareteam2:windowMinWidthMajor
+          @attr name com.petcare.teamiki:windowMinWidthMajor
         */
         public static final int Theme_windowMinWidthMajor = 10;
         /**
@@ -8028,7 +8034,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
           <p>This is a private symbol.
-          @attr name com.petcarekl.patcareteam2:windowMinWidthMinor
+          @attr name com.petcare.teamiki:windowMinWidthMinor
         */
         public static final int Theme_windowMinWidthMinor = 11;
         /**
@@ -8044,7 +8050,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
           <p>This is a private symbol.
-          @attr name com.petcarekl.patcareteam2:windowNoTitle
+          @attr name com.petcare.teamiki:windowNoTitle
         */
         public static final int Theme_windowNoTitle = 3;
         /** Attributes that can be used with a Toolbar.
@@ -8055,28 +8061,28 @@ containing a value of this type.
            <tr><th>Attribute</th><th>Description</th></tr>
            <tr><td><code>{@link #Toolbar_android_gravity android:gravity}</code></td><td></td></tr>
            <tr><td><code>{@link #Toolbar_android_minHeight android:minHeight}</code></td><td> Allows us to read in the minHeight attr pre-v16 </td></tr>
-           <tr><td><code>{@link #Toolbar_collapseContentDescription com.petcarekl.patcareteam2:collapseContentDescription}</code></td><td> Text to set as the content description for the collapse button.</td></tr>
-           <tr><td><code>{@link #Toolbar_collapseIcon com.petcarekl.patcareteam2:collapseIcon}</code></td><td></td></tr>
-           <tr><td><code>{@link #Toolbar_contentInsetEnd com.petcarekl.patcareteam2:contentInsetEnd}</code></td><td> Minimum inset for content views within a bar.</td></tr>
-           <tr><td><code>{@link #Toolbar_contentInsetLeft com.petcarekl.patcareteam2:contentInsetLeft}</code></td><td> Minimum inset for content views within a bar.</td></tr>
-           <tr><td><code>{@link #Toolbar_contentInsetRight com.petcarekl.patcareteam2:contentInsetRight}</code></td><td> Minimum inset for content views within a bar.</td></tr>
-           <tr><td><code>{@link #Toolbar_contentInsetStart com.petcarekl.patcareteam2:contentInsetStart}</code></td><td> Minimum inset for content views within a bar.</td></tr>
-           <tr><td><code>{@link #Toolbar_maxButtonHeight com.petcarekl.patcareteam2:maxButtonHeight}</code></td><td></td></tr>
-           <tr><td><code>{@link #Toolbar_navigationContentDescription com.petcarekl.patcareteam2:navigationContentDescription}</code></td><td> Text to set as the content description for the navigation button
+           <tr><td><code>{@link #Toolbar_collapseContentDescription com.petcare.teamiki:collapseContentDescription}</code></td><td> Text to set as the content description for the collapse button.</td></tr>
+           <tr><td><code>{@link #Toolbar_collapseIcon com.petcare.teamiki:collapseIcon}</code></td><td></td></tr>
+           <tr><td><code>{@link #Toolbar_contentInsetEnd com.petcare.teamiki:contentInsetEnd}</code></td><td> Minimum inset for content views within a bar.</td></tr>
+           <tr><td><code>{@link #Toolbar_contentInsetLeft com.petcare.teamiki:contentInsetLeft}</code></td><td> Minimum inset for content views within a bar.</td></tr>
+           <tr><td><code>{@link #Toolbar_contentInsetRight com.petcare.teamiki:contentInsetRight}</code></td><td> Minimum inset for content views within a bar.</td></tr>
+           <tr><td><code>{@link #Toolbar_contentInsetStart com.petcare.teamiki:contentInsetStart}</code></td><td> Minimum inset for content views within a bar.</td></tr>
+           <tr><td><code>{@link #Toolbar_maxButtonHeight com.petcare.teamiki:maxButtonHeight}</code></td><td></td></tr>
+           <tr><td><code>{@link #Toolbar_navigationContentDescription com.petcare.teamiki:navigationContentDescription}</code></td><td> Text to set as the content description for the navigation button
              located at the start of the toolbar.</td></tr>
-           <tr><td><code>{@link #Toolbar_navigationIcon com.petcarekl.patcareteam2:navigationIcon}</code></td><td> Icon drawable to use for the navigation button located at
+           <tr><td><code>{@link #Toolbar_navigationIcon com.petcare.teamiki:navigationIcon}</code></td><td> Icon drawable to use for the navigation button located at
              the start of the toolbar.</td></tr>
-           <tr><td><code>{@link #Toolbar_popupTheme com.petcarekl.patcareteam2:popupTheme}</code></td><td> Reference to a theme that should be used to inflate popups
+           <tr><td><code>{@link #Toolbar_popupTheme com.petcare.teamiki:popupTheme}</code></td><td> Reference to a theme that should be used to inflate popups
              shown by widgets in the toolbar.</td></tr>
-           <tr><td><code>{@link #Toolbar_subtitle com.petcarekl.patcareteam2:subtitle}</code></td><td> Specifies subtitle text used for navigationMode="normal" </td></tr>
-           <tr><td><code>{@link #Toolbar_subtitleTextAppearance com.petcarekl.patcareteam2:subtitleTextAppearance}</code></td><td></td></tr>
-           <tr><td><code>{@link #Toolbar_title com.petcarekl.patcareteam2:title}</code></td><td></td></tr>
-           <tr><td><code>{@link #Toolbar_titleMarginBottom com.petcarekl.patcareteam2:titleMarginBottom}</code></td><td></td></tr>
-           <tr><td><code>{@link #Toolbar_titleMarginEnd com.petcarekl.patcareteam2:titleMarginEnd}</code></td><td></td></tr>
-           <tr><td><code>{@link #Toolbar_titleMarginStart com.petcarekl.patcareteam2:titleMarginStart}</code></td><td></td></tr>
-           <tr><td><code>{@link #Toolbar_titleMarginTop com.petcarekl.patcareteam2:titleMarginTop}</code></td><td></td></tr>
-           <tr><td><code>{@link #Toolbar_titleMargins com.petcarekl.patcareteam2:titleMargins}</code></td><td></td></tr>
-           <tr><td><code>{@link #Toolbar_titleTextAppearance com.petcarekl.patcareteam2:titleTextAppearance}</code></td><td></td></tr>
+           <tr><td><code>{@link #Toolbar_subtitle com.petcare.teamiki:subtitle}</code></td><td> Specifies subtitle text used for navigationMode="normal" </td></tr>
+           <tr><td><code>{@link #Toolbar_subtitleTextAppearance com.petcare.teamiki:subtitleTextAppearance}</code></td><td></td></tr>
+           <tr><td><code>{@link #Toolbar_title com.petcare.teamiki:title}</code></td><td></td></tr>
+           <tr><td><code>{@link #Toolbar_titleMarginBottom com.petcare.teamiki:titleMarginBottom}</code></td><td></td></tr>
+           <tr><td><code>{@link #Toolbar_titleMarginEnd com.petcare.teamiki:titleMarginEnd}</code></td><td></td></tr>
+           <tr><td><code>{@link #Toolbar_titleMarginStart com.petcare.teamiki:titleMarginStart}</code></td><td></td></tr>
+           <tr><td><code>{@link #Toolbar_titleMarginTop com.petcare.teamiki:titleMarginTop}</code></td><td></td></tr>
+           <tr><td><code>{@link #Toolbar_titleMargins com.petcare.teamiki:titleMargins}</code></td><td></td></tr>
+           <tr><td><code>{@link #Toolbar_titleTextAppearance com.petcare.teamiki:titleTextAppearance}</code></td><td></td></tr>
            </table>
            @see #Toolbar_android_gravity
            @see #Toolbar_android_minHeight
@@ -8136,17 +8142,17 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
           <p>This is a private symbol.
-          @attr name com.petcarekl.patcareteam2:collapseContentDescription
+          @attr name com.petcare.teamiki:collapseContentDescription
         */
         public static final int Toolbar_collapseContentDescription = 18;
         /**
-          <p>This symbol is the offset where the {@link com.petcarekl.patcareteam2.R.attr#collapseIcon}
+          <p>This symbol is the offset where the {@link com.petcare.teamiki.R.attr#collapseIcon}
           attribute's value can be found in the {@link #Toolbar} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.petcarekl.patcareteam2:collapseIcon
+          @attr name com.petcare.teamiki:collapseIcon
         */
         public static final int Toolbar_collapseIcon = 17;
         /**
@@ -8165,7 +8171,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
           <p>This is a private symbol.
-          @attr name com.petcarekl.patcareteam2:contentInsetEnd
+          @attr name com.petcare.teamiki:contentInsetEnd
         */
         public static final int Toolbar_contentInsetEnd = 5;
         /**
@@ -8184,7 +8190,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
           <p>This is a private symbol.
-          @attr name com.petcarekl.patcareteam2:contentInsetLeft
+          @attr name com.petcare.teamiki:contentInsetLeft
         */
         public static final int Toolbar_contentInsetLeft = 6;
         /**
@@ -8203,7 +8209,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
           <p>This is a private symbol.
-          @attr name com.petcarekl.patcareteam2:contentInsetRight
+          @attr name com.petcare.teamiki:contentInsetRight
         */
         public static final int Toolbar_contentInsetRight = 7;
         /**
@@ -8222,11 +8228,11 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
           <p>This is a private symbol.
-          @attr name com.petcarekl.patcareteam2:contentInsetStart
+          @attr name com.petcare.teamiki:contentInsetStart
         */
         public static final int Toolbar_contentInsetStart = 4;
         /**
-          <p>This symbol is the offset where the {@link com.petcarekl.patcareteam2.R.attr#maxButtonHeight}
+          <p>This symbol is the offset where the {@link com.petcare.teamiki.R.attr#maxButtonHeight}
           attribute's value can be found in the {@link #Toolbar} array.
 
 
@@ -8238,7 +8244,7 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.petcarekl.patcareteam2:maxButtonHeight
+          @attr name com.petcare.teamiki:maxButtonHeight
         */
         public static final int Toolbar_maxButtonHeight = 16;
         /**
@@ -8255,7 +8261,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
           <p>This is a private symbol.
-          @attr name com.petcarekl.patcareteam2:navigationContentDescription
+          @attr name com.petcare.teamiki:navigationContentDescription
         */
         public static final int Toolbar_navigationContentDescription = 20;
         /**
@@ -8268,7 +8274,7 @@ containing a value of this type.
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           <p>This is a private symbol.
-          @attr name com.petcarekl.patcareteam2:navigationIcon
+          @attr name com.petcare.teamiki:navigationIcon
         */
         public static final int Toolbar_navigationIcon = 19;
         /**
@@ -8281,7 +8287,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           <p>This is a private symbol.
-          @attr name com.petcarekl.patcareteam2:popupTheme
+          @attr name com.petcare.teamiki:popupTheme
         */
         public static final int Toolbar_popupTheme = 8;
         /**
@@ -8297,21 +8303,21 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
           <p>This is a private symbol.
-          @attr name com.petcarekl.patcareteam2:subtitle
+          @attr name com.petcare.teamiki:subtitle
         */
         public static final int Toolbar_subtitle = 3;
         /**
-          <p>This symbol is the offset where the {@link com.petcarekl.patcareteam2.R.attr#subtitleTextAppearance}
+          <p>This symbol is the offset where the {@link com.petcare.teamiki.R.attr#subtitleTextAppearance}
           attribute's value can be found in the {@link #Toolbar} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.petcarekl.patcareteam2:subtitleTextAppearance
+          @attr name com.petcare.teamiki:subtitleTextAppearance
         */
         public static final int Toolbar_subtitleTextAppearance = 10;
         /**
-          <p>This symbol is the offset where the {@link com.petcarekl.patcareteam2.R.attr#title}
+          <p>This symbol is the offset where the {@link com.petcare.teamiki.R.attr#title}
           attribute's value can be found in the {@link #Toolbar} array.
 
 
@@ -8321,11 +8327,11 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.petcarekl.patcareteam2:title
+          @attr name com.petcare.teamiki:title
         */
         public static final int Toolbar_title = 2;
         /**
-          <p>This symbol is the offset where the {@link com.petcarekl.patcareteam2.R.attr#titleMarginBottom}
+          <p>This symbol is the offset where the {@link com.petcare.teamiki.R.attr#titleMarginBottom}
           attribute's value can be found in the {@link #Toolbar} array.
 
 
@@ -8337,11 +8343,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.petcarekl.patcareteam2:titleMarginBottom
+          @attr name com.petcare.teamiki:titleMarginBottom
         */
         public static final int Toolbar_titleMarginBottom = 15;
         /**
-          <p>This symbol is the offset where the {@link com.petcarekl.patcareteam2.R.attr#titleMarginEnd}
+          <p>This symbol is the offset where the {@link com.petcare.teamiki.R.attr#titleMarginEnd}
           attribute's value can be found in the {@link #Toolbar} array.
 
 
@@ -8353,11 +8359,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.petcarekl.patcareteam2:titleMarginEnd
+          @attr name com.petcare.teamiki:titleMarginEnd
         */
         public static final int Toolbar_titleMarginEnd = 13;
         /**
-          <p>This symbol is the offset where the {@link com.petcarekl.patcareteam2.R.attr#titleMarginStart}
+          <p>This symbol is the offset where the {@link com.petcare.teamiki.R.attr#titleMarginStart}
           attribute's value can be found in the {@link #Toolbar} array.
 
 
@@ -8369,11 +8375,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.petcarekl.patcareteam2:titleMarginStart
+          @attr name com.petcare.teamiki:titleMarginStart
         */
         public static final int Toolbar_titleMarginStart = 12;
         /**
-          <p>This symbol is the offset where the {@link com.petcarekl.patcareteam2.R.attr#titleMarginTop}
+          <p>This symbol is the offset where the {@link com.petcare.teamiki.R.attr#titleMarginTop}
           attribute's value can be found in the {@link #Toolbar} array.
 
 
@@ -8385,11 +8391,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.petcarekl.patcareteam2:titleMarginTop
+          @attr name com.petcare.teamiki:titleMarginTop
         */
         public static final int Toolbar_titleMarginTop = 14;
         /**
-          <p>This symbol is the offset where the {@link com.petcarekl.patcareteam2.R.attr#titleMargins}
+          <p>This symbol is the offset where the {@link com.petcare.teamiki.R.attr#titleMargins}
           attribute's value can be found in the {@link #Toolbar} array.
 
 
@@ -8401,17 +8407,17 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.petcarekl.patcareteam2:titleMargins
+          @attr name com.petcare.teamiki:titleMargins
         */
         public static final int Toolbar_titleMargins = 11;
         /**
-          <p>This symbol is the offset where the {@link com.petcarekl.patcareteam2.R.attr#titleTextAppearance}
+          <p>This symbol is the offset where the {@link com.petcare.teamiki.R.attr#titleTextAppearance}
           attribute's value can be found in the {@link #Toolbar} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.petcarekl.patcareteam2:titleTextAppearance
+          @attr name com.petcare.teamiki:titleTextAppearance
         */
         public static final int Toolbar_titleTextAppearance = 9;
         /** Attributes that can be used with a View.
@@ -8422,11 +8428,11 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
            <tr><th>Attribute</th><th>Description</th></tr>
            <tr><td><code>{@link #View_android_focusable android:focusable}</code></td><td> Boolean that controls whether a view can take focus.</td></tr>
            <tr><td><code>{@link #View_android_theme android:theme}</code></td><td> Specifies a theme override for a view.</td></tr>
-           <tr><td><code>{@link #View_backgroundTint com.petcarekl.patcareteam2:backgroundTint}</code></td><td> Tint to apply to the background.</td></tr>
-           <tr><td><code>{@link #View_backgroundTintMode com.petcarekl.patcareteam2:backgroundTintMode}</code></td><td> Blending mode used to apply the background tint.</td></tr>
-           <tr><td><code>{@link #View_paddingEnd com.petcarekl.patcareteam2:paddingEnd}</code></td><td> Sets the padding, in pixels, of the end edge; see {@link android.R.attr#padding}.</td></tr>
-           <tr><td><code>{@link #View_paddingStart com.petcarekl.patcareteam2:paddingStart}</code></td><td> Sets the padding, in pixels, of the start edge; see {@link android.R.attr#padding}.</td></tr>
-           <tr><td><code>{@link #View_theme com.petcarekl.patcareteam2:theme}</code></td><td> Deprecated.</td></tr>
+           <tr><td><code>{@link #View_backgroundTint com.petcare.teamiki:backgroundTint}</code></td><td> Tint to apply to the background.</td></tr>
+           <tr><td><code>{@link #View_backgroundTintMode com.petcare.teamiki:backgroundTintMode}</code></td><td> Blending mode used to apply the background tint.</td></tr>
+           <tr><td><code>{@link #View_paddingEnd com.petcare.teamiki:paddingEnd}</code></td><td> Sets the padding, in pixels, of the end edge; see {@link android.R.attr#padding}.</td></tr>
+           <tr><td><code>{@link #View_paddingStart com.petcare.teamiki:paddingStart}</code></td><td> Sets the padding, in pixels, of the start edge; see {@link android.R.attr#padding}.</td></tr>
+           <tr><td><code>{@link #View_theme com.petcare.teamiki:theme}</code></td><td> Deprecated.</td></tr>
            </table>
            @see #View_android_focusable
            @see #View_android_theme
@@ -8479,7 +8485,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
           <p>This is a private symbol.
-          @attr name com.petcarekl.patcareteam2:backgroundTint
+          @attr name com.petcare.teamiki:backgroundTint
         */
         public static final int View_backgroundTint = 5;
         /**
@@ -8505,7 +8511,7 @@ containing a value of this type.
 <tr><td><code>screen</code></td><td>15</td><td> [Sa + Da - Sa * Da, Sc + Dc - Sc * Dc] </td></tr>
 </table>
           <p>This is a private symbol.
-          @attr name com.petcarekl.patcareteam2:backgroundTintMode
+          @attr name com.petcare.teamiki:backgroundTintMode
         */
         public static final int View_backgroundTintMode = 6;
         /**
@@ -8523,7 +8529,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
           <p>This is a private symbol.
-          @attr name com.petcarekl.patcareteam2:paddingEnd
+          @attr name com.petcare.teamiki:paddingEnd
         */
         public static final int View_paddingEnd = 3;
         /**
@@ -8541,7 +8547,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
           <p>This is a private symbol.
-          @attr name com.petcarekl.patcareteam2:paddingStart
+          @attr name com.petcare.teamiki:paddingStart
         */
         public static final int View_paddingStart = 2;
         /**
@@ -8553,7 +8559,7 @@ containing a value of this type.
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           <p>This is a private symbol.
-          @attr name com.petcarekl.patcareteam2:theme
+          @attr name com.petcare.teamiki:theme
         */
         public static final int View_theme = 4;
         /** Attributes that can be used with a ViewStubCompat.
@@ -8606,10 +8612,10 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
            <colgroup align="left" />
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #WalletFragmentOptions_appTheme com.petcarekl.patcareteam2:appTheme}</code></td><td> Theme to be used for the Wallet selector </td></tr>
-           <tr><td><code>{@link #WalletFragmentOptions_environment com.petcarekl.patcareteam2:environment}</code></td><td> Google Wallet environment to use </td></tr>
-           <tr><td><code>{@link #WalletFragmentOptions_fragmentMode com.petcarekl.patcareteam2:fragmentMode}</code></td><td> Fragment mode </td></tr>
-           <tr><td><code>{@link #WalletFragmentOptions_fragmentStyle com.petcarekl.patcareteam2:fragmentStyle}</code></td><td> A style resource specifing attributes to customize the look and feel of WalletFragment </td></tr>
+           <tr><td><code>{@link #WalletFragmentOptions_appTheme com.petcare.teamiki:appTheme}</code></td><td> Theme to be used for the Wallet selector </td></tr>
+           <tr><td><code>{@link #WalletFragmentOptions_environment com.petcare.teamiki:environment}</code></td><td> Google Wallet environment to use </td></tr>
+           <tr><td><code>{@link #WalletFragmentOptions_fragmentMode com.petcare.teamiki:fragmentMode}</code></td><td> Fragment mode </td></tr>
+           <tr><td><code>{@link #WalletFragmentOptions_fragmentStyle com.petcare.teamiki:fragmentStyle}</code></td><td> A style resource specifing attributes to customize the look and feel of WalletFragment </td></tr>
            </table>
            @see #WalletFragmentOptions_appTheme
            @see #WalletFragmentOptions_environment
@@ -8635,7 +8641,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 <tr><td><code>holo_light</code></td><td>1</td><td></td></tr>
 </table>
           <p>This is a private symbol.
-          @attr name com.petcarekl.patcareteam2:appTheme
+          @attr name com.petcare.teamiki:appTheme
         */
         public static final int WalletFragmentOptions_appTheme = 0;
         /**
@@ -8656,7 +8662,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 <tr><td><code>strict_sandbox</code></td><td>2</td><td></td></tr>
 </table>
           <p>This is a private symbol.
-          @attr name com.petcarekl.patcareteam2:environment
+          @attr name com.petcare.teamiki:environment
         */
         public static final int WalletFragmentOptions_environment = 1;
         /**
@@ -8675,7 +8681,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 <tr><td><code>selectionDetails</code></td><td>2</td><td></td></tr>
 </table>
           <p>This is a private symbol.
-          @attr name com.petcarekl.patcareteam2:fragmentMode
+          @attr name com.petcare.teamiki:fragmentMode
         */
         public static final int WalletFragmentOptions_fragmentMode = 3;
         /**
@@ -8687,7 +8693,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           <p>This is a private symbol.
-          @attr name com.petcarekl.patcareteam2:fragmentStyle
+          @attr name com.petcare.teamiki:fragmentStyle
         */
         public static final int WalletFragmentOptions_fragmentStyle = 2;
         /**  Attributes that may be specified in a style resource to customize the look and feel of
@@ -8697,17 +8703,17 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
            <colgroup align="left" />
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #WalletFragmentStyle_buyButtonAppearance com.petcarekl.patcareteam2:buyButtonAppearance}</code></td><td> The appearance of the buy button </td></tr>
-           <tr><td><code>{@link #WalletFragmentStyle_buyButtonHeight com.petcarekl.patcareteam2:buyButtonHeight}</code></td><td> Height of the buy button.</td></tr>
-           <tr><td><code>{@link #WalletFragmentStyle_buyButtonText com.petcarekl.patcareteam2:buyButtonText}</code></td><td> The text on the buy button </td></tr>
-           <tr><td><code>{@link #WalletFragmentStyle_buyButtonWidth com.petcarekl.patcareteam2:buyButtonWidth}</code></td><td> Width of the buy button.</td></tr>
-           <tr><td><code>{@link #WalletFragmentStyle_maskedWalletDetailsBackground com.petcarekl.patcareteam2:maskedWalletDetailsBackground}</code></td><td> Masked wallet details background </td></tr>
-           <tr><td><code>{@link #WalletFragmentStyle_maskedWalletDetailsButtonBackground com.petcarekl.patcareteam2:maskedWalletDetailsButtonBackground}</code></td><td> "Change" button background in masked wallet details view </td></tr>
-           <tr><td><code>{@link #WalletFragmentStyle_maskedWalletDetailsButtonTextAppearance com.petcarekl.patcareteam2:maskedWalletDetailsButtonTextAppearance}</code></td><td> TextAppearance for the "Change" button in masked wallet details view </td></tr>
-           <tr><td><code>{@link #WalletFragmentStyle_maskedWalletDetailsHeaderTextAppearance com.petcarekl.patcareteam2:maskedWalletDetailsHeaderTextAppearance}</code></td><td> TextAppearance for headers describing masked wallet details </td></tr>
-           <tr><td><code>{@link #WalletFragmentStyle_maskedWalletDetailsLogoImageType com.petcarekl.patcareteam2:maskedWalletDetailsLogoImageType}</code></td><td> Type of the wallet logo image in masked wallet details view </td></tr>
-           <tr><td><code>{@link #WalletFragmentStyle_maskedWalletDetailsLogoTextColor com.petcarekl.patcareteam2:maskedWalletDetailsLogoTextColor}</code></td><td> Color of the Google Wallet logo text in masked wallet details view </td></tr>
-           <tr><td><code>{@link #WalletFragmentStyle_maskedWalletDetailsTextAppearance com.petcarekl.patcareteam2:maskedWalletDetailsTextAppearance}</code></td><td> TextAppearance for masked wallet details </td></tr>
+           <tr><td><code>{@link #WalletFragmentStyle_buyButtonAppearance com.petcare.teamiki:buyButtonAppearance}</code></td><td> The appearance of the buy button </td></tr>
+           <tr><td><code>{@link #WalletFragmentStyle_buyButtonHeight com.petcare.teamiki:buyButtonHeight}</code></td><td> Height of the buy button.</td></tr>
+           <tr><td><code>{@link #WalletFragmentStyle_buyButtonText com.petcare.teamiki:buyButtonText}</code></td><td> The text on the buy button </td></tr>
+           <tr><td><code>{@link #WalletFragmentStyle_buyButtonWidth com.petcare.teamiki:buyButtonWidth}</code></td><td> Width of the buy button.</td></tr>
+           <tr><td><code>{@link #WalletFragmentStyle_maskedWalletDetailsBackground com.petcare.teamiki:maskedWalletDetailsBackground}</code></td><td> Masked wallet details background </td></tr>
+           <tr><td><code>{@link #WalletFragmentStyle_maskedWalletDetailsButtonBackground com.petcare.teamiki:maskedWalletDetailsButtonBackground}</code></td><td> "Change" button background in masked wallet details view </td></tr>
+           <tr><td><code>{@link #WalletFragmentStyle_maskedWalletDetailsButtonTextAppearance com.petcare.teamiki:maskedWalletDetailsButtonTextAppearance}</code></td><td> TextAppearance for the "Change" button in masked wallet details view </td></tr>
+           <tr><td><code>{@link #WalletFragmentStyle_maskedWalletDetailsHeaderTextAppearance com.petcare.teamiki:maskedWalletDetailsHeaderTextAppearance}</code></td><td> TextAppearance for headers describing masked wallet details </td></tr>
+           <tr><td><code>{@link #WalletFragmentStyle_maskedWalletDetailsLogoImageType com.petcare.teamiki:maskedWalletDetailsLogoImageType}</code></td><td> Type of the wallet logo image in masked wallet details view </td></tr>
+           <tr><td><code>{@link #WalletFragmentStyle_maskedWalletDetailsLogoTextColor com.petcare.teamiki:maskedWalletDetailsLogoTextColor}</code></td><td> Color of the Google Wallet logo text in masked wallet details view </td></tr>
+           <tr><td><code>{@link #WalletFragmentStyle_maskedWalletDetailsTextAppearance com.petcare.teamiki:maskedWalletDetailsTextAppearance}</code></td><td> TextAppearance for masked wallet details </td></tr>
            </table>
            @see #WalletFragmentStyle_buyButtonAppearance
            @see #WalletFragmentStyle_buyButtonHeight
@@ -8743,7 +8749,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 <tr><td><code>monochrome</code></td><td>3</td><td></td></tr>
 </table>
           <p>This is a private symbol.
-          @attr name com.petcarekl.patcareteam2:buyButtonAppearance
+          @attr name com.petcare.teamiki:buyButtonAppearance
         */
         public static final int WalletFragmentStyle_buyButtonAppearance = 3;
         /**
@@ -8772,7 +8778,7 @@ containing a value of this type.
 <tr><td><code>wrap_content</code></td><td>-2</td><td></td></tr>
 </table>
           <p>This is a private symbol.
-          @attr name com.petcarekl.patcareteam2:buyButtonHeight
+          @attr name com.petcare.teamiki:buyButtonHeight
         */
         public static final int WalletFragmentStyle_buyButtonHeight = 0;
         /**
@@ -8793,7 +8799,7 @@ containing a value of this type.
 <tr><td><code>donate_with_google</code></td><td>4</td><td></td></tr>
 </table>
           <p>This is a private symbol.
-          @attr name com.petcarekl.patcareteam2:buyButtonText
+          @attr name com.petcare.teamiki:buyButtonText
         */
         public static final int WalletFragmentStyle_buyButtonText = 2;
         /**
@@ -8822,7 +8828,7 @@ containing a value of this type.
 <tr><td><code>wrap_content</code></td><td>-2</td><td></td></tr>
 </table>
           <p>This is a private symbol.
-          @attr name com.petcarekl.patcareteam2:buyButtonWidth
+          @attr name com.petcare.teamiki:buyButtonWidth
         */
         public static final int WalletFragmentStyle_buyButtonWidth = 1;
         /**
@@ -8836,7 +8842,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 <p>May be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
 "<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
           <p>This is a private symbol.
-          @attr name com.petcarekl.patcareteam2:maskedWalletDetailsBackground
+          @attr name com.petcare.teamiki:maskedWalletDetailsBackground
         */
         public static final int WalletFragmentStyle_maskedWalletDetailsBackground = 6;
         /**
@@ -8850,7 +8856,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 <p>May be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
 "<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
           <p>This is a private symbol.
-          @attr name com.petcarekl.patcareteam2:maskedWalletDetailsButtonBackground
+          @attr name com.petcare.teamiki:maskedWalletDetailsButtonBackground
         */
         public static final int WalletFragmentStyle_maskedWalletDetailsButtonBackground = 8;
         /**
@@ -8862,7 +8868,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           <p>This is a private symbol.
-          @attr name com.petcarekl.patcareteam2:maskedWalletDetailsButtonTextAppearance
+          @attr name com.petcare.teamiki:maskedWalletDetailsButtonTextAppearance
         */
         public static final int WalletFragmentStyle_maskedWalletDetailsButtonTextAppearance = 7;
         /**
@@ -8874,7 +8880,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           <p>This is a private symbol.
-          @attr name com.petcarekl.patcareteam2:maskedWalletDetailsHeaderTextAppearance
+          @attr name com.petcare.teamiki:maskedWalletDetailsHeaderTextAppearance
         */
         public static final int WalletFragmentStyle_maskedWalletDetailsHeaderTextAppearance = 5;
         /**
@@ -8893,7 +8899,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 <tr><td><code>monochrome</code></td><td>2</td><td></td></tr>
 </table>
           <p>This is a private symbol.
-          @attr name com.petcarekl.patcareteam2:maskedWalletDetailsLogoImageType
+          @attr name com.petcare.teamiki:maskedWalletDetailsLogoImageType
         */
         public static final int WalletFragmentStyle_maskedWalletDetailsLogoImageType = 10;
         /**
@@ -8910,7 +8916,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
           <p>This is a private symbol.
-          @attr name com.petcarekl.patcareteam2:maskedWalletDetailsLogoTextColor
+          @attr name com.petcare.teamiki:maskedWalletDetailsLogoTextColor
         */
         public static final int WalletFragmentStyle_maskedWalletDetailsLogoTextColor = 9;
         /**
@@ -8922,7 +8928,7 @@ containing a value of this type.
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           <p>This is a private symbol.
-          @attr name com.petcarekl.patcareteam2:maskedWalletDetailsTextAppearance
+          @attr name com.petcare.teamiki:maskedWalletDetailsTextAppearance
         */
         public static final int WalletFragmentStyle_maskedWalletDetailsTextAppearance = 4;
     };

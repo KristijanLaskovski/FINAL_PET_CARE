@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.petcarekl.patcareteam2"
+    package="com.petcare.teamiki"
     android:versionCode="1"
     android:versionName="1.0" >
 
@@ -14,10 +14,19 @@
     <uses-feature
         android:name="android.hardware.camera"
         android:required="true" />
+    
+    <uses-feature
+android:glEsVersion="0x00020000"
+android:required="true"/>
+    
 
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <!-- for Google Maps API -->
+    <permission android:name="com.petcarekl.patcareteam2.permission.MAPS_RECEIVE" android:protectionLevel="signature"/>
+<uses-permission android:name="com.petcarekl.patcareteam2.permission.MAPS_RECEIVE"/>
+    
+     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_LOCATION" />
@@ -28,16 +37,32 @@
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/CustomActionBarTheme" >
+       
+   <!--   <meta-data
+        android:name="com.google.android.maps.v2.API_KEY"
+        android:value="AIzaSyD1S9FIESkxZ2VY4XH7_k0qph9m4Y6szAE"/>-->
+        
         <meta-data
-            android:name="com.petcarekl.patcareteam2"
-            android:value="AIzaSyCAN7HNP1aCJrDNHcLe-9POC8ar1lXqXls" />
+        android:name="com.google.android.geo.API_KEY"
+        android:value="AIzaSyBqXKqyDojNB3JKJ0m-bLgr96on6UdcilE"/>
+   
+        
+        
         <!--
-            <meta-data android:name="com.google.android.gms.version"
-    		android:value="@integer/google_play_services_version" />
-        -->
+<meta-data
+            android:name="com.petcarekl.patcareteam2"
+            android:value="AIzaSyD1S9FIESkxZ2VY4XH7_k0qph9m4Y6szAE" />
+
+ -->
+       
+     <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version" />
+       <!-- AIzaSyD1S9FIESkxZ2VY4XH7_k0qph9m4Y6szAE -->
+
+<!-- by Didi AIzaSyCAN7HNP1aCJrDNHcLe-9POC8ar1lXqXls -->
+
 
         <activity
-            android:name=".LoginActivity"
+            android:name="com.petcarekl.patcareteam2.LoginActivity"
             android:label="@string/app_name"
             android:screenOrientation="portrait" >
             <intent-filter>
@@ -47,7 +72,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".MainActivity"
+            android:name="com.petcarekl.patcareteam2.MainActivity"
             android:label="@string/app_name"
             android:screenOrientation="portrait" >
             <intent-filter>
@@ -57,7 +82,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".AboutUs"
+            android:name="com.petcarekl.patcareteam2.AboutUs"
             android:label="@string/app_name"
             android:screenOrientation="portrait"
             android:theme="@android:style/Theme.Dialog" >
@@ -68,7 +93,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".Preference"
+            android:name="com.petcarekl.patcareteam2.Preference"
             android:label="@string/app_name"
             android:screenOrientation="portrait" >
             <intent-filter>
@@ -78,12 +103,12 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".CommentActivity"
+            android:name="com.petcarekl.patcareteam2.CommentActivity"
             android:label="@string/title_activity_comment"
             android:screenOrientation="portrait" >
         </activity>
         <activity
-            android:name=".Register"
+            android:name="com.petcarekl.patcareteam2.Register"
             android:label="@string/title_activity_register"
             android:screenOrientation="portrait" >
         </activity>
@@ -99,17 +124,21 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".CommentsOnPost"
+            android:name="com.petcarekl.patcareteam2.CommentsOnPost"
             android:label="@string/title_activity_comments_on_post"
             android:screenOrientation="portrait" >
         </activity>
         <activity
-            android:name=".TipActivity"
+            android:name="com.petcarekl.patcareteam2.TipActivity"
             android:label="@string/title_activity_tip" >
         </activity>
         <activity
-            android:name=".User_Profile_Visit"
+            android:name="com.petcarekl.patcareteam2.User_Profile_Visit"
             android:label="@string/title_activity_user__profile__visit" >
+        </activity>
+        <activity
+            android:name="com.petcarekl.patcareteam2.Map_activity_pet_location"
+            android:label="@string/title_activity_map_activity_pet_location" >
         </activity>
     </application>
 

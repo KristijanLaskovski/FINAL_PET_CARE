@@ -14,7 +14,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 
-import com.petcarekl.patcareteam2.R;
+import com.petcare.teamiki.R;
 import com.petcarekl.patcareteam2.CustumAdapterForComments.ReplayOnCommentInterface;
 
 public class CustumAdapterTips extends ArrayAdapter {

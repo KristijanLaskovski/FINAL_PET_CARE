@@ -78,5 +78,7 @@
     <string name="title_activity_tip">TipActivity</string>
     <string name="contentofTip">tip content</string>
     <string name="title_activity_user__profile__visit">User_Profile_Visit</string>
+    <string name="title_activity_map_activity_pet_location">Map_activity_pet_location</string>
+    <string name="adresoncustumview">No address added!</string>
 
 </resources>

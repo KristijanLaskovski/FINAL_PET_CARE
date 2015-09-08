@@ -35,7 +35,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.petcarekl.patcareteam2.R;
+import com.petcare.teamiki.R;
 
 public class LoginActivity extends Activity implements View.OnClickListener {
 	

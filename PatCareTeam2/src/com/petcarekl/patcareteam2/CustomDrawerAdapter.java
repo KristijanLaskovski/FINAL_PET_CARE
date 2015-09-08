@@ -11,7 +11,7 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.petcarekl.patcareteam2.R;
+import com.petcare.teamiki.R;
 
 public class CustomDrawerAdapter extends ArrayAdapter {
 

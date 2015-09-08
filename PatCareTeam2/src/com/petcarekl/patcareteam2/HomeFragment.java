@@ -12,7 +12,7 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import com.petcarekl.patcareteam2.R;
+import com.petcare.teamiki.R;
 import com.petcarekl.patcareteam2.CustumAdapterForComments.ReplayOnCommentInterface;
 
 
@@ -62,6 +62,10 @@ public class HomeFragment extends  android.support.v4.app.ListFragment implement
     ListView listViewOnHome;
     Button btnAddAcommnet;
     View footer;
+    
+  
+    
+    
     // Progress Dialog
 	private ProgressDialog pDialog;
 	private static final String READ_COMMENTS_URL = "http://www.petcarekl.com/webservice/commentspc.php";
@@ -174,6 +178,11 @@ public class HomeFragment extends  android.support.v4.app.ListFragment implement
 			String latitude) {
 		// TODO Auto-generated method stub
 		Toast.makeText(getActivity(), longitude+" "+latitude, Toast.LENGTH_SHORT).show();
+		Intent i=new Intent(getActivity(),Map_activity_pet_location.class);
+		  i.putExtra("LONGITUDE", longitude);
+		  i.putExtra("LATITUDE", latitude);
+		  startActivity(i);
+		
 	}
 	//KIKO_COMMENTS ___________________ZA_DIDI_TUKA_PRI_CLICK_NA_GLOBUSOT_SHOW_MAP__________________________________________________________________________________________________________________________
 	
@@ -238,7 +247,9 @@ public class HomeFragment extends  android.support.v4.app.ListFragment implement
 				String longitude = c.getString("longitude");
 				String type_c = c.getString("typecomment");
 				String post_id=c.getString("post_id");
-				CommentItem comitem=new CommentItem(username,content_text, firstname_text,lastname_text, title, image_p, image_c, langitude, longitude, contact, type_c,post_id);
+				String post_address=c.getString("address");
+				String post_hasimage=c.getString("hasimage");
+				CommentItem comitem=new CommentItem(username,content_text, firstname_text,lastname_text, title, image_p, image_c, langitude, longitude, contact, type_c,post_id,post_address,post_hasimage);
 				NEW_Comments.add(comitem);
 				
 			}
@@ -436,7 +447,10 @@ public void updateJSONdatareminding() {
 							String longitude = c.getString("longitude");
 							String type_c = c.getString("typecomment");
 							String post_id=c.getString("post_id");
-							CommentItem comitem=new CommentItem(username,content_text, firstname_text, lastname_text, title, image_p, image_c, langitude, longitude, contact, type_c,post_id);
+							String post_address=c.getString("address");
+							String post_hasimage=c.getString("hasimage");
+							
+							CommentItem comitem=new CommentItem(username,content_text, firstname_text, lastname_text, title, image_p, image_c, langitude, longitude, contact, type_c,post_id,post_address,post_hasimage);
 							NEW_Comments.add(comitem);
 							Log.d("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@", "loadedd coments on SCROLL   "+ mComments.length()+" "+content);
 							
@@ -459,14 +473,23 @@ public void startActivityVisitUser(String username) {
 	SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(getActivity());
     String post_username = sp.getString("username", "anon");
     
-    //Toast.makeText(getActivity(), post_username+"="+username, Toast.LENGTH_SHORT).show();
-   
-	if(post_username.length()!=username.length()){
-
+    String clicked_user_text="";
+	String logedin_usename_text="";
+	byte[] data_clicked= Base64.decode(username, Base64.DEFAULT);
+	byte[] data_loged = Base64.decode(post_username, Base64.DEFAULT);
+	try {
+		clicked_user_text = new String(data_clicked, "UTF-8");
+		logedin_usename_text = new String(data_loged, "UTF-8");
+	} catch (UnsupportedEncodingException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	}
+	
+   if((clicked_user_text.equals(logedin_usename_text))==false){
 		Intent i = new Intent(getActivity(),User_Profile_Visit.class);
 	     i.putExtra("POST_USERNAME", username);
 		startActivity(i);	
-	}
+    }
 	
 	
 }

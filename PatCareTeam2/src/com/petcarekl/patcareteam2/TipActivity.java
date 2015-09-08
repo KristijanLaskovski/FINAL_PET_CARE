@@ -3,21 +3,24 @@ package com.petcarekl.patcareteam2;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarActivity;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.TextView;
+import com.petcare.teamiki.R;
 
 public class TipActivity extends ActionBarActivity {
 	
 	String tip_content;
 	TextView tvFor_tip;
-
+	ActionBar  actionBar;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_tip);
+		
 		tvFor_tip=(TextView)findViewById(R.id.tipTextView);
 		Intent is= getIntent();
         Bundle b = is.getExtras();
@@ -25,12 +28,29 @@ public class TipActivity extends ActionBarActivity {
         {
         	tip_content =(String) b.get("POST_ID");
         }
-		
+        setTitle(tip_content);
+       // getActionBar().setHomeButtonEnabled(true);
+       // getActionBar().setDisplayHomeAsUpEnabled(true);
+        actionBar = getSupportActionBar();
+       // actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_LIST);
+        // TODO: Remove the redundant calls to getSupportActionBar()
+        //       and use variable actionBar instead
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setHomeButtonEnabled(true);
         setTipView(tip_content);
 		
 	}
 
+	@Override
+	public boolean onOptionsItemSelected(MenuItem item) { 
+	        switch (item.getItemId()) {
+	        case android.R.id.home: 
+	            onBackPressed();
+	            return true;
+	        }
 
+	    return super.onOptionsItemSelected(item);
+	}
 	
 	
 	public void setTipView(String title_tip){
@@ -74,22 +94,5 @@ public class TipActivity extends ActionBarActivity {
 	
 	
 	
-	@Override
-	public boolean onCreateOptionsMenu(Menu menu) {
-		// Inflate the menu; this adds items to the action bar if it is present.
-		getMenuInflater().inflate(R.menu.tip, menu);
-		return true;
-	}
-
-	@Override
-	public boolean onOptionsItemSelected(MenuItem item) {
-		// Handle action bar item clicks here. The action bar will
-		// automatically handle clicks on the Home/Up button, so long
-		// as you specify a parent activity in AndroidManifest.xml.
-		int id = item.getItemId();
-		if (id == R.id.action_settings) {
-			return true;
-		}
-		return super.onOptionsItemSelected(item);
-	}
+	
 }

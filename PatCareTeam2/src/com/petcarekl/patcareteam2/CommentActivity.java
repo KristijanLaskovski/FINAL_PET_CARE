@@ -18,7 +18,7 @@ import org.json.JSONObject;
 
 import com.google.android.gms.location.LocationListener;
 import com.google.android.gms.maps.model.LatLng;
-import com.petcarekl.patcareteam2.R;
+import com.petcare.teamiki.R;
 
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -86,6 +86,10 @@ public class CommentActivity extends AppCompatActivity implements OnClickListene
 	private String rb_text;
 	private String phonnumbercontact="";
 
+	  String AdresaNaPostot="";
+	String Has_image_Comment="false";
+	
+	
 	/* location */
 	private Button  mCheckLocation;
 	private AlertDialog.Builder dialogBuilder; // reused
@@ -164,7 +168,9 @@ public class CommentActivity extends AppCompatActivity implements OnClickListene
 	//	latlng = (TextView) findViewById(R.id.latlng); /* ONLY FOR DEBUGGING */
 		//locationAddress = (TextView) findViewById(R.id.locationAddress);
 		
-		locationManager = (LocationManager) getSystemService(LOCATION_SERVICE); /* i am getting location services from location manager */
+		locationManager = (LocationManager) getSystemService(LOCATION_SERVICE); /* i am getting location services 
+
+from location manager */
 		
 		boolean gpsEnabled = locationManager
 				.isProviderEnabled(LocationManager.GPS_PROVIDER);
@@ -172,8 +178,12 @@ public class CommentActivity extends AppCompatActivity implements OnClickListene
 				.isProviderEnabled(LocationManager.NETWORK_PROVIDER);
 		
 		if (!gpsEnabled && !netEnabled){
-			/* starting settings so the user enables them, TODO what if the user, doesn't enables them, stop everything.
-			 * TODO make safeguard against - matching Activity may not exist - read more: hover ACTION_NETWORK_OPERATOR_SETTINGS */
+			/* starting settings so the user enables them, TODO what if the user, doesn't enables them, stop 
+
+everything.
+			 * TODO make safeguard against - matching Activity may not exist - read more: hover 
+
+ACTION_NETWORK_OPERATOR_SETTINGS */
 			Toast.makeText(this, "gps and net are desabled", Toast.LENGTH_LONG);
 			startActivity(new Intent(Settings.ACTION_NETWORK_OPERATOR_SETTINGS));
 			Log.d("&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&","gps and net are enabled");	
@@ -184,7 +194,7 @@ public class CommentActivity extends AppCompatActivity implements OnClickListene
 			Log.d("&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&","gps is enabled");	
 			
 		}
-		
+		 
 		if(netEnabled){
 			Toast.makeText(this, "net is enabled", Toast.LENGTH_LONG);
 			Log.d("&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&","net is enabled");	
@@ -195,11 +205,30 @@ public class CommentActivity extends AppCompatActivity implements OnClickListene
 		provider = locationManager.getBestProvider(criteria, false);
 				
 		if (provider == null || provider.equals("")) {
-			Toast.makeText(getBaseContext(), "No Provider Found",Toast.LENGTH_LONG).show(); /* shouldn't happen. */
+			Toast.makeText(getBaseContext(), "No Provider Found",Toast.LENGTH_LONG).show(); /* shouldn't 
+
+happen. */
+			/* TODO no toast - only for debugging */
+			provider = "no";
+			
+			
 		} else {
 			
-			deviceLocation = locationManager.getLastKnownLocation(provider);
+			Toast.makeText(getBaseContext(), "Provider is " + provider ,Toast.LENGTH_LONG).show(); /* shouldn't 
+
+happen. */
 			
+			deviceLocation = locationManager.getLastKnownLocation(provider);
+		if (locationManager.getLastKnownLocation(provider) == null) {
+			/* get location based on some other app's knowledge for your app */
+
+			Log.d("&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&","LOCATION FROM PASSIVE PROVIDER");	
+			deviceLocation = locationManager.getLastKnownLocation(LocationManager.PASSIVE_PROVIDER);
+		}else {
+
+			Log.d("&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&","LOCATION FROM YOUR PROVIDER");	
+			deviceLocation = locationManager.getLastKnownLocation(provider);
+		}
 			 locationManager.requestLocationUpdates(provider, LOCATION_REFRESH_TIME,
 					 LOCATION_REFRESH_DISTANCE ,  new android.location.LocationListener() {
 						
@@ -213,22 +242,92 @@ public class CommentActivity extends AppCompatActivity implements OnClickListene
 						public void onProviderEnabled(String provider) {
 							// TODO handle
 							
+							StringBuilder message = new StringBuilder("Your provider " + provider + " is disalbed ");
+							if(provider.equals("gps")){
+									if(locationManager
+					.isProviderEnabled(LocationManager.NETWORK_PROVIDER)){
+										message.append(" but network provider is still enabled");
+									} else {
+										message.append(" and network priver is disabled too.");
+									}
+								} else if (provider.equals("network")){
+									if(locationManager
+											.isProviderEnabled
+
+(LocationManager.GPS_PROVIDER)){
+																
+
+message.append(" but gps provider is still enabled");
+															} 
+
+else {
+																
+
+message.append(" and gps priver is disabled too.");
+															}
+									
+								} else {
+									message.append("what");
+								}
+								/* TODO handle this */
+							
+							Toast.makeText(context, message.toString(), 
+
+Toast.LENGTH_LONG).show();
+							
 						}
 						
 						@Override
 						public void onProviderDisabled(String provider) {
-							
-							Toast.makeText(context, "Your provider" + provider + " is disabled ", Toast.LENGTH_LONG).show();
-							
+							StringBuilder message = new StringBuilder("Your provider " + 
+
+provider + " is disalbed ");
+						if(provider.equals("gps")){
+								if(locationManager
+				.isProviderEnabled(LocationManager.NETWORK_PROVIDER)){
+									message.append(" but network provider is still enabled");
+								} else {
+									message.append(" and network priver is disabled too.");
+									Intent intent = new Intent
+
+(Settings.ACTION_LOCATION_SOURCE_SETTINGS);
+									startActivity(intent);
+								}
+							} else if (provider.equals("network")){
+								if(locationManager
+										.isProviderEnabled
+
+(LocationManager.GPS_PROVIDER)){
+															
+
+message.append(" but gps provider is still enabled");
+														} else {
+															
+
+message.append(" and gps priver is disabled too.");
+															
+
+Intent intent = new Intent(Settings.ACTION_LOCATION_SOURCE_SETTINGS);
+															
+
+startActivity(intent);
+														}
+								
+							} else {
+								message.append("what");
+							}
 							/* TODO handle this */
+						
+						Toast.makeText(context, message.toString(), Toast.LENGTH_LONG).show();
+						
 						}
 						
 						@Override
 						public void onLocationChanged(Location location) {
 							// TODO Auto-generated method stub
-							Toast.makeText(context, "onLocationChanged", Toast.LENGTH_LONG).show();
+						//	Toast.makeText(context, "onLocationChanged", Toast.LENGTH_LONG).show();
 							deviceLocation = location;
-						
+							Log.d("&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&","Your location is changed");	
 						}
 					});
 		}
@@ -255,6 +354,8 @@ public class CommentActivity extends AppCompatActivity implements OnClickListene
 					if (deviceLocation != null) {
 						 lat = deviceLocation.getLatitude();
 						 lng = deviceLocation.getLongitude();
+						 
+						 Log.d("&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&","Device location is not null");	
 						//latlng.setText("Latitude is: " + lat + " and longitude is " + lng);
 						/* 001 HERE YOU GET THE LOCATION, SAVE IT IN YOUR EXTRAS */
 						
@@ -277,7 +378,7 @@ public class CommentActivity extends AppCompatActivity implements OnClickListene
 									addresfull+=address.getCountryName()+" ";
 								imv3.setImageDrawable(myDrawable3);
 								tv3.setText(addresfull);
-								
+								AdresaNaPostot=addresfull;
 								
 								}
 								
@@ -288,6 +389,7 @@ public class CommentActivity extends AppCompatActivity implements OnClickListene
 						
 					} else {
 						Toast.makeText(context, "deviceLocation is null ", Toast.LENGTH_LONG).show();
+						Log.d("&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&","Device location is null");	
 					}
 					dialog.cancel();
 					break;
@@ -353,7 +455,9 @@ public class CommentActivity extends AppCompatActivity implements OnClickListene
 					@Override
 					public void onAddressObtained(Address address) {
 						Log.d("&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&","HALLO");	
-						if (address != null) { /* if address is not null we know it's the correct one, since that's
+						if (address != null) { /* if address is not null we know it's the correct 
+
+one, since that's
 						why we use GecodingTask.*/
 							Log.d("&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&","Address is not null.");	
 								 lat = address.getLatitude();
@@ -371,25 +475,46 @@ public class CommentActivity extends AppCompatActivity implements OnClickListene
 										addresfull+=address.getCountryName()+" ";
 									imv3.setImageDrawable(myDrawable3);
 									tv3.setText(addresfull);
-								 
+									AdresaNaPostot=addresfull;
 								 
 								 
 								// latlng.setText("Latitude is: " + lat + " and longitude is " + lng);
 								// locationAddress.setText("Location address is: " + address.getThoroughfare() + " " +  address.getFeatureName() + " "  + address.getPostalCode() + " " + address.getCountryName() );
 								/* 001 HERE YOU GET THE LOCATION, SAVE IT IN YOUR EXTRAS 
-								 * ti si go znaesh najdobro kodot, no mislam deka najubavo e na edno mesto
-								 * site podatoci da gi stavash, znachi da ne gi stavash tuka odma vo baza, tuku 
-								 * da apdejtirash ednash na kraj koga kje klikne POST, zasho mozhebi nekoj kje se
-								 * predomisli i kje saka da editne neshto i na sekoe editnuvanje kje pravish ista rabota
-								 * (valjda vaka ti e, jas samo pishuvam onaka :P zasho dosadnen mi e zhivotot pa i jas
+								 * ti si go znaesh najdobro kodot, no mislam deka najubavo 
+
+e na edno mesto
+								 * site podatoci da gi stavash, znachi da ne gi stavash 
+
+tuka odma vo baza, tuku 
+								 * da apdejtirash ednash na kraj koga kje klikne POST, 
+
+zasho mozhebi nekoj kje se
+								 * predomisli i kje saka da editne neshto i na sekoe 
+
+editnuvanje kje pravish ista rabota
+								 * (valjda vaka ti e, jas samo pishuvam onaka :P zasho 
+
+dosadnen mi e zhivotot pa i jas
 								 * sum dosadna) :P
 								 * */
 						} else {
-							/* 001 DALI MISLITE DEKA TREBA TUKA DA PRIMI OKEJ DA SE VRATI NAZAD I USTVARI DA NEMA
-							 * SETIRANO LOKCIJA, ISTO KAKO CANCEL, ILI DA ISKOCHI TOAST, MORASH DA VNESESH NESHTO,
-							 * - MENE MI E DA NE IMAME PREMNOGU TOAST-OVI NIZ CELATA APLIKACIJA, ZASHO GLEDAM DEKA
-							 * NEMA MNOGU VO NAJNOVIVE, MNOGU RETKO, ILI PA IM ISKACHA NESHTO OD GORE, MOZHEME
+							/* 001 DALI MISLITE DEKA TREBA TUKA DA PRIMI OKEJ DA SE VRATI NAZAD 
+
+I USTVARI DA NEMA
+							 * SETIRANO LOKCIJA, ISTO KAKO CANCEL, ILI DA ISKOCHI TOAST, MORASH 
+
+DA VNESESH NESHTO,
+							 * - MENE MI E DA NE IMAME PREMNOGU TOAST-OVI NIZ CELATA 
+
+APLIKACIJA, ZASHO GLEDAM DEKA
+							 * NEMA MNOGU VO NAJNOVIVE, MNOGU RETKO, ILI PA IM ISKACHA NESHTO 
+
+OD GORE, MOZHEME
 							 * I TOA DA GO NAJDEME */
+							
+							imv3.setImageDrawable(myDrawable3);
+							tv3.setText("address not found ");
 						}
 						
 					}
@@ -557,7 +682,9 @@ public class CommentActivity extends AppCompatActivity implements OnClickListene
 					imv2.setImageDrawable(myDrawable);
 					tv2.setText(phonnumbercontact);
 				}else{
-					Toast.makeText(CommentActivity.this, "Phone number must be from 9 characters!", Toast.LENGTH_SHORT).show();                   
+					Toast.makeText(CommentActivity.this, "Phone number must be from 9 characters!", 
+
+Toast.LENGTH_SHORT).show();                   
 					imv2.setImageDrawable(myDrawable);
 					tv2.setText("No contact added !");
 				}
@@ -578,7 +705,9 @@ public class CommentActivity extends AppCompatActivity implements OnClickListene
 	}
 	
 	
-	//hhhhhhhhhhhhhhhhhhhhhhhhh__________KIKO_COMMENT____POST___PHOTO_______________hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
+	
+
+//hhhhhhhhhhhhhhhhhhhhhhhhh__________KIKO_COMMENT____POST___PHOTO_______________hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
 	
 	private Uri outputFileUri;
 	static final int YOUR_SELECT_PICTURE_REQUEST_CODE = 1;
@@ -614,7 +743,9 @@ public class CommentActivity extends AppCompatActivity implements OnClickListene
 	    final Intent chooserIntent = Intent.createChooser(galleryIntent, "Select Source");
 
 	    // Add the camera options.
-	    chooserIntent.putExtra(Intent.EXTRA_INITIAL_INTENTS, cameraIntents.toArray(new Parcelable[cameraIntents.size()]));
+	    chooserIntent.putExtra(Intent.EXTRA_INITIAL_INTENTS, cameraIntents.toArray(new Parcelable[cameraIntents.size
+
+()]));
 
 	    startActivityForResult(chooserIntent, YOUR_SELECT_PICTURE_REQUEST_CODE);
 	}
@@ -643,7 +774,9 @@ public class CommentActivity extends AppCompatActivity implements OnClickListene
 	            }
 	            Bitmap bitmap=null;
 	            try {
-					 bitmap = MediaStore.Images.Media.getBitmap(this.getContentResolver(), selectedImageUri);
+					 bitmap = MediaStore.Images.Media.getBitmap(this.getContentResolver(), 
+
+selectedImageUri);
 				} catch (FileNotFoundException e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
@@ -669,13 +802,16 @@ public class CommentActivity extends AppCompatActivity implements OnClickListene
 	            bitmap.compress(CompressFormat.JPEG, 100, bytedata);
 	            byte[] dataa = bytedata.toByteArray();
 	            image_comment_encoded= Base64.encodeToString(dataa, Base64.DEFAULT);
+	            Has_image_Comment="true";
 	            mImageView.setImageBitmap(bitmap);
 	            
 	        }
 	    }
 	}
 	
-	//hhhhhhhhhhhhhhhhhhhhhhhhh__________KIKO_COMMENT____POST___PHOTO_______________hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
+	
+
+//hhhhhhhhhhhhhhhhhhhhhhhhh__________KIKO_COMMENT____POST___PHOTO_______________hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
 	
 class PostComment extends AsyncTask<String, String, String> {
 		
@@ -753,7 +889,8 @@ class PostComment extends AsyncTask<String, String, String> {
                 params.add(new BasicNameValuePair("image_p", post_image_progile));
                 params.add(new BasicNameValuePair("contact", phonnumbercontact));
                 params.add(new BasicNameValuePair("comment_image_name", cfile_commnet_name));
-                
+                params.add(new BasicNameValuePair("address", AdresaNaPostot));
+                params.add(new BasicNameValuePair("hasimage", Has_image_Comment));
                 Log.d("request!", "starting");
                 
                 //Posting user data to script 
