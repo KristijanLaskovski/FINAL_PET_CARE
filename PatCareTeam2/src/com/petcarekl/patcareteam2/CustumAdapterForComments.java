@@ -1,5 +1,7 @@
 package com.petcarekl.patcareteam2;
 
+import java.net.URI;
+import java.net.URL;
 import java.util.ArrayList;
 
 import com.google.android.gms.maps.model.LatLng;
@@ -9,14 +11,17 @@ import com.squareup.picasso.Picasso;
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.graphics.Point;
 import android.location.Address;
 import android.provider.ContactsContract.Contacts.Data;
 import android.util.Base64;
 import android.util.Log;
+import android.view.Display;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
+import android.view.WindowManager;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ImageButton;
@@ -109,18 +114,31 @@ public class CustumAdapterForComments extends ArrayAdapter<CommentItem> {
     	        viewHolder.tvTime.setText(comment.getTime_c());
     	        viewHolder.tvComment.setText(comment.getMessage());
     	        
-    	        if(comment.getHasimageC().equals("true")){
-    	        	
-    	        	Log.d("HAS IMAGE", comment.getHasimageC());
-    	        	 Picasso.with(mContext).load(image_c).into(viewHolder.img_comment);
+    	        WindowManager wm = (WindowManager)mContext.getSystemService(Context.WINDOW_SERVICE);
+    	        Display display = wm.getDefaultDisplay();
+    	        Point size = new Point();
+    	        display.getSize(size);
+    	        int width = size.x;
+    	        int height = size.y;
+    	       
+    	        
+    	   
+    	        
+    	        BitmapFactory.Options options = new BitmapFactory.Options();
+    	        options.inJustDecodeBounds = true;
+    	        BitmapFactory.decodeFile(image_c);
+    	        int imageHeight = options.outHeight;
+    	        int imageWidth = options.outWidth;
+    	        
+    	        
+    	        
+    	        	Log.d("HAS IMAGE  TRUE", comment.getHasimageC());
+    	        	 Picasso.with(mContext)
+    	        	 .load(image_c)
+    	        	  .resize(width-200 , height-height/2)
+    	        	 .into(viewHolder.img_comment);
     	        	 
-    	        }if(comment.getHasimageC().equals("false")){
-    	        	
-    	        	Log.d("HAS IMAGE", comment.getHasimageC());
-    	        	viewHolder.img_comment.setVisibility(View.GONE);
-    	        }
-    	        
-    	        
+    	        	    	        
     	      // 
     	        
     	        

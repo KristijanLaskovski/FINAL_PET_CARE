@@ -381,12 +381,7 @@ public class HomeFragment extends android.support.v4.app.ListFragment implements
 				mComments = json.getJSONArray(TAG_POSTS);
 				// Log.d("LENGTH NA MCOMMENTS-------------------------->",Integer.toString(mComments.length())
 				// );
-				if (mComments.length() < 2) {
-					// listViewOnHome.removeFooterView(footer);
-					// footer.setVisibility(View.GONE);
-					// Toast.makeText(getActivity(), "No more coments",
-					// Toast.LENGTH_SHORT).show();
-				}
+				
 
 				// looping through all posts according to the json object
 				// returned

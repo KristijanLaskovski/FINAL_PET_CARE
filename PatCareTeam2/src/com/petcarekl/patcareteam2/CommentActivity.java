@@ -978,8 +978,7 @@ public class CommentActivity extends AppCompatActivity implements
 			String post_lname = sp.getString("lastname", "anon");
 			String post_image_progile = sp.getString("pimage", "anon");
 
-			SimpleDateFormat sdf_comment_name = new SimpleDateFormat(
-					"HHmmMMMddyyyy");
+			SimpleDateFormat sdf_comment_name = new SimpleDateFormat("HHmmssSSSMMMddyyyy");
 			String cfile_commnet_name = sdf_comment_name.format(new Date());
 
 			try {
@@ -1001,8 +1000,7 @@ public class CommentActivity extends AppCompatActivity implements
 						image_comment_encoded));
 				params.add(new BasicNameValuePair("image_p", post_image_progile));
 				params.add(new BasicNameValuePair("contact", phonnumbercontact));
-				params.add(new BasicNameValuePair("comment_image_name",
-						cfile_commnet_name));
+				params.add(new BasicNameValuePair("comment_image_name",cfile_commnet_name));
 				params.add(new BasicNameValuePair("address", AdresaNaPostot));
 				params.add(new BasicNameValuePair("hasimage", Has_image_Comment));
 				Log.d("request!", "starting");
