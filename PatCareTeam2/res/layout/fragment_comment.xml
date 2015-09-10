@@ -7,7 +7,7 @@
     android:divider="@null"
     android:dividerHeight="5dp"
     android:listSelector="@android:color/transparent"
-    tools:context="com.petcarekl.patcareteam2.ProfileFragment" />
+    tools:context="com.petcare.teamiki.ProfileFragment" />
 
     
 

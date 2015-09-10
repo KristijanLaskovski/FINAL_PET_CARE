@@ -6,8 +6,9 @@
     <string name="title_section2">Profile</string>
     <string name="title_section3">Lost and Found pets</string>
     <string name="title_section4">Adobt a pet</string>
-    <string name="title_section5">Give or sell a pet</string>
+     <string name="title_section5">Give or sell a pet</string>
     <string name="title_section6">Tips for Pet Care</string>
+    <string name="title_section7">Near vet-stations</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="action_example">Example action</string>
@@ -38,8 +39,8 @@
     <string name="emailhint">Email</string>
     <string name="lname">Last Name</string>
     <string name="takeaphoto">Take a photo</string>
-    <string name="motostring">Rescue the lost,save the injured,</string>
-    <string name="motostring2">love the abandoned</string>
+    <string name="motostring">save the injured, love the abandoned</string>
+    <string name="motostring2">Rescue the lost,</string>
     <string name="tp">TAKE</string>
     <string name="loc">Plc</string>
     <string name="myLocation">obtain my location</string>
@@ -81,5 +82,7 @@
     <string name="title_activity_map_activity_pet_location">Map_activity_pet_location</string>
     <string name="adresoncustumview">No address added!</string>
     <string name="usernamehint">Username</string>
+    <string name="title_activity_nearby_places">NearbyPlaces</string>
+    <string name="errornetwork">Error Problems please try to connect to internet !!</string>
 
 </resources>

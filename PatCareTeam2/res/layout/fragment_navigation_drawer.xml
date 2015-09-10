@@ -7,6 +7,6 @@
     android:divider="#8BCBBE"
     android:dividerHeight="1dp"
     
-    tools:context="com.petcarekl.patcareteam2.NavigationDrawerFragment" />
+    tools:context="com.petcare.teamiki.NavigationDrawerFragment" />
 
 
