@@ -44,4 +44,12 @@ When an user founs a lost pet on the street, or his pet is injuered and needs he
  </div>
 
 
+ <divclass="row">
+ When a user wants to find some tips fot taking good care for his pet, that can be don by going to the Tips for pet care activity.
+ <br/>
+<img alt="Logo"  heignt="600" width="300" src="https://raw.githubusercontent.com/KristijanLaskovski/FINAL_PET_CARE/master/App%20images/tips.jpg"><br/>
+<br/>
+
+ </div>
+
 </div>
