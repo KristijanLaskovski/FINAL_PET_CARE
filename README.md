@@ -36,9 +36,9 @@ For navigating through the app we used the Android navigation drawer, wher tha m
 <div class="row">
 When an user founs a lost pet on the street, or his pet is injuered and needs help, or he wants to adopt a new pet hen he can make a comment by pressing the comment button in the botton-left corner.Then a new activity opens where he can enter informations about the location, type of the post, add a phone number so every one can contact him, add a photo and some text. When he finishes with adding the inforamtion he has to press on the post button.
 <br/>
-<img alt="Logo"  heignt="600" width="300" src="https://github.com/KristijanLaskovski/FINAL_PET_CARE/blob/master/App%20images/newcomment.jpg">
+<img alt="Logo"  heignt="600" width="300" src="https://github.com/KristijanLaskovski/FINAL_PET_CARE/blob/master/App%20images/newcomment.jpg"><br/>
   Post screen<br/>
-<img alt="Logo"  heignt="600" width="300" src="https://github.com/KristijanLaskovski/FINAL_PET_CARE/blob/master/App%20images/commentinfo.jpg">
+<img alt="Logo"  heignt="600" width="300" src="https://github.com/KristijanLaskovski/FINAL_PET_CARE/blob/master/App%20images/commentinfo.jpg"><br/>
   All informations added on the post<br>
   <hr>
  </div>
