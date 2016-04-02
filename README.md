@@ -27,11 +27,11 @@ To use the application every user must register first, if he does't have an acco
 
 
 <div class="row">
-For navigating through the app we used the Android navigation drawer, wher tha main menu contained Home page, Profile,Tips for Pet care, Nearest pet stores and 3 submenu depending of the type of the post (posts for lost,Found, injured pets). 
-<img alt="Logo" src="https://raw.githubusercontent.com/KristijanLaskovski/FINAL_PET_CARE/master/App%20images/homeposts.jpg">
+For navigating through the app we used the Android navigation drawer, wher tha main menu contained Home page, Profile,Tips for Pet care, Nearest pet stores and 3 submenu depending of the type of the post (posts for lost,Found, injured pets). <br/>
+<img alt="Logo"  heignt="600" width="300" src="https://raw.githubusercontent.com/KristijanLaskovski/FINAL_PET_CARE/master/App%20images/homeposts.jpg">
   Home screen
   <hr>
-<br/>
+
  </div>
 
 
